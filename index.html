@@ -54,7 +54,7 @@ td.u { text-decoration: underline; }
     <div class="head">
       <p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" height="48" width="72" /></a></p>
 
-      <h1 id="main">A Minimum Information Model for Representing Potential Drug-Drug Interaction Knowledge and Evidence</h1>
+      <h1 id="main">A Minimum Information Model for Representing Potential Drug-Drug Interaction Knowledge and Evidence - Introduction, Stakeholder Descriptions, Use Cases, and User Scenarios</h1>
       <h2 id="w3c-doctype"><abbr title="World Wide Web Consortium Health Care and Life Science Interest Group">W3C HCLS IG</abbr> DRAFT Interest Group Note 26 May 2016</h2>
       <dl>
         <dt>Latest published version:</dt><dd><a href=""></a></dd>
@@ -165,17 +165,20 @@ td.u { text-decoration: underline; }
       <h2 id="contents">Table of Contents</h2>
       
       <ul class="toc">
-          <li class="tocline1"><a href="#introduction">1 Introduction</a> </li>
-          <li class="tocline1"><a href="#scope">2 Scope</a> </li>
-          <li class="tocline1"><a href="#conventions">3 Conventions</a> </li>
-          <li class="tocline2"><a href="#NormativeParts">Normative Parts</a></li>
-          <li class="tocline1"><a href="#DDIUseCases">4 DDI Use Cases</a> </li>
-              <li class="tocline2"><a href="#s4_1">4.1 Use Case - 1</a></li>
-              <li class="tocline2"><a href="#s4_2">4.2 Use Cases - 2</a></li>
-          <li class="tocline1"><a href="#DDIKeyChallenges">5 DDI Key Challenges</a> </li>
-          <li class="tocline1"><a href="#DDIEvidenceReporting">6 DDI Evidence Reporting</a> </li>
-          <li class="tocline1"><a href="#DDIInformationModel">7 DDI Information Model</a></li>
-          <li class="tocline1"><a href="#DDILinks">8 DDI Links</a> </li>
+        <li class="tocline1"><a href="#introduction">1 Introduction</a> </li>
+	<li class="tocline1"><a href="#stakeholder-descriptions">2 Stakeholder Descriptions</a> </li>
+	<li class="tocline1"><a href="#user-stories-and-goals">3 User Stories and Goals</a> </li>
+	<li class="tocline1"><a href="#kr-considerations">4 Knowledge Representation Core Considerations</a> </li>
+          <!-- <li class="tocline1"><a href="#scope">2 Scope</a> </li> -->
+          <!-- <li class="tocline1"><a href="#conventions">3 Conventions</a> </li> -->
+          <!-- <li class="tocline2"><a href="#NormativeParts">Normative Parts</a></li> -->
+          <!-- <li class="tocline1"><a href="#DDIUseCases">4 DDI Use Cases</a> </li> -->
+          <!--     <li class="tocline2"><a href="#s4_1">4.1 Use Case - 1</a></li> -->
+          <!--     <li class="tocline2"><a href="#s4_2">4.2 Use Cases - 2</a></li> -->
+          <!-- <li class="tocline1"><a href="#DDIKeyChallenges">5 DDI Key Challenges</a> </li> -->
+          <!-- <li class="tocline1"><a href="#DDIEvidenceReporting">6 DDI Evidence Reporting</a> </li> -->
+          <!-- <li class="tocline1"><a href="#DDIInformationModel">7 DDI Information Model</a></li> -->
+          <!-- <li class="tocline1"><a href="#DDILinks">8 DDI Links</a> </li> -->
           <li class="tocline1"><a href="#acknowledgements">10 Acknowledgements</a></li>
           <li class="tocline1"><a href="#references">11 References</a></li>
           <li class="tocline1"><a href="#appendix">12 Appendix</a></li>
@@ -187,54 +190,74 @@ td.u { text-decoration: underline; }
     <h2 id="introduction">1 Introduction</h2>
     </div>
 
-  
-    <h2 id="scope">2 Scope</h2>
-
-    <h2 id="conventions">3 Conventions</h2>
-
-    <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [<a href="#RFC2119">RFC2119</a>].</p>
-
-    <p>RDF data in this document are expressed in Turtle [<a href="#TURTLE">TURTLE</a>]. Queries on this data are expressed in SPARQL [<a href="#SPARQL">SPARQL</a>]. The following namespace prefix bindings are assumed unless otherwise stated:</p>
-    <div style="text-align: center;">
-      <table class="theList">
-	<tr><th>Prefix</th>				<th>URI</th>	  <th>Description</th></tr>
-	<tr><td><code>cito:</code></td>			<td><code>http://purl.org/spar/cito/</code></td>	<td><a href="http://purl.org/spar/cito/">Citation Typing Ontology</a></td></tr>
-	<tr><td><code>dcat:</code></td>			<td><code>http://www.w3.org/ns/dcat#</code></td>	<td><a href="http://www.w3.org/TR/vocab-dcat/">Data Catalog</a></td></tr>
-	<tr><td><code>dctypes:</code></td>		<td><code>http://purl.org/dc/dcmitype/</code></td>	<td><a href="http://purl.org/dc/dcmitype/">Dublin Core Metadata Types</a></td></tr>
-	<tr><td><code>dct:</code></td>			<td><code>http://purl.org/dc/terms/</code></td>	<td><a href="http://purl.org/dc/terms/">Dublin Core Metadata Terms</a></td></tr>
-	<tr><td><code>foaf:</code></td>			<td><code>http://xmlns.com/foaf/0.1/</code></td>	<td><a href="http://xmlns.com/foaf/0.1/">Friend-of-a-Friend</a></td></tr>
-	<tr><td><code>freq:</code></td>			<td><code>http://purl.org/cld/freq/</code></td>	<td><a href="http://dublincore.org/groups/collections/frequency/">Collection Description Frequency Vocabulary</a></td></tr>
-	<tr><td><code>idot:</code></td>			<td><code>http://identifiers.org/idot/</code></td>	<td><a href="http://identifiers.org/idot/">Identifiers.org vocabulary</a></td></tr>
-	<tr><td><code>lexvo:</code></td>		<td><code>http://lexvo.org/ontology#</code></td>	<td><a href="http://www.lexvo.org/">Lexical Vocabulary</a></td></tr>
-	<tr><td><code>pav:</code></td>			<td><code>http://purl.org/pav/</code></td>	<td><a href="https://code.google.com/p/pav-ontology/wiki/Homepage">Provenance Authoring and Versioning ontology</a></td></tr>
-	<tr><td><code>prov:</code></td>			<td><code>http://www.w3.org/ns/prov#</code></td>	<td><a href="http://www.w3.org/TR/prov-o/">PROV Ontology</a></td></tr>
-	<tr><td><code>rdf:</code></td>			<td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td>	<td><a href="http://www.w3.org/TR/REC-rdf-syntax/">RDF Syntax</a></td></tr>
-	<tr><td><code>rdfs:</code></td>			<td><code>http://www.w3.org/2000/01/rdf-schema#</code></td>	<td><a href="http://www.w3.org/TR/rdf-schema/">RDF Schema</a></td></tr>
-	<tr><td><code>schemaorg:</code></td>		<td><code>http://schema.org/</code></td>		<td><a href="http://schema.org/">schema.org vocabulary</a></td></tr>
-	<tr><td><code>sd:</code></td>			<td><code>http://www.w3.org/ns/sparql-service-description#</code></td>	<td><a href="http://www.w3.org/TR/sparql11-service-description/">SPARQL 1.1 Service Description</a></td></tr>
-	<tr><td><code>sio:</code></td>		<td><code>http://semanticscience.org/resource/</code></td>		<td><a href="http://sio.semanticscience.org/">Semanticscience Integrated Ontology (SIO)</a></td></tr>
-	<tr><td><code>void:</code></td>			<td><code>http://rdfs.org/ns/void#</code></td>	<td><a href="http://www.w3.org/TR/void/">Describing Linked Datasets with the VoID Vocabulary</a></td></tr>
-	<tr><td><code>void-ext:</code></td>			<td><code>http://ldf.fi/void-ext#</code></td>	<td><a href="http://ldf.fi/void-ext">Extensions to the Vocabulary of Interlinked Datasets (VoID)</a></td></tr>
-	<tr><td><code>xsd:</code></td>			<td><code>http://www.w3.org/2001/XMLSchema#</code></td>	<td><a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema</a></td></tr>
-
-	</table>
+    <a target="_blank" target="https://docs.google.com/document/d/1rm7Q0KiX9CPeoXlfCFx5kInCYkeV44a9qzAdbTV7Aws/edit#">Edit the google doc for this section</a>
+    
+    <div>
+      <h2 id="#stakeholder-descriptions">2 Stakeholder Descriptions</h2>
     </div>
 
-    <p>The character sequence "###" is used to denote a placeholder for a positive integer (&ge; 1) in examples. The integers that replace this surrogate are of type <a href="http://www.w3.org/TR/xmlschema11-2/#integer">xsd:integer</a>.</p>
-     <h2 id="NormativeParts">3.1 Normative Parts</h2>
-  <div>
-    <h2 id="DDIUseCases">4 DDI Use Cases</h2>
-    <h3 id="s4_1">4.1 Use Case - 1</h3>
-    <h3 id="s4_2">4.2 Use Case - 2</h3>  
-  </div>
-  
-    <h2 id="DDIKeyChallenges">5 DDI Key Challenges</h2>
+    <a target="_blank" target="https://docs.google.com/document/d/1AbWuONYTrFOV95OhjlRwrm3ZJy5jjvzJ-dywO5OZyFY/edit#">Edit the google doc for this section</a>
 
-    <h2 id="DDIEvidenceReporting">6 DDI Evidence Reporting  </h2>
+    <div>
+      <h2 id="#user-stories-and-goals">3 User Stories and Goals</h2>
+    </div>
+    
+    <a target="_blank" target="https://docs.google.com/document/d/1HE8r8nmJBHRrtbE6YrNfK00Ztkev44-dNk-Rm6MP92U/edit">Edit the google doc for this section</a>
+
+
+    <div>
+      <h2 id="#kr-considerations">4 Knowledge Representation Core Considerations</h2>
+    </div>
+    
+    <a target="_blank" target="https://docs.google.com/document/d/14saXL4qhusPHxxN1Aymc5z_u7vH3j3V-YF9TKNjRxLQ/edit">Edit the google doc for this section</a>
+
+  <!--   <h2 id="scope">2 Scope</h2> -->
+
+  <!--   <h2 id="conventions">3 Conventions</h2> -->
+
+  <!--   <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [<a href="#RFC2119">RFC2119</a>].</p> -->
+
+  <!--   <p>RDF data in this document are expressed in Turtle [<a href="#TURTLE">TURTLE</a>]. Queries on this data are expressed in SPARQL [<a href="#SPARQL">SPARQL</a>]. The following namespace prefix bindings are assumed unless otherwise stated:</p> -->
+  <!--   <div style="text-align: center;"> -->
+  <!--     <table class="theList"> -->
+  <!-- 	<tr><th>Prefix</th>				<th>URI</th>	  <th>Description</th></tr> -->
+  <!-- 	<tr><td><code>cito:</code></td>			<td><code>http://purl.org/spar/cito/</code></td>	<td><a href="http://purl.org/spar/cito/">Citation Typing Ontology</a></td></tr> -->
+  <!-- 	<tr><td><code>dcat:</code></td>			<td><code>http://www.w3.org/ns/dcat#</code></td>	<td><a href="http://www.w3.org/TR/vocab-dcat/">Data Catalog</a></td></tr> -->
+  <!-- 	<tr><td><code>dctypes:</code></td>		<td><code>http://purl.org/dc/dcmitype/</code></td>	<td><a href="http://purl.org/dc/dcmitype/">Dublin Core Metadata Types</a></td></tr> -->
+  <!-- 	<tr><td><code>dct:</code></td>			<td><code>http://purl.org/dc/terms/</code></td>	<td><a href="http://purl.org/dc/terms/">Dublin Core Metadata Terms</a></td></tr> -->
+  <!-- 	<tr><td><code>foaf:</code></td>			<td><code>http://xmlns.com/foaf/0.1/</code></td>	<td><a href="http://xmlns.com/foaf/0.1/">Friend-of-a-Friend</a></td></tr> -->
+  <!-- 	<tr><td><code>freq:</code></td>			<td><code>http://purl.org/cld/freq/</code></td>	<td><a href="http://dublincore.org/groups/collections/frequency/">Collection Description Frequency Vocabulary</a></td></tr> -->
+  <!-- 	<tr><td><code>idot:</code></td>			<td><code>http://identifiers.org/idot/</code></td>	<td><a href="http://identifiers.org/idot/">Identifiers.org vocabulary</a></td></tr> -->
+  <!-- 	<tr><td><code>lexvo:</code></td>		<td><code>http://lexvo.org/ontology#</code></td>	<td><a href="http://www.lexvo.org/">Lexical Vocabulary</a></td></tr> -->
+  <!-- 	<tr><td><code>pav:</code></td>			<td><code>http://purl.org/pav/</code></td>	<td><a href="https://code.google.com/p/pav-ontology/wiki/Homepage">Provenance Authoring and Versioning ontology</a></td></tr> -->
+  <!-- 	<tr><td><code>prov:</code></td>			<td><code>http://www.w3.org/ns/prov#</code></td>	<td><a href="http://www.w3.org/TR/prov-o/">PROV Ontology</a></td></tr> -->
+  <!-- 	<tr><td><code>rdf:</code></td>			<td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td>	<td><a href="http://www.w3.org/TR/REC-rdf-syntax/">RDF Syntax</a></td></tr> -->
+  <!-- 	<tr><td><code>rdfs:</code></td>			<td><code>http://www.w3.org/2000/01/rdf-schema#</code></td>	<td><a href="http://www.w3.org/TR/rdf-schema/">RDF Schema</a></td></tr> -->
+  <!-- 	<tr><td><code>schemaorg:</code></td>		<td><code>http://schema.org/</code></td>		<td><a href="http://schema.org/">schema.org vocabulary</a></td></tr> -->
+  <!-- 	<tr><td><code>sd:</code></td>			<td><code>http://www.w3.org/ns/sparql-service-description#</code></td>	<td><a href="http://www.w3.org/TR/sparql11-service-description/">SPARQL 1.1 Service Description</a></td></tr> -->
+  <!-- 	<tr><td><code>sio:</code></td>		<td><code>http://semanticscience.org/resource/</code></td>		<td><a href="http://sio.semanticscience.org/">Semanticscience Integrated Ontology (SIO)</a></td></tr> -->
+  <!-- 	<tr><td><code>void:</code></td>			<td><code>http://rdfs.org/ns/void#</code></td>	<td><a href="http://www.w3.org/TR/void/">Describing Linked Datasets with the VoID Vocabulary</a></td></tr> -->
+  <!-- 	<tr><td><code>void-ext:</code></td>			<td><code>http://ldf.fi/void-ext#</code></td>	<td><a href="http://ldf.fi/void-ext">Extensions to the Vocabulary of Interlinked Datasets (VoID)</a></td></tr> -->
+  <!-- 	<tr><td><code>xsd:</code></td>			<td><code>http://www.w3.org/2001/XMLSchema#</code></td>	<td><a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema</a></td></tr> -->
+
+  <!-- 	</table> -->
+  <!--   </div> -->
+
+  <!--   <p>The character sequence "###" is used to denote a placeholder for a positive integer (&ge; 1) in examples. The integers that replace this surrogate are of type <a href="http://www.w3.org/TR/xmlschema11-2/#integer">xsd:integer</a>.</p> -->
+  <!--    <h2 id="NormativeParts">3.1 Normative Parts</h2> -->
+  <!-- <div> -->
+  <!--   <h2 id="DDIUseCases">4 DDI Use Cases</h2> -->
+  <!--   <h3 id="s4_1">4.1 Use Case - 1</h3> -->
+  <!--   <h3 id="s4_2">4.2 Use Case - 2</h3>   -->
+  <!-- </div> -->
+  
+  <!--   <h2 id="DDIKeyChallenges">5 DDI Key Challenges</h2> -->
+
+  <!--   <h2 id="DDIEvidenceReporting">6 DDI Evidence Reporting  </h2> -->
 
     
-    <h2 id="DDIInformationModel">7 DDI Information Model</h2>
-    <h2 id="DDILinks">8 DDI Links</h2>
+  <!--   <h2 id="DDIInformationModel">7 DDI Information Model</h2> -->
+  <!--   <h2 id="DDILinks">8 DDI Links</h2> -->
     <h2 id="acknowledgements">10 Acknowledgements</h2>
     <h2 id="references">11 References</h2>
 
