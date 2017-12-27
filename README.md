@@ -31,11 +31,11 @@ standard like HL7. These include the following activities:
 
 - Create deliverables using an interesting and non-trivial set of potential drug-drug interactions:
 
--- Data Model: A data model (schema) for potential drug interaction knowledge and evidence
+   -- Data Model: A data model (schema) for potential drug interaction knowledge and evidence
 
--- Vocabulary: A precise vocabulary describing/defining the data model
+   -- Vocabulary: A precise vocabulary describing/defining the data model
 
--- Serializations: one or more serialization formats of the abstract
+   -- Serializations: one or more serialization formats of the abstract
    data model, such as Structured Product Labeling (HL7 CDA),
    JSON/JSON-LD)
 
