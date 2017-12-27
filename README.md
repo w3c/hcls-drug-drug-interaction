@@ -36,8 +36,8 @@ standard like HL7. These include the following activities:
    -- Vocabulary: A precise vocabulary describing/defining the data model
 
    -- Serializations: one or more serialization formats of the abstract
-   data model, such as Structured Product Labeling (HL7 CDA),
-   JSON/JSON-LD)
+   data model, such as XML, JSON/JSON-LD, Structured Product Labeling (HL7 CDA),
+   
 
 - Demonstration of how the minimum information model can support medication reconciliation 
 
