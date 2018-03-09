@@ -1,9 +1,8 @@
 # w3c-ddi
 W3C HCLS Drug-Drug Interaction
 
-A repository to store artifacts created for the Interest Group Note
-titled "A Minimum Representation of Potential Drug-Drug Interaction
-Knowledge and Evidence"
+A repository to store artifacts created for the W3C Semantic Web in Health Care and Life Sciences Community Group Note
+titled "A Minimum Representation of Potential Drug-Drug Interaction Knowledge and Evidence - Primer and Best Practices"
 
 ## Folder layout:
 
