@@ -8,7 +8,8 @@
      class='remove'></script>
     <script class='remove'>
       var respecConfig = {
-        specStatus: "ED",
+        specStatus: "CG-DRAFT",
+        edDraftURI: "https://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/w3c-ddi/index.html",
         editors: [
             {
                 name: "Richard D. Boyce",
@@ -101,7 +102,10 @@
                 company: "Ohio University, USA"
             }],
         github: "https://github.com/W3C-HCLS/w3c-ddi",
-        shortName: "MPIO"
+      shortName: "MPIO",
+      wg: "Semantic Web in Health Care and Life Sciences Community Group",
+      wgPublicList: "public-hclscg",
+      wgURI: "https://www.w3.org/community/hclscg/"
       };
     </script>
       <style>
@@ -119,27 +123,10 @@
       </p>
     </section>
     <section id='sotd'>
-        <p>
-          This Note was produced by the <a href="http://www.w3.org/2001/sw/hcls/">Semantic Web in Health Care and Life Sciences Interest Group</a> as
-            (part of the <a href="https://sites.google.com/site/ddikrandir/home/ddi_info_model_taskforce">Data Activity</a>)
-            to build a meta-data standard for potential drug-drug interactions (PDDIs)
-            that can meet the information needs of pharmacists and clinicians working in different care settings.
-            The (<a href="http://lists.w3.org/Archives/Public/public-semweb-lifesci/">archived</a>) public mailing list <a href="mailto:public-semweb-lifesci@w3.org">public-semweb-lifesci@w3.org</a>
-            (see <a href="http://www.w3.org/Mail/Request">instructions</a>) is preferred
-            for discussion of this document. As of the time of publication no further work on this document is scheduled;
-            however, submitted comments will be retained for future consideration.
+      This draft is currently open for editing suggestions by all interested stakeholders.
         </p>
         <p>
-          Publication as an Interest Group Note does not imply endorsement by the W3C Membership.
-            This is a draft document and may be updated, replaced or obsoleted by other documents at any time.
-            It is inappropriate to cite this document as other than work in progress.
-        </p>
-        <p>
-          The disclosure obligations of the Participants of this group are described in the
-            <a href="http://www.w3.org/2011/09/HCLSIGCharter.html">charter</a>.
-        </p>
-        <p>
-          This document is governed by the <a href="http://www.w3.org/2014/Process-20140801/">xyz</a>.
+          This document is governed by the <a href="https://www.w3.org/community/reports/reqs/">W3C  requirements of the Community and Business Group Process related to deliverables</a>.
         </p>
     </section>
     <section>
@@ -403,42 +390,42 @@
                 iteratively refined until arriving at a consensus definition. More details about the definition development
                 process are written in Workflow for arriving at user-centered definitions. The final definition creation
                 documents are available for download from the project’s GitHub code repository
-                (<a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">
+                (<a target="new" href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">
                 https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>). The final definitions are
                 listed below in alphabetical order:
             </p>
             <ul>
-                <li><strong>Clinical Consequences (<a href="http://purl.obolibrary.org/obo/MPIO_0000002">http://purl.obolibrary.org/obo/MPIO_0000002</a>):</strong>
+                <li><strong>Clinical Consequences (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000002">http://purl.obolibrary.org/obo/MPIO_0000002</a>):</strong>
                     Changes in patient health status from baseline that can be observed or measured by a
                     clinician or reported by a patient.</li>
                 <li><strong>Contextual information/modifying factors
-                    (<a href="http://purl.obolibrary.org/obo/MPIO_0000000">http://purl.obolibrary.org/obo/MPIO_0000000</a>):</strong>
+                    (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000000">http://purl.obolibrary.org/obo/MPIO_0000000</a>):</strong>
                     Factors such as patient age, patient health conditions, route of administration, product formulation,
                     or concurrent medications that might alter the risk of a drug-drug interaction clinical consequence or its seriousness. </li>
-                <li><strong>Evidence for a Suspected Drug-Drug Interaction (<a href="http://purl.obolibrary.org/obo/MPIO_0000004">http://purl.obolibrary.org/obo/MPIO_0000004</a>):</strong>
+                <li><strong>Evidence for a Suspected Drug-Drug Interaction (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000004">http://purl.obolibrary.org/obo/MPIO_0000004</a>):</strong>
                     The support for or refutation of a drug-drug interaction in humans, potentially including data resulting
                     from clinical studies, clinical observation, physiological experiments, or it may be an extrapolation based
                     on drug-drug interaction mechanisms.</li>
-                <li><strong>Mechanism of Interaction (<a href="http://purl.obolibrary.org/obo/MPIO_0000005">http://purl.obolibrary.org/obo/MPIO_0000005</a>):</strong>
+                <li><strong>Mechanism of Interaction (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000005">http://purl.obolibrary.org/obo/MPIO_0000005</a>):</strong>
                     The process(es) by which a drug-drug interaction with clinical consequence occurs.</li>
-                <li><strong>Frequency of Exposure to the PDDI (<a href="http://purl.obolibrary.org/obo/MPIO_0000007">http://purl.obolibrary.org/obo/MPIO_0000007</a>):</strong>
+                <li><strong>Frequency of Exposure to the PDDI (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000007">http://purl.obolibrary.org/obo/MPIO_0000007</a>):</strong>
                     The number of individuals within a cohort that are exposed to a drug-drug interaction over a specified time
                     period divided by the total number of patients in the cohort.</li>
-                <li><strong>Frequency of Harm for persons who have been exposed to the PDDI (<a href="http://purl.obolibrary.org/obo/MPIO_0000006">http://purl.obolibrary.org/obo/MPIO_0000006</a> ):</strong>
+                <li><strong>Frequency of Harm for persons who have been exposed to the PDDI (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000006">http://purl.obolibrary.org/obo/MPIO_0000006</a> ):</strong>
                     The number of individuals within a cohort that experience a clinical consequence of a drug-drug interaction clinical consequence divided by
                     the total number of patients co-exposed to the drugs involved.</li>
-                <li><strong>Recommended Action (<a href="http://purl.obolibrary.org/obo/MPIO_0000008">http://purl.obolibrary.org/obo/MPIO_0000008</a>):</strong>
+                <li><strong>Recommended Action (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000008">http://purl.obolibrary.org/obo/MPIO_0000008</a>):</strong>
                     An evidence-based strategy to mitigate the potential clinical consequences of a drug-drug interaction; e.g., <em>use only if benefit outweighs risk,
                         assess risk and take action if necessary, no special precautions.</em></li>
-                <li><strong>Seriousness (<a href="http://purl.obolibrary.org/obo/MPIO_0000009">http://purl.obolibrary.org/obo/MPIO_0000009</a>):</strong>
+                <li><strong>Seriousness (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000009">http://purl.obolibrary.org/obo/MPIO_0000009</a>):</strong>
                     The degree to which a drug-drug interaction clinical consequence may result in harm and that will determine the type and speed
                     of clinician intervention.</li>
-                <li><strong>Severity (<a href="http://purl.obolibrary.org/obo/MPIO_0000010">http://purl.obolibrary.org/obo/MPIO_0000010</a>):</strong>
+                <li><strong>Severity (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000010">http://purl.obolibrary.org/obo/MPIO_0000010</a>):</strong>
                     The intensity of a drug-drug interaction clinical consequence.</li>
             </ul>
             <p>
                 The interested reader can review details on each user centered definition in the aforementioned definition documents
-                downloadable from GitHub (<a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>).
+                downloadable from GitHub (<a target="new" href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>).
                 In the interest of space, we provide here only a limited discussion of the definitions in the form of two example
                 PDDIs. These two are chosen from the set of 14 exemplar potential drug-drug interactions for which the Task Force
                 force developed comprehensive decision trees (see <a href="#decision-trees">Appendix DECISION TREES: Sample Decision Trees</a>).
