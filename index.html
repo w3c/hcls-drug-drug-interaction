@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>A Minimum Representation of Potential Drug-Drug Interaction Knowledge and Evidence - Primer and Best Practices</title>
+    <title>A Minimum Representation of Potential Drug-Drug Interaction Knowledge and Evidence - Technical and User-centered Foundation</title>
     <script 
       src='https://www.w3.org/Tools/respec/respec-w3c-common' 
       class='remove'>
@@ -850,38 +850,64 @@
       experts generate summaries of PDDI evidence from primary sources. These summaries bring PDDI knowledge to clinicians
       in the form of published drug information compendia, clinical decision support rules, and interaction checking applications.
       <strong>However, there are currently no broadly accepted standards to guide these experts in the organization and presentation of PDDI
-        information that would be most effective for clinical decision support.</strong></p>
+        information that would be most effective for clinical decision support.</strong>
+    </p>
 
-    <p><a href="#PDDI-MI-APPLICATIONS"></a> provides an overview of the role envisioned for a PDDI minimal information model.
+    <p><a href="#PDDI-MI-APPLICATIONS"></a> provides an overview of the roles envisioned for a PDDI minimal information model.
       Drug experts would generate summaries of PDDI evidence from primary sources using the information elements from the
       PDDI minimal information model. The information elements would cover the minimum set of information required for the
       effective clinical management of PDDI exposure. The resulting common representation of PDDI summaries would facilitate
       curation and information exchange. Downstream applications would process these representations into forms amenable for
-      clinical decision support, drug product label enhancement, cohort identification, and other pharmacovigilance activities.</p>
-
-    <p>To achieve these goals, the minimal information model MUST be flexible and computable. Representations in commonly-used
-      formats (JSON,XML/RDF ,etc.) will support ease of construction and parsing of models, particularly through shared libraries
-      and APIs. Where possible, model elements should draw upon accepted biomedical taxonomies and ontologies to represent medications,
-      diagnoses, and descriptions of potential adverse reactions.  Preferring the use of ontologies over free-text descriptions will
-      reduce ambiguity associated with free-text, thus supporting comparison and computational analyses.</p>
+      clinical decision support, drug product label enhancement, cohort identification, and other pharmacovigilance activities. To achieve the envisioned roles, the minimal information model must be flexible and computable. Where possible, model elements should draw upon accepted biomedical taxonomies and ontologies to represent medications, diagnoses, and descriptions of potential adverse reactions. Preferring the use of ontologies over free-text descriptions will reduce ambiguity associated with free-text, thus supporting comparison and computational analyses. Representations in commonly-used formats (JSON,XML/RDF ,etc.) will support ease of construction and parsing of models, particularly through shared libraries and APIs. .
+      </p>
 
     <figure id="PDDI-MI-APPLICATIONS">
       <img src="Presentations/images/info-model-value-proposition.png">
       <figcaption>An overview of the role envisioned for a PDDI minimal information model. </figcaption>
     </figure>
+
+    <p>The purpose of this Community Group Note is to provide a
+      technical and user-centered foundation for for a minimum
+      information model for PDDI information. The principle
+      contributions include:
+      <ol>
+	      
+	<li>definitions for the model's core information items,
+	  examples of using the definitions to represent two PDDIs,
+	  and a set of additional PDDIs selected as case studies for
+	  future work on the information model;</li>
+	<li>clarification on the intended users of the information model
+	  along with use cases and specific information needs; and</li>
+	<li>a statement on the appropriate scope of knowledge representation
+	  for the information model.</li>
+      </ol>
+      
+      The following section discuss each of these contributions. Then
+      follows a discussion of specific demonstrations that are the
+      subject of future work.
+    </p>
+
+    
   </section>
 </section>
 <section id="user-centered-def">
-  <h2>Minimum information model definitions</h2>
+  <h2>Definitions for the Core Information Items of the Minimum Information Model</h2>
   <p>
-    The Task Force force participants finalized user-centered definitions for a total nine core information items (see <a href="#definition-dev-workflow"></a>).
-    The core information item <i>drugs involved</i> was considered non-ambiguous and was not included in the user-centered definition development process. Each user-centered definition was created by first creating a document with one or more candidate definitions
-    along with supporting background information and examples. The documents were reviewed by the task force and
-    iteratively refined until arriving at a consensus definition. The final definition creation
-    documents are available for download from the project’s GitHub code repository
-    (<a target="new" href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">
-      https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>). The definitions are
-    listed below in alphabetical order:
+    The Task Force force participants finalized user-centered
+    definitions for a total nine core information items
+    (see <a href="#definition-dev-workflow"></a>).  An additional core
+    information item <i>drugs involved</i> was considered
+    non-ambiguous and was not included in the user-centered definition
+    development process. Each user-centered definition was developed by
+    first creating a document with one or more candidate definitions
+    along with supporting background information and examples. The
+    documents were reviewed by the task force and iteratively refined
+    until arriving at a consensus definition. The final definition
+    creation documents are available for download from the project’s
+    GitHub code repository (<a target="new"
+    href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">
+    https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>). The
+    definitions are listed below in alphabetical order:
   </p>
   <ul>
     <li><dfn>Clinical Consequences</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000002">http://purl.obolibrary.org/obo/MPIO_0000002</a>):
@@ -906,7 +932,7 @@
       An evidence-based strategy to mitigate the potential clinical consequences of a drug-drug interaction; e.g., <em>use only if benefit outweighs risk,
         assess risk and take action if necessary, no special precautions.</em></li>
     <li> <dfn>Seriousness</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000009">http://purl.obolibrary.org/obo/MPIO_0000009</a>):
-      The degree to which a drug-drug interaction clinical consequence may result in harm and that will determine the type and speed
+      The degree to which a drug-drug interaction clinical consequence may result in harm thereby determining the type and speed
       of clinician intervention.</li>
     <li><dfn>Severity</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000010">http://purl.obolibrary.org/obo/MPIO_0000010</a>):
       The intensity of a drug-drug interaction clinical consequence.</li>
@@ -1498,14 +1524,134 @@
     </section>
   </section>
 </section>
+
+<section id="KR-discussion">
+  <h2>Setting the Knowledge Representation Scope</h2>
+
+The wide range of potential use cases for the information model
+require flexibility in certain aspects of the knowledge
+representation. Moreover, the number of pre-existing ontologies relevant to this
+domain clearly demonstrates the richness of the domain
+[[HERRERO-ZAZO-INTERACTIONS]]. To keep the minimum information model
+lean and ensure its maintainability and usability, it was necessary to
+develop a clear scope for the knowledge representation including
+issues such as:
+
+<ul>
+  <li> How should terms related to the core information items
+  (see <a href="#user-centered-def"></a>) be modelled?</li>
+
+  <li>What is the role of an upper ontology?</li>
+  
+  <li>What is the relationship between  the core information items and other existing ontologies?</li>
+
+  <li>Should terms from other resources, such as medical terminologies, be reused?</li>
+
+</ul>
+
+The following list provides the strategies accepted by the PDDI Task
+Force (see <a href="#kr-process-apdx"></a>) based on recommendations
+from a sub-team of domain experts, biomedical informatics specialists,
+and knowledge representation experts:
+
+<ol>
+  <li>The task force has developed an open source ontology called the
+      Minimum PDDI Information Ontology
+      (<a href="https://github.com/MPIO-Developers/MPIO"
+      target="new">MPIO</a>) for the core information items relevant
+      to the PDDI domain (see
+      Section <a href="#user-centered-def"></a>). The ontology is
+      limited in its semantic richness by design, but remains
+      compatible with semantically rich models such as <a target="new"
+      href="http://purl.obolibrary.org/obo/dideo.owl"> DIDEO</a>
+      and <a target="new"
+      href="http://purl.obolibrary.org/obo/dinto.owl">DINTO</a>. The
+      minimal semantic richness of MPIO is motivated by the Task
+      Force's domain analysis and resulting uses cases (see
+      Section <a href="#justification"></a>).
+  </li>
+  <li> The MPIO is written in
+      the <a href="http://www.w3.org/TR/owl2-primer/">Web Ontology
+      Language (OWL 2)</a> [[owl2-overview]]. The individual classes
+      in the MPIO are sub-classes of classes provided by
+      the <a href="https://github.com/bfo-ontology/BFO/wiki"> Basic
+      Formal Ontology (BFO)</a> upper ontology. This enables
+      integration with numerous other ontologies written in OWL 2 that
+      use the same upper ontology. This approach fosters integration
+      with a number of existing formal ontology efforts including
+      DIDEO, DINTO, <a href="http://obi-ontology.org/"
+      target="new">Ontology for Biomedical Investigations</a>, and
+      the <a href="http://www.oae-ontology.org/"> Ontology of Adverse
+      Events</a>.
+  </li>
+  <li>The core PDDI information items in the MPIO are
+       all <a href="http://purl.obolibrary.org/obo/IAO_0000030">information
+       content entities</a>. This approach is chosen because
+       information in the PDDI domain can often be speculative or
+       hypothetical and so its important to distinguish between a
+       description of a thing and the thing itself. Information
+       content entities support this type of description and avoid
+       the <a href="https://en.wikipedia.org/wiki/Existential_fallacy">
+       existential fallacy</a>.
+  </li>
+  <li>One effect of defining the core PDDI information items as
+      information content entities is that the OWL 2 entities do not
+      refer to the actual material entities or processes. Rather, all
+      properties of the core information items are terminological in
+      nature and refer to relations between the term and other
+      terms. For example, the core term <a>Mechanism of
+      Interaction</a> does not represent an entity that has
+      participants or is preceded by another biological process. Those
+      would be properties of material processes that are the actual
+      realized mechanisms of the interaction. The MPIO
+      term <a>Mechanism of Interaction</a> is an information
+      content entity provides information about those material
+      processes. It is up to other ontologies, such as DIDEO or DINTO,
+      to provide a detailed representation of the underlying
+      biomedical processes, qualities, and material entities.  These
+      representations will be complementary to the core information
+      items in MPIO.
+  </li>
+  <li>An important requirement of the PDDI minimum information model
+      is that it allow for integration of terms from existing
+      biomedical terminologies such as ICD-10, SNOMED-CT, RxNorm, and
+      LOINC. This presents a challenge since relevant terminologies
+      can come with different levels of semantic richness,
+      methodological rigor, and semantic commitments. While it is
+      highly unlikely that it would be possible to unify all external
+      terms semantically at an upper level with the core PDDI
+      information items (see
+      Section <a href="#user-centered-def"></a>), terms for which a
+      human understandable, non-circular, definition exist, MAY be
+      re-used in the MPIO. Re-use SHALL be accomplished by
+      representing an information content entity about the object
+      referenced by the term. For example, the diagnosis referred to
+      by a diagnostic code from ICD 10 would be reused in the MPIO by
+      representing an information content entity corresponding to the
+      ICD 10 code.
+  </li>
+</ol>  
+  
+</section>
+
 <section>
   <h2>Discussion</h2>
   <p>
-    The information provided in this Community Group Note provides a strong basis for design and implementation activities for the PDDI
-    minimum information model. More than a dozen PDDIs are now represented using detailed decision trees (see <a href="#decision-trees"></a>). The Task Force will represent all of these decision trees using the minimum information model. Three medication reconciliation use cases (see Appendix MEDREC)
-    include mention of PDDIs for which the Task Force has developed decision trees. Combined, these artifacts provide a concrete
-    focal point that will be useful for demonstrating how serializations of PDDIs written in the PDDI minimum information data
-    model will support clinical tasks. While the a reference implementation of the information model and specific demonstrations are the subject of future work, the next sub-sections provide an overview of potential applications.
+    The information provided in this Community Group Note provides a
+    strong basis for design and implementation activities for the PDDI
+    minimum information model. More than a dozen PDDIs are now
+    represented using detailed decision trees
+    (see <a href="#decision-trees"></a>). The Task Force will
+    represent all of these decision trees using the minimum
+    information model. Three medication reconciliation use cases (see
+    Appendix MEDREC) include mention of PDDIs for which the Task Force
+    has developed decision trees. Combined, these artifacts provide a
+    concrete focal point that will be useful for demonstrating how
+    serializations of PDDIs written in the PDDI minimum information
+    data model will support clinical tasks. While the a reference
+    implementation of the information model and specific
+    demonstrations are the subject of future work, the next
+    sub-sections provide an overview of potential applications.
   </p>
 
   <section>
@@ -1627,7 +1773,13 @@
 <section>
   <h2>Conclusion</h2>
   <p>
-    This Community Group Note provides motivation and a detailed domain for a minimum information model for PDDI information.The user stories (see <a href="#final-stories"></a>) and information needs (see <a href="#all-user-information-needs"></a>) that the Task Force identified will guide the scope and implementation of artifacts to demonstrate the minimum information model. 
+    This Community Group Note provides motivation and a detailed
+    domain analysis for a minimum information model for PDDI
+    information. The user stories (see <a href="#final-stories"></a>)
+    and information needs
+    (see <a href="#all-user-information-needs"></a>) that the Task
+    Force identified will guide the scope and implementation of
+    artifacts to demonstrate the minimum information model.
   </p>
 
 </section>
@@ -1679,7 +1831,7 @@
         information model should be used when facing known issues with PDDI evidence and knowledge. Toward that
         aim, participants were requested to provide suggestions of PDDIs meeting at least one or more of the
         following criteria which follow from the aforementioned information categories suggested by attendees
-        of the multi-stakeholder conference meetings/series mentioned in section “Model Overview”:
+        of the multi-stakeholder conference meetings/series mentioned in Section <a href="#justification"></a>:
       </p>
       <ol type="A">
         <li>The interaction could (and should) be contextualized for specific patients or clinical circumstances.</li>
@@ -1699,7 +1851,193 @@
         <li>The recommended action is “a clear alternative drug and dose”.</li>
       </ol>
     </section>
-    <section id="user-story-workflow">
+    <section id="decision-trees">
+    <h2>Decision Trees Created for the Minimum Information Model Domain Analysis</h2>
+    <p>The Task Force force developed 14 PDDI decision trees to be used for demonstrating the minimum information model.
+      The PDDI decision trees cover 15 different situations identified by the Task Force force as potentially
+      affecting the search and synthesies of PDDI information. The potential interactions and the information
+      situations they were selected for are listed in <em>Table 1</em>.</p>
+
+    <p><strong><em>Table 1</em></strong></p>
+    <table>
+      <tr>
+        <th width="200">Exemplar potential drug-drug interactions</th>
+        <th width="150">Drug or Drug Class 1</th>
+        <th width="150">Drug or Drug Class 2</th>
+        <th width="300">Explanation/Justification</th>
+      </tr>
+      <tr>
+        <td rowspan="2">Can (and should) be contextualized for specific patients or clinical circumstances</td>
+        <td>Tamoxifen</td>
+        <td>Paroxetine</td>
+        <td>Patients with extensive CYP2D6 status on paroxetine will derive no benefit from tamoxifen. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project github</a>).
+	</td>
+      </tr>
+      <tr>
+        <td>Potassium (KCL)</td>
+        <td>Potassium-sparing Diuretics</td>
+        <td>Combination has known patient-specific risk factors. <strong><font color="red">(Status: Completed on iDIA project -- need permission before releasing to this project's github)</font></strong></td>
+      </tr>
+      <tr>
+        <td>Applies at the class level</td>
+        <td>Monoamine Oxidase Inhibitors (MAOIs)</td>
+        <td>Indirect Sympathomimetics</td>
+        <td>A class interaction involving all drugs in the class. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project github</a>).</td>
+      </tr>
+      <tr>
+        <td>Does not apply at the class level</td>
+        <td>Tyrosine Kinase Inhibitors</td>
+        <td>Proton Pump Inhibitors</td>
+        <td>Not all Kinase inhibitors have pH dependent absorption. Imatinib, nilotinib, dasatinib, bosutinib, and ponatinib are BCR‐ABL tyrosine kinase inhibitors. Imatinib and ponatinib do not have a significant interaction due to pH dependent absorption with proton pump inhibitors, whereas nilotinib, dasatinib, and bosutinib do (Lexi‐comp and Micromedex). (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project github</a>).</td>
+      </tr>
+      <tr>
+        <td rowspan="2">The mechanism is known and is pharmacokinetic</td>
+        <td>Warfarin</td>
+        <td>CYP2C9 Inhibitors (ie. Bactrim)</td>
+        <td>A CYP-mediated pharmacokinetic interaction. <strong><font color="red">(Status: In Process)</font></strong></td>
+      </tr>
+      <tr>
+        <td>Digoxin</td>
+        <td>Cyclosporin</td>
+        <td>A transport protein (p-glycoprotein) mediated interaction. <strong><font color="red">(Status: In Process)</font></strong></td>
+      </tr>
+      <tr>
+        <td>The mechanism is known and is pharmacodynamic</td>
+        <td>Epinephrine</td>
+        <td>Beta-Blockers</td>
+        <td>The interaction is different differentiates between selective and non-selective beta blockers. The clinical outcome is a; hypertensive crisis. <strong><font color="red">(Status: Completed on iDIA project -- need permission before releasing to this project's github)</font></strong></td>
+      </tr>
+      <tr>
+        <td>The mechanism is not well elucidated/known</td>
+        <td>Warfarin</td>
+        <td>Ifosfamide/Etoposide</td>
+        <td>Drugs for treating cancers of the blood drugs. - Clinical effect is INR change buts no mention of what mechanism could be found. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project github</a>).</td>
+      </tr>
+      <tr>
+        <td rowspan="2">The evidence supporting the interaction is strong</td>
+        <td>Epinephrine</td>
+        <td>Beta-Blockers</td>
+        <td>Widely known interaction with considerable available evidence. <strong><font color="red">(Status: Completed on iDIA project -- need permission before releasing to this project's github)</font></strong></td>
+      </tr>
+      <tr>
+        <td>Simvastatin, Atorvastatin, Lovastatin</td>
+        <td>Clarithromycin</td>
+        <td>Widely known interaction with considerable available evidence. <strong><font color="red">(Status: In Process)</font></strong></td>
+      </tr>
+      <tr>
+        <td>The evidence supporting the interaction is weak</td>
+        <td>Warfarin</td>
+        <td>Antibiotics that don't inhibit CYP2C9</td>
+        <td>Hard to find evidence for the interaction. <strong><font color="red">(Status: In Process)</font></strong></td>
+      </tr>
+      <tr>
+        <td>The frequency of exposure data is available</td>
+        <td>Warfarin</td>
+        <td>Non-steroidal anti-inflammatory drugsNSAIDs</td>
+        <td>Paper by Malone et al. - National sample. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project github</a>).</td>
+      </tr>
+      <tr>
+        <td>The frequency of exposure data is not available</td>
+        <td>Simvastatin</td>
+        <td>Fluconazole</td>
+        <td>Based on literature search. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project github</a>).</td>
+      </tr>
+      <tr>
+        <td>The frequency of adverse event data is available</td>
+        <td>Spironolactone</td>
+        <td>Potassium supplements</td>
+        <td>Associated with Risk of hospitalization. <strong><font color="red">(Status: Completed on iDIA project (KCL and K-sparing diuretics) -- need permission before releasing to this project's github)</font></strong></td>
+      </tr>
+      <tr>
+        <td>The frequency of adverse event data is not available</td>
+        <td>Simvastatin</td>
+        <td>Fluconazole</td>
+        <td>Literature search did not find frequency of adverse event data. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project github</a>).</td>
+      </tr>
+      <tr>
+        <td>The recommended action is “monitor” or “take note”</td>
+        <td>Potassium (KCL)</td>
+        <td>Potassium-sparing Diuretics</td>
+        <td>See explanation above. <strong><font color="red">(Status: Completed on iDIA project -- need permission before releasing to this project's github)</font></strong></td>
+      </tr>
+      <tr>
+        <td>The recommended action is “avoid”</td>
+        <td>Monoamine Oxidase Inhibitors (MAOIs)</td>
+        <td>Indirect Sympathomimetics</td>
+        <td>See explanation above. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project github</a>).</td>
+      </tr>
+      <tr>
+        <td>The recommended action is a clear alternative drug and dose</td>
+        <td>Simvastatin</td>
+        <td>Amiodarone</td>
+        <td><a href="http://www.fda.gov/Drugs/DrugSafety/ucm283137.htm">http://www.fda.gov/Drugs/DrugSafety/ucm283137.htm</a> (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project github</a>).</td>
+      </tr>
+    </table>
+    <section id="warfarin-nsaids-dt">
+      <h2>Example PDDI - Warfarin + NSAIDs (Draft)</h2>
+      <p style="text-align: center"><strong>NIH Project:  R21-HS023826-01; Title:  Individualized Drug Interaction
+          Alerts; Authors: Daniel C. Malone, University of Arizona; John Horn, Philip Hansten,
+          University of Washington</strong></p>
+      <p>
+        Non-steroidal anti-inflammatory drugs (NSAIDs) have antiplatelet effects which
+        increase the bleeding risk when combined with oral anticoagulants such as warfarin.
+        The antiplatelet effect of NSAIDs lasts only as long as the NSAID is present in the
+        circulation, unlike aspirin’s antiplatelet effect, which lasts for up to 2 weeks
+        after aspirin is discontinued. NSAIDs also can cause peptic ulcers and most of the
+        evidence for increased bleeding risk with NSAIDs plus warfarin is due to upper
+        gastrointestinal bleeding (UGIB).
+      </p>
+      <figure id="Warfarin-NSAID-TREE">
+        <img src="W3C-Images/Warfarin-NSAID-TREE.png">
+        <figcaption> <span style="color: #30d529">¢</span> = No special precautions.
+          <span style="color: #f9bd3b">n</span> = Assess risk and take action if necessary.
+          <span style="color: #fb0082">u</span> = Use only if benefit outweighs risk <br>
+          <p style="text-align: left"><strong>Footnotes:</strong></p>
+          <ol type="1">
+            <li style="text-align: left">Topical diclofenac has relatively low systemic absorption; in one study a topical gel (16 g/day) produced about 6% of the absorption seen with systemic administration of 150 mg/day. A higher than recommended dose of topical gel (48 g/day) produced 20% of a systemic dose of diclofenac.</li>
+            <li style="text-align: left">If the NSAID is being used as an analgesic or antipyretic, it would be prudent to use an alternative such as acetaminophen. In some people, acetaminophen can increase the anticoagulant effect of warfarin, so monitor the INR if acetaminophen is used in doses over 2 g/day for a few days. For more severe pain consider short-term opioids in place of the NSAID.</li>
+            <li style="text-align: left">Proton pump inhibitors and misoprostol may reduce the risk of UGIB in patients receiving NSAIDs and warfarin.</li>
+            <li style="text-align: left">Patients with a history of UGIB or peptic ulcer may have an increased risk of UGIB from this interaction. The extent to which older age is an independent risk factor for UGIB due to these interactions is not firmly established, but UGIB in general is known to increase with age.</li>
+            <li style="text-align: left">Both corticosteroids and aldosterone antagonists have been shown to substantially increase the risk of UGIB in patients on NSAIDs, with relative risks of 12.8 and 11 respectively compared to a risk of 4.3 with NSAIDs alone (Masclee et al. Gastroenterology 2014;147:784-92.)</li>
+          </ol>
+        </figcaption>
+      </figure>
+    </section>
+    <section id="BCR-ABL">
+      <h2>Example PDDI - BCR-ABL Tyrosine Kinase Inhibitors (TKI) + Proton Pump Inhibitors (PPI)</h2>
+      <p><strong>NIH Grant: "Addressing gaps in clinically useful evidence on drug-drug interactions" (1R01LM011838-01); ; Authors: Evan Draper, Mayo Clinic; Daniel C. Malone , University of Arizona; John Horn, Philip Hansten, University of Washington</strong></p>
+      <p>
+        BCR-ABL Tyrosine Kinase inhibitors bosutinib, dasatinib, imatinib, nilotinib, and
+        ponatinib are indicated for Philadelphia chromosome-positive chronic myeloid leukemia.
+        Ponatinib is only approved in T315I-positive patients. These TKIs demonstrate pH dependent
+        absorption for oral administration which may result in decreased efficacy when given
+        concomitantly with medications that increase gastric pH.  Dasatinib area under the curve
+        (AUC) is decreased when co-administered with antacids, H2 antagonists, and PPIs.<sup>1</sup> Bosutinib and nilotinib AUCs are decreased with concomitant PPIs but antacids and H2
+        antagonists may be considered if TKI is given 2 hours before the antacid/H2 antagonist.<sup>2,3</sup>
+        However, for nilotinib a retrospective study has shown no difference in cytogenetic response
+        rates for patients taking PPIs.<sup>4</sup>  Imatinib and ponatinib AUCs are not appreciably decreased
+        by PPI co-administration.<sup>5,6</sup>
+      </p>
+      <figure>
+        <img src="W3C-Images/BCR-ABL-tree.png">
+        <figcaption><span style="color: #30d529">¢</span> = No special precautions.
+          <span style="color: #f9bd3b">n</span> = Assess risk and take action if necessary.
+          <span style="color: #fb0082">u</span> = Use only if benefit outweighs risk <br>
+          <p style="text-align: left"><strong>Footnotes:</strong></p>
+          <ol type="1">
+            <li style="text-align: left">Sprycel [package insert]. Princeton, NJ: Bristol-Myers Squibb Company; 2015</li>
+            <li style="text-align: left">Bosulif [package insert]. New York, NY: Pfizer Labs; 2015.</li>
+            <li style="text-align: left">Tasigna [package insert]. East Hanover, NJ: Novartis; 2015.</li>
+            <li style="text-align: left">Yin OQ, Giles FJ, Baccarani M, et al. Concurrent use of proton pump inhibitors or H2 blockers did not adversely affect nilotinib efficacy in patients with chronic myeloid leukemia. Cancer Chemother Pharmacol. 2012;70(2):345-350.</li>
+            <li style="text-align: left">Iclusig [package insert]. Cambridge, MA: ARIAD Pharmaceuticals, Inc. 2016.</li>
+            <li style="text-align: left">Egorin MJ, Shah DD, Christner SM, et al. Effect of a proton pump inhibitor on the pharmacokinetics of imatinib. Br J Clin Pharmacol. 2009;68(3):370-374.</li>
+          </ol>
+        </figcaption>
+      </figure>
+    </section>
+  </section>
+
+        <section id="user-story-workflow">
       <h2>Workflow for arriving at stories and goals</h2>
       <p>
         User stories and goals were developed in order to showcase how the PDDI minimum information model
@@ -1725,12 +2063,13 @@
       </p>
     </section>
 
+    
     <section id="definition-dev-workflow">
       <h2>Workflow for arriving at user-centered definitions</h2>
       <p>
         We used the process shown in <a href="#user-centered-flow"></a> to arrive at user-centered definitions for
         the core information items recommended by the prior drug interaction conference series
-        (see section “Model Overview”). We started with an initial definition of each item based on
+        (see Section <a href="#justification"></a>). We started with an initial definition of each item based on
         suggestions by members of the Task Force force and review of the DINTO (Herrero-Zazo et al. 2015)
         and DIDEO (Brochhausen et al. 2014) ontologies. We then solicited feedback from all Task Force
         force participants using a Qualtrics survey (see <a href="#example-survey"></a> ). The survey asked participants
@@ -1799,220 +2138,7 @@
       <p>Q7<br>Do you have any comments, concerns, or suggestions about the examples and evidence?</p>
     </section>
 
-    <section id="kr-scope">
-      <h2>Setting the scope for knowledge representation</h2>
-      <p>
-        The Task Force force recognized that the wide range of potential use cases for the information model
-        require flexibility in certain aspects of the knowledge representation. The number of pre-existing
-        ontologies relevant to theis PDDI domain of discourse clearly demonstrates that richness of the domain.
-        To keep the minimum information model lean and to ensure its maintainability and usability, it was
-        necessary to develop a clear scope for the knowledge representation including issues such as:
-      </p>
-      <ol type="a">
-        <li>Does the scope of knowledge representation include Do we provide only the terms identified
-          through the Task Force force or does it also include we aim to model terms relevant to those terms?</li>
-        <li>What is the relation to previously developed other, pre-existing ontologies?</li>
-        <li>Will we reuse of terms from other resources such as drug and disease terminologies be allowed?</li>
-        <li>Should term definitions refer to an Do we use an Upper Ontology that provides general terms common
-          across biomedicine (e.g., continuants, occurrents, information artifacts, etc.)?</li>
-      </ol>
-      <p>
-        The answers to these questions were determined through a series of teleconferences bringing together domain
-        experts, biomedical informatics specialists, and knowledge representation experts across the Task Force force.
-        The topics were discussed, arguments for different approaches were laid out and, agreement among the participants
-        was sought. In addition to the conversation during the teleconferences, participants had the opportunity to add
-        comments and voice their opinion to the statements in the document. When the Task Force force arrived at a
-        consolidated version, the group voted by teleconference and through e-mail. The result of that vote is to be
-        regarded the final version of the document and is provided in the results section.
-      </p>
-    </section>
-  </section>
-
-  <section id="decision-trees">
-    <h2>Decision Trees Created for the Minimum Information Model Domain Analysis</h2>
-    <p>The Task Force force developed 14 PDDI decision trees to be used for demonstrating the minimum information model.
-      The PDDI decision trees cover 15 different situations identified by the Task Force force as potentially
-      affecting the search and synthesies of PDDI information. The potential interactions and the information
-      situations they were selected for are listed in <em>Table 1</em>.</p>
-
-    <p><strong><em>Table 1</em></strong></p>
-    <table>
-      <tr>
-        <th width="200">Exemplar potential drug-drug interactions</th>
-        <th width="150">Drug or Drug Class 1</th>
-        <th width="150">Drug or Drug Class 2</th>
-        <th width="300">Explanation/Justification</th>
-      </tr>
-      <tr>
-        <td rowspan="2">Can (and should) be contextualized for specific patients or clinical circumstances</td>
-        <td>Tamoxifen</td>
-        <td>Paroxetine</td>
-        <td>Patients with extensive 2D6 status on paroxetine will derive no benefit from tamoxifen</td>
-      </tr>
-      <tr>
-        <td>Potassium KCL</td>
-        <td>PotassiumK-sparing Diuretics</td>
-        <td>Combination has known patient-specific risk factors</td>
-      </tr>
-      <tr>
-        <td>Applies at the class level</td>
-        <td>Mono-amine Aoxidase inhibitor OI</td>
-        <td>Indirect Sympathomimetics</td>
-        <td>A class interaction involving all drugs in the class</td>
-      </tr>
-      <tr>
-        <td>Does not apply at the class level</td>
-        <td>Tyrosine Kinase Inhibitors</td>
-        <td>Proton Pump Inhibitors</td>
-        <td>Not all Kinase inhibitors have pH dependent absorption. Imatinib, nilotinib, dasatinib, bosutinib, and ponatinib are BCR‐ABL tyrosine kinase inhibitors. Imatinib and ponatinib do not have a significant interaction due to pH dependent absorption with proton pump inhibitors, whereas nilotinib, dasatinib, and bosutinib do (Lexi‐comp and Micromedex).</td>
-      </tr>
-      <tr>
-        <td rowspan="2">The mechanism is known and is pharmacokinetic</td>
-        <td>Warfarin</td>
-        <td>CYP2C9I inhibitors (ie. Bactrim)</td>
-        <td>A CYP-mediated pharmacokinetic interaction</td>
-      </tr>
-      <tr>
-        <td>Ddigoxin</td>
-        <td>Cyclosporin</td>
-        <td>A transport protein (p-glycoprotein) mediated interaction</td>
-      </tr>
-      <tr>
-        <td>The mechanism is known and is pharmacodynamic</td>
-        <td>Epinephrine</td>
-        <td>Beta-Blockers</td>
-        <td>The interaction is different differentiates between selective and non-selective beta blockers. The clinical outcome is a; hypertensive crisis</td>
-      </tr>
-      <tr>
-        <td>The mechanism is not well elucidated/known</td>
-        <td>Warfarin</td>
-        <td>Ifosfamide/Etoposide</td>
-        <td>Drugs for treating cancers of the blood drugs. - Clinical effect is INR change buts no mention of what mechanism could be found.</td>
-      </tr>
-      <tr>
-        <td rowspan="2">The evidence supporting the interaction is strong</td>
-        <td>Epinephrine</td>
-        <td>Beta-Blockers</td>
-        <td>Widely known interaction with considerable available evidence </td>
-      </tr>
-      <tr>
-        <td>Simvastatin, Atorvastatin, Lovastatin</td>
-        <td>Clarithromycin</td>
-        <td>Widely known interaction with considerable available evidence </td>
-      </tr>
-      <tr>
-        <td>The evidence supporting the interaction is weak</td>
-        <td>Warfarin</td>
-        <td>Antibiotics that don't inhibit CYP2C9</td>
-        <td>Hard to find evidence for the interaction.</td>
-      </tr>
-      <tr>
-        <td>The frequency of exposure data is available</td>
-        <td>Warfarin</td>
-        <td>Non-steroidal anti-inflammatory drugsNSAIDs</td>
-        <td>Paper by Malone et al. - National sample</td>
-      </tr>
-      <tr>
-        <td>The frequency of exposure data is not available</td>
-        <td>Simvastatin</td>
-        <td>Fluconazole</td>
-        <td>Based on literature search</td>
-      </tr>
-      <tr>
-        <td>The frequency of adverse event data is available</td>
-        <td>Spironolactone</td>
-        <td>Potassium supplements</td>
-        <td>Associated with Risk of hospitalization</td>
-      </tr>
-      <tr>
-        <td>The frequency of adverse event data is not available</td>
-        <td>Simvastatin</td>
-        <td>Fluconazole</td>
-        <td>Based on literature search</td>
-      </tr>
-      <tr>
-        <td>The recommended action is “monitor” or “take note”</td>
-        <td>Potassium KCL</td>
-        <td>Potassium K-sparing Diuretics</td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td>The recommended action is “avoid”</td>
-        <td>Monoamine Oxidase Inhibitors (MAOIs)</td>
-        <td>Indirect Sympathomimetics</td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td>The recommended action is a clear alternative drug and dose</td>
-        <td>Simvastatin</td>
-        <td>Amiodarone</td>
-        <td><a href="http://www.fda.gov/Drugs/DrugSafety/ucm283137.htm">http://www.fda.gov/Drugs/DrugSafety/ucm283137.htm</a></td>
-      </tr>
-    </table>
-    <section id="warfarin-nsaids-dt">
-      <h2>Example PDDI - Warfarin + NSAIDs (Draft)</h2>
-      <p style="text-align: center"><strong>NIH Project:  R21-HS023826-01; Title:  Individualized Drug Interaction
-          Alerts; Authors: Daniel C. Malone, University of Arizona; John Horn, Philip Hansten,
-          University of Washington</strong></p>
-      <p>
-        Non-steroidal anti-inflammatory drugs (NSAIDs) have antiplatelet effects which
-        increase the bleeding risk when combined with oral anticoagulants such as warfarin.
-        The antiplatelet effect of NSAIDs lasts only as long as the NSAID is present in the
-        circulation, unlike aspirin’s antiplatelet effect, which lasts for up to 2 weeks
-        after aspirin is discontinued. NSAIDs also can cause peptic ulcers and most of the
-        evidence for increased bleeding risk with NSAIDs plus warfarin is due to upper
-        gastrointestinal bleeding (UGIB).
-      </p>
-      <figure id="Warfarin-NSAID-TREE">
-        <img src="W3C-Images/Warfarin-NSAID-TREE.png">
-        <figcaption> <span style="color: #30d529">¢</span> = No special precautions.
-          <span style="color: #f9bd3b">n</span> = Assess risk and take action if necessary.
-          <span style="color: #fb0082">u</span> = Use only if benefit outweighs risk <br>
-          <p style="text-align: left"><strong>Footnotes:</strong></p>
-          <ol type="1">
-            <li style="text-align: left">Topical diclofenac has relatively low systemic absorption; in one study a topical gel (16 g/day) produced about 6% of the absorption seen with systemic administration of 150 mg/day. A higher than recommended dose of topical gel (48 g/day) produced 20% of a systemic dose of diclofenac.</li>
-            <li style="text-align: left">If the NSAID is being used as an analgesic or antipyretic, it would be prudent to use an alternative such as acetaminophen. In some people, acetaminophen can increase the anticoagulant effect of warfarin, so monitor the INR if acetaminophen is used in doses over 2 g/day for a few days. For more severe pain consider short-term opioids in place of the NSAID.</li>
-            <li style="text-align: left">Proton pump inhibitors and misoprostol may reduce the risk of UGIB in patients receiving NSAIDs and warfarin.</li>
-            <li style="text-align: left">Patients with a history of UGIB or peptic ulcer may have an increased risk of UGIB from this interaction. The extent to which older age is an independent risk factor for UGIB due to these interactions is not firmly established, but UGIB in general is known to increase with age.</li>
-            <li style="text-align: left">Both corticosteroids and aldosterone antagonists have been shown to substantially increase the risk of UGIB in patients on NSAIDs, with relative risks of 12.8 and 11 respectively compared to a risk of 4.3 with NSAIDs alone (Masclee et al. Gastroenterology 2014;147:784-92.)</li>
-          </ol>
-        </figcaption>
-      </figure>
-    </section>
-    <section id="BCR-ABL">
-      <h2>Example PDDI - BCR-ABL Tyrosine Kinase Inhibitors (TKI) + Proton Pump Inhibitors (PPI)</h2>
-      <p><strong>NIH Grant: "Addressing gaps in clinically useful evidence on drug-drug interactions" (1R01LM011838-01); ; Authors: Evan Draper, Mayo Clinic; Daniel C. Malone , University of Arizona; John Horn, Philip Hansten, University of Washington</strong></p>
-      <p>
-        BCR-ABL Tyrosine Kinase inhibitors bosutinib, dasatinib, imatinib, nilotinib, and
-        ponatinib are indicated for Philadelphia chromosome-positive chronic myeloid leukemia.
-        Ponatinib is only approved in T315I-positive patients. These TKIs demonstrate pH dependent
-        absorption for oral administration which may result in decreased efficacy when given
-        concomitantly with medications that increase gastric pH.  Dasatinib area under the curve
-        (AUC) is decreased when co-administered with antacids, H2 antagonists, and PPIs.<sup>1</sup> Bosutinib and nilotinib AUCs are decreased with concomitant PPIs but antacids and H2
-        antagonists may be considered if TKI is given 2 hours before the antacid/H2 antagonist.<sup>2,3</sup>
-        However, for nilotinib a retrospective study has shown no difference in cytogenetic response
-        rates for patients taking PPIs.<sup>4</sup>  Imatinib and ponatinib AUCs are not appreciably decreased
-        by PPI co-administration.<sup>5,6</sup>
-      </p>
-      <figure>
-        <img src="W3C-Images/BCR-ABL-tree.png">
-        <figcaption><span style="color: #30d529">¢</span> = No special precautions.
-          <span style="color: #f9bd3b">n</span> = Assess risk and take action if necessary.
-          <span style="color: #fb0082">u</span> = Use only if benefit outweighs risk <br>
-          <p style="text-align: left"><strong>Footnotes:</strong></p>
-          <ol type="1">
-            <li style="text-align: left">Sprycel [package insert]. Princeton, NJ: Bristol-Myers Squibb Company; 2015</li>
-            <li style="text-align: left">Bosulif [package insert]. New York, NY: Pfizer Labs; 2015.</li>
-            <li style="text-align: left">Tasigna [package insert]. East Hanover, NJ: Novartis; 2015.</li>
-            <li style="text-align: left">Yin OQ, Giles FJ, Baccarani M, et al. Concurrent use of proton pump inhibitors or H2 blockers did not adversely affect nilotinib efficacy in patients with chronic myeloid leukemia. Cancer Chemother Pharmacol. 2012;70(2):345-350.</li>
-            <li style="text-align: left">Iclusig [package insert]. Cambridge, MA: ARIAD Pharmaceuticals, Inc. 2016.</li>
-            <li style="text-align: left">Egorin MJ, Shah DD, Christner SM, et al. Effect of a proton pump inhibitor on the pharmacokinetics of imatinib. Br J Clin Pharmacol. 2009;68(3):370-374.</li>
-          </ol>
-        </figcaption>
-      </figure>
-    </section>
-  </section>
-
+    
   <section id="final-stories">
     <h2>User stories for the minimum information model</h2>
     <section id="color-coding-key">
@@ -2223,6 +2349,27 @@
     </section>
   </section>
 
+  <section id="kr-process-apdx">
+    <h2>The Process Used by the Task Force for Setting the Knowledge Representation Scope</h2>
+    
+    A sub-team of the task force focused on setting the scope of
+    knowledge representation for the minimum information model. A
+    series of teleconferences bringing together domain experts,
+    biomedical informatics specialists, and knowledge representation
+    experts across the task force. Starting with a core set of
+    questions, topics were discussed, arguments for different
+    approaches were laid out and, agreement among the participants was
+    sought. Besides the conversation during the teleconferences,
+    participants had the opportunity to add comments and voice their
+    opinion to the statements in the document. When the task force
+    arrived at a consolidated version, the group voted by
+    teleconference and through e-mail. The result of that vote was
+    written into a draft document. The final version of the document
+    was revised and written as Section <a href=""#KR-discussion""></a>
+    of this document.
+  </section>
+  
+  
   <section id="Value Sets">
     <h2>Value Sets to Support PDDI Examples</h2>
 
