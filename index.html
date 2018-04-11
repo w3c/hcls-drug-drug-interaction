@@ -848,17 +848,33 @@
       average of 3,970 publications per year from 2000 through 2016. This suggests that the body of evidence about PDDIs is
       overwhelming and dynamic. As it is impossible for clinicians to keep up with the PDDI evidence base, drug
       experts generate summaries of PDDI evidence from primary sources. These summaries bring PDDI knowledge to clinicians
-      in the form of published drug information compendia, clinical decision support rules, and interaction checking applications.
+      in the form of published drug information compendium, clinical decision support rules, and interaction checking applications.
       <strong>However, there are currently no broadly accepted standards to guide these experts in the organization and presentation of PDDI
         information that would be most effective for clinical decision support.</strong>
     </p>
 
-    <p><a href="#PDDI-MI-APPLICATIONS"></a> provides an overview of the roles envisioned for a PDDI minimal information model.
-      Drug experts would generate summaries of PDDI evidence from primary sources using the information elements from the
-      PDDI minimal information model. The information elements would cover the minimum set of information required for the
-      effective clinical management of PDDI exposure. The resulting common representation of PDDI summaries would facilitate
-      curation and information exchange. Downstream applications would process these representations into forms amenable for
-      clinical decision support, drug product label enhancement, cohort identification, and other pharmacovigilance activities. To achieve the envisioned roles, the minimal information model must be flexible and computable. Where possible, model elements should draw upon accepted biomedical taxonomies and ontologies to represent medications, diagnoses, and descriptions of potential adverse reactions. Preferring the use of ontologies over free-text descriptions will reduce ambiguity associated with free-text, thus supporting comparison and computational analyses. Representations in commonly-used formats (JSON,XML/RDF ,etc.) will support ease of construction and parsing of models, particularly through shared libraries and APIs. .
+    <p><a href="#PDDI-MI-APPLICATIONS"></a> provides an overview of
+      the roles envisioned for a PDDI minimal information model.  Drug
+      experts would generate summaries of PDDI evidence from primary
+      sources using the information elements from the PDDI minimal
+      information model. The information elements would cover the
+      minimum set of information required for the effective clinical
+      management of PDDI exposure. The resulting common representation
+      of PDDI summaries would facilitate curation and information
+      exchange. Downstream applications would process these
+      representations into forms amenable for clinical decision
+      support, drug product label enhancement, cohort identification,
+      and other pharmacovigilance activities. To achieve the
+      envisioned roles, the minimal information model must be flexible
+      and computable. Where possible, model elements should draw upon
+      accepted biomedical taxonomies and ontologies to represent
+      medications, diagnoses, and descriptions of potential adverse
+      reactions. Preferring the use of ontologies over free-text
+      descriptions will reduce ambiguity associated with free-text,
+      thus supporting comparison and computational
+      analyses. Representations in commonly-used formats (JSON,XML/RDF
+      ,etc.) will support ease of construction and parsing of models,
+      particularly through shared libraries and APIs
       </p>
 
     <figure id="PDDI-MI-APPLICATIONS">
@@ -1007,7 +1023,7 @@
           over 2 g/day for a few days. For more severe pain consider short-term opioids in place of the NSAID.</td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> Any recommended actions that apply to all patient exposures SHOULD be stated using clear an concise language. The recommended action statement SHOULD also provide citations to <a>evidence for a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on <a>contextual information/modifying factors</a> SHOULD be mentioned seperately to support context-specific presentation of such information.</td>
+	<td><strong>Comment:</strong> Any recommended actions that apply to all patient exposures SHOULD be stated using clear an concise language. The recommended action statement SHOULD also provide citations to <a>evidence for a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on <a>contextual information/modifying factors</a> SHOULD be mentioned separately to support context-specific presentation of such information.</td>
       </tr>
     </table>
     <table>
@@ -1065,7 +1081,7 @@
       </tr>
       <tr>		      
 	<td><strong>Comment:</strong> Frequency of exposure and frequency of harm information is
-          rarely available but can help a clinician assess the risk/benefit tradeoff of exposure to PDDI. Such information SHOULD be provided if available. </td>
+          rarely available but can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Such information SHOULD be provided if available. </td>
       </tr>
     </table>
     <table>
@@ -1074,7 +1090,7 @@
       </tr>
       <tr>
 	<td><strong>Comment:</strong> Frequency of exposure and frequency of harm information is
-          rarely available but can help a clinician assess the risk/benefit tradeoff of exposure to PDDI. Such information SHOULD be provided if available. </td>
+          rarely available but can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Such information SHOULD be provided if available. </td>
       </tr>
     </table>
   </section>
@@ -1094,7 +1110,7 @@
 	<td style="background-color: #f4fff2"><emph>Drugs involved</emph>: <a href="#TKIs">Tyrosine Kinase Inhibitors (TKIs)</a> and <a href="#proton-pump-inhibitor-atc">Proton Pump Inhibitors (PPIs)</a></td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> The same comments about stated in the previous example about drugs involved apply to this example. Note that in the previous example the drugs involved are specified using RxNorm while this example uses ATC. This is to emphasize that, while the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, the implementor MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
+	<td><strong>Comment:</strong> The same comments about stated in the previous example about drugs involved apply to this example. Note that in the previous example the drugs involved are specified using RxNorm while this example uses ATC. This is to emphasize that, while the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
       </tr>
     </table>
     <table>
@@ -1102,7 +1118,7 @@
 	<td style="background-color: #f4fff2"><strong>Clinical Consequences:</strong> Decreased efficacy relative to treatment for <a href="#acml">chronic myeloid leukemia</a></td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> The same comments about stated in the previous example about the clinical consequences associated with a PDDI. Note that in the previous example the clinical consequences involved are specified using <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> while this example uses <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. This is to emphasize that, while the clinical consequences  SHOULD be listed as sets of terms from a terminology such as ICD-10 or SNOMED-CT, the implementor MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
+	<td><strong>Comment:</strong> The same comments about stated in the previous example about the clinical consequences associated with a PDDI. Note that in the previous example the clinical consequences involved are specified using <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> while this example uses <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. This is to emphasize that, while the clinical consequences  SHOULD be listed as sets of terms from a terminology such as ICD-10 or SNOMED-CT, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
       </tr>
     </table>
     <table>
@@ -1181,7 +1197,7 @@
 	</td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> The same comments about stated in the previous example about the contextual information/modifying factors. As for other information items, reference to coded terms for drugs and other relevant entities SHOULD be used to reduce ambiguity. Notice that this example could be improved because it references coded terms for TKIs but not for antacids and H2 antagonists. The implementor MAY choose any terminologies they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminologies be one that is actively maintained and freely accessible to the public.</td>
+	<td><strong>Comment:</strong> The same comments about stated in the previous example about the contextual information/modifying factors. As for other information items, reference to coded terms for drugs and other relevant entities SHOULD be used to reduce ambiguity. Notice that this example could be improved because it references coded terms for TKIs but not for antacids and H2 antagonists. The implementer MAY choose any terminologies they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminologies be one that is actively maintained and freely accessible to the public.</td>
       </tr>
     </table>
     <table>
@@ -1248,10 +1264,17 @@
   <section id="overarching-use-case">
     <h2>The overarching use case for the minimum information model</h2>
     <p>
-      The overarching use case for a minimum information model for representing PDDI information in a clinical context is <strong>to provide a technical foundation for effective PDDI clinical decision support</strong>. Unfortunately, existing drug information sources systems generally organize information into a more or
-      less narrative format includes only some of the core PDDI information elements. To illustrate, consider
-      the PDDI between oral anticoagulants and non-steroidal anti-inflammatory drugs (NSAIDs) reported in the
-      well-curated French Interactions médicamenteuses PDDI dataset (ANSM 2016) shown in <a href="#NSAID-Example"></a>.
+      The overarching use case for a minimum information model for
+      representing PDDI information in a clinical context
+      is <strong>to provide a technical foundation for effective PDDI
+      clinical decision support</strong>. Unfortunately, existing drug
+      information sources systems generally organize information into
+      a more or less narrative format includes only some of the core
+      PDDI information elements. To illustrate, consider the PDDI
+      between oral anticoagulants and non-steroidal anti-inflammatory
+      drugs (NSAIDs) reported in the well-curated French Interactions
+      médicamenteuses PDDI dataset (ANSM 2016) shown
+      in <a href="#NSAID-Example"></a>.
     </p>
     <figure id="NSAID-Example">
       <img src="W3C-Images/NSAID-Example.png">
@@ -1280,7 +1303,7 @@
       would include drug and patient characteristics factors that might increase or mitigate the risk of harm from exposure
       to the interaction drug pair. Such information often complements, and sometimes is based on , information on the
       frequency information items (frequency of exposure to the PDDI and frequency of harm for exposed persons who have
-      been exposed). Together, these information items help to inform the clinician about the risk-benefit tradeoff of PDDI
+      been exposed). Together, these information items help to inform the clinician about the risk-benefit trade-off of PDDI
       exposure. In fact, it has been shown that effective clinical decision support that improves patient outcomes can be
       built using such information. For example, Tamblyn et al. found that a novel medication clinical decision support system
       that provided patient-specific risk estimates of injury due to falls reduced fall-related injury by 1.7 injuries per 1000
@@ -1367,8 +1390,8 @@
 	<li><a href="#eval-management-options-pharm">A pharmacist evaluating management options</a></li>
 	<li><a href="#nurse-screening">A nurse screening for PDDIs</a></li>
 	<li><a href="#editor-synthesis-dissemination">A drug compendium editor synthesizing PDDI evidence for dissemination</a></li>
-	<li><a href="#librarian-dissemination">A health science librarian assisting in the synthesisis of PDDI evidence for dissemination</a></li>
-	<li><a href="#cds-team">A systems analyst and content specialist translating a synthesisis of PDDI evidence into a clinical decision support tool</a></li>
+	<li><a href="#librarian-dissemination">A health science librarian assisting in the synthesis of PDDI evidence for dissemination</a></li>
+	<li><a href="#cds-team">A systems analyst and content specialist translating a synthesizes of PDDI evidence into a clinical decision support tool</a></li>
       </ul>
       
       The user types considered “out of scope” are listed in Appendix <a href="#out-of-scope-stories"></a>.
@@ -1381,7 +1404,7 @@
       Medication reconciliation use cases were created by the Task Force force as a way to highlight
       the potential clinical applicability of the minimum information information model. To obtain background information for the medication
       reconciliation use cases, a third year PharmD student conducted structured interviews with a hospital
-      pharmacist and with a consultant pharmacist andalong with an observedation of the hospital pharmacist
+      pharmacist and with a consultant pharmacist and along with an observation of the hospital pharmacist
       medication reconciliation process. Detailed use cases were drafted based on points raised during the
       interviews and drug-drug interactions highlighted by the interviewed pharmacists. Where possible, the
       Task Force force’s selected PDDIs were incorporated. Draft use cases were sent to the interviewed
@@ -1433,7 +1456,7 @@
           increased risk of serotonin syndrome.  In order to gather this
           information, she reviews Bill’s history, lab results, and allergies
           from the health records faxed by his skilled nursing facility, as
-          well as his medication list upon admission.  She reviews LexicompTM
+          well as his medication list upon admission.  She reviews Lexicomp&trade;
           and the hospital’s intranet resources for additional information,
           but is having trouble finding information that is relevant to Bill’s
           situation.  She does a literature search using PubMed  in order to
@@ -1469,7 +1492,7 @@
           will experience hyperkalemia, <span style="background-color: #f6bf8b">how serious hyperkalemia may be</span>, and
           <span style="background-color: #dfa99f">how to manage the interaction, such as by discontinuing one of Maria’s
             medications</span>.   Beth reviews the hospital’s intranet, as well as
-          MicromedexTM, for recommendations.  She would also like more
+          Micromedex&trade;, for recommendations.  She would also like more
           information about the potassium chloride that Maria was taking
           as one of her home medications, so she will need to contact
           Maria’s community pharmacy in order to find out the strength
@@ -1542,7 +1565,7 @@ issues such as:
 
 <ul>
   <li> How should terms related to the core information items
-  (see <a href="#user-centered-def"></a>) be modelled?</li>
+  (see <a href="#user-centered-def"></a>) be modeled?</li>
 
   <li>What is the role of an upper ontology?</li>
   
@@ -1640,37 +1663,35 @@ and knowledge representation experts:
 <section>
   <h2>Discussion</h2>
   <p>
-    The information provided in this Community Group Note provides a concrete, user
-    centered, basis for design and implementation activities for the PDDI
-    minimum information model. Nine user stories with related goals
-    show how the PDDI minimum information model would support various
-    users (see <a href="#spec-user-stories"></a>).  Detailed
-    descriptions of more than a dozen PDDIs were written by the task
-    force along with decision trees that represent specific clinical
-    contexts (see <a href="#decision-trees"></a>). Non-ambigous
-    definitions were created for PDDI core information items and
-    implemented in a new an open source ontology (see
+    The information provided in this Community Group Note provides a
+    concrete, user centered, basis for design and implementation
+    activities for the PDDI minimum information model. Nine user
+    stories with related goals show how the PDDI minimum information
+    model would support various users
+    (see <a href="#spec-user-stories"></a>).  Detailed descriptions of
+    more than a dozen PDDIs were written by the task force along with
+    decision trees that represent specific clinical contexts
+    (see <a href="#decision-trees"></a>). Non-ambiguous definitions
+    were created for PDDI core information items and implemented in a
+    new an open source ontology (see
     Sections <a href="#user-centered-def"></a>
     and <a href="#KR-discussion"></a>). Two example PDDIs were
     annotated with the core information items along with detailed
-    discussion of Task Force recommendations
-    (see Sections <a href="#ex-warfarin-nsaids"></a>
+    discussion of Task Force recommendations (see
+    Sections <a href="#ex-warfarin-nsaids"></a>
     and <a href="#ex-tki-ppi"></a>. A subset of the user stories and
     selected PDDIs were integrated into three medication
     reconciliation use cases (see Section
     <a href="#med-rec-use-cases"></a>).
   </p>
   <p>
-    While the a reference implementation of the information model and
-    specific demonstrations, such as those shown in
-    <a href="#PDDI-MI-APPLICATIONS"></a> are the subject of future
-    work, the next sub-sections provide an overview of potential
-    applications.
+    The next sub-sections provide a discussion of three potential
+    applications of the minimum information that are shown
+    in <a href="#PDDI-MI-APPLICATIONS"></a>. 
   </p>
 
   <section>
-    <h2>Demonstration Example 1: Sharable PDDI Clinical Decision
-    Support Using HL7 Standards </h2>
+    <h2>Shareable PDDI Clinical Decision Support Using HL7 Standards </h2>
     <p>
       The creation and maintenance of PDDI clinical decision support
       (CDS) generally requires considerable time and energy from
@@ -1750,148 +1771,176 @@ and knowledge representation experts:
   </section>
 
   <section>
-    <h2>Demonstration Example 2 : Structured Product Labeling Drug-drug Interaction Section indexing</h2>
+    <h2>Enhancing the Drug-drug Interaction Section of Structured Product Labeling</h2>
     <p>
-      If information about known drug interactions is missing from a
-      drug’s product labeling, it might have serious consequences for
-      patients. To address this potential risk, the FDA mandated in
-      2006 that all product labels for FDA-approved prescription drugs
-      include clinically significant interactions (c.f., CFR 21
-      201.57(c)(8)), as well as the results of pharmacokinetic studies
-      that establish the absence of effect (c.f., CFR 21
-      201.57(c)(13)(C)) (Code of Federal Regulations Title
-      21). Structured Product Labels (SPLs) are XML documents written
-      in an HL7 standard that the United States Food and Drug
-      Administration (FDA) requires industry to use when submitting
-      drug product label content (FDA 2005). The SPLs for all drug
+      Serious consequences for patients could result if information
+      about known drug interactions is missing from a drug’s product
+      labeling. To address this potential risk, the United States Food
+      and Drug Administration (FDA) mandated in 2006 that all product
+      labels for FDA-approved prescription drugs include clinically
+      significant interactions (c.f., CFR 21 201.57(c)(8)), as well as
+      the results of pharmacokinetic studies that establish the
+      absence of effect (c.f., CFR 21 201.57(c)(13)(C)) (Code of
+      Federal Regulations Title 21). Similar requirements have been
+      enacted by the European Medicine's Agency for their equivalent
+      of product labeling
+      called <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3248251/"
+      target="new">Summary of Product Characteristics</a>.
+    </p>
+    <p>
+      As was mentioned in a previous section
+      (see <a href="#overarching-use-case"></a>), drug product
+      labeling can contain many gaps in information relative to the
+      core PDDI information. Other prior work has shown that many
+      known PDDIs are not mentioned in drug labels (Boyce et
+      al. 2013). This problem is not unique to United States
+      labeling. For instance, Pfistermeister et al. reported that
+      critical drug–drug interaction warnings are frequently missing,
+      or are mentioned inconsistently in the United States, United
+      Kingdom, and German labels of the involved drugs (Pfistermeister
+      et al. 2014).
+    </p>
+    <p>
+      As is shown <a href="#PDDI-MI-APPLICATIONS"></a>, the PDDI
+      minimum information model could help address this issue by
+      making PDDI information reported in product labeling more
+      complete and clinically useful. In the United States and other
+      parts of the world, the content of a drug's product label is
+      written by the company that owns the drug as part of the drug
+      approval process. There is currently no information model to
+      guide product label authors as they write drug interaction
+      information. The PDDI minimum information model could providing
+      authors with clear guidance on the core information items that
+      they should discuss. 
+    </p>
+    <p>
+      This approach might require an annotation tool to help authors
+      tag the core PDDI information items correctly and
+      consistently. Once the PDDI information is authored using the
+      minimum information model, it would need to be published in a
+      computer readable format. In the United States, this would
+      currently be accomplished using
+      the <a href="https://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/"
+      target="new"> Structured Product Label (SPL)</a> standard. Other
+      standards, such as
+      the <a href="http://www.ema.europa.eu/ema/index.jsp?curl=pages/regulation/general/general_content_001849.jsp&mid=WC0b01ac0580bf85bb"
+      target="new"> International Organization for Standardization
+      (ISO) for the identification of medicinal products (IDMP)</a>
+      serve a similar function outside of the United States. Focusing
+      on the United States as case study, SPLs are XML documents
+      written using the HL7 SPL specification that the FDA requires
+      industry to use when submitting drug product label content (FDA
+      2005). The
+      HL7 <a href="https://www.hl7.org/Special/committees/rcrim/overview.cfm"
+      target="new">Biomedical Research and Regulation</a> developed
+      and maintains the SPL standard. Currently, the SPLs for all drug
       products marketed in the United States are available for
       download from the National Library of Medicine's DailyMed
       resource (National Library of Medicine 2017). At the time of
       this writing, DailyMed provides access to drug product labeling
-      for more than 33,000 prescription products.
+      for more than 30,000 prescription products.
     </p>
     <p>
-      As was shown in a previous section
-      (see <a href="#overarching-use-case"></a>), drug product
-      labeling can contain many gaps in information relative to the
-      core PDDI information. Other prior work has shown that many
-      known PDDIs are not mentioned in SPLs (Boyce et al. 2013). This
-      problem is not unique to United States labeling. For instance,
-      Pfistermeister et al. reported that critical drug–drug
-      interaction warnings are frequently missing, or are mentioned
-      inconsistently in the United States, United Kingdom, and German
-      labels of the involved drugs (Pfistermeister et al. 2014).
-    </p>
-    <p>
-      As <a href="#PDDI-MI-APPLICATIONS"></a> indicates, the PDDI
-      minimum information model could be particularly relevant to
-      addressing this issue. Specifically, PDDI information reported
-      in drug product labeling might be considerably more complete and
-      clincally useful if it were represented using the minimum
-      information model. Technically, this would be possible by
-      writing a specification for how to create SPL supplemental
-      indexing files with PDDI information represented in the minimum
-      information model. Supplemental indexing to SPLs are
-      SPL files that provide additional useful information for
-      official FDA drug SPLs. Currently, supplemental indexing is used
-      to specify pharmacologic classes, billing units, warning letter
-      alerts, and other information (National Library of Medicine
-      2017).
-    </p>
-    <p>
-      While a given supplemental indexing file is written in the same
-      SPL document standard, it can include a detailed sub-model like
-      the PDDI minimum information model. A feature of the indexing
-      files is that they can be used to both store the supplemental
-      data in a computable format and, using through the use of XSL
-      and XSLT, render the data in various formats including HTML, and
-      PDF, and character-delimited tables. The PDDIs supplemental
-      indexing files will show a technical solution to enhancing SPL
-      drug interaction content with information that could be used for
+      It would be technically possible to publish PDDI information
+      annotated using the minimum information model in a computer
+      readable format using what is called an SPL <i>supplemental
+      indexing file</i>. Supplemental indexing to SPLs are SPL files
+      that provide additional useful information for official FDA drug
+      SPLs. Currently, supplemental indexing is used to specify
+      pharmacologic classes, billing units, warning letter alerts, and
+      other information (National Library of Medicine 2017). While a
+      given supplemental indexing file is written in the same SPL
+      document standard, it can include a detailed sub-model like the
+      PDDI minimum information model. A feature of the indexing files
+      is that they can be used to both store the supplemental data in
+      a computable format and, using through the use of XSL and XSLT,
+      render the data in various formats including HTML, and PDF, and
+      character-delimited tables. The Task Force recommends that this
+      idea and other possibilities be tested to determine how to best
+      provide accurate PDDI information that is clinically useful for
       decision support by SPL consumers.
     </p>
   </section>
 
   <section>
-    <h2>Demonstration Example 3: Computable Cohort Descriptions</h2>
-    <p>
-      Another potential application of the minimum information model
-      would be to help highlight research gaps that need to be filled
-      to advance effective PDDI decision support. A powerful method to
-      accomplish this would be through the use of computable cohort
-      descriptions — serialized queries that combine concept sets with
-      logical operations to extract specific patient sub-populations
-      from a clinical data repository. Computable cohort descriptions
-      are a cornerstone for research on PDDIs using real world data.
-      Clinical researcher can use the descriptions to investigate the
-      frequency of exposure to the PDDIs, frequency of clinical
-      outcomes in exposed patients, and factors that modify the risk
-      of harm.
-    </p>
-    <p>
-      The Task Force force will show how a JSON representation of
-      PDDIs constructed using the minimum information model and the
-      Task Force force’s decision trees can be translated to
-      computable cohort definitions. The target for translation will
-      be the Atlas clinical research tool created by the Observational
-      Data Health and Informatics collaborative. Atlas has a powerful
-      interface for creating, running, and sharing cohort descriptions
-      (OHDSI 2017; OHDSI 2016). Once created, cohort descriptions can
-      be executed over any clinical dataset that is stored in the
-      OHDSI common data model. For the given project, this would be
-      especially useful for acquiring data from multiple sites on the
-      frequency of exposure to PDDIs and frequency of harm for those
-      exposed.
-    </p>
-  </section>
-
-  <section>
-    <h2> Demonstration Example 4: Highlighting gaps in evidence for developing PDDI decision support</h2>
+    <h2>Highlighting and Filling Gaps in Evidence Needed to Develop PDDI Decision Support</h2>
     <p>
       Existing PDDI knowledge is heterogeneous with respect to
-      coverage of the core information elements.  While the oral
-      anticoagulant / NSAID PDDI used as an example in the above
-      discussion is well known, with information readily available
-      across several core categories, this is rarely the
-      case. Fortunately, new sources of data are becoming available
-      that can be leveraged to generate clinical evidence to rapidly
-      fill knowledge gaps. These include deeply interlinked
-      longitudinal health-care datasets useful for studying real-world
-      PDDI exposure frequency, risk modifying factors, and
-      associations with clinical outcomes (Hennessy et al. 2016).
-      Additional non-clinical data sources, including web search log
-      data, text mining of social media, and wearable real-time
-      monitoring activities logs, can also be useful (Beninger 2016;
-      Freifeld et al. 2017; Koutkias et al. 2016; Shang et al. 2014;
-      Cameron et al. 2013; Yang et al. 2015; Harpaz et
-      al. 2016). Large research networks have emerged that bridge
-      multiple health systems and registries to enable innovative
-      approaches to generating evidence to inform clinically
-      actionable knowledge. Projects like the All of Us Research
-      Program (https://allofus.nih.gov/) and the Million Veteran
-      Program (Gaziano et al. 2016) are seeking to gather health data
-      from more than one million people for the purpose of
-      accelerating research and improve health. These novel programs
-      link whole genome sequencing with health encounter and
-      participant-provided data collected for cohorts of over a
-      million people. Moreover, researchers will be able to
-      prospectively re-contact participants to complete questionnaires
-      and other research procedures.
+      coverage of the core information elements. For example,
+      frequency of exposure and frequency of harm evidence was not
+      available for either of the two PDDI examples detailed in this
+      Note (see Sections <a href="#ex-warfarin-nsaids"></a>
+      and <a href="#ex-tki-ppi"></a>). Other examples of knowledge
+      gaps are mentioned in Appendix <a href="#decision-trees"></a>,
+      such as the poorly understood mechanism of the PDDI between
+      warfarin and Ifosfamide/Etoposide.
     </p>
     <p>
-      The developments mentioned above create potential to help
-      advance PDDI decision support. However, the potential can only
-      be realized if gaps in clinically useful PDDI knowledge are
-      identified, prioritized, and addressed using the most
-      appropriate data and methods for evidence generation. One way
-      the minimum information model helps to identify knowledge gaps
-      is that it can act as an information template for a group of
-      drug experts to use while synthesizing evidence for PDDIs. As
-      the expert panel compiles evidence for each of the core
-      information categories, critical gaps in knowledge would become
-      apparent.  The prioritized gaps could help clinical research
-      community to make efforts to generate appropriate evidence to
-      fill those gaps.
+      Part of the reason that there are many knowledge gaps is that
+      many drug interactions are identified in case reports or
+      observational studies that provide little or no indication of
+      causal mechanisms. Other interactions, especially
+      pharmacokinetic interactions, are established based on small
+      clinical studies that rarely suggest a clinical
+      consequence. Still other interactions might be inferred from the
+      pharmacodynamic properties of two drugs, leaving unanswered
+      questions about contextual factors that might increase or
+      mitigate patient risks. Moreover, gaps in knowledge can exist
+      about the risk factors or appropriate management options for a
+      given interaction, even when solid evidence is available for its
+      existence, the mechanism of its occurrence, and the likely
+      clinical consequence from exposure.
+    </p>
+    <p>
+      In order to realize the potential of the minimum information
+      model to advance PDDI decision support, it is important that
+      gaps in clinically useful PDDI knowledge be identified,
+      prioritized, and addressed. The information model itself would
+      help highlight research gaps by acting as an information
+      template for a group of drug experts to use while PDDI
+      synthesizing evidence. As the expert panel compiles evidence for
+      each of the core information categories, critical gaps in
+      knowledge would become apparent.  The prioritized gaps could
+      help clinical research community to make efforts to generate
+      appropriate evidence to fill those gaps.
+    </p>
+    <p>
+      One activity that can help lay the foundation for broader
+      efforts to address gaps in PDDI knowledge is the development of
+      computable cohort descriptions — serialized queries that combine
+      concept sets with logical operations to extract specific patient
+      sub-populations from a clinical data repository. Computable
+      cohort descriptions are a cornerstone for research on PDDIs
+      using real world data. A recent project showed the feasibility of converting the
+      decision trees for PDDIs created as part of this Note to
+      computable cohort definitions (<strong>TODO: CITE - Rosko, SC.,
+      Hansten, PD., Horn, JR., Malone, DC., Romero, A., Boyce,
+      RD. Toward shareable individualized drug interaction
+      alerts. AMIA Summit on Clinical Research Informatics. March 29th
+      2017. San Francisco, CA. USA.</strong>). The target for
+      translation was the Atlas clinical research tool created by the
+      Observational Data Health and Informatics collaborative. Atlas
+      has a powerful interface for creating, running, and sharing
+      cohort descriptions (OHDSI 2017; OHDSI 2016). Once created, the
+      cohort descriptions were executed over a clinical dataset for a
+      simulated population stored in the OHDSI common data model. The
+      code, concept sets, and cohort descriptions for the
+      demonstration are stored
+      in <a href="https://github.com/dbmi-pitt/iDIA_Rules">a GitHub
+      repository</a>
+      and <a href="https://github.com/dbmi-pitt/docker-iDIA-Rules">Docker
+	container</a>.
+    </p>
+    <p>
+      The Task Force recommends further research that builds on this
+      preliminary work with the goal of developing a learning system
+      that identifies gaps in PDDI knowledge about the frequency of
+      PDDI exposure, frequency of clinical outcomes, and factors that
+      modify the risk of harm, prioritizes the gaps, and the collect
+      data from multiple sites to fill in those knowledge gaps in
+      knowledge. If successful, such a system would help improve
+      patient safety by making PDDI decision support more current and
+      complete than is currently the case.
     </p>
   </section>
 </section>
@@ -1902,16 +1951,18 @@ and knowledge representation experts:
   <p>
     This Community Group Note provides motivation and a detailed
     domain analysis for a minimum information model for PDDI
-    information. The user stories (see <a href="#final-stories"></a>)
-    and information needs
-    (see <a href="#all-user-information-needs"></a>) that the Task
-    Force identified will guide the scope and implementation of
-    artifacts to demonstrate the minimum information model.
+    information. The Note also suggests potential applications of the
+    minimum information model that could lead to improvements in
+    patients safety with respect to PDDIs. The overarching goal of
+    these contributions is to provide a technical foundation for
+    effective PDDI clinical decision support. A reference
+    implementation of the information model is the subject of future
+    work.
   </p>
 </section>
 
 <section>
-  <h2>Acknowledgements</h2>
+  <h2>Acknowledgments</h2>
   <p>
   Development of this Community Group Note was partially supported by
   a grant from the United States National Library of Medicine
@@ -1934,7 +1985,7 @@ and knowledge representation experts:
         using the new information model.</li>
       <li>In parallel, Task Force members initiated an iterative process that involved stakeholders
         (i.e., individuals who edit drug information sources, various types of clinicians, and decision
-        support systemCDS developers), in the creation of user stories and use cases that define the
+        support system developers), in the creation of user stories and use cases that define the
         requirements for the minimum information model.</li>
       <li>Also in parallel, a sub-team of knowledge representation experts developed guidelines for the
         information model’s semantics of the information model. </li>
@@ -1993,7 +2044,7 @@ and knowledge representation experts:
     <h2>Decision Trees Created for the Minimum Information Model Domain Analysis</h2>
     <p>The Task Force force developed 14 PDDI decision trees to be used for demonstrating the minimum information model.
       The PDDI decision trees cover 15 different situations identified by the Task Force force as potentially
-      affecting the search and synthesies of PDDI information. The potential interactions and the information
+      affecting the search and syntheses of PDDI information. The potential interactions and the information
       situations they were selected for are listed in <em>Table 1</em>.</p>
 
     <p><strong><em>Table 1</em></strong></p>
@@ -2071,7 +2122,7 @@ and knowledge representation experts:
       <tr>
         <td>The frequency of exposure data is available</td>
         <td>Warfarin</td>
-        <td>Non-steroidal anti-inflammatory drugsNSAIDs</td>
+        <td>Non-steroidal anti-inflammatory drugs (NSAIDs)</td>
         <td>Paper by Malone et al. - National sample. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project on github</a>).</td>
       </tr>
       <tr>
@@ -2185,14 +2236,14 @@ and knowledge representation experts:
         the assistance of a user experience expert to develop a master list of tasks, users, information needs,
         information values, and barriers to drug-drug interaction based decision-making in a variety of situations.
         A core set of user types was selected for development of user stories based on the scope of the minimum
-        information model. These will be presented in the Results section. UThe user types considered “out of scope”
-        are listed in Appendix <a href="#out-of-scope-stories">OUTOFSCOPESTORIES</a>.
+        information model. These will be presented in the Results section. The user types considered “out of scope”
+        are listed in Appendix <a href="#out-of-scope-stories"></a>.
       </p>
       <p>
         In order to develop the user stories for the core user types, Task Force force members created an
         initial information needs list  and then was supplemented it with user interviews, interview transcripts
         collected as a part of a recently published manuscript on PDDI information needs of drug information
-        compendia editors (Romagnoli et al. 2017), and the published literature. Where possible, user stories
+        compendium editors (Romagnoli et al. 2017), and the published literature. Where possible, user stories
         were based on PDDIs suggested by the Task Force force’s PDDI experts. All user stories were reviewed
         during team meetings to solicit feedback and comments. Based on Task Force force member suggestions,
         the user stories were edited to make them more clinically relevant, accurate and appropriate. Information
@@ -3286,3 +3337,6 @@ and knowledge representation experts:
 </html>
 
 
+
+<!--  LocalWords:  AMIA OHDSI
+ -->
