@@ -45,3 +45,6 @@ standard like HL7. These include the following activities:
 ## Possible workflow and application models for the PDDI minimal information model:
 
 ![alt text](https://github.com/W3C-HCLS/w3c-ddi/raw/master/Presentations/images/info-model-value-proposition.png "Possible workflow and application models for the PDDI minimal information model.")
+
+## Contributors
+- [ericprud](https://github.com/ericprud)
