@@ -1,8 +1,8 @@
-# w3c-ddi
-W3C HCLS Drug-Drug Interaction
+# hcls-drug-drug-interaction
+W3C HCLS Minimum Information Model for Potential Drug-Drug Interaction Information
 
 A repository to store artifacts created for the W3C Semantic Web in Health Care and Life Sciences Community Group Note
-titled "A Minimum Representation of Potential Drug-Drug Interaction Knowledge and Evidence - Primer and Best Practices"
+titled "W3C A Minimum Representation of Potential Drug-Drug Interaction Knowledge and Evidence - Technical and User-centered Foundation"
 
 ## Folder layout:
 
@@ -47,4 +47,5 @@ standard like HL7. These include the following activities:
 ![alt text](https://github.com/W3C-HCLS/w3c-ddi/raw/master/Presentations/images/info-model-value-proposition.png "Possible workflow and application models for the PDDI minimal information model.")
 
 ## Contributors
+- [rkboyce](https://github.com/rkboyce)
 - [ericprud](https://github.com/ericprud)
