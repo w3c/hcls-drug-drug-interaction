@@ -2,7 +2,7 @@
 W3C HCLS Minimum Information Model for Potential Drug-Drug Interaction Information
 
 A repository to store artifacts created for the W3C Semantic Web in Health Care and Life Sciences Community Group Note
-titled "W3C A Minimum Representation of Potential Drug-Drug Interaction Knowledge and Evidence - Technical and User-centered Foundation." See also the related [Minimum PDDI Information Ontology](https://github.com/MPIO-Developers/MPIO/) project.
+titled "W3C A Minimum Representation of Potential Drug-Drug Interaction Knowledge and Evidence - Technical and User-centered Foundation." See also the related [Minimum PDDI Information Ontology](https://github.com/MPIO-Developers/MPIO/) project and the [HL7 CDS and Pharmacy WG sponsored implementation guide for potential drug-drug interaction clinical decision support](https://github.com/HL7/PDDI-CDS).
 
 ## Folder layout:
 
