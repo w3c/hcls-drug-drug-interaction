@@ -1,4 +1,7 @@
-* general edits
+* figure out how to put abstract in
+** take it out of pdf and reword
+** get it to show up
+* general edits - go through document
 *  clean up task force andd decision tree mentions
 *  revise section 4
 *  propose model for coding of entities in xml
