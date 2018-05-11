@@ -954,11 +954,22 @@ pharmacovigilance activities.
 	<li>a statement on the appropriate scope of knowledge representation
 	  for the information model.</li>
       </ol>
+
+    The focus of this document is definition of the model, not
+    representation. Although this document provides preliminary XML
+    examples of the use of the model to represent PDDI information
+    (see <a href="#appendix-xml"></a>), detailed representational
+    issues are not discussed in this document. Planned future efforts
+    will address these questions. 
     </p>
   </section>
 </section>
+
+<section id ="the-model">
+ <h2>The Minimum Information Model</h2>
+
 <section id="user-centered-def">
-  <h2>Definitions for the Core Information Items of the Minimum Information Model</h2>
+  <h2>Definitions of Core Information Items</h2>
   <p>
     The minimum information model contains a total of 10 core
     information items. The process for developing these items is
@@ -997,17 +1008,36 @@ pharmacovigilance activities.
     <li><dfn>Severity</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000010">http://purl.obolibrary.org/obo/MPIO_0000010</a>):
       The intensity of a drug-drug interaction clinical consequence.</li>
   </ul>
+ <p>
+These core information elements are consistent with the results of a separate international Delphi study on how
+      to improve the delivery of medication alerts within computerized physician order entry systems (Riedmann et al. 2011).
+      This suggested list of core information elements includes some that are present in one or more of the 15 PDDI conceptual
+      models analyzed in a recent comprehensive review by Herrero-Zazo, Segura-Bedmar, and Martínez [[herrero-zazo-2016]].
+      However, there is little commonality across the conceptual models on those elements that are included and no single
+      conceptual model covers all 9 of the information elements. For example, the mechanism of the interaction and clinical
+      consequences were present in multiple models but at different levels of granularity. Other information elements, such
+      as frequency of exposure and frequency of harm are not present in any of the 15 sources. Even PDDI knowledge bases that
+      are strongly clinically-oriented (as opposed to  knowledge bases oriented toward use in bioinformatics or drug development)
+      use considerably different information elements. For example, the National Drug File - Reference Terminology (NDF-RT)
+      produced by the U.S. Department of Veterans Affairs [[olvey-2010]] includes detailed information about pharmacokinetic
+      mechanisms but does not discuss clinical consequences. In contrast, the system reported by Mille, Degoulet, and Jaulent
+      [[mille-2007]] provided details on the clinical consequences, including risk increasing and mitigating factors,
+      but supplied only a limited structure for mechanism.
+</p>
+
   <p>
     The interested reader can review details on each user centered definition in the aforementioned definition documents
     downloadable from GitHub (<a target="new"
     href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>).
+  </p>
+  </section>
 
-    We provide here only a limited discussion of the definitions in the form of two example
+  <section id="examples">
+  <h2>Examples of the use of the minimal information model</h2>
+    We provide limited discussion of the definitions in the form of two example
     PDDIs, chosen from a larger set of 14 exemplar potential drug-drug
     interactions examined during the develompent of the minimal
     information model (see <a href="#decision-trees"></a>).
-  </p>
-
   <section id="ex-warfarin-nsaids">
     <h2>Applying the Minimal Information Model definitions to the PDDI between warfarin
       + non-steroidal anti-inflammatory drugs (NSAIDs)</h2>
@@ -1267,48 +1297,11 @@ pharmacovigilance activities.
     </table>
   </section>
 </section>
+</section>
 
 <section id="justification">
   <h2>Background and use cases</h2>
-  <section>
-    <h2>Stakeholder suggested core PDDI information items</h2>
-    <p>
-      The need for a standard representation of PDDI information was one of the topics addressed at two multi-stakeholder
-      conference meetings/series [[hines-2011]][[scheife-2015]][[payne-2015]][[tilson-2016]]. Attendees
-      at both conferences included stakeholders from drug information content providers, regulatory agencies, and academic
-      organizations. Among the key recommendations was the following suggested set of core information that should be included
-      for every PDDI mentioned in a clinically-oriented drug information resource [[payne-2015]]:
-    </p>
-    <p>
-      <ul>
-        <li>Drugs Involved</li>
-        <li>Clinical consequences</li>
-        <li>Frequency of exposure to the PDDI</li>
-        <li>Frequency of harm for person exposed to PDDI</li>
-        <li>Contextual information/modifying factors</li>
-        <li>Evidence</li>
-        <li>Mechanism of the Interaction</li>
-        <li>Recommended Actions</li>
-        <li>Seriousness Rating</li>
-      </ul>
-    </p>
-    <p>
-      These core information elements are consistent with the results of a separate international Delphi study on how
-      to improve the delivery of medication alerts within computerized physician order entry systems (Riedmann et al. 2011).
-      This suggested list of core information elements includes some that are present in one or more of the 15 PDDI conceptual
-      models analyzed in a recent comprehensive review by Herrero-Zazo, Segura-Bedmar, and Martínez [[herrero-zazo-2016]].
-      However, there is little commonality across the conceptual models on those elements that are included and no single
-      conceptual model covers all 9 of the information elements. For example, the mechanism of the interaction and clinical
-      consequences were present in multiple models but at different levels of granularity. Other information elements, such
-      as frequency of exposure and frequency of harm are not present in any of the 15 sources. Even PDDI knowledge bases that
-      are strongly clinically-oriented (as opposed to  knowledge bases oriented toward use in bioinformatics or drug development)
-      use considerably different information elements. For example, the National Drug File - Reference Terminology (NDF-RT)
-      produced by the U.S. Department of Veterans Affairs [[olvey-2010]] includes detailed information about pharmacokinetic
-      mechanisms but does not discuss clinical consequences. In contrast, the system reported by Mille, Degoulet, and Jaulent
-      [[mille-2007]] provided details on the clinical consequences, including risk increasing and mitigating factors,
-      but supplied only a limited structure for mechanism.
-    </p>
-  </section>
+
   <section id="overarching-use-case">
     <h2>The overarching use case for the minimum information model</h2>
     <p>
@@ -1505,8 +1498,7 @@ pharmacovigilance activities.
       <section>
 	<h2>Use Case 2:  Hospital Pharmacist, Medication
 	Reconciliation upon Discharge</h2>
-	<em> HH: What &quot;can and should be contextualized?&quot; There is a
-	nound missing here.</em>
+
 	<ul>
           <li>A PDDI that can (and should) be contextualized for specific patients or clinical circumstances:  KCL (potassium chloride) + K-sparing Diuretics (spironolactone)</li>
 	</ul>
@@ -1592,14 +1584,15 @@ pharmacovigilance activities.
 </section>
 
 <section id="KR-discussion">
-  <h2>Setting the Knowledge Representation Scope</h2>
+  <h2>Knoweldge representation for the minimal information model</h2>
 
 The wide range of potential use cases for the information model
-require flexibility in the knowledge representation. Moreover, the number of pre-existing ontologies relevant to this
-domain clearly demonstrates the richness of the domain
-[[herrero-zazo-2015]]. To keep the minimum information model
-lean and ensure its maintainability and usability, it was necessary to
-develop a clear scope for the knowledge representation including
+requires flexibility in the knowledge representation. Moreover, the
+  number of pre-existing ontologies relevant to this domain clearly
+  demonstrates the richness of the domain [[herrero-zazo-2015]]. To
+  keep the minimum information model lean and ensure its
+  maintainability and usability, it was necessary to develop a clear
+  scope for the knowledge representation including 
 issues such as:
 
 <ul>
@@ -1622,15 +1615,15 @@ description of the process used to develop these recommendations):
   <li>The Minimum PDDI Information Ontology
       (<a href="https://github.com/MPIO-Developers/MPIO"
       target="new">MPIO</a>) should be used for the core information
-      items relevant       to the PDDI domain (see 
+      items relevant to the PDDI domain (see 
       Section <a href="#user-centered-def"></a>). The ontology is
       limited in its semantic richness by design, but remains
       compatible with semantically rich models such as <a target="new"
-      href="http://purl.obolibrary.org/obo/dideo.owl"> DIDEO</a>
-      and <a target="new"
-      href="http://purl.obolibrary.org/obo/dinto.owl">DINTO</a>. See <a href="#justification"></a>
-      for a discussion of the motivations underlying the design of the
-      MPIO see Section <a href="#justification"></a>.
+      href="http://purl.obolibrary.org/obo/dideo.owL"> the Drug-drug
+      Interaction and Drug-drug Interaction Evidence Ontology
+      (DIDEO)</a> and <a target="new"
+      href="http://purl.obolibrary.org/obo/dinto.owl">the Drug-Drugs
+      Interaction Ontology (DINTO)</a>.
   </li>
   <li> The MPIO is written in
       the <a href="http://www.w3.org/TR/owl2-primer/">Web Ontology
@@ -1645,27 +1638,32 @@ description of the process used to develop these recommendations):
       target="new">Ontology for Biomedical Investigations</a>, and
       the <a href="http://www.oae-ontology.org/"> Ontology of Adverse
       Events</a>.
+
+
   </li>
   <li>The core PDDI information items in the MPIO are
        all <a href="http://purl.obolibrary.org/obo/IAO_0000030">information
-       content entities</a>. This approach is chosen because
-       information in the PDDI domain can often be speculative or
-       hypothetical and so its important to distinguish between a
-       description of a thing and the thing itself. Information
-       content entities support this type of description and avoid
-       the <a href="https://en.wikipedia.org/wiki/Existential_fallacy">
-       existential fallacy</a>.
-  </li>
-  <li>One effect of defining the core PDDI information items as
-      information content entities is that the OWL 2 entities do not
+       content entities</a>. This approach is chosen to reflect the
+       hypothetical nature of the information represented. As
+       abstract descriptions of events and relationships that might occur,
+       instances of the PDDI model do not make any claims that these
+       interactions must actually exist.  However, as OWL models are
+       generally interpreted to discuss objects that exist in the
+       world, knowledge representations must take care to avoid
+       making these claims of any of the PDDI information. To addres
+       this problem, MPIO classifies items in the minimal information
+       model as <em>information content entities</em>, essentially
+       saying that they are &quot;about some thing&quot; Thus, each
+       element of the model essentially exists as a statement about
+       the PDDI.  As a result, the OWL 2 entities do not
       refer to the actual material entities or processes. Rather, all
       properties of the core information items are terminological in
       nature and refer to relations between the term and other
       terms. For example, the core term <a>Mechanism of
       Interaction</a> does not represent an entity that has
       participants or is preceded by another biological process. Those
-      would be properties of material processes that are the actual
-      realized mechanisms of the interaction. The MPIO
+      would be properties of material processes that would be invoved
+       if the interaction were actually realized. Instead, the MPIO
       term <a>Mechanism of Interaction</a> is an information
       content entity provides information about those material
       processes. It is up to other ontologies, such as DIDEO or DINTO,
@@ -1677,20 +1675,23 @@ description of the process used to develop these recommendations):
   <li>An important requirement of the PDDI minimum information model
       is that it allow for integration of terms from existing
       biomedical terminologies such as ICD-10, SNOMED-CT, RxNorm, and
-      LOINC. This presents a challenge since relevant terminologies
-      can come with different levels of semantic richness,
+      LOINC. This presents a challenge since these terminologies
+      reprsent similar items at different levels of semantic richness,
       methodological rigor, and semantic commitments. While it is
       highly unlikely that it would be possible to unify all external
       terms semantically at an upper level with the core PDDI
       information items (see
       Section <a href="#user-centered-def"></a>), terms for which a
-      human understandable, non-circular, definition exist, MAY be
+      human understandable, non-circular, definition exist, MAY be 
       re-used in the MPIO. Re-use SHALL be accomplished by
       representing an information content entity about the object
       referenced by the term. For example, the diagnosis referred to
       by a diagnostic code from ICD 10 would be reused in the MPIO by
       representing an information content entity corresponding to the
-      ICD 10 code.
+      ICD 10 code. Practically speaking, concepts from any of the
+      terminologies might be used, but they should represented
+      whenever possible by unambiguous identifiers for both the source
+      terminology and the specific concept.
   </li>
 </ol>  
   
