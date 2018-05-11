@@ -979,15 +979,15 @@ pharmacovigilance activities.
       or concurrent medications that might alter the risk of a drug-drug interaction clinical consequence or its seriousness. </li>
     <li><dfn>Evidence for a Suspected Drug-Drug Interaction</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000004">http://purl.obolibrary.org/obo/MPIO_0000004</a>):
       The support for or refutation of a drug-drug interaction in humans, potentially including data resulting
-      from clinical studies, clinical observation, physiological experiments, or it may be an extrapolation based
+      from clinical studies, clinical observation, physiological experiments, or extrapolation based
       on drug-drug interaction mechanisms.</li>
     <li><dfn>Mechanism of Interaction</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000005">http://purl.obolibrary.org/obo/MPIO_0000005</a>):
       The process(es) by which a drug-drug interaction with clinical consequence occurs.</li>
     <li><dfn>Frequency of Exposure to the PDDI</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000007">http://purl.obolibrary.org/obo/MPIO_0000007</a>):
-      The number of individuals within a cohort that are exposed to a drug-drug interaction over a specified time
+      When available, the number of individuals within a cohort that are exposed to a drug-drug interaction over a specified time
       period divided by the total number of patients in the cohort.</li>
     <li><dfn>Frequency of Harm for persons who have been exposed to the PDDI</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000006">http://purl.obolibrary.org/obo/MPIO_0000006</a> ):
-      The number of individuals within a cohort that experience a clinical consequence of a drug-drug interaction clinical consequence divided by the total number of patients co-exposed to the drugs involved.</li>
+      When available, the number of individuals within a cohort that experience a clinical consequence of a drug-drug interaction clinical consequence divided by the total number of patients co-exposed to the drugs involved.</li>
     <li><dfn>Recommended Action</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000008">http://purl.obolibrary.org/obo/MPIO_0000008</a>):
       An evidence-based strategy to mitigate the potential clinical consequences of a drug-drug interaction; e.g., <em>use only if benefit outweighs risk,
         assess risk and take action if necessary, no special precautions.</em></li>
@@ -999,10 +999,13 @@ pharmacovigilance activities.
   </ul>
   <p>
     The interested reader can review details on each user centered definition in the aforementioned definition documents
-    downloadable from GitHub (<a target="new" href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>).
-    In the interest of space, we provide here only a limited discussion of the definitions in the form of two example
-    PDDIs. These two are chosen from the set of 14 exemplar potential drug-drug interactions for which the Task Force
-    force developed comprehensive decision trees (see <a href="#decision-trees"></a>).
+    downloadable from GitHub (<a target="new"
+    href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>).
+
+    We provide here only a limited discussion of the definitions in the form of two example
+    PDDIs, chosen from a larger set of 14 exemplar potential drug-drug
+    interactions examined during the develompent of the minimal
+    information model (see <a href="#decision-trees"></a>).
   </p>
 
   <section id="ex-warfarin-nsaids">
@@ -1010,9 +1013,9 @@ pharmacovigilance activities.
       + non-steroidal anti-inflammatory drugs (NSAIDs)</h2>
     <p>
       We illustrate here the application of the Minimum Information Model definitions to representing the PDDI involving warfarin
-      and non-steroidal anti-inflammatory drugs (NSAIDs). Task Force drug experts created the PDDI description and decision
-      tree shown in <a href="#warfarin-nsaids-dt"></a>. The PDDI description and decision tree is shown below annotated with Minimal
-      Information Model definitions and discussion comments. Note that the capitalized keywords (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, AND OPTIONAL) are defined in RFC 2119 [[RFC2119]]. 
+      and non-steroidal anti-inflammatory drugs (NSAIDs). Details of
+      the development process can be found
+      in <a href="#warfarin-nsaids-dt"></a>. Note that the capitalized keywords (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, AND OPTIONAL) are defined in RFC 2119 [[RFC2119]]. 
     </p>
 
     <table>
@@ -1092,7 +1095,7 @@ pharmacovigilance activities.
             </ul>
             <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a>, the patient is NOT concomitantly taking a <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a>, and the patient has one or more of the following risk factors:</li>
             <ul>
-              <li>History of <a href="#gi-bleeding">upper gastrointestinal bleeding (UGIB) or peptic ulcer</a> or age > 65 years old</li>
+              <li>History of <a href="#gi-bleeding">UGIB or peptic ulcer</a> or age > 65 years old</li>
               <ul>
 		<li><strong>Recommended Action:</strong> Use only if benefit outweighs risk</li>
 		<li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> Patients with a
@@ -1478,7 +1481,7 @@ pharmacovigilance activities.
           <li>The modifying factors are unknown:  Linezolid + SSRIs (sertraline)</li>
 	</ul>
 	<p>Beth is a hospital pharmacist who is reviewing the medications in the
-          physician admission order for Bill.  Bill is an
+          physician admission order for Bill, an
           <span style="background-color: #d0c7e3">85-year-old male
             dementia patient</span> who was transferred from a skilled nursing
           facility to the hospital after being diagnosed with a
