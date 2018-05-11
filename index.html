@@ -962,7 +962,7 @@ pharmacovigilance activities.
   <p>
     The minimum information model contains a total of 10 core
     information items. The process for developing these items is
-    details in <a href="#definition-dev-workflow">Appendix A.1.4</a>). The final definition
+    details in <a href="#definition-dev-workflow"></a>). The final definition
     creation documents are available for download from the project’s
     GitHub code repository (<a target="new"
     href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">
@@ -1121,7 +1121,7 @@ pharmacovigilance activities.
           stated as specifically as possible. The factors SHOULD be amenable to implementation as executable
           logic using value sets from clinical terminologies such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a>, the
 	  <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a>, and <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. As is used in this
-          example, a decision tree SHOULD relate each factor to a specific <a>recommended action</a> that is supported by the <a>evidence for a suspected drug-drug interaction</a></td>
+          example, each factor SHOULD be related to a specific <a>recommended action</a> that is supported by the <a>evidence for a suspected drug-drug interaction</a></td>
       </tr>
     </table>
     <table>
@@ -1146,13 +1146,12 @@ pharmacovigilance activities.
   <section id="ex-tki-ppi">
     <h2>Applying the Minimal Information Model definitions to the PDDI between BCR-ABL
       Tyrosine Kinase Inhibitors (TKI) + Proton Pump Inhibitors (PPI)</h2>
-    <p>
-      We illustrate here the application of the Minimum Information Model to representing the PDDI involving
-      BCR-ABL Tyrosine Kinase Inhibitors (TKIs) + Proton Pump Inhibitors (PPIs). Task Force drug experts created
-      the description and decision tree shown in the Appendix
+    <p> Minimal information Model definitions and discussion comments
+      (where differing from the previous example) for the  PDDI
+      involving  BCR-ABL Tyrosine Kinase Inhibitors (TKIs) + Proton
+      Pump Inhibitors (PPIs). Details of the development of this
+      information can be found in the Appendix
       <a href="#BCR-ABL"></a>.
-      Here is the Task Force description annotated with Minimal Information Model definitions and discussion comments
-      where different than for the previous example:
     </p>
     <table>
       <tr>
@@ -1423,16 +1422,13 @@ pharmacovigilance activities.
   <section id="spec-user-stories">
     <h2>End-users of the minimum information model</h2>
     <p>
-      User stories and goals were developed by the Task Force in order to show how the PDDI minimum information model
-      would support various users. The Task Force force began by developing  stakeholder description and
-      the user scenarios documents in order to identify key users. These were used as the basis for further brainstorming with
-      the assistance of a user experience expert to develop a master list of tasks, users, information needs,
-      information values, and barriers to drug-drug interaction based decision-making in a variety of situations.
-      A core set of user types was selected for development of user stories based on the scope of the minimum
-      information model.
-    </p>
-    <p>
-      Nine user stories with related goals were finalized by the Task Force force. Each user story was color coded for mention of core information items in the minimum information model (see <a href="#color-coding-key"></a>). The final set of user stories is located in <a href="#detailed-user-stories"></a>. User stories include the following:
+      Nine user stories with related goals demonstrate the use of the
+      PDDI minimal information model. Each user story was color coded
+      for mention of core information items in the minimum information
+      model (see <a href="#color-coding-key"></a>). The final set of
+      user stories is located
+      in <a href="#detailed-user-stories"></a>. User stories include
+      the following: 
       <ul>
 	<li><a href="#treatment-planning-phys">A physician conducting treatment planning</a> (3 distinct user stories)</li>
 	<li><a href="#eval-management-options-phys">A physician evaluating management options</a></li>
@@ -1450,27 +1446,19 @@ pharmacovigilance activities.
   <section id="med-rec-use-cases">
     <h2>A set of use cases focused on medication reconciliation</h2>
     <p>
-      Medication reconciliation use cases were created by the Task Force force as a way to highlight
-      the potential clinical applicability of the minimum information information model. To obtain background information for the medication
-      reconciliation use cases, a third year PharmD student conducted structured interviews with a hospital
-      pharmacist and with a consultant pharmacist and along with an observation of the hospital pharmacist
-      medication reconciliation process. Detailed use cases were drafted based on points raised during the
-      interviews and drug-drug interactions highlighted by the interviewed pharmacists. Where possible, the
-      Task Force force’s selected PDDIs were incorporated. Draft use cases were sent to the interviewed
-      pharmacists for feedback and edits, and then presented during a full Task Force force meeting involving
-      all participants. Suggestions from this meeting were incorporated into the use cases. In order to tie the medication reconciliation use cases more closely to
+      Medication reconciliation use cases highlight the potential
+      clinical applicability of the minimum information information
+      model. To tie the medication reconciliation use cases more
+      closely to 
       user-centered definitions, information model items were highlighted based on a color-coded key to
-      indicate the user-centered definition in question. The modified use cases were then sent to members
-      of the Task Force force using a questionnaire custom built using Qualtrics software
-      (<a href="www.qualtrics.com">www.qualtrics.com</a>).
-      This approach was chosen to allow for additional, anonymous feedback.
+      indicate the user-centered definition in question. 
     </p>
     <p>
       Three detailed medication reconciliation use cases are provide in the following sub-sections. Each use case is color coded for mention of core information items in the minimum information model (see <a href="#color-coding-key"></a>). One use case is for a Hospital Pharmacist
       dealing with medication reconciliation upon admission. Another use case is for a hospital pharmacist
       completing a dealing with medication reconciliation upon discharge.  A third use case is for a consultant
       pharmacist performing medication reconciliation upon patient readmission. All three use cases include
-      mention of PDDIs for which the Task Force force has developed decision trees (see <a href="#decision-trees"></a>).
+      mention of PDDIs discussed in detail in the Appendix (see <a href="#decision-trees"></a>).
     </p>
 
     <section id="med-rec-use-cases">
@@ -1478,7 +1466,7 @@ pharmacovigilance activities.
       <section>
 	<h2>Use Case 1:  Hospital Pharmacist, Medication Reconciliation upon Admission</h2>
 	<ul>
-          <li>The modifying factors are unknown:  Linezolid + SSRIs (sertraline)</li>
+          <li>A PDDI with unknown modifying factors:  Linezolid + SSRIs (sertraline)</li>
 	</ul>
 	<p>Beth is a hospital pharmacist who is reviewing the medications in the
           physician admission order for Bill, an
@@ -1515,9 +1503,12 @@ pharmacovigilance activities.
           she does not have access to all of the articles in the search results.</p>
       </section>
       <section>
-	<h2>Use Case 2:  Hospital Pharmacist, Medication Reconciliation upon Discharge</h2>
+	<h2>Use Case 2:  Hospital Pharmacist, Medication
+	Reconciliation upon Discharge</h2>
+	<em> HH: What &quot;can and should be contextualized?&quot; There is a
+	nound missing here.</em>
 	<ul>
-          <li>Can (and should) be contextualized for specific patients or clinical circumstances:  KCL (potassium chloride) + K-sparing Diuretics (spironolactone)</li>
+          <li>A PDDI that can (and should) be contextualized for specific patients or clinical circumstances:  KCL (potassium chloride) + K-sparing Diuretics (spironolactone)</li>
 	</ul>
 	<p>
           Beth is reviewing the physician’s discharge order for Maria.
@@ -1535,7 +1526,7 @@ pharmacovigilance activities.
           <span style="background-color: #d0c7e3">taking the ACE inhibitor lisinopril for heart failure</span>,
           and since ACE inhibitors can also increase potassium levels, Beth would
           like to know how much this <span style="background-color: #d0c7e3">modifying factor</span>
-          has increased Maria’s <span style="background-color: #fee087">risk of
+          might increase Maria’s <span style="background-color: #fee087">risk of
             hyperkalemia</span> due to the interaction between potassium chloride and
           spironolactone.  Beth would like to know how likely it is that Maria
           will experience hyperkalemia, <span style="background-color: #f6bf8b">how serious hyperkalemia may be</span>, and
@@ -1551,7 +1542,7 @@ pharmacovigilance activities.
       <section>
 	<h2>Use Case 3:  Consultant Pharmacist, Medication Reconciliation upon Readmission</h2>
 	<ul>
-          <li>The mechanism is known and is pharmacokinetic:  Warfarin + 2C9 inhibitors (metronidazole)</li>
+          <li>A PDDI with a known, pharmacokinetic mechanism:  Warfarin + 2C9 inhibitors (metronidazole)</li>
 	</ul>
 	<p>
           Patrick is a nursing home consultant pharmacist who is reviewing the
@@ -1583,15 +1574,15 @@ pharmacovigilance activities.
             the interaction</span>.  He would also like to know <span style="background-color: #dfa99f">if metronidazole is
             the best option to continue treating Nancy’s C. diff infection,
             or if there is an alternative option that may not interact with
-            warfarin</span>.  In order to gather this information, he reviews Nancy’s
-          previous INR values, medication list, and history.  He is also
-          contacting the hospital in order to determine whether warfarin
+            warfarin</span>.  To gather this information, he reviews Nancy’s
+          previous INR values, medication list, and history.  He also
+            contacts the hospital to determine whether warfarin
           had been given at any point during Nancy’s stay, if the dosage
           had been adjusted, what other medications she was given, and if
-          any of her other medications were discontinued.  He also reviews
+          any of her other medications were discontinued.  He reviews
           his company’s intranet resources for additional information about
           the interaction and possible <span style="background-color: #dfa99f">evidence-based recommendations</span>.
-          Patrick is also interested in the <span style="background-color: #a8a8a8">frequency of serious bleeding
+          Finally, Patrick is interested in the <span style="background-color: #a8a8a8">frequency of serious bleeding
             events </span><span style="background-color: #d0c7e3">in geriatric patients co-prescribed warfarin and
             metronidazole</span>, and the <span style="background-color: #bed1f6">literature surrounding the interaction</span>.
 	</p>
@@ -1604,8 +1595,7 @@ pharmacovigilance activities.
   <h2>Setting the Knowledge Representation Scope</h2>
 
 The wide range of potential use cases for the information model
-require flexibility in certain aspects of the knowledge
-representation. Moreover, the number of pre-existing ontologies relevant to this
+require flexibility in the knowledge representation. Moreover, the number of pre-existing ontologies relevant to this
 domain clearly demonstrates the richness of the domain
 [[herrero-zazo-2015]]. To keep the minimum information model
 lean and ensure its maintainability and usability, it was necessary to
@@ -1624,26 +1614,23 @@ issues such as:
 
 </ul>
 
-The following list provides the strategies accepted by the PDDI Task
-Force (see <a href="#kr-process-apdx"></a>) based on recommendations
-from a sub-team of domain experts, biomedical informatics specialists,
-and knowledge representation experts:
+The following strategies are suggested for the representation of PDDI
+minimal information (see <a href="#kr-process-apdx"></a> for a
+description of the process used to develop these recommendations):
 
 <ol>
-  <li>The task force has developed an open source ontology called the
-      Minimum PDDI Information Ontology
+  <li>The Minimum PDDI Information Ontology
       (<a href="https://github.com/MPIO-Developers/MPIO"
-      target="new">MPIO</a>) for the core information items relevant
-      to the PDDI domain (see
+      target="new">MPIO</a>) should be used for the core information
+      items relevant       to the PDDI domain (see 
       Section <a href="#user-centered-def"></a>). The ontology is
       limited in its semantic richness by design, but remains
       compatible with semantically rich models such as <a target="new"
       href="http://purl.obolibrary.org/obo/dideo.owl"> DIDEO</a>
       and <a target="new"
-      href="http://purl.obolibrary.org/obo/dinto.owl">DINTO</a>. The
-      minimal semantic richness of MPIO is motivated by the Task
-      Force's domain analysis and resulting uses cases (see
-      Section <a href="#justification"></a>).
+      href="http://purl.obolibrary.org/obo/dinto.owl">DINTO</a>. See <a href="#justification"></a>
+      for a discussion of the motivations underlying the design of the
+      MPIO see Section <a href="#justification"></a>.
   </li>
   <li> The MPIO is written in
       the <a href="http://www.w3.org/TR/owl2-primer/">Web Ontology
@@ -1718,15 +1705,14 @@ and knowledge representation experts:
     stories with related goals show how the PDDI minimum information
     model would support various users
     (see <a href="#spec-user-stories"></a>).  Detailed descriptions of
-    more than a dozen PDDIs were written by the task force along with
-    decision trees that represent specific clinical contexts
-    (see <a href="#decision-trees"></a>). Non-ambiguous definitions
+    more than a dozen PDDIs, including specific clinical contexts,
+    were constructed (see <a href="#decision-trees"></a>). Non-ambiguous definitions
     were created for PDDI core information items and implemented in a
     new an open source ontology (see
     Sections <a href="#user-centered-def"></a>
     and <a href="#KR-discussion"></a>). Two example PDDIs were
     annotated with the core information items along with detailed
-    discussion of Task Force recommendations (see
+    recommendations (see
     Sections <a href="#ex-warfarin-nsaids"></a>
     and <a href="#ex-tki-ppi"></a>. A subset of the user stories and
     selected PDDIs were integrated into three medication
@@ -1758,11 +1744,8 @@ and knowledge representation experts:
       possible solution to the challenge of seamless information
       exchange and data interoperability of information resources in
       health care related environments (Bender and Sartipi 2013;
-      Mandel et al. 2016). <a target="new"
-      href="https://www.hl7.org/fhir/overview.html">FHIR</a> is a
-      standard created by the <a href="https://www.hl7.org/"
-      target="new"> Health Level Seven (HL7)</a> organization.  The
-      standard provides a collection of specifications for resources
+      Mandel et al. 2016). FHIR  provides a collection of
+      specifications for resources 
       in healthcare settings for the purpose of overcoming the data
       exchange challenges in healthcare.  FHIR defines a set of
       standardized data models for health care covering key areas
@@ -1807,9 +1790,10 @@ and knowledge representation experts:
       target="new">project's scope statement</a>, the HL7 PDDI CDS
       project will draw from the technical foundation, PDDI
       information, and user centered design artifacts reported in this
-      Community Group Note. It is anticipated that the project may
-      raise the need to create new FHIR resource(s) (e.g., a resource
-      to represent drug interactions) and/or FHIR profile(s) (e,g, for
+      Community Group Note. It is anticipated that representation of
+      PDDI minimal information may  require the creation of new FHIR
+      resource(s) (e.g., a resource       to represent drug
+      interactions) and/or FHIR profile(s) (e,g, for 
       PDDI context representation). At the time of this writing,
       participation in the PDDI CDS project is open to public
       participation. Person interested in participation can find more
@@ -1849,14 +1833,13 @@ and knowledge representation experts:
     </p>
     <p>
       As is shown <a href="#PDDI-MI-APPLICATIONS"></a>, the PDDI
-      minimum information model could help address this issue by
-      making PDDI information reported in product labeling more
+      minimum information model could  making PDDI information reported in product labeling more
       complete and clinically useful. In the United States and other
       parts of the world, the content of a drug's product label is
       written by the company that owns the drug as part of the drug
       approval process. There is currently no information model to
       guide product label authors as they write drug interaction
-      information. The PDDI minimum information model could providing
+      information. The PDDI minimum information model could provide
       authors with clear guidance on the core information items that
       they should discuss. 
     </p>
@@ -1864,8 +1847,8 @@ and knowledge representation experts:
       This approach might require an annotation tool to help authors
       tag the core PDDI information items correctly and
       consistently. Once the PDDI information is authored using the
-      minimum information model, it would need to be published in a
-      computer readable format. In the United States, this would
+      minimum information model, it could be published in a
+      computer readable format. In the United States, this would 
       currently be accomplished using
       the <a href="https://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/"
       target="new"> Structured Product Label (SPL)</a> standard. Other
@@ -1888,24 +1871,18 @@ and knowledge representation experts:
       for more than 30,000 prescription products.
     </p>
     <p>
-      It would be technically possible to publish PDDI information
-      annotated using the minimum information model in a computer
-      readable format using what is called an SPL <i>supplemental
-      indexing file</i>. Supplemental indexing to SPLs are SPL files
-      that provide additional useful information for official FDA drug
-      SPLs. Currently, supplemental indexing is used to specify
-      pharmacologic classes, billing units, warning letter alerts, and
-      other information (National Library of Medicine 2017). While a
-      given supplemental indexing file is written in the same SPL
-      document standard, it can include a detailed sub-model like the
-      PDDI minimum information model. A feature of the indexing files
-      is that they can be used to both store the supplemental data in
-      a computable format and, using through the use of XSL and XSLT,
-      render the data in various formats including HTML, and PDF, and
-      character-delimited tables. The Task Force recommends that this
-      idea and other possibilities be tested to determine how to best
-      provide accurate PDDI information that is clinically useful for
-      decision support by SPL consumers.
+      PDDI information annotated using the minimum information model
+      could be published in a computer readable format using what is
+      called an SPL <i>supplemental       indexing
+      file</i>. Supplemental indexing files provide additional useful
+      information augmenting official FDA drug  SPLs. Currently,
+      supplemental indexing is used to specify pharmacologic classes,
+      billing units, warning letter alerts, and other information
+      (National Library of Medicine 2017). Supplemental indexing files
+      including the elements of the  PDDI minimum information model
+      might be stored in XML and, trough the use of XSL and XSLT,
+      be used to render the data in various formats including HTML,
+      and PDF, and character-delimited tables. 
     </p>
   </section>
 
@@ -1939,28 +1916,23 @@ and knowledge representation experts:
       clinical consequence from exposure.
     </p>
     <p>
-      In order to realize the potential of the minimum information
-      model to advance PDDI decision support, it is important that
-      gaps in clinically useful PDDI knowledge be identified,
-      prioritized, and addressed. The information model itself would
-      help highlight research gaps by acting as an information
-      template for a group of drug experts to use while PDDI
-      synthesizing evidence. As the expert panel compiles evidence for
-      each of the core information categories, critical gaps in
-      knowledge would become apparent.  The prioritized gaps could
-      help clinical research community to make efforts to generate
-      appropriate evidence to fill those gaps.
+      The information model can also act as a template for drug
+      epxperts to use while synthesizing PDDI evidence. As the experts
+      compile evidence for each of the core information
+      categories, critical gaps in knowledge will become apparent.
+      These gaps might be used to develop prioritized research agendas
+      aimed at providing evidence for clinical recommendations. 
     </p>
     <p>
-      One activity that can help lay the foundation for broader
-      efforts to address gaps in PDDI knowledge is the development of
-      computable cohort descriptions — serialized queries that combine
-      concept sets with logical operations to extract specific patient
-      sub-populations from a clinical data repository. Computable
-      cohort descriptions are a cornerstone for research on PDDIs
-      using real world data. A recent project showed the feasibility of converting the
-      decision trees for PDDIs created as part of this Note to
-      computable cohort definitions [[rosko-2017]]. The target for
+      Similarly, the PDDI model might be used to address knowledge
+      gaps through the creation of computable cohort descriptions —
+      serialized queries that  combine  concept sets with logical
+      operations to extract specific patient sub-populations from a
+      clinical data repository. Computable cohort descriptions are a
+      cornerstone for research on PDDIs using real world data. A
+      recent project showed the feasibility of converting PDDI
+      descriptions created as part of this Note to  computable cohort
+      definitions [[rosko-2017]]. The target for 
       translation was the Atlas clinical research tool created by the
       Observational Data Health and Informatics collaborative. Atlas
       has a powerful interface for creating, running, and sharing
@@ -1973,17 +1945,6 @@ and knowledge representation experts:
       repository</a>
       and <a href="https://github.com/dbmi-pitt/docker-iDIA-Rules">Docker
 	container</a>.
-    </p>
-    <p>
-      The Task Force recommends further research that builds on this
-      preliminary work with the goal of developing a learning system
-      that identifies gaps in PDDI knowledge about the frequency of
-      PDDI exposure, frequency of clinical outcomes, and factors that
-      modify the risk of harm, prioritizes the gaps, and the collect
-      data from multiple sites to fill in those knowledge gaps in
-      knowledge. If successful, such a system would help improve
-      patient safety by making PDDI decision support more current and
-      complete than is currently the case.
     </p>
   </section>
 </section>
