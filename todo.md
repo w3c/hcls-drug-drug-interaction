@@ -1,5 +1,3 @@
-*  revise section 4
-
 *  propose model for coding of entities in xml
 *  add "drugs involved" to section 2.
 * fix issues in github
@@ -26,3 +24,5 @@ DONE
 ** 2.2 is end users
 ** 2.4 is use cases.
 *  text about representations forthcoming
+*  revise section 4
+
