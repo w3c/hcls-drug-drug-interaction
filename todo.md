@@ -1,4 +1,7 @@
 *  propose model for coding of entities in xml
+** say that this is just a proposal
+** refer to FHIR
+** give an example
 *  add "drugs involved" to section 2.
 * fix issues in github
 *  create draft of manuscript
