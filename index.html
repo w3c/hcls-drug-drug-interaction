@@ -725,7 +725,7 @@
       editors: [
       {
       name: "Richard D. Boyce",
-      url: "www.dbmi.pitt.edu/person/richard-boyce-phd",
+      url: "http://www.dbmi.pitt.edu/person/richard-boyce-phd",
       company: "Department of Biomedical Informatics, University of Pittsburgh, USA"
       },
       {
@@ -738,6 +738,7 @@
       },
       {
       name: "Harry Hochheiser",
+      url: "http://www.dbmi.pitt.edu/person/harry-hochheiser-phd",
       company: "Department of Biomedical Informatics, University of Pittsburgh, USA"
       },
       {
@@ -1747,8 +1748,8 @@ description of the process used to develop these recommendations):
       Fast Health Interoperability Resources (FHIR) provides a
       possible solution to the challenge of seamless information
       exchange and data interoperability of information resources in
-      health care related environments (Bender and Sartipi 2013;
-      Mandel et al. 2016). FHIR  provides a collection of
+      health care related environments
+      [[bender-2013]][[mandel-2016]]. FHIR  provides a collection of 
       specifications for resources 
       in healthcare settings for the purpose of overcoming the data
       exchange challenges in healthcare.  FHIR defines a set of
@@ -3099,12 +3100,58 @@ description of the process used to develop these recommendations):
   </section>
   
   <section id="appendix-xml">
-    <h2>Straw Man XML Examples</h2>
-    <p>In this section we present straw man XML representations of the
-      example PDDIs described in section <a href="#user-centered-def">User-centered definitions</a>.</p>
+    <h2>Proposed XML Examples</h2>
+    <p>The purpose of this note is to describe the content of
+    the PDDI minimal information model, leaving representational
+      issues to be resolved in an anticipated future note.
+    Any eventual representation models will rely heavily on
+    existing ontologies and relevant models such as FHIR
+    [[bender-2013]][[mandel-2016]].  Specifically, as medications may be
+    represented with a variety of codes, we propose using a
+    representation similar to
+    FHIR's <A HREF="https://www.hl7.org/fhir/datatypes.html#CodeableConcept">CodeableConcept</a>,
+    which will allow for clear an unambiguous representation of
+    medications thorugh reference to established vocabularies, without
+    requiring the use of any single vocabulary.
+								
+    <p>Here, we present straw man XML representations of the example
+    PDDIs described in
+    section <a href="#user-centered-def">User-centered
+	definitions</a>.   As representational issues have not been
+    fully resolved, these examples should be considered informative
+    (not normative) and subject to revision.</p>
+
     <section>
       <h2>Example 1: warfarin and non-steroidal anti-inflammatory drugs (NSAIDs)</h2>
-      <pre class="example" style="white-space: pre-wrap" title="Warfarin and non-steroidal anti-inflammatory drugs (NSAIDs)">
+      <pre class="example" style="white-space: pre-wrap"
+	   title="Warfarin and non-steroidal anti-inflammatory drugs
+		  (NSAIDs)">
+
+	&lt!--Note: Placeholder URIS for undefined PIO
+	and other concepts to be replaced by once concepts are created.--&gt
+	&ltMPIO:MPIO_00000xx label='drugs involved'&gt
+
+
+	&ltDRON:DRON_00000005 label="drug product"&gt
+	&ltcoding&gt
+	&ltsystem&gt "http://www.nlm.nih.gov/research/umls/rxnorm"&lt/system&gt
+	&ltcode&gt11289&lt/code&gt
+	&ltdisplay&gtWARFARIN&lt/display&gt
+	&lt/coding&gt
+
+	&lt/DRON:DRON_00000005&gt
+
+	&ltDRON:DRON_00000005 label="clinical drug role"&gt
+	&ltcoding&gt
+	&ltsystem&gt "http://www.nlm.nih.gov/research/umls/snomedct"&lt/system&gt
+	&ltcode&gtC0003211&lt/code&gt
+	&ltdisplay&gtAnti-inflammatory agents, Non-Steroidal&lt/display&gt
+	&lt/coding&gt
+	&lt/DRON:DRON_00000005&gt
+	
+	
+	&lt/MPIO:MPIO_00000xx&gt
+
 	&ltMPIO:MPIO_0000005 label=’mechanism of interaction information’&gt
 	‘Non-steroidal anti-inflammatory drugs (NSAIDs) have antiplatelet effects which increase the bleeding risk when combined with oral anticoagulants such as warfarin. The antiplatelet effect of NSAIDs lasts only as long as the NSAID is present in the circulation, unlike aspirin’s antiplatelet effect, which lasts for up to 2 weeks after aspirin is discontinued. NSAIDs also can cause peptic ulcers and most of the evidence for increased bleeding risk with NSAIDs plus warfarin is due to upper gastrointestinal bleeding (UGIB).’
 	&lt/MPIO:MPIO_0000005&gt
@@ -3216,7 +3263,37 @@ description of the process used to develop these recommendations):
     </section>
     <section>
       <h2>Example 2: Tyrosine Kinase inhibitors and medications that increase gastric pH</h2>
-      <pre class="example" style="white-space: pre-wrap" title="Tyrosine Kinase inhibitors and medications that increase gastric pH">
+      <pre class="example" style="white-space: pre-wrap"
+	   title="Tyrosine Kinase inhibitors and medications that
+		  increase gastric pH">
+
+
+	&ltMPIO:MPIO_00000xx label='drugs involved'&gt
+
+
+
+	&ltDRON:DRON_00000005 label="clinical drug role"&gt
+	&ltcoding&gt
+	&ltsystem&gt "http://www.nlm.nih.gov/research/umls/snomedct"&lt/system&gt
+	&ltcode&gt C4521478 &lt/code&gt
+	&ltdisplay&g Protein-tyrosine kinase inhibitor (disposition) &lt/display&gt
+	&lt/coding&gt
+	
+	&lt/DRON:DRON_00000005&gt
+
+
+	&ltDRON:DRON_00000005 label="clinical drug role"&gt
+	&ltcoding&gt
+	&ltsystem&gt TBD &lt/system&gt
+	&ltcode&gt TBD &lt/code&gt
+	&ltdisplay&g TBD &lt/display&gt
+	&lt/coding&gt
+	
+	&lt/DRON:DRON_00000005&gt
+
+	
+	&lt/MPIO:MPIO_00000xx&gt
+
         &ltMPIO:MPIO_0000005 label=’mechanism of interaction information’&gt
 	‘These TKIs demonstrate pH dependent absorption for oral administration which may result in decreased efficacy when given concomitantly with medications that increase gastric pH.’
 	&lt/MPIO:MPIO_0000005&gt

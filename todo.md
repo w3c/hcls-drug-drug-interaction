@@ -1,8 +1,7 @@
-*  propose model for coding of entities in xml
-** say that this is just a proposal
-** refer to FHIR
-** give an example
-*  add "drugs involved" to section 2.
+
+* add ontology concept for drugs involved
+* review xml examples and fix content
+** particularly for gastric ph
 * fix issues in github
 *  create draft of manuscript
 
@@ -28,4 +27,21 @@ DONE
 ** 2.4 is use cases.
 *  text about representations forthcoming
 *  revise section 4
+
+*add link to myself
+*  propose model for coding of entities in xml
+** say that this is just a proposal
+** refer to FHIR
+** fix bende/srpiti/mandel link 
+** unknown stuff in color
+** write up list of changes to present to rich. - and other questions
+    (all the tbd stuff)
+    - including plan for paper (mention scheife/payne working group).
+*  add "drugs involved" to section 2.
+* give an example
+** class for warfrain
+** class for nsaids
+   Concept: [C0003211]  Anti-Inflammatory Agents, Non-Steroida
+**tyrosine kinase
+** medications that increase gastrich ph
 
