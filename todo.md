@@ -1,7 +1,6 @@
-
-* add ontology concept for drugs involved
+* reorder elements in 2.1 to match example in 2.2
 * review xml examples and fix content
-** particularly for gastric ph
+** particularly for gastric ph meds
 * fix issues in github
 *  create draft of manuscript
 
@@ -45,3 +44,4 @@ DONE
 **tyrosine kinase
 ** medications that increase gastrich ph
 
+* add ontology concept for drugs involved
