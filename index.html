@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -720,12 +719,70 @@
       "href": "https://healthit.ahrq.gov/ahrq-funded-projects/current-health-it-priorities/clinical-decision-support-cds/chapter-1-approaching-clinical-decision/section-2-overview-cds-five-rights"}
 
       },
+
+      "sprycel-2015": {
+      "title": "Sprycel",
+      "publisher": "Bristol-Myers Squibb Company, Princeton, NJ",
+      "date": "2015"},
+
+ 	  "bosulif-2015": {
+      "title": "Bosulif",
+      "publisher": "Pfizer Labs, New York, NY",
+      "date": "2015"},
+
+ 	  "tasigna-2015": {
+      "title": "Tasigna",
+      "publisher": "Novartis, East Hanover, NJ",
+      "date": "2015"},
+
+ 	  "yin-2012": {
+      "authors": [
+      "Ophelia Q.P. Yin",
+      "Frank J. Giles",
+      "Michele Baccarani",
+      "Philipp Le Coutre",
+      "Ovidiu Chiparus",
+      "Neil Gallagher",
+      "Giuseppe Saglio",
+      "Timothy P. Hughes",
+      "Andreas Hochhaus",
+      "Hagop M. Kantarjian",
+      "Richard A. Larson"],
+      "title": "Concurrent use of proton pump inhibitors or H2 blockers did not adversely affect nilotinib efficacy in patients with chronic myeloid leukemia",
+      "publisher": "Cancer Chemotherapy and Pharmacology",
+      "pages": "345-350",
+      "date": "2012",
+  	  "href": "https://www.ncbi.nlm.nih.gov/pubmed/22623211"},
+nn
+ 	  "iclusig-2016": {
+      "title": "Iclusig",
+      "publisher": "ARIAD Pharmaceuticals, Inc., Cambridge, MA",
+      "date": "2016"},
+
+ 	  "egorin-2009": {
+      "authors": [
+      "Merrill J. Egorin",
+      "Dhvani D. Shah",
+      "Susan M. Christner",
+      "Mara A. Yerk",
+      "Kristin A. Komazec",
+      "Leonard R. Appleman",
+      "Robert L. Redner",
+      "Brian M. Miller",
+      "Jan H. Beumer"],
+      "title": "Effect of a proton pump inhibitor on the pharmacokinetics of imatinib",
+      "publisher": "British Journal of Clinical Pharmacology",
+      "pages": "370-374",
+      "date": "2009",
+  	  "href": "https://www.ncbi.nlm.nih.gov/pubmed/19740393"}
+
+      },
       specStatus: "CG-DRAFT",
       edDraftURI: "https://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/w3c-ddi/index.html",
       editors: [
       {
       name: "Richard D. Boyce",
-      url: "http://www.dbmi.pitt.edu/person/richard-boyce-phd",
+      url: "www.dbmi.pitt.edu/person/richard-boyce-phd",
       company: "Department of Biomedical Informatics, University of Pittsburgh, USA"
       },
       {
@@ -738,7 +795,7 @@
       },
       {
       name: "Harry Hochheiser",
-      url: "http://www.dbmi.pitt.edu/person/harry-hochheiser-phd",
+      url: "www.dbmi.pitt.edu/person/harry-hochheiser-phd",
       company: "Department of Biomedical Informatics, University of Pittsburgh, USA"
       },
       {
@@ -769,6 +826,10 @@
       {
       name: "Jodi Schneider",
       company: "University of Illinois at Urbana-Champaign, USA"
+      },
+      {
+      name: "Sam Habiel",
+      company: "Open Source Electronic Health Records Alliance (OSEHRA), USA"
       },
       {
       name: "John Horn",
@@ -871,7 +932,7 @@ pharmacovigilance activities.
 <section>
   <h2>Introduction</h2>
   <p>
-    Ensuring medication therapy occurs safely and to the maximum benefit for of any given patients is of great
+    Ensuring medication therapy occurs safely and to the maximum benefit for of any given patient is of great
     interest to clinicians [[institute-medicine-2006]]. One possible threat to patient safety comes from exposure
     to two or more drugs that are known to interact (i.e., potential drug-drug interactions or PDDIs), and could therefore
     lead to a clinically observable effect on the patient (i.e., an actual drug-drug interaction). While the effects
@@ -932,7 +993,7 @@ pharmacovigilance activities.
       thus supporting comparison and computational
       analyses. Representations in commonly-used formats (JSON,XML/RDF
       ,etc.) will support ease of construction and parsing of models,
-      particularly through shared libraries and APIs
+      particularly through shared libraries and APIs.
       </p>
 
     <figure id="PDDI-MI-APPLICATIONS">
@@ -1047,7 +1108,7 @@ These core information elements are consistent with the results of a separate in
     information model (see <a href="#decision-trees"></a>).
   <section id="ex-warfarin-nsaids">
     <h2>Applying the Minimal Information Model definitions to the PDDI between warfarin
-      + non-steroidal anti-inflammatory drugs (NSAIDs)</h2>
+      and non-steroidal anti-inflammatory drugs (NSAIDs)</h2>
     <p>
       We illustrate here the application of the Minimum Information Model definitions to representing the PDDI involving warfarin
       and non-steroidal anti-inflammatory drugs (NSAIDs). Details of
@@ -1077,7 +1138,7 @@ These core information elements are consistent with the results of a separate in
 	<td style="background-color: #f4fff2"><a>Seriousness</a>: Bleeding is a serious potential clinical consequence because it can result in death, life-threatening hospitalization, and disability. </td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> A PDDI clinical consequence MUST be noted as <i>serious</i> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage. This recommendation is in accordance with the the World Health Organization [[who-umc-glossary]], the United States Food and Drug Administration [[usdhhs-2011]], and other organizations that conduct pharmacovigilance.</td>
+	<td><strong>Comment:</strong> A PDDI clinical consequence MUST be noted as <i>serious</i> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage. This recommendation is in accordance with the World Health Organization [[who-umc-glossary]], the United States Food and Drug Administration [[usdhhs-2011]], and other organizations that conduct pharmacovigilance.</td>
       </tr>
     </table>
     <table>
@@ -1109,7 +1170,7 @@ These core information elements are consistent with the results of a separate in
           over 2 g/day for a few days. For more severe pain consider short-term opioids in place of the NSAID.</td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> Any recommended actions that apply to all patient exposures SHOULD be stated using clear an concise language. The recommended action statement SHOULD also provide citations to <a>evidence for a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on <a>contextual information/modifying factors</a> SHOULD be mentioned separately to support context-specific presentation of such information.</td>
+	<td><strong>Comment:</strong> Any recommended actions that apply to all patient exposures SHOULD be stated using clear and concise language. The recommended action statement SHOULD also provide citations to <a>evidence for a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on <a>contextual information/modifying factors</a> SHOULD be mentioned separately to support context-specific presentation of such information.</td>
       </tr>
     </table>
     <table>
@@ -1132,7 +1193,7 @@ These core information elements are consistent with the results of a separate in
             </ul>
             <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a>, the patient is NOT concomitantly taking a <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a>, and the patient has one or more of the following risk factors:</li>
             <ul>
-              <li>History of <a href="#gi-bleeding">UGIB or peptic ulcer</a> or age > 65 years old</li>
+              <li>History of <a href="#gi-bleeding">upper gastrointestinal bleeding (UGIB) or peptic ulcer</a> or age > 65 years old</li>
               <ul>
 		<li><strong>Recommended Action:</strong> Use only if benefit outweighs risk</li>
 		<li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> Patients with a
@@ -1154,7 +1215,7 @@ These core information elements are consistent with the results of a separate in
       </tr>
       <tr>
 	<td><strong>Comment:</strong> <a>Contextual information/modifying factors</a> are necessary for alerts that
-          are both sensitive and specific. Like clinical consequences, the each known factor SHOULD be
+          are both sensitive and specific. Like clinical consequences, each known factor SHOULD be
           stated as specifically as possible. The factors SHOULD be amenable to implementation as executable
           logic using value sets from clinical terminologies such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a>, the
 	  <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a>, and <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. As is used in this
@@ -1184,11 +1245,9 @@ These core information elements are consistent with the results of a separate in
     <h2>Applying the Minimal Information Model definitions to the PDDI between BCR-ABL
       Tyrosine Kinase Inhibitors (TKI) + Proton Pump Inhibitors (PPI)</h2>
     <p> Minimal information Model definitions and discussion comments
-      (where differing from the previous example) for the  PDDI
+      (were differing from the previous example) for the  PDDI
       involving  BCR-ABL Tyrosine Kinase Inhibitors (TKIs) + Proton
-      Pump Inhibitors (PPIs). Details of the development of this
-      information can be found in the Appendix
-      <a href="#BCR-ABL"></a>.
+      Pump Inhibitors (PPIs). 
     </p>
     <table>
       <tr>
@@ -1356,7 +1415,7 @@ These core information elements are consistent with the results of a separate in
       built using such information. For example, Tamblyn et al. found that a novel medication clinical decision support system
       that provided patient-specific risk estimates of injury due to falls reduced fall-related injury by 1.7 injuries per 1000
       patients (95% CI 0.2/1000 to 3.2/1000 p=0.02) [[tamblyn-2012]]. Conversely, when a PDDI summary provides no context
-      about risk and and no frequency information, only clinical decision support alerts based on  simple exposure to the drug
+      about risk and no frequency information, only clinical decision support alerts based on  simple exposure to the drug
       combination can be built. This leads to highly sensitive but unspecific alerts and is a primary cause of alert fatigue and
       clinician dissatisfaction  [[van-der-sijs-2006]].
     </p>
@@ -1448,8 +1507,8 @@ These core information elements are consistent with the results of a separate in
     <h2>A set of use cases focused on medication reconciliation</h2>
     <p>
       Medication reconciliation use cases highlight the potential
-      clinical applicability of the minimum information information
-      model. To tie the medication reconciliation use cases more
+      clinical applicability of the minimum information model. To tie
+      the medication reconciliation use cases more 
       closely to 
       user-centered definitions, information model items were highlighted based on a color-coded key to
       indicate the user-centered definition in question. 
@@ -1458,8 +1517,8 @@ These core information elements are consistent with the results of a separate in
       Three detailed medication reconciliation use cases are provide in the following sub-sections. Each use case is color coded for mention of core information items in the minimum information model (see <a href="#color-coding-key"></a>). One use case is for a Hospital Pharmacist
       dealing with medication reconciliation upon admission. Another use case is for a hospital pharmacist
       completing a dealing with medication reconciliation upon discharge.  A third use case is for a consultant
-      pharmacist performing medication reconciliation upon patient readmission. All three use cases include
-      mention of PDDIs discussed in detail in the Appendix (see <a href="#decision-trees"></a>).
+      pharmacist performing medication reconciliation upon patient
+      readmission. All three use cases include PDDIs discussed in detail in the Appendix (see <a href="#decision-trees"></a>).
     </p>
 
       <section>
@@ -1681,7 +1740,7 @@ description of the process used to develop these recommendations):
       is that it allow for integration of terms from existing
       biomedical terminologies such as ICD-10, SNOMED-CT, RxNorm, and
       LOINC. This presents a challenge since these terminologies
-      reprsent similar items at different levels of semantic richness,
+      represent similar items at different levels of semantic richness,
       methodological rigor, and semantic commitments. While it is
       highly unlikely that it would be possible to unify all external
       terms semantically at an upper level with the core PDDI
@@ -1827,7 +1886,7 @@ description of the process used to develop these recommendations):
       target="new">Summary of Product Characteristics</a>.
     </p>
     <p>
-      As was mentioned in a previous section
+      As mentioned in a previous section
       (see <a href="#overarching-use-case"></a>), drug product
       labeling can contain many gaps in information relative to the
       core PDDI information. Other prior work has shown that many
@@ -1839,7 +1898,7 @@ description of the process used to develop these recommendations):
     </p>
     <p>
       As is shown <a href="#PDDI-MI-APPLICATIONS"></a>, the PDDI
-      minimum information model could  making PDDI information reported in product labeling more
+      minimum information model could help address this issue by making PDDI information reported in product labeling more
       complete and clinically useful. In the United States and other
       parts of the world, the content of a drug's product label is
       written by the company that owns the drug as part of the drug
@@ -1963,7 +2022,7 @@ description of the process used to develop these recommendations):
     domain analysis for a minimum information model for PDDI
     information. The Note also suggests potential applications of the
     minimum information model that could lead to improvements in
-    patients safety with respect to PDDIs. The overarching goal of
+    patient safety with respect to PDDIs. The overarching goal of
     these contributions is to provide a technical foundation for
     effective PDDI clinical decision support. A reference
     implementation of the information model is the subject of future
@@ -1989,10 +2048,10 @@ description of the process used to develop these recommendations):
 
     <p>Toward the goal of developing such a model, a volunteer-based Task Force force was formed by the Health
       Care and Life Sciences Interest Group, an interest group that operates publicly through the World Wide
-      Web Consortium (W3C).  This Task Force force has taken a user-centered design approach to designing the
+      Web Consortium (W3C).  This Task Force has taken a user-centered design approach to designing the
       minimal information model through three main activities:</p>
     <ul>
-      <li>A sub-team of drug experts on the Task Force force selected more than a dozen PDDIs to represent
+      <li>A sub-team of drug experts on the Task Force selected more than a dozen PDDIs to represent
         using the new information model.</li>
       <li>In parallel, Task Force members initiated an iterative process that involved stakeholders
         (i.e., individuals who edit drug information sources, various types of clinicians, and decision
@@ -2007,7 +2066,7 @@ description of the process used to develop these recommendations):
 	model</h2>
       <font color="grey">
 
-      <p>Prior work by some members of the Task Force force has sought to develop evidence-based clinical
+      <p>Prior work by some members of the Task Force has sought to develop evidence-based clinical
         algorithms that consider a patient’s electronic health record information to provide a clinician
         with actionable information tailored to the patient’s specific context. <sup>1</sup>The algorithms are formulated
         as decision trees to provide concise information including the interaction description, the purported
@@ -2015,10 +2074,10 @@ description of the process used to develop these recommendations):
         listed in the footnotes. Two sample decision trees illustrating the management options can be found in
         the appendix (see Appendix <a href="#decision-trees">DECISION TREES</a>).</p>
       <blockquote style="font-size: small"><sup>1</sup>The initial decision trees were developed through the “Individualized Drug Interaction Alerts”
-        AHRQ grant by Task Force force members Dan Malone and John Horn, as well as Phil Hansten (AHRQ Project: R21-HS023826-01;
+        AHRQ grant by Task Force members Dan Malone and John Horn, as well as Phil Hansten (AHRQ Project: R21-HS023826-01;
         Title: Individualized Drug Interaction Alerts; Authors: Daniel C. Malone, University of Arizona; John Horn,
         Philip Hansten, University of Washington).</blockquote>
-      <p>The Task Force force built on this prior work by selecting PDDIs to demonstrate the new minimum
+      <p>The Task Force built on this prior work by selecting PDDIs to demonstrate the new minimum
         information model and then creating decision trees for each of the PDDIs that they selected.
         Task Force drug experts selected the PDDIs and identified contextual information/modifying factors that
         would warrant any of three different recommended actions - <em>No special precautions, Assess risk and take action
@@ -2030,7 +2089,7 @@ description of the process used to develop these recommendations):
         One option was to select the most serious PDDIs. However, it was noted that the seriousness of a PDDI
         depends a great deal on the patient characteristics context. This meant that it would be difficult to
         identify PDDIs that were considered the most serious in all clinical settings and for all patients. An
-        alternative approach was to choose PDDIs that would allow the Task Force force to demonstrate how the
+        alternative approach was to choose PDDIs that would allow the Task Force to demonstrate how the
         information model should be used when facing known issues with PDDI evidence and knowledge. Toward that
         aim, participants were requested to provide suggestions of PDDIs meeting at least one or more of the
         following criteria which follow from the aforementioned information categories suggested by attendees
@@ -2231,12 +2290,12 @@ description of the process used to develop these recommendations):
           <span style="color: #fb0082">u</span> = Use only if benefit outweighs risk <br>
           <p style="text-align: left"><strong>Footnotes:</strong></p>
           <ol type="1">
-            <li style="text-align: left">Sprycel [package insert]. Princeton, NJ: Bristol-Myers Squibb Company; 2015</li>
-            <li style="text-align: left">Bosulif [package insert]. New York, NY: Pfizer Labs; 2015.</li>
-            <li style="text-align: left">Tasigna [package insert]. East Hanover, NJ: Novartis; 2015.</li>
-            <li style="text-align: left">Yin OQ, Giles FJ, Baccarani M, et al. Concurrent use of proton pump inhibitors or H2 blockers did not adversely affect nilotinib efficacy in patients with chronic myeloid leukemia. Cancer Chemother Pharmacol. 2012;70(2):345-350.</li>
-            <li style="text-align: left">Iclusig [package insert]. Cambridge, MA: ARIAD Pharmaceuticals, Inc. 2016.</li>
-            <li style="text-align: left">Egorin MJ, Shah DD, Christner SM, et al. Effect of a proton pump inhibitor on the pharmacokinetics of imatinib. Br J Clin Pharmacol. 2009;68(3):370-374.</li>
+            <li style="text-align: left">[[sprycel-2015]]</li>
+            <li style="text-align: left">[[bosulif-2015]]</li>
+            <li style="text-align: left">[[tasigna-2015]]</li>
+            <li style="text-align: left">[[yin-2012]]</li>
+            <li style="text-align: left">[[iclusig-2016]]</li>
+            <li style="text-align: left">[[egorin-2009]]</li>
           </ol>
         </figcaption>
       </figure>
@@ -2247,7 +2306,7 @@ description of the process used to develop these recommendations):
       <h2>Workflow for arriving at stories and goals</h2>
       <p>
         User stories and goals were developed in order to showcase how the PDDI minimum information model
-        will support users. The Task Force force began developing the Stakeholder Description document and
+        will support users. The Task Force began developing the Stakeholder Description document and
         the PDDI Minimum Information Model User Scenarios document in order to identify key users. These
         stakeholder descriptions and user scenarios were used as the basis for further brainstorming with
         the assistance of a user experience expert to develop a master list of tasks, users, information needs,
@@ -2258,14 +2317,14 @@ description of the process used to develop these recommendations):
       </p>
       <p>
 	<font color="grey">
-        In order to develop the user stories for the core user types, Task Force force members created an
+        In order to develop the user stories for the core user types, Task Force  members created an
         initial information needs list  and then was supplemented it with user interviews, interview transcripts
         collected as a part of a recently published manuscript on PDDI information needs of drug information
         compendium editors [[romagnoli-2017]], and the published literature. Where possible, user stories
-        were based on PDDIs suggested by the Task Force force’s PDDI experts. All user stories were reviewed
-        during team meetings to solicit feedback and comments. Based on Task Force force member suggestions,
+        were based on PDDIs suggested by the Task Force’s PDDI experts. All user stories were reviewed
+        during team meetings to solicit feedback and comments. Based on Task Force member suggestions,
         the user stories were edited to make them more clinically relevant, accurate and appropriate. Information
-        model items were highlighted based on a color-coded key to indicate the the minimum information model
+        model items were highlighted based on a color-coded key to indicate the minimum information model
         information item in question.
 	</font>
       </p>
@@ -2299,20 +2358,20 @@ description of the process used to develop these recommendations):
         We used the process shown in <a href="#user-centered-flow"></a> to arrive at user-centered definitions for
         the core information items recommended by the prior drug interaction conference series
         (see Section <a href="#justification"></a>). We started with an initial definition of each item based on
-        suggestions by members of the Task Force force and review of the DINTO [[herrero-zazo-2015]]
+        suggestions by members of the Task Force and review of the DINTO [[herrero-zazo-2015]]
         and DIDEO [[brochhausen-2014]] ontologies. We then solicited feedback from all Task Force
         force participants using a Qualtrics survey (see <a href="#example-survey"></a> ). The survey asked participants
         to rate their level of agreement with the definition and the evidence presented using a Likert
         scale (Strongly agree, Agree, Somewhat agree, Neither agree nor disagree, Somewhat disagree,
         Disagree, Strongly disagree), followed by questions about how to modify the definition in order
         to make it more general or specific. Feedback was collected and synthesized, and then the proposed
-        definition was modified based on Task Force force recommendations. The Task Force force sub-teams
+        definition was modified based on Task Force recommendations. The Task Force sub-teams
         discussed and developed final versions. The definitions were finalized for use in the PDDI minimum
         information model.
       </p>
       <figure id="user-centered-flow">
         <img src="W3C-Images/user-centered-flow.png">
-        <figcaption>The process used by the Task Force force to arrive at user-centered definitions
+        <figcaption>The process used by the Task Force to arrive at user-centered definitions
           for the core information items recommended by two multi-stakeholder conference meetings/series
           [[hines-2011]][[scheife-2015]][[payne-2015]][[tilson-2016]].</figcaption>
       </figure>
@@ -2362,7 +2421,7 @@ description of the process used to develop these recommendations):
         </ul>
       </p>
       <p>Q4<br>What would you add to or remove from this definition in order to make it more general?</p>
-      <p>Q5<br>What would you add to or remove from this definition in order to make it more specific to drug drug interactions?</p>
+      <p>Q5<br>What would you add to or remove from this definition in order to make it more specific to drug-drug interactions?</p>
       <p>Q6<br>Do you have any additional comments, concerns, or suggestions about the definition?</p>
       <p>Q7<br>Do you have any comments, concerns, or suggestions about the examples and evidence?</p>
     </section>
@@ -2519,7 +2578,7 @@ description of the process used to develop these recommendations):
           <li>Michael is a librarian who works for the medication safety unit in a regulatory
             agency.  He has graduate training in library and information science, and
             has a good understanding of medical reference sources.  When he is asked
-            to locate information about a potential drug drug interaction, he wants to
+            to locate information about a potential drug-drug interaction, he wants to
             understand more about the terms used to describe the drugs so that he can
             develop search strategies to run daily, weekly, and monthly searches.
             He would like to find terms used to describe the specific drugs involved
@@ -3456,3 +3515,6 @@ description of the process used to develop these recommendations):
 
 <!--  LocalWords:  AMIA OHDSI
  -->
+<!--TODO: We need to review and include relevant material from the "Best Practices for Reporting  Preclinical Studies " section of
+ https://alzped.nia.nih.gov/resources? -->
+<!-- TODO: Possible Drop XML Section -->
