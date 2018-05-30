@@ -1,7 +1,3 @@
-* reorder elements in 2.1 to match example in 2.2
-* review xml examples and fix content
-** particularly for gastric ph meds
-* fix issues in github
 *  create draft of manuscript
 
 DONE
@@ -45,3 +41,16 @@ DONE
 ** medications that increase gastrich ph
 
 * add ontology concept for drugs involved
+* reorder elements in 2.1 to match example in 2.2
+  *drugs involved
+  *clinical consequences
+  seriousness
+  severity
+  mechanism
+ recommended action
+ contextual information/modifying factors 
+ frequencey of exposure
+ frequency of harm
+* review xml examples and fix content
+** particularly for gastric ph meds
+* fix issues in github
