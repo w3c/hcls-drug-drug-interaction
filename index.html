@@ -2057,22 +2057,22 @@ description of the process used to develop these recommendations):
     <p>Toward the goal of developing such a model, a volunteer-based Task Force force was formed by the Health
       Care and Life Sciences Interest Group, an interest group that operates publicly through the World Wide
       Web Consortium (W3C).  This Task Force has taken a user-centered design approach to designing the
-      minimal information model through three main activities:</p>
-    <ul>
-      <li>A sub-team of drug experts on the Task Force selected more than a dozen PDDIs to represent
-        using the new information model.</li>
-      <li>In parallel, Task Force members initiated an iterative process that involved stakeholders
-        (i.e., individuals who edit drug information sources, various types of clinicians, and decision
-        support system developers), in the creation of user stories and use cases that define the
+      minimal information model through the a series of complementary activities:</p>
+    <ol>
+      <li>Development of decision trees of more than a dozen PDDIs to
+	represent  using the new information model.</li>
+      <li>Creation of user stories and use cases that define the
         requirements for the minimum information model.</li>
-      <li>Also in parallel, a sub-team of knowledge representation experts developed guidelines for the
-        information model’s semantics of the information model. </li>
-    </ul>
+      <li>Construction of user-centered definitions for elements of the
+      information model.
+      <li>Definition of guidelines for knowledge representation</li>
+    </ol>
 
+    <section id="Decision-Trees">
+      <h2>Decision Trees</h2>
     <section id="selecting-PDDIs">
       <h2>Selecting PDDIs to implement using the minimum information
 	model</h2>
-      <font color="grey">
 
       <p>Prior work by some members of the Task Force has sought to develop evidence-based clinical
         algorithms that consider a patient’s electronic health record information to provide a clinician
@@ -2120,15 +2120,15 @@ description of the process used to develop these recommendations):
         <li>The recommended action is “avoid”.</li>
         <li>The recommended action is “a clear alternative drug and dose”.</li>
       </ol>
-      </font>
+
     </section>
     <section id="decision-trees">
     <h2>Decision Trees Created for the Minimum Information Model Domain Analysis</h2>
-    <p><font color="grey">The Task Force force developed 14 PDDI decision trees detailing
+    The Task Force force developed 14 PDDI decision trees detailing
       the steps taken in using the the minimal information model to
       describe PDDIS.  These exemplars were chosen to represent
       questions identified by the Task Force force as potentially
-      affecting the search and syntheses of PDDI information. </font>The
+      affecting the search and syntheses of PDDI information. The
       potential interactions and the information situations they were selected for are listed in <em>Table 1</em>.</p>
 
     <p><strong><em>Table 1</em></strong></p>
@@ -2308,7 +2308,12 @@ description of the process used to develop these recommendations):
         </figcaption>
       </figure>
     </section>
-  </section>
+    </section>
+</section>
+
+
+<section id="user-stories-goals">
+  <h2>User Stories and use cases</h2>
 
         <section id="user-story-workflow">
       <h2>Workflow for arriving at stories and goals</h2>
@@ -2320,11 +2325,9 @@ description of the process used to develop these recommendations):
         the assistance of a user experience expert to develop a master list of tasks, users, information needs,
         information values, and barriers to drug-drug interaction based decision-making in a variety of situations.
         A core set of user types was selected for development of user stories based on the scope of the minimum
-        information model. <font color="grey">These will be presented in the Results section. The user types considered “out of scope”
-        are listed in Appendix <a href="#out-of-scope-stories"></a>.</font>
+        information model. 
       </p>
       <p>
-	<font color="grey">
         In order to develop the user stories for the core user types, Task Force  members created an
         initial information needs list  and then was supplemented it with user interviews, interview transcripts
         collected as a part of a recently published manuscript on PDDI information needs of drug information
@@ -2334,7 +2337,6 @@ description of the process used to develop these recommendations):
         the user stories were edited to make them more clinically relevant, accurate and appropriate. Information
         model items were highlighted based on a color-coded key to indicate the minimum information model
         information item in question.
-	</font>
       </p>
 
       
@@ -2358,87 +2360,11 @@ description of the process used to develop these recommendations):
                     (<a href="www.qualtrics.com">www.qualtrics.com</a>).
                     This approach was chosen to allow for additional, anonymous feedback.
                 </p>
-            </section>
-    
-    <section id="definition-dev-workflow">
-      <h2>Workflow for arriving at user-centered definitions</h2>
-      <p>
-        We used the process shown in <a href="#user-centered-flow"></a> to arrive at user-centered definitions for
-        the core information items recommended by the prior drug interaction conference series
-        (see Section <a href="#justification"></a>). We started with an initial definition of each item based on
-        suggestions by members of the Task Force and review of the DINTO [[herrero-zazo-2015]]
-        and DIDEO [[brochhausen-2014]] ontologies. We then solicited feedback from all Task Force
-        force participants using a Qualtrics survey (see <a href="#example-survey"></a> ). The survey asked participants
-        to rate their level of agreement with the definition and the evidence presented using a Likert
-        scale (Strongly agree, Agree, Somewhat agree, Neither agree nor disagree, Somewhat disagree,
-        Disagree, Strongly disagree), followed by questions about how to modify the definition in order
-        to make it more general or specific. Feedback was collected and synthesized, and then the proposed
-        definition was modified based on Task Force recommendations. The Task Force sub-teams
-        discussed and developed final versions. The definitions were finalized for use in the PDDI minimum
-        information model.
-      </p>
-      <figure id="user-centered-flow">
-        <img src="W3C-Images/user-centered-flow.png">
-        <figcaption>The process used by the Task Force to arrive at user-centered definitions
-          for the core information items recommended by two multi-stakeholder conference meetings/series
-          [[hines-2011]][[scheife-2015]][[payne-2015]][[tilson-2016]].</figcaption>
-      </figure>
     </section>
 
-    <section id="example-survey">
-      <h2>Example of the survey used to arrive at final user centered definitions</h2>
-      <p>We would like your feedback regarding user-centered definitions.
-        Please review the following user-centered definition(s) and example(s).</p>
-      <p>Q1<br>Here is our proposed user-centered definition of “evidence”:</p>
-      <p><strong>The support given for the possible existence of a drug interaction;
-          it may include, but is not limited to, systematic reviews, randomized control
-          trials, case reports, or study data. </strong></p>
-      <p><strong>For example:</strong> Evidence of an interaction between
-        corticosteroids and non-steroidal anti-inflammatory drugs (NSAIDs),
-        and between aldosterone antagonists and NSAIDs:</p>
-      <ul>
-        <li><strong>“Both corticosteroids and aldosterone antagonists  have been shown to
-            substantially increase the risk of UGIB in patients  on NSAIDs, with relative
-            risks of 12.8 and 11 respectively compared to a risk of 4.3 with NSAIDs alone”</strong></li>
-        <li>Results from a case series analysis [[masclee-2014]]</li>
-        <ul>
-          <li><strong>Source:</strong> Outcome of the decision pathway,
-            <a href="https://pitt.co1.qualtrics.com/CP/File.php?F=F_29xiLSLtHky74vX">Warfarin-NSAID Decision Table</a>,
-            AHRQ Project: R21-HS023826-01; Title:
-            Individualized Drug Interaction Alerts; Contact PI: Daniel C. Malone, University of Arizona</li>
-        </ul>
-      </ul>
-      <p>Q2<br>Please select one of the following options to indicate whether you agree or disagree with this definition:</p>
-      <p>
-        <ul>
-          <li>Strongly Agree</li>
-          <li>Agree</li>
-          <li>Somewhat Agree</li>
-          <li>Neither Agree nor Disagree</li>
-          <li>Somewhat Disagree</li>
-          <li>Disagree</li>
-          <li>Strongly Disagree</li>
-        </ul>
-      </p>
-      <p>Q3<br>How general do you think this definition should be?</p>
-      <p>
-        <ul>
-          <li>More General</li>
-          <li>Appropriate</li>
-          <li>Less General</li>
-        </ul>
-      </p>
-      <p>Q4<br>What would you add to or remove from this definition in order to make it more general?</p>
-      <p>Q5<br>What would you add to or remove from this definition in order to make it more specific to drug-drug interactions?</p>
-      <p>Q6<br>Do you have any additional comments, concerns, or suggestions about the definition?</p>
-      <p>Q7<br>Do you have any comments, concerns, or suggestions about the examples and evidence?</p>
-    </section>
 
   <section id="final-stories">
     <h2>User stories for the minimum information model</h2>
-    <section id="color-coding-key">
-      <h2>Color-coding Key</h2>
-      <p>
 	The following three use cases presented below use the following color-coding to represent core information items defined for the minimum information model. A table
 	summarizing the information needs exposed by these use cases is also presented in  Appendix <a href="#med-rec-needs"></a>.
       </p>
@@ -2472,10 +2398,7 @@ description of the process used to develop these recommendations):
           <td width="300" style="text-align: center">Frequency of Harm/Exposure</td>
         </tr>
       </table>
-    </section>
 
-    <section id="detailed-user-stories">
-      <h2>User Stories</h2>
       <section id="treatment-planning-phys">
         <h2>Treatment Planning, Physician</h2>
         <p><strong>Simvastatin + Amiodarone</strong></p>
@@ -2614,7 +2537,6 @@ description of the process used to develop these recommendations):
             what to display and how to display information or alerts for clinicians.</li>
         </ul>
       </section>
-    </section>
     <section id="out-of-scope-stories">
       <h2>Out of scope user stories</h2>
       <p>The following user stories were considered as outside of scope of the task of developing the PDDI minimum
@@ -2644,8 +2566,92 @@ description of the process used to develop these recommendations):
     </section>
   </section>
 
+    
+
+    </section>
+
+  <section id="user-centered-defs">
+    <h2>User-centered definitions of minimal information model
+      elements</h2>
+    
+    <section id="definition-dev-workflow">
+      <h2>Workflow for arriving at user-centered definitions</h2>
+      <p>
+        We used the process shown in <a href="#user-centered-flow"></a> to arrive at user-centered definitions for
+        the core information items recommended by the prior drug interaction conference series
+        (see Section <a href="#justification"></a>). We started with an initial definition of each item based on
+        suggestions by members of the Task Force and review of the DINTO [[herrero-zazo-2015]]
+        and DIDEO [[brochhausen-2014]] ontologies. We then solicited feedback from all Task Force
+        force participants using a Qualtrics survey (see <a href="#example-survey"></a> ). The survey asked participants
+        to rate their level of agreement with the definition and the evidence presented using a Likert
+        scale (Strongly agree, Agree, Somewhat agree, Neither agree nor disagree, Somewhat disagree,
+        Disagree, Strongly disagree), followed by questions about how to modify the definition in order
+        to make it more general or specific. Feedback was collected and synthesized, and then the proposed
+        definition was modified based on Task Force recommendations. The Task Force sub-teams
+        discussed and developed final versions. The definitions were finalized for use in the PDDI minimum
+        information model.
+      </p>
+      <figure id="user-centered-flow">
+        <img src="W3C-Images/user-centered-flow.png">
+        <figcaption>The process used by the Task Force to arrive at user-centered definitions
+          for the core information items recommended by two multi-stakeholder conference meetings/series
+          [[hines-2011]][[scheife-2015]][[payne-2015]][[tilson-2016]].</figcaption>
+      </figure>
+      </section>
+
+    <section id="example-survey">
+      <h2>The survey used to arrive at final user centered definitions</h2>
+      <p>We would like your feedback regarding user-centered definitions.
+        Please review the following user-centered definition(s) and example(s).</p>
+      <p>Q1<br>Here is our proposed user-centered definition of “evidence”:</p>
+      <p><strong>The support given for the possible existence of a drug interaction;
+          it may include, but is not limited to, systematic reviews, randomized control
+          trials, case reports, or study data. </strong></p>
+      <p><strong>For example:</strong> Evidence of an interaction between
+        corticosteroids and non-steroidal anti-inflammatory drugs (NSAIDs),
+        and between aldosterone antagonists and NSAIDs:</p>
+      <ul>
+        <li><strong>“Both corticosteroids and aldosterone antagonists  have been shown to
+            substantially increase the risk of UGIB in patients  on NSAIDs, with relative
+            risks of 12.8 and 11 respectively compared to a risk of 4.3 with NSAIDs alone”</strong></li>
+        <li>Results from a case series analysis [[masclee-2014]]</li>
+        <ul>
+          <li><strong>Source:</strong> Outcome of the decision pathway,
+            <a href="https://pitt.co1.qualtrics.com/CP/File.php?F=F_29xiLSLtHky74vX">Warfarin-NSAID Decision Table</a>,
+            AHRQ Project: R21-HS023826-01; Title:
+            Individualized Drug Interaction Alerts; Contact PI: Daniel C. Malone, University of Arizona</li>
+        </ul>
+      </ul>
+      <p>Q2<br>Please select one of the following options to indicate whether you agree or disagree with this definition:</p>
+      <p>
+        <ul>
+          <li>Strongly Agree</li>
+          <li>Agree</li>
+          <li>Somewhat Agree</li>
+          <li>Neither Agree nor Disagree</li>
+          <li>Somewhat Disagree</li>
+          <li>Disagree</li>
+          <li>Strongly Disagree</li>
+        </ul>
+      </p>
+      <p>Q3<br>How general do you think this definition should be?</p>
+      <p>
+        <ul>
+          <li>More General</li>
+          <li>Appropriate</li>
+          <li>Less General</li>
+        </ul>
+      </p>
+      <p>Q4<br>What would you add to or remove from this definition in order to make it more general?</p>
+      <p>Q5<br>What would you add to or remove from this definition in order to make it more specific to drug-drug interactions?</p>
+      <p>Q6<br>Do you have any additional comments, concerns, or suggestions about the definition?</p>
+      <p>Q7<br>Do you have any comments, concerns, or suggestions about the examples and evidence?</p>
+    </section>
+    </section>
+
+
   <section id="kr-process-apdx">
-    <h2>The Process Used by the Task Force for Setting the Knowledge Representation Scope</h2>
+    <h2>Definition of guidelines for knowledge representation</h2>
     
     <font color="grey">A sub-team of the task force focused on setting the scope of
     knowledge representation for the minimum information model. A
@@ -2664,7 +2670,7 @@ description of the process used to develop these recommendations):
       of this document.
       </font>
   </section>
-  
+  </section>
   
   <section id="Value Sets">
     <h2>Value Sets to Support PDDI Examples</h2>
@@ -3513,7 +3519,6 @@ description of the process used to develop these recommendations):
 	&lt/MPIO:MPIO_0000000&gt
 
       </pre>
-    </section>
   </section>
 </section>
 </body>
