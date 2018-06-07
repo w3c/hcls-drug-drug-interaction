@@ -1,3 +1,4 @@
+* fix color coding mess (seriousness/severity)
 *  create draft of manuscript
 
 DONE
