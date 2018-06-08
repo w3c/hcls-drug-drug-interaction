@@ -1494,13 +1494,11 @@ These core information elements are consistent with the results of a separate in
   <section id="spec-user-stories">
     <h2>End-users of the minimum information model</h2>
     <p>
-      Nine user stories with related goals demonstrate the use of the
-      PDDI minimal information model. Each user story was color coded
-      for mention of core information items in the minimum information
-      model (see <a href="#final-stories"></a>). The final set of
-      user stories is located
-      in <a href="#final-stories"></a>. User stories include
-      the following: 
+      Twelve user stories with related goals demonstrate the use of the
+      PDDI minimal information model. These stories are associated
+      with seven types of users (physicians, pharamacists, nurses,
+      drug compendia editors, health science librarians, systems
+      analysts, and content specialists: 
       <ul>
 	<li><a href="#treatment-planning-phys">A physician conducting treatment planning</a> (3 distinct user stories)</li>
 	<li><a href="#eval-management-options-phys">A physician evaluating management options</a></li>
@@ -1508,22 +1506,81 @@ These core information elements are consistent with the results of a separate in
 	<li><a href="#nurse-screening">A nurse screening for PDDIs</a></li>
 	<li><a href="#editor-synthesis-dissemination">A drug compendium editor synthesizing PDDI evidence for dissemination</a></li>
 	<li><a href="#librarian-dissemination">A health science librarian assisting in the synthesis of PDDI evidence for dissemination</a></li>
-	<li><a href="#cds-team">A systems analyst and content specialist translating a synthesizes of PDDI evidence into a clinical decision support tool</a></li>
+	<li><a href="#cds-team">A systems analyst and content
+	specialist translating a synthesizes of PDDI evidence into a
+	    clinical decision support tool</a></li>
+	<li><a href="#med-rec-use cases">Pharmacists reonciling
+	patient medications</a>
       </ul>
       
-      The user types considered “out of scope” are listed in Appendix <a href="#out-of-scope-stories"></a>.
+      Additional user types considered “out of scope” are listed in Appendix <a href="#out-of-scope-stories"></a>.
     </p>
+
+
+    <p>Each user story was color coded
+      for mention of core information items in the minimum information
+      model (see <A HREF="#user-story-color-coding"></a>). Three user stories focused on the critical process 
+      of medication reconciliation for PDDIS detailed in the Appendix
+      (see <a href="#decision-trees"></a>) are given here; remaining user
+      stories are located 
+      in <a href="#final-stories"></a>. 
+  </section>
+
+  <section id="user-story-color-coding">
+    <h2>Color codes used in user stories</h2>
+    <p>The following table illustrates the colors used to describe
+      user stories. Note that some of the elements (severity and frequency
+      of exposure) are not addressed in any of the user stories.</p>
+
+          <table>
+        <tr>
+          <td style="background-color: #fee087" width="150"></td>
+          <td width="300" style="text-align: center">Clinical Consequences</td>
+        </tr>
+        <tr>
+          <td style="background-color: #bed1f6" width="150"></td>
+          <td width="300" style="text-align: center">Evidence</td>
+        </tr>
+        <tr>
+          <td style="background-color: #dfa99f" width="150"></td>
+          <td width="300" style="text-align: center">Recommended Actions</td>
+        </tr>
+        <tr>
+          <td style="background-color: #a9d098" width="150"></td>
+          <td width="300" style="text-align: center">Mechanism of Interaction</td>
+        </tr>
+        <tr>
+          <td style="background-color: #d0c7e3" width="150"></td>
+          <td width="300" style="text-align: center">Contextual Evidence/Modifying Factors</td>
+        </tr>
+        <tr>
+          <td style="background-color: #f6bf8b" width="150"></td>
+          <td width="300" style="text-align: center">Seriousness Rating</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: #ccffff" width="150"></td>
+          <td width="300" style="text-align: center">Severity Rating</td>
+        </tr>
+
+	
+        <tr>
+          <td style="background-color: #a8a8a8" width="150"></td>
+          <td width="300" style="text-align: center">Frequency of Harm</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: #ffcccc" width="150"></td>
+          <td width="300" style="text-align: center">Frequency of Exposure</td>
+        </tr>
+
+
+  </table>
+    
   </section>
   
   <section id="med-rec-use-cases">
     <h2>A set of user stories focused on medication reconciliation</h2>
-    <p>
-      Three detailed medication reconciliation use stories are provided in the following sub-sections. Each use case is color coded for mention of core information items in the minimum information model (see <a href="#final-stories"></a>). One use case is for a Hospital Pharmacist
-      dealing with medication reconciliation upon admission. Another use case is for a hospital pharmacist
-      completing a dealing with medication reconciliation upon discharge.  A third use case is for a consultant
-      pharmacist performing medication reconciliation upon patient
-      readmission. All three user stories include PDDIs discussed in detail in the Appendix (see <a href="#decision-trees"></a>).
-    </p>
 
       <section>
 	<h2>Use Story 1:  Hospital Pharmacist, Medication Reconciliation upon Admission</h2>
@@ -1770,7 +1827,7 @@ description of the process used to develop these recommendations):
   <p>
     The information provided in this Community Group Note provides a
     concrete, user centered, basis for design and implementation
-    activities for the PDDI minimum information model. Nine user
+    activities for the PDDI minimum information model. Twelve user
     stories with related goals show how the PDDI minimum information
     model would support various users
     (see <a href="#spec-user-stories"></a>).  Detailed descriptions of
@@ -2311,7 +2368,7 @@ description of the process used to develop these recommendations):
 
 
 <section id="user-stories-goals">
-  <h2>User Stories and use cases</h2>
+  <h2>User Stories</h2>
 
         <section id="user-story-workflow">
       <h2>Workflow for arriving at stories and goals</h2>
@@ -2339,63 +2396,16 @@ description of the process used to develop these recommendations):
 
       
     </section>
-    <section>
-                <h2>A set of use cases focused on medication reconciliation</h2>
-                <p>
-                    Medication reconciliation use cases were recommended by a Task Force force members as a way to highlight
-                    the Task Force force information model elements. To obtain background information for the medication
-                    reconciliation use cases, a third year PharmD student conducted structured interviews with a hospital
-                    pharmacist and with a consultant pharmacist andalong with an observedation of the hospital pharmacist
-                    medication reconciliation process. Detailed use cases were drafted based on points raised during the
-                    interviews and drug-drug interactions highlighted by the interviewed pharmacists. Where possible, the
-                    Task Force force’s selected PDDIs were incorporated. Draft use cases were sent to the interviewed
-                    pharmacists for feedback and edits, and then presented during a full Task Force force meeting involving
-                    all participants. Suggestions from this meeting were incorporated into the use cases. As with the user
-                    stories mentioned above, in order to tie the medication reconciliation use cases more closely to
-                    user-centered definitions, information model items were highlighted based on a color-coded key to
-                    indicate the user-centered definition in question. The modified use cases were then sent to members
-                    of the Task Force force using a questionnaire custom built using Qualtrics software
-                    (<a href="www.qualtrics.com">www.qualtrics.com</a>).
-                    This approach was chosen to allow for additional, anonymous feedback.
-                </p>
-    </section>
-
 
   <section id="final-stories">
     <h2>User stories for the minimum information model</h2>
-	The following three use cases presented below use the following color-coding to represent core information items defined for the minimum information model. A table
+	The following user stories use the
+	color-coding described
+	in <A href="user-story-color-coding"></a> to represent core
+	information items defined for the minimum information model. A
+	table 
 	summarizing the information needs exposed by these use cases is also presented in  Appendix <a href="#med-rec-needs"></a>.
       </p>
-      <table>
-        <tr>
-          <td style="background-color: #fee087" width="150"></td>
-          <td width="300" style="text-align: center">Clinical Consequences</td>
-        </tr>
-        <tr>
-          <td style="background-color: #bed1f6" width="150"></td>
-          <td width="300" style="text-align: center">Evidence</td>
-        </tr>
-        <tr>
-          <td style="background-color: #dfa99f" width="150"></td>
-          <td width="300" style="text-align: center">Recommended Actions</td>
-        </tr>
-        <tr>
-          <td style="background-color: #a9d098" width="150"></td>
-          <td width="300" style="text-align: center">Mechanism of Interaction</td>
-        </tr>
-        <tr>
-          <td style="background-color: #d0c7e3" width="150"></td>
-          <td width="300" style="text-align: center">Contextual Evidence/Modifying Factors</td>
-        </tr>
-        <tr>
-          <td style="background-color: #f6bf8b" width="150"></td>
-          <td width="300" style="text-align: center">Seriousness/Severity Rating</td>
-        </tr>
-        <tr>
-          <td style="background-color: #a8a8a8" width="150"></td>
-          <td width="300" style="text-align: center">Frequency of Harm/Exposure</td>
-        </tr>
-      </table>
 
       <section id="treatment-planning-phys">
         <h2>Treatment Planning, Physician</h2>

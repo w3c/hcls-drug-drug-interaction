@@ -1,4 +1,3 @@
-* fix color coding mess (seriousness/severity)
 *  create draft of manuscript
 
 DONE
@@ -55,3 +54,8 @@ DONE
 * review xml examples and fix content
 ** particularly for gastric ph meds
 * fix issues in github
+* verify generaal look
+- fix collapse of user stories into one category
+* fix color coding mess (seriousness/severity)
+- go through all stories
+
