@@ -1,4 +1,6 @@
-*  create draft of manuscript
+* go through comments from contributors, as per
+  https://github.com/w3c/hcls-drug-drug-interaction/issues/10 and
+  https://github.com/w3c/hcls-drug-drug-interaction/issues/11. 
 
 DONE
 * figure out how to respec it - respec is adding w=0,h=0 to img tags
