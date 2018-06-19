@@ -1,6 +1,12 @@
 * go through comments from contributors, as per
   https://github.com/w3c/hcls-drug-drug-interaction/issues/10 and
-  https://github.com/w3c/hcls-drug-drug-interaction/issues/11. 
+  https://github.com/w3c/hcls-drug-drug-interaction/issues/11.
+
+*finish table 1
+* why is the grant info some prominent in a.1.1.21. and elsewhwere.
+* should we put the needs table straight into the doucment?
+*mpio terms
+
 
 DONE
 * figure out how to respec it - respec is adding w=0,h=0 to img tags
