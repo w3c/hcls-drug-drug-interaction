@@ -1,10 +1,8 @@
 
-*finish table 1 - remove and clear out stuff
-* why is the grant info some prominent in a.1.1.21. and elsewhwere. -
-  reform funding acks
-* remove info needs table
 * remove stuff about user-centered. focus on who - serious as binary
 * image 1 size
+
+* talkt to Rich about talbe 1 - fixing content and urls
 
 
 * go through comments from contributors, as per
@@ -75,3 +73,6 @@ DONE
 * fix color coding mess (seriousness/severity)
 - go through all stories
 
+* remove info needs table
+* why is the grant info some prominent in a.1.1.21. and elsewhwere. -
+  reform funding acks
