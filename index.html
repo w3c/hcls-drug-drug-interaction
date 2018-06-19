@@ -914,7 +914,7 @@
     to two or more drugs that are known to interact (i.e., potential drug-drug interactions or PDDIs), and could therefore
     lead to a clinically observable effect on the patient (i.e., an actual drug-drug interaction). The purpose of this Community Group Note is to provide a
       technical and user-centered foundation for a minimum
-      information model for PDDI information. New information regarding PDDIs is published every day in primary sources such as drug product labeling and the scientific literature. However, there are currently no broadly accepted standards to guide these experts in the organization and presentation of PDDI information that would be most effective for clinical decision support. These shortcomings suggest the need for harmonized approaches for documenting and sharing PDDI information. The resulting common representation of PDDI summaries would facilitate curation and information exchange. Downstream applications would process these representations into forms amenable for clinical decision support, drug product label enhancement, cohort identification, and other pharmacovigilance activities.
+      information model for PDDI information. New information regarding PDDIs is published every day in primary sources such as drug product labeling and the scientific literature. However, there are currently no broadly accepted standards to guide these experts in the organization and presentation of PDDI information for clinical decision support. These shortcomings suggest the need for harmonized approaches for documenting and sharing PDDI information. The resulting common representation of PDDI summaries would facilitate curation and information exchange. Downstream applications would process these representations into forms amenable for clinical decision support, drug product label enhancement, cohort identification, and other pharmacovigilance activities.
 =======
 
 Ensuring medication therapy occurs safely and to the maximum benefit
@@ -1143,7 +1143,7 @@ pharmacovigilance activities.
 >>>>>>> hh-revisions
     <li><dfn>Contextual information/modifying factors</dfn>
       (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000000">http://purl.obolibrary.org/obo/MPIO_0000000</a>):
-      Factors such as patient age, patient health conditions, route of administration, product formulation,
+      Factors such as patient age, patient health conditions, route of administration, product formulation, drug dose, pharmacogenetics, 
       or concurrent medications that might alter the risk of a drug-drug interaction clinical consequence or its seriousness. </li>
     <li><dfn>Evidence for a Suspected Drug-Drug Interaction</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000004">http://purl.obolibrary.org/obo/MPIO_0000004</a>):
       The support for or refutation of a drug-drug interaction in humans, potentially including data resulting
@@ -1158,8 +1158,7 @@ pharmacovigilance activities.
     <li><dfn>Frequency of Harm for persons who have been exposed to the PDDI</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000006">http://purl.obolibrary.org/obo/MPIO_0000006</a> ):
       The number of individuals within a cohort that experience a clinical consequence of a drug-drug interaction clinical consequence divided by the total number of patients co-exposed to the drugs involved.</li>
     <li><dfn>Recommended Action</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000008">http://purl.obolibrary.org/obo/MPIO_0000008</a>):
-      An evidence-based strategy to mitigate the potential clinical consequences of a drug-drug interaction; e.g., <em>use only if benefit outweighs risk,
-        assess risk and take action if necessary, no special precautions.</em></li>
+      An evidence-based strategy to mitigate the potential clinical consequences of a drug-drug interaction, such as drug change, drug dosage adjustment, and monitor lab values. Assess risk and take action if necessary, determine where benefit outweighs risk, and where there are no special precautions.</em></li>
     <li> <dfn>Seriousness</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000009">http://purl.obolibrary.org/obo/MPIO_0000009</a>):
       The degree to which a drug-drug interaction clinical consequence may result in harm thereby determining the type and speed
       of clinician intervention.</li>
@@ -1390,7 +1389,7 @@ These core information elements are consistent with the results of a separate in
 	<td style="background-color: #f4fff2"><emph>Drugs involved</emph>: <a href="#TKIs">Tyrosine Kinase Inhibitors (TKIs)</a> and <a href="#proton-pump-inhibitor-atc">Proton Pump Inhibitors (PPIs)</a></td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> The same comments about stated in the previous example about drugs involved apply to this example. Note that in the previous example the drugs involved are specified using RxNorm while this example uses ATC. This is to emphasize that, while the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
+	<td><strong>Comment:</strong> Note that in the previous example the drugs involved are specified using RxNorm while this example uses ATC. This is to emphasize that, while the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
       </tr>
     </table>
     <table>
@@ -1398,7 +1397,7 @@ These core information elements are consistent with the results of a separate in
 	<td style="background-color: #f4fff2"><strong>Clinical Consequences:</strong> Decreased efficacy relative to treatment for <a href="#acml">chronic myeloid leukemia</a></td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> The same comments about stated in the previous example about the clinical consequences associated with a PDDI. Note that in the previous example the clinical consequences involved are specified using <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> while this example uses <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. This is to emphasize that, while the clinical consequences  SHOULD be listed as sets of terms from a terminology such as ICD-10 or SNOMED-CT, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
+	<td><strong>Comment:</strong> Note that in the previous example the clinical consequences involved are specified using <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> while this example uses <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. This is to emphasize that, while the clinical consequences  SHOULD be listed as sets of terms from a terminology such as ICD-10 or SNOMED-CT, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
       </tr>
     </table>
     <table>
@@ -1408,7 +1407,7 @@ These core information elements are consistent with the results of a separate in
           hospitalization, and disability. </td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> The same comments about stated in the previous example about the seriousness of a PDDI clinical consequence.</td>
+	<td><strong>Comment:</strong> A PDDI clinical consequence MUST be noted as <i>serious</i> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage. This recommendation is in accordance with the World Health Organization [[who-umc-glossary]], the United States Food and Drug Administration [[usdhhs-2011]], and other organizations that conduct pharmacovigilance.</td>
       </tr>
     </table>
     <table>
@@ -1427,7 +1426,7 @@ These core information elements are consistent with the results of a separate in
           concomitantly with medications that increase gastric pH.  </td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> The same comments about stated in the previous example about the mechanism of a PDDI. A limitation of this example is that it refers to 'medications that increase gastric pH' without reference any specific drugs or codes from a drug terminology. </td>
+	<td><strong>Comment:</strong> A limitation of this example is that it refers to 'medications that increase gastric pH' without reference any specific drugs or codes from a drug terminology.  The mechanism of a PDDI MUST be reported if known. The description SHOULD be written for a clinician audience and include details that help the clinician decide what course of management action to take. To reduce ambiguity, the description MAY refer to specific drugs or health conditions using codes from terminologies.</td>
       </tr>
     </table>
     <table>
@@ -1678,7 +1677,7 @@ These core information elements are consistent with the results of a separate in
       information model.
     </p>
     <p>
-      Nine user stories with related goals were finalized by the Task Force force. Each user story was color coded for mention of core information items in the minimum information model (see <a href="#color-coding-key"></a>). The final set of user stories is located in <a href="#detailed-user-stories"></a>. User stories include the following:
+      Nine user stories with related goals were finalized by the Task Force. Each user story was color coded for mention of core information items in the minimum information model (see <a href="#color-coding-key"></a>). The final set of user stories is located in <a href="#detailed-user-stories"></a>. User stories include the following:
 =======
       Twelve user stories with related goals demonstrate the use of the
       PDDI minimal information model. These stories are associated
@@ -2644,10 +2643,10 @@ description of the process used to develop these recommendations):
     </section>
     <section id="decision-trees">
     <h2>Decision Trees Created for the Minimum Information Model Domain Analysis</h2>
-    The Task Force force developed 14 PDDI decision trees detailing
+    The Task Force developed 14 PDDI decision trees detailing
       the steps taken in using the the minimal information model to
       describe PDDIS.  These exemplars were chosen to represent
-      questions identified by the Task Force force as potentially
+      questions identified by the Task Force as potentially
       affecting the search and syntheses of PDDI information. The
       potential interactions and the information situations they were
     selected for are listed in <em>Table 1</em>. Value sets defining
