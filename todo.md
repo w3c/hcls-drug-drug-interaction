@@ -1,9 +1,4 @@
 
-* remove stuff about user-centered. focus on who - serious as binary
-* image 1 size
-
-* talkt to Rich about talbe 1 - fixing content and urls
-
 
 * go through comments from contributors, as per
   https://github.com/w3c/hcls-drug-drug-interaction/issues/10 and
@@ -76,3 +71,8 @@ DONE
 * remove info needs table
 * why is the grant info some prominent in a.1.1.21. and elsewhwere. -
   reform funding acks
+* image 1 size
+* remove stuff about user-centered. focus on who - serious as binary
+
+* talkt to Rich about talbe 1 - fixing content and urls
+

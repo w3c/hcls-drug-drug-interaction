@@ -684,7 +684,7 @@
       "href": "https://www.ncbi.nlm.nih.gov/pubmed/20040698"},
 
       "who-umc-glossary": {
-      "authors": ["World Health Organizatoin"],
+      "authors": ["World Health Organization"],
       "title": "UMC - Glossary",
       "date": "2017",
       "href": "https://www.who-umc.org/global-pharmacovigilance/global-pharmacovigilance/glossary/"},
@@ -998,7 +998,8 @@ pharmacovigilance activities.
       </p>
 
     <figure id="PDDI-MI-APPLICATIONS">
-      <img src="Presentations/images/info-model-value-proposition.png">
+      <img src="Presentations/images/info-model-value-proposition.png"
+      width"1152" height="864">
       <figcaption>An overview of the role envisioned for a PDDI minimal information model. </figcaption>
     </figure>
 
@@ -1035,13 +1036,11 @@ pharmacovigilance activities.
   <h2>Definitions of Core Information Items</h2>
   <p>
     The minimum information model contains a total of 10 core
-    information items. The process for developing these items is
-    details in <a href="#definition-dev-workflow"></a>). The final definition
-    creation documents are available for download from the project’s
-    GitHub code repository (<a target="new"
-    href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">
-    https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>). The
-    definitions are listed below:
+    information items. Definitions are given below; descriptions of
+    considerations informing the     definitions of these term can be
+    found at (<a target="new"
+    href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions"> 
+    https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>): 
   </p>
   <ul>
     <li><dfn>Drugs Involved</dfn> (<a target="new"
@@ -1056,7 +1055,11 @@ pharmacovigilance activities.
       clinician or reported by a patient.</li>
 
     <li> <dfn>Seriousness</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000009">http://purl.obolibrary.org/obo/MPIO_0000009</a>):
-      The degree to which a drug-drug interaction clinical consequence may result in harm thereby determining the type and speed
+      As defined by he World Health Organization an event is serious
+      if it &quot;results in death; requires hospitalization or
+      extension of hospital stay; results in persistent or significant
+      disability or incapacity; is life-threatening&quot;
+      [[who-umc-glossary]]. Seriousness may determine the type and speed
       of clinician intervention.</li>
     <li><dfn>Severity</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000010">http://purl.obolibrary.org/obo/MPIO_0000010</a>):
       The intensity of a drug-drug interaction clinical
@@ -1103,8 +1106,16 @@ These core information elements are consistent with the results of a separate in
       mechanisms but does not discuss clinical consequences. In contrast, the system reported by Mille, Degoulet, and Jaulent
       [[mille-2007]] provided details on the clinical consequences, including risk increasing and mitigating factors,
       but supplied only a limited structure for mechanism.
-</p>
+ </p>
 
+ <p>Although not used by practitioners and clinicians, seriousness is
+ an important concept for pharmacovigilance and
+ pharmacoepidemiological studies. The adoption of this term aligns
+ this effort with definitions adopted by the World Health
+ Organization[[who-umc-glossary]], the United States Food and Drug
+ Administration [[usdhhs-2011]], and other organizations involved in
+ pharmacovigilance efforts.
+   </p>
   <p>
     The interested reader can review details on each definition in
     documnets  downloadable from GitHub (<a target="new"
@@ -1150,7 +1161,7 @@ These core information elements are consistent with the results of a separate in
 	<td style="background-color: #f4fff2"><a>Seriousness</a>: Bleeding is a serious potential clinical consequence because it can result in death, life-threatening hospitalization, and disability. </td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> A PDDI clinical consequence MUST be noted as <i>serious</i> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage. This recommendation is in accordance with the World Health Organization [[who-umc-glossary]], the United States Food and Drug Administration [[usdhhs-2011]], and other organizations that conduct pharmacovigilance.</td>
+	<td><strong>Comment:</strong> A PDDI clinical consequence MUST be noted as <i>serious</i> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage.</td>
       </tr>
     </table>
     <table>
@@ -2388,7 +2399,7 @@ description of the process used to develop these recommendations):
         information model. 
       </p>
       <p>
-        In order to develop the user stories for the core user types, Task Force  members created an
+        To develop the user stories for the core user types, Task Force  members created an
         initial information needs list  and then was supplemented it with user interviews, interview transcripts
         collected as a part of a recently published manuscript on PDDI information needs of drug information
         compendium editors [[romagnoli-2017]], and the published literature. Where possible, user stories

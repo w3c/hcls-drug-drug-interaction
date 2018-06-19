@@ -9,16 +9,16 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    viewBox="0.0 0.0 960.0 720.0"
-   fill="none"
-   stroke="none"
-   stroke-linecap="square"
    stroke-miterlimit="10"
    id="svg4333"
    inkscape:version="0.91 r13725"
    sodipodi:docname="info-model-value-proposition.svg"
    inkscape:export-filename="/Users/harry/Dropbox/research/projects/boycepddi/minimal-information-model/w3c-ddi/Presentations/images/info-model-value-proposition.png"
    inkscape:export-xdpi="599.85773"
-   inkscape:export-ydpi="599.85773">
+   inkscape:export-ydpi="599.85773"
+   stroke-linecap="square"
+   stroke="none"
+   fill="none">
   <metadata
      id="metadata4490">
     <rdf:RDF>
@@ -27,6 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -45,19 +46,19 @@
      inkscape:window-height="1228"
      id="namedview4486"
      showgrid="false"
-     inkscape:zoom="1.1313708"
-     inkscape:cx="463.14802"
-     inkscape:cy="427.04967"
+     inkscape:zoom="0.95289851"
+     inkscape:cx="511.79508"
+     inkscape:cy="345.244"
      inkscape:window-x="375"
      inkscape:window-y="40"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg4333" />
+     inkscape:current-layer="g4338" />
   <clipPath
      id="p.0">
     <path
        d="m0 0l960.0 0l0 720.0l-960.0 0l0 -720.0z"
-       clip-rule="nonzero"
-       id="path4336" />
+       id="path4336"
+       clip-rule="nonzero" />
   </clipPath>
   <g
      clip-path="url(#p.0)"
