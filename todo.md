@@ -1,11 +1,19 @@
+
+*finish table 1 - remove and clear out stuff
+* why is the grant info some prominent in a.1.1.21. and elsewhwere. -
+  reform funding acks
+* remove info needs table
+* remove stuff about user-centered. focus on who - serious as binary
+* image 1 size
+
+
 * go through comments from contributors, as per
   https://github.com/w3c/hcls-drug-drug-interaction/issues/10 and
   https://github.com/w3c/hcls-drug-drug-interaction/issues/11.
 
-*finish table 1
-* why is the grant info some prominent in a.1.1.21. and elsewhwere.
-* should we put the needs table straight into the doucment?
+* add figure from xia-jing
 *mpio terms
+
 
 
 DONE
