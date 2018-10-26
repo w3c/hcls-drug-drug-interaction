@@ -15,15 +15,15 @@ Warfarin    Ifosfamide/Etoposide --  Completed as part of the W3C effort
 
 Monoamine Oxidase Inhibitors (MAOIs)    Indirect Sympathomimetics -- Completed as part of the W3C effort
 
+Clarithromycin    Simvastatin, Atorvastatin, Lovastatin -- Completed as part of the W3C effort
+
+Warfarin    CYP2C9 Inhibitors (ie. Bactrim) -- Completed as part of the W3C effort
+
 --
 
 Warfarin    Antibiotics that don't inhibit CYP2C9 -- W3C effort but a decision tree not completed yet TODO
 
 Cyclosporin    Digoxin -- W3C effort but a decision tree not completed yet TODO
-
-Warfarin    CYP2C9 Inhibitors (ie. Bactrim) -- W3C effort but a decision tree not completed yet TODO
-
-Clarithromycin    Simvastatin, Atorvastatin, Lovastatin -- W3C effort but a decision tree not completed yet TODO
 
 --
 
