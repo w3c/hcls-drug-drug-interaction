@@ -165,6 +165,12 @@
       "title": "CFR - Code of Federal Regulations Title 21, Volume 4",
       "href": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/CFRSearch.cfm?fr=201.57"},
 
+      "fda-simvastatin-amiodarone": {
+      "authors": ["FDA"],
+      "title": "FDA Drug Safety Communication: Revised dose limitation for Zocor (simvastatin) when taken with amiodarone",
+      "date":"2011",
+      "href": "https://www.fda.gov/Drugs/DrugSafety/ucm283137.htm"},
+
       "dechanont-2014": {
       "authors": [
       "Supinya Dechanont",
@@ -243,6 +249,17 @@
       "date": "Dec 18, 2013",
       "href": "https://www.ncbi.nlm.nih.gov/pubmed/24345026"},
 
+      "hansten-2001": {
+  	  "authors": [
+  	  "Philip Hansten",
+      "John R. Horn",
+      "Thomas K. Hazlet"
+      ],
+      "title": "ORCA:OpeRational ClassificAtion of Drug Interactions.",
+      "publisher": "Journal of the American Pharmaceutical Association",
+      "pages": "161-165",
+      "date": "March/April 2001"},
+      
       "hennessy-2016": {
       "authors": [
       "S. Hennessy",
@@ -535,13 +552,13 @@
 
       "rosko-2017": {
   	  "authors": [
-      "Samuel C. Rosko",
+          "Samuel C. Rosko",
   	  "Philip Hansten",
   	  "John R. Horn", 
   	  "Daniel C. Malone", 
   	  "Andrew Romero", 
   	  "Richard D. Boyce"],
-      "title": "Toward shareable individualized drug interaction alerts.",
+          "title": "Toward shareable individualized drug interaction alerts.",
   	  "publisher": "AMIA Summit on Clinical Research Informatics",
   	  "date": "Mar 2017"},
 
@@ -996,11 +1013,10 @@ pharmacovigilance activities.
       particularly through shared libraries and APIs.
       </p>
 
-    <div class="issue" data-number="13" title="Clarify the meaning of 'observation'">
     <figure id="PDDI-MI-APPLICATIONS">
       <img src="Presentations/images/info-model-value-proposition.png"
       width"1152" height="864">
-      <figcaption>An overview of the role envisioned for a PDDI minimal information model. </figcaption>
+      <figcaption>An overview of the role envisioned for a PDDI minimal information model. Drug experts synthesize drug-drug interaction evidence from pre-clinical studies, clinical studies, and clinical observation into knowlege artifacts. They annotate the artifacts using information categories in the PDDI minimal information model. The annotated knowledge artifacts are useful for a variety of use cases including decision support, drug product labeling, and to inform cohort descriptions useful for generating evidence from retrospective health records. </figcaption>
     </figure>
 
     <p>The purpose of this Community Group Note is to provide a
@@ -1043,19 +1059,21 @@ pharmacovigilance activities.
     https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>): 
   </p>
   <ul>
+
+    <div class="issue" data-number="13" title="Need to update to refer to the drug concept set identifier entity once available in MPIO">
     <li><dfn>Drugs Involved</dfn> (<a target="new"
     href="http://purl.obolibrary.org/obo/APOLLO_SV_00000461"><span style="color:red">http://purl.obolibrary.org/obo/APOLLO_SV_00000461<span></A>):
     The drugs considered to be possible participants in a potential
     drug-drug interactions. Drugs may be specified as drug classses
     (such as NSAIDs), as specific chemicals, as products, or in any
     other appropriate granularity.</LI>
+    </div>
 
     <li><dfn>Clinical Consequences</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000002">http://purl.obolibrary.org/obo/MPIO_0000002</a>):
       Changes in patient health status from baseline that can be observed or measured by a
       clinician or reported by a patient.</li>
 
-    <div class="issue" data-number="12" title="Addressing how to improve upon the poor concepts of serious and severity">
-      <li> <dfn>Seriousness</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000009">http://purl.obolibrary.org/obo/MPIO_0000009</a>):
+     <li> <dfn>Seriousness</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000009">http://purl.obolibrary.org/obo/MPIO_0000009</a>):
 	As defined by the World Health Organization an event is serious
 	if it &quot;results in death; requires hospitalization or
 	extension of hospital stay; results in persistent or significant
@@ -1063,17 +1081,37 @@ pharmacovigilance activities.
 	[[who-umc-glossary]]. Seriousness may determine the type and speed
 	of clinician intervention.</li>
 
-      <li><dfn>Severity</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000010">http://purl.obolibrary.org/obo/MPIO_0000010</a>):
-	The intensity of a drug-drug interaction clinical
-	consequence.</li>
-    </div> 
+    <li> <dfn>Operational Classification Statement</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000005">http://purl.obolibrary.org/obo/MPIO_0000111</a>):
+      A short risk classification statement that suggests a specific management criteria for a specific patient context. For example, the OpeRational ClassificAtion of Drug Interactions [[hansten-2001]] system suggests the following categories:</li>
+      <ul>
+	<li>Avoid Combination (Risk of combination outweighs benefit)</li>
 
+	<li>Usually Avoid Combination (Use only under special circumstances)</li>
+	<ul>
+	  <li>Interactions for which there are clearly preferable alternatives for one or both drugs.</li>
+	  <li>Interactions to avoid by using an alternative drug or other therapy unless the benefit is judged to outweigh the increased risk.</li>
+	</ul>
+	
+	<li>Minimize Risk (Assess risk and take one or more of the following actions if needed)</li>
+	<ul>
+	  <li>Consider alternatives: Alternatives may be available that are less likely to interact.</li>
+	  <li>Circumvent: Take action to minimize the interaction (without avoiding combination).</li>
+	</ul>
+
+	<li>Monitor: Early detection can minimize the risk of an adverse outcome.</li>
+
+	<li>No Special Precautions (Risk of adverse outcome appears small)</li>
+
+	<li>Ignore (Evidence suggests that the drugs do not interact)</li>
+      </ul>
+
+
+    <li><dfn>Recommended Action</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000008">http://purl.obolibrary.org/obo/MPIO_0000008</a>):
+      An evidence-based strategy to mitigate the potential clinical consequences of a drug-drug interaction such as a drug change, adjust drug dose, and monitor lab values. A Recommended Action should provide specific detailed suggestions that complement the <a>Operational Classification Statement</a>.  </li>
+      
    <li><dfn>Mechanism of Interaction</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000005">http://purl.obolibrary.org/obo/MPIO_0000005</a>):
       The process(es) by which a drug-drug interaction with clinical
       consequence occurs.</li>
-
-    <li><dfn>Recommended Action</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000008">http://purl.obolibrary.org/obo/MPIO_0000008</a>):
-      An evidence-based strategy to mitigate the potential clinical consequences of a drug-drug interaction such as a drug change, adjust drug dose, and monitor lab values.</li>
 
     <li><dfn>Contextual information/modifying factors</dfn>
       (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000000">http://purl.obolibrary.org/obo/MPIO_0000000</a>):
@@ -1111,10 +1149,9 @@ These core information elements are consistent with the results of a separate in
       but supplied only a limited structure for mechanism.
  </p>
 
-<div class="issue" data-number="12" title="Addressing how to improve upon the poor concepts of serious and severity">
- <p>Although not used by practitioners and clinicians, seriousness is
- an important concept for pharmacovigilance and
- pharmacoepidemiological studies. The adoption of this term aligns
+ <p>Note that, although not commonly used by practitioners and
+ clinicians, seriousness is an important concept for pharmacovigilance
+ and pharmacoepidemiological studies. The adoption of this term aligns
  this effort with definitions adopted by the World Health
  Organization[[who-umc-glossary]], the United States Food and Drug
  Administration [[usdhhs-2011]], and other organizations involved in
@@ -1175,7 +1212,6 @@ These core information elements are consistent with the results of a separate in
       </tr>
     </table>
 
-    <div class="issue" data-number="12" title="Addressing how to improve upon the poor concepts of serious and severity">
     <table>
       <tr>
 	<td style="background-color: #f4fff2"><a>Seriousness</a>: Bleeding is a serious potential clinical consequence because it can result in death, life-threatening hospitalization, and disability. </td>
@@ -1186,15 +1222,13 @@ These core information elements are consistent with the results of a separate in
     </table>
     <table>
       <tr>
-	<td style="background-color: #f4fff2"><a>Severity</a>: While bleeding is a serious potential clinical consequence, severity can vary from easily tolerated to incapacitating </td>
+	<td style="background-color: #f4fff2"><a>Operational Classification Statement</a>: Depending on the patient context, there are different operational classification statements for the warfarin-NSAIDs PDDI. See the contextual information/modifying factors for this interaction where the specific contextual information/modifying factors are discussed.</td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> The severity of a PDDI clinical consequence MUST be reported if known. The severity of a PDDI clinical consequence MUST be noted using non-ambiguous terms or phrases. Any of the existing terminologies for adverse event severity, such as Common Terminology Criteria for Adverse Event (CTCAE) [[ctcae-wiki]], MAY be used for describing a PDDI clinical consequence.</td>
+	<td><strong>Comment:</strong>A PDDI MUST report at least one operational classification statement. The description MAY include one or more operational classification statements as long as each statement depends on a single patient context. In this case, the  operational classification statements SHOULD be mentioned where the specific contextual information/modifying factors are discussed.</td>
       </tr>
     </table>
     </div>
-
-    
     <table>
       <tr>
 	<td style="background-color: #f4fff2"><a>Mechanism of Interaction</a>: <a href="#NSAIDS-drugs">Non-steroidal anti-inflammatory drugs (NSAIDs)</a> have
@@ -1216,7 +1250,7 @@ These core information elements are consistent with the results of a separate in
           over 2 g/day for a few days. For more severe pain consider short-term opioids in place of the NSAID.</td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> Any recommended actions that apply to all patient exposures SHOULD be stated using clear and concise language. The recommended action statement SHOULD also provide citations to <a>evidence for a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on <a>contextual information/modifying factors</a> SHOULD be mentioned separately to support context-specific presentation of such information.</td>
+	<td><strong>Comment:</strong> If known, a <a>recommended action</a> SHOULD be stated using clear and concise language. Any recommended actions that apply to all patient exposures SHOULD be stated using clear and concise language. It is RECOMMENDED that each recommended action statement provide citations to <a>evidence for a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on <a>contextual information/modifying factors</a> SHOULD be mentioned separately to support context-specific presentation of such information.</td>
       </tr>
     </table>
     <table>
@@ -1225,7 +1259,7 @@ These core information elements are consistent with the results of a separate in
           <ol>
             <li>The <a href="#NSAIDS-drugs">NSAIDs</a> is <a href="#topical-diclof">topical diclofenac</a></li>
             <ul>
-              <li><strong>Recommended Action:</strong> No special precautions</li>
+              <li><strong>Operational Classification Statement:</strong> No special precautions</li>
               <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> <a href="#topical-diclof">Topical diclofenac</a> has relatively
 		low systemic absorption; in one study a topical gel (16 g/day) produced about 6% of
 		the absorption seen with systemic administration of 150 mg/day. A higher than recommended
@@ -1234,14 +1268,14 @@ These core information elements are consistent with the results of a separate in
             <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a> but the patient is concomitantly taking a
               <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a></li>
             <ul>
-              <li><strong>Recommended Action:</strong> Assess risk and take action if necessary</li>
+              <li><strong>Operational Classification Statement:</strong> Assess risk and take action if necessary</li>
               <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> <a href="#proton-pump-inhibitor">Proton pump inhibitors</a> and <a href="#misoprostol">misoprostol</a> may reduce the risk of UGIB in patients receiving NSAIDs and warfarin. </li>
             </ul>
             <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a>, the patient is NOT concomitantly taking a <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a>, and the patient has one or more of the following risk factors:</li>
             <ul>
               <li>History of <a href="#gi-bleeding">upper gastrointestinal bleeding (UGIB) or peptic ulcer</a> or age > 65 years old</li>
               <ul>
-		<li><strong>Recommended Action:</strong> Use only if benefit outweighs risk</li>
+		<li><strong>Operational Classification Statement:</strong> Use only if benefit outweighs risk</li>
 		<li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> Patients with a
                   history of UGIB or peptic ulcer may have an increased risk of UGIB from this interaction.
                   The extent to which older age is an independent risk factor for UGIB due to these interactions
@@ -1249,7 +1283,7 @@ These core information elements are consistent with the results of a separate in
               </ul>
               <li>Concomitantly taking <a href="#systemic-cortico">systemic corticosteroids</a>, <a href="#aldosterone-antagonists">aldosterone antagonists</a>, or high dose or multiple <a href="#NSAIDS-drugs">NSAIDs</a></li>
               <ul>
-		<li><strong>Recommended Action:</strong> Use only if benefit outweighs risk</li>
+		<li><strong>Operational Classification Statement:</strong> Use only if benefit outweighs risk</li>
 		<li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> Both corticosteroids
                   and aldosterone antagonists have been shown to substantially increase the risk of UGIB in
                   patients on NSAIDs, with relative risks of 12.8 and 11 respectively compared
@@ -1265,7 +1299,7 @@ These core information elements are consistent with the results of a separate in
           stated as specifically as possible. The factors SHOULD be amenable to implementation as executable
           logic using value sets from clinical terminologies such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a>, the
 	  <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a>, and <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. As is used in this
-          example, each factor SHOULD be related to a specific <a>recommended action</a> that is supported by the <a>evidence for a suspected drug-drug interaction</a></td>
+          example, each factor SHOULD be related to a specific <a>operational classification statement</a> that is supported by the <a>evidence for a suspected drug-drug interaction</a>. It is RECOMMENDED that, wherever possible, each evidence statment refer to a specific source in the form of a citation.</td>
       </tr>
     </table>
     <table>
@@ -1313,7 +1347,6 @@ These core information elements are consistent with the results of a separate in
       </tr>
     </table>
 
-    <div class="issue" data-number="12" title="Addressing how to improve upon the poor concepts of serious and severity">
     <table>
       <tr>
 	<td style="background-color: #f4fff2"><strong>Seriousness:</strong> A decrease in chronic myeloid leukemia treatment efficacy is
@@ -1323,18 +1356,7 @@ These core information elements are consistent with the results of a separate in
       <tr>
 	<td><strong>Comment:</strong> A PDDI clinical consequence MUST be noted as <i>serious</i> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage.</td>
       </tr>
-    </table>
-    <table>
-      <tr>
-	<td style="background-color: #f4fff2"><strong>Severity:</strong> There is no intensity scale relevant to describing a decrease in chronic
-          myeloid leukemia treatment efficacy </td>
-      </tr>
-      <tr>
-	<td><strong>Comment:</strong> If there is no relevant description of intensity for the clinical consequence of a given PDDI, this SHOULD be explicitly stated. </td>
-      </tr>
-    </table>
-    </div>
-    
+    </table>  
     <table>
       <tr>
 	<td style="background-color: #f4fff2"><strong>Mechanism of Interaction:</strong> BCR-ABL Tyrosine Kinase inhibitors demonstrate pH
@@ -1354,7 +1376,7 @@ These core information elements are consistent with the results of a separate in
           <ul>
             <li>The TKI is <a href="#imatinib">imatinib</a> or <a href="#ponatinib">ponatinib</a></li>
             <ul>
-              <li><strong>Recommended Action:</strong> No special precautions</li>
+              <li><strong>Operational Classification Statement:</strong> No special precautions</li>
               <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> Imatinib and ponatinib AUCs are not appreciably
 		decreased by PPI co-administration </li>
               <ul>
@@ -1365,10 +1387,10 @@ These core information elements are consistent with the results of a separate in
             </ul>
             <li>The TKI is <a href="#nilotinib">nilotinib</a></li>
             <ul>
-              <li><strong>Recommended Action:</strong> Assess risk and take action if necessary</li>
+              <li><strong>Operational Classification Statement:</strong> Assess risk and take action if necessary</li>
               <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong>Bosutinib and nilotinib AUCs
 		are decreased with concomitant PPIs but antacids and H2 antagonists may be considered if
-		TKI is given 2 hours before the antacid/H2 antagonist.2,3 However, for nilotinib a retrospective
+		TKI is given 2 hours before the antacid/H2 antagonist. However, for nilotinib a retrospective
 		study has shown no difference in cytogenetic response rates for patients taking PPIs.</li>
               <ul>
 		<li>Yin OQ, Giles FJ, Baccarani M, et al. Concurrent use of proton pump inhibitors or H2
@@ -1378,7 +1400,7 @@ These core information elements are consistent with the results of a separate in
             </ul>
             <li>The TKI is <a href="#bosutinib">bosutinib</a> or <a href="#dasatinib">dasatinib</a></li>
             <ul>
-              <li><strong>Recommended Action:</strong> Use only if benefit outweighs risk</li>
+              <li><strong>Operational Classification Statement:</strong> Use only if benefit outweighs risk</li>
               <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong>Bosutinib and nilotinib
 		AUCs are decreased with concomitant PPIs but antacids and H2 antagonists may be considered
 		if TKI is given 2 hours before the antacid/H2 antagonist.</li>
@@ -1392,7 +1414,7 @@ These core information elements are consistent with the results of a separate in
 	</td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> The same comments stated in the previous example about the contextual information/modifying factors. As for other information items, reference to coded terms for drugs and other relevant entities SHOULD be used to reduce ambiguity. Notice that this example could be improved because it references coded terms for TKIs but not for antacids and H2 antagonists. The implementer MAY choose any terminologies they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminologies be one that is actively maintained and freely accessible to the public.</td>
+	<td><strong>Comment:</strong> The same comments stated in the previous example about the contextual information/modifying factors. Notice that there is no <a>recommended action</a> statement to complement the <a>operational classification statements</a>. Such a statement would be most useful for the recommendation to "assess risk and take action if necessary." In this case, there is not sufficient evidence for a recommended action statement to provide more information than the operational classification statement already provides. As for other information items, reference to coded terms for drugs and other relevant entities SHOULD be used to reduce ambiguity. Notice that this example could be improved because it references coded terms for TKIs but not for antacids and H2 antagonists. The implementer MAY choose any terminologies they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminologies be one that is actively maintained and freely accessible to the public.</td>
       </tr>
     </table>
     <table>
@@ -1570,8 +1592,7 @@ These core information elements are consistent with the results of a separate in
   <section id="user-story-color-coding">
     <h2>Color codes used in user stories</h2>
     <p>The following table illustrates the colors used to describe
-      user stories. Note that some of the elements (severity and frequency
-      of exposure) are not addressed in any of the user stories.</p>
+      user stories. Note that  frequency of exposure is not addressed in any of the user stories.</p>
 
           <table>
         <tr>
@@ -1599,12 +1620,6 @@ These core information elements are consistent with the results of a separate in
           <td width="300" style="text-align: center">Seriousness Rating</td>
         </tr>
 
-        <tr>
-          <td style="background-color: #ccffff" width="150"></td>
-          <td width="300" style="text-align: center">Severity Rating</td>
-        </tr>
-
-	
         <tr>
           <td style="background-color: #a8a8a8" width="150"></td>
           <td width="300" style="text-align: center">Frequency of Harm</td>
@@ -2084,7 +2099,7 @@ description of the process used to develop these recommendations):
     </p>
     <p>
       The information model can also act as a template for drug
-      epxperts to use while synthesizing PDDI evidence. As the experts
+      experts to use while synthesizing PDDI evidence. As the experts
       compile evidence for each of the core information
       categories, critical gaps in knowledge will become apparent.
       These gaps might be used to develop prioritized research agendas
@@ -2241,111 +2256,111 @@ description of the process used to develop these recommendations):
         <td rowspan="2">Can (and should) be contextualized for specific patients or clinical circumstances</td>
         <td>Tamoxifen</td>
         <td>Paroxetine</td>
-        <td>Patients with extensive CYP2D6 status on paroxetine will derive no benefit from tamoxifen. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project on github</a>).
+        <td>Patients with extensive CYP2D6 status on paroxetine will derive no benefit from tamoxifen. (Status: completed, <a href="https://zenodo.org/record/1471714">view at Zenodo</a>).
 	</td>
       </tr>
       <tr>
         <td>Potassium (KCL)</td>
         <td>Potassium-sparing Diuretics</td>
-        <td>Combination has known patient-specific risk factors. <strong><font color="red">(Status: Completed as part of the iDIA project -- need permission before releasing to this project's github)</font></strong></td>
+        <td>Combination has known patient-specific risk factors. (Status: completed, <a href="mailto:public-hclscg@w3.org">email HCLS CG</a> to request)</td>
       </tr>
       <tr>
         <td>Applies at the class level</td>
         <td>Monoamine Oxidase Inhibitors (MAOIs)</td>
         <td>Indirect Sympathomimetics</td>
-        <td>A class interaction involving all drugs in the class. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project on github</a>).</td>
+        <td>A class interaction involving all drugs in the class.  (Status: completed, <a href="https://zenodo.org/record/1472473">view at Zenodo</a>).</td>
       </tr>
       <tr>
         <td>Does not apply at the class level</td>
         <td>Tyrosine Kinase Inhibitors</td>
         <td>Proton Pump Inhibitors</td>
-        <td>Not all Kinase inhibitors have pH dependent absorption. Imatinib, nilotinib, dasatinib, bosutinib, and ponatinib are BCR‐ABL tyrosine kinase inhibitors. Imatinib and ponatinib do not have a significant interaction due to pH dependent absorption with proton pump inhibitors, whereas nilotinib, dasatinib, and bosutinib do (Lexi‐comp and Micromedex). (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project on github</a>).</td>
+        <td>Not all kinase inhibitors have pH dependent absorption. Imatinib, nilotinib, dasatinib, bosutinib, and ponatinib are BCR‐ABL tyrosine kinase inhibitors. Imatinib and ponatinib do not have a significant interaction due to pH dependent absorption with proton pump inhibitors, whereas nilotinib, dasatinib, and bosutinib do (Lexi‐comp and Micromedex). (Status: completed, <a href="https://zenodo.org/record/1472469">view at Zenodo</a>).</td>
       </tr>
       <tr>
         <td rowspan="2">The mechanism is known and is pharmacokinetic</td>
         <td>Warfarin</td>
         <td>CYP2C9 Inhibitors (ie. Bactrim)</td>
-        <td>A CYP-mediated pharmacokinetic interaction. <strong><font color="red">(Status: In Process)</font></strong></td>
+        <td>A CYP-mediated pharmacokinetic interaction. (Status: completed, <a href="https://zenodo.org/record/1472464">view at Zenodo</a>)</td>
       </tr>
       <tr>
         <td>Digoxin</td>
         <td>Cyclosporin</td>
-        <td>A transport protein (p-glycoprotein) mediated interaction. <strong><font color="red">(Status: In Process)</font></strong></td>
+        <td>A transport protein (p-glycoprotein) mediated interaction. (Status: completed, <a href="mailto:public-hclscg@w3.org">email HCLS CG</a> to request)</td>
       </tr>
       <tr>
         <td>The mechanism is known and is pharmacodynamic</td>
         <td>Epinephrine</td>
         <td>Beta-Blockers</td>
-        <td>The interaction is different differentiates between selective and non-selective beta blockers. The clinical outcome is a; hypertensive crisis. <strong><font color="red">(Status: Completed as part of the iDIA project -- need permission before releasing to this project's github)</font></strong></td>
+        <td>The interaction is different differentiates between selective and non-selective beta blockers. The clinical outcome is a; hypertensive crisis. (Status: completed, <a href="mailto:public-hclscg@w3.org">email HCLS CG</a> to request)</font></strong></td>
       </tr>
       <tr>
         <td>The mechanism is not well elucidated/known</td>
         <td>Warfarin</td>
         <td>Ifosfamide/Etoposide</td>
-        <td>Drugs for treating cancers of the blood drugs. - Clinical effect is INR change buts no mention of what mechanism could be found. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project on github</a>).</td>
+        <td>Drugs for treating cancers of the blood drugs. - Clinical effect is INR change buts no mention of what mechanism could be found. (Status: completed, <a href="https://zenodo.org/record/1472471">view at Zenodo</a>)</td>
       </tr>
       <tr>
         <td rowspan="2">The evidence supporting the interaction is strong</td>
         <td>Epinephrine</td>
         <td>Beta-Blockers</td>
-        <td>Widely known interaction with considerable available evidence. <strong><font color="red">(Status: Completed as part of the iDIA project -- need permission before releasing to this project's github)</font></strong></td>
+        <td>Widely known interaction with considerable available evidence. (Status: completed, <a href="mailto:public-hclscg@w3.org">email HCLS CG</a> to request)</td>
       </tr>
       <tr>
         <td>Simvastatin, Atorvastatin, Lovastatin</td>
         <td>Clarithromycin</td>
-        <td>Widely known interaction with considerable available evidence. <strong><font color="red">(Status: In Process)</font></strong></td>
+        <td>Widely known interaction with considerable available evidence. (Status: completed, <a href="https://zenodo.org/record/1472460">view at Zenodo</a>)</td>
       </tr>
       <tr>
         <td>The evidence supporting the interaction is weak</td>
         <td>Warfarin</td>
-        <td>Antibiotics that don't inhibit CYP2C9</td>
-        <td>Hard to find evidence for the interaction. <strong><font color="red">(Status: In Process)</font></strong></td>
+        <td>Antibiotics for which it is uncertain if inhibition of CYP2C9 affects warfarin</td>
+        <td>Hard to find evidence for the interaction. (Status: completed, <a href="https://zenodo.org/record/1472471">view at Zenodo</a>) </td>
       </tr>
       <tr>
         <td>The frequency of exposure data is available</td>
         <td>Warfarin</td>
         <td>Non-steroidal anti-inflammatory drugs (NSAIDs)</td>
-        <td>Paper by Malone et al. - National sample. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project on github</a>).</td>
+        <td>Paper by Malone et al. - National sample. (Status: completed, <a href="https://zenodo.org/record/1472475">view at Zenodo</a>).</td>
       </tr>
       <tr>
         <td>The frequency of exposure data is not available</td>
         <td>Simvastatin</td>
         <td>Fluconazole</td>
-        <td>Based on literature search. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project on github</a>).</td>
+        <td>Based on literature search. (Status: completed, <a href="https://zenodo.org/record/1472441">view at Zenodo</a>).</td>
       </tr>
       <tr>
         <td>The frequency of adverse event data is available</td>
         <td>Spironolactone</td>
         <td>Potassium supplements</td>
-        <td>Associated with Risk of hospitalization. <strong><font color="red">(Status: Completed as part of the iDIA project (KCL and K-sparing diuretics) -- need permission before releasing to this project's github)</font></strong></td>
+        <td>Associated with Risk of hospitalization. (Status: completed, <a href="mailto:public-hclscg@w3.org">email HCLS CG</a> to request)</td>
       </tr>
       <tr>
         <td>The frequency of adverse event data is not available</td>
         <td>Simvastatin</td>
         <td>Fluconazole</td>
-        <td>Literature search did not find frequency of adverse event data. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project on github</a>).</td>
+        <td>Literature search did not find frequency of adverse event data. (Status: completed, <a href="https://zenodo.org/record/1472441">view at Zenodo</a>).</td>
       </tr>
       <tr>
         <td>The recommended action is “monitor” or “take note”</td>
         <td>Potassium (KCL)</td>
         <td>Potassium-sparing Diuretics</td>
-        <td>See explanation above. <strong><font color="red">(Status: Completed as part of the iDIA project -- need permission before releasing to this project's github)</font></strong></td>
+        <td>See explanation above. (Status: completed, <a href="mailto:public-hclscg@w3.org">email HCLS CG</a> to request)</td>
       </tr>
       <tr>
         <td>The recommended action is “avoid”</td>
         <td>Monoamine Oxidase Inhibitors (MAOIs)</td>
         <td>Indirect Sympathomimetics</td>
-        <td>See explanation above. (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project on github</a>).</td>
+        <td>See explanation above.  (Status: completed, <a href="https://zenodo.org/record/1472473">view at Zenodo</a>).</td>
       </tr>
       <tr>
         <td>The recommended action is a clear alternative drug and dose</td>
         <td>Simvastatin</td>
         <td>Amiodarone</td>
-        <td><a href="http://www.fda.gov/Drugs/DrugSafety/ucm283137.htm">http://www.fda.gov/Drugs/DrugSafety/ucm283137.htm</a> (Status: completed, see <a href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/Decision-trees">the project on github</a>).</td>
+        <td>The target of a drug safety communication from a regulatory agency [[fda-simvastatin-amiodarone]]. (Status: completed, <a href="https://zenodo.org/record/1472434">view at Zenodo</a>).</td>
       </tr>
     </table>
     <section id="warfarin-nsaids-dt">
-      <h2>Example PDDI:Warfarin + NSAIDs (Draft)></h2>
+      <h2>Example PDDI:Warfarin + NSAIDs</h2>
       <p>
         Non-steroidal anti-inflammatory drugs (NSAIDs) have antiplatelet effects which
         increase the bleeding risk when combined with oral anticoagulants such as warfarin.
