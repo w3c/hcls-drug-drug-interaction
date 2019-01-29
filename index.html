@@ -26,6 +26,11 @@
       "date": "April 2004",
       "href": "https://www.ncbi.nlm.nih.gov/pubmed/15098847"},
 
+      "ahrq-drug-drug": {
+      "authors": ["AHRQ"],
+      "title": "Drug-drug interactions: percentage of patients who received a prescription for a target medication during the measurement period and who were dispensed a concurrent prescription for a precipitant medication. National Quality Measures Clearinghouse",
+      "href": "https://qualitymeasures.ahrq.gov/summaries/summary/47511/drugdrug-interactions-percentage-of-patients-who-received-a-prescription-for-a-target-medication-during-the-measurement-period-and-who-were-dispensed-a-concurrent-prescription-for-a-precipitant-medication?q=drugdrug+interactions"},
+
 
       "ayvaz-2015": {
       "authors": [
@@ -76,6 +81,7 @@
 
       "bristol-myers-warfarin": {
       "authors": ["Bristol-Myers Squibb"],
+      "date":"2017",
       "title": "{DailyMed} - {COUMADIN}- warfarin sodium tablet",
       "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d91934a0-902e-c26c-23ca-d5accc4151b6",},
 
@@ -183,9 +189,10 @@
       "date": "May 2014",
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24616171"},
 
-      "drugs-interaction": {
+      "drugs-dot-com-interaction": {
       "authors": ["Drugs.com"],
       "title": "Drug Interaction Report",
+      "date":"1/28/2019",
       "href": "https://www.drugs.com/interactions-check.php?drug_list=1310-0%2C2311-0&professional=1&types%5B%5D=major"},
 
       "european-medicines-2012": {
@@ -309,6 +316,15 @@
       "pages": "941-946",
       "date": "May 15, 2011",
       "href": "https://www.ncbi.nlm.nih.gov/pubmed/21546646"},
+
+      "HL7-cds-PDDI-draft": {
+      "authors": ["HL7 Clinical Decision Support Workgroup"],
+      "title": "Potential Drug-Drug Interaction (PDDI) CDS IG : Ballot for Comment 2 - Terminology page",
+      "href": "http://build.fhir.org/ig/HL7/PDDI-CDS/terminology.html",
+      "date":"2019"
+      },
+
+
       
       "institute-medicine-2006": {
       "authors": ["Institute of Medicine"],
@@ -395,6 +411,7 @@
       "dailymed-about": {
       "authors": ["DailyMed"],
       "title": "DailyMed - About",
+      "date":"2019",
       "href": "https://dailymed.nlm.nih.gov/dailymed/about-dailymed.cfm"},
 
       "nebeker-2004": {
@@ -408,11 +425,14 @@
       "date": "May 18, 2004",
       "href": "https://www.ncbi.nlm.nih.gov/pubmed/15148066"},
 
-      "ahrq-drug-drug": {
-      "authors": ["AHRQ"],
-      "title": "Drug-drug interactions: percentage of patients who received a prescription for a target medication during the measurement period and who were dispensed a concurrent prescription for a precipitant medication. National Quality Measures Clearinghouse",
-      "href": "https://qualitymeasures.ahrq.gov/summaries/summary/47511/drugdrug-interactions-percentage-of-patients-who-received-a-prescription-for-a-target-medication-during-the-measurement-period-and-who-were-dispensed-a-concurrent-prescription-for-a-precipitant-medication?q=drugdrug+interactions"},
-
+      "NLM-vsac-2019": {
+      "authors": ["NLM"],
+      "title": "Value Set Authority Center - U.S. National Library of Medicine",
+      "href": "https://vsac.nlm.nih.gov/",
+      "date":"2019"
+      },
+      
+      
       "olvey-2010": {
       "authors": [
       "E. Olvey",
@@ -792,7 +812,7 @@
 
       },
       specStatus: "CG-DRAFT",
-      edDraftURI: "https://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/w3c-ddi/index.html",
+      edDraftURI: "https://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/hcls-drug-drug-interaction/index.html",
       editors: [
       {
       name: "Richard D. Boyce",
@@ -800,12 +820,8 @@
       company: "Department of Biomedical Informatics, University of Pittsburgh, USA"
       },
       {
-      name: "Ratnesh Sahay",
-      company: "Insight Center for Data Analytics, NUI Galway, Ireland"
-      },
-      {
-      name: "Serkan Ayvaz",
-      company: "Department of Software Engineering, Bahcesehir University, Istanbul, Turkey"
+      name: "Elizabeth A. Garcia",
+      company: "School of Pharmacy, University of Pittsburgh, USA"
       },
       {
       name: "Harry Hochheiser",
@@ -813,73 +829,66 @@
       company: "Department of Biomedical Informatics, University of Pittsburgh, USA"
       },
       {
-      name: "Elizabeth A. Garcia",
-      company: "School of Pharmacy, University of Pittsburgh, USA"
+      name: "Serkan Ayvaz",
+      company: "Department of Software Engineering, Bahcesehir University, Istanbul, Turkey"
       },
+      {
+      name: "Ratnesh Sahay",
+      company: "Insight Center for Data Analytics, NUI Galway, Ireland"
+      },    
       {
       name: "Michel Dumontier",
       company: "Institute of Data Science, Maastricht University, Netherlands"
-      }],
+      }],      
+
       authors: [
-      {
-      name: "Brian LeBaron",
-      company: "Southeast Louisiana Veterans Health Care System, USA"
-      },
-      {
-      name: "Brian Hocum",
-      company: "Genelex, Seattle, USA"
-      },
-      {
-      name: "Daniel C. Malone",
-      company: "College of Pharmacy, University of Arizona, USA"
-      },
-      {
-      name: "Evan Draper",
-      company: "Pharmacy Services, Mayo Clinic, USA"
-      },
-      {
-      name: "Jodi Schneider",
-      company: "University of Illinois at Urbana-Champaign, USA"
-      },
-      {
-      name: "Sam Habiel",
-      company: "Open Source Electronic Health Records Alliance (OSEHRA), USA"
-      },
-      {
-      name: "John Horn",
-      company: "School of Pharmacy, University of Washington, USA"
-      },
       {
       name: "Juan M. Banda",
       company: "Stanford University, USA"
       },
       {
-      name: "Katrina Romagnoli",
-      company: "University of Pittsburgh Medical Center, USA"
-      },
-      {
-      name: "Lorne Walker",
-      company: "University of Pittsburgh Medical Center, USA"
-      },
-      {
-      name: "Louisa (Yu) Zhang",
-      company: "University of Pittsburgh, USA"
-      },
-      {
-      name: "Maria Herrero-Zazo",
-      company: "King’s College London, United Kingdom "
+      name: "Oya Beyan",
+      company: "Fraunhofer FIT, Germany"
       },
       {
       name: "Mathias Brochhausen",
       company: "University of Arkansas for Medical Sciences, USA"
       },
       {
+      name: "Evan Draper",
+      company: "Pharmacy Services, Mayo Clinic, USA"
+      },
+      {
+      name: "Sam Habiel",
+      company: "Open Source Electronic Health Records Alliance (OSEHRA), USA"
+      },
+      {
       name: "Oktie Hassanzadeh",
       company: "IBM Research, USA"
       },
       {
-      name: "Oya Beyan",
-      company: "Fraunhofer FIT, Germany"
+      name: "Maria Herrero-Zazo",
+      company: "King’s College London, United Kingdom "
+      },
+      {
+      name: "Brian Hocum",
+      company: "Genelex, Seattle, USA"
+      },
+      {
+      name: "John Horn",
+      company: "School of Pharmacy, University of Washington, USA"
+      },
+      {
+      name: "Xia Jing",
+      company: "Ohio University, USA"
+      },
+      {
+      name: "Brian LeBaron",
+      company: "Southeast Louisiana Veterans Health Care System, USA"
+      },
+      {
+      name: "Daniel C. Malone",
+      company: "College of Pharmacy, University of Arizona, USA"
       },
       {
       name: "Øystein Nytrø",
@@ -890,9 +899,22 @@
       company: "University of Utah, USA"
       },
       {
-      name: "Xia Jing",
-      company: "Ohio University, USA"
-      }],
+      name: "Katrina Romagnoli",
+      company: "University of Pittsburgh Medical Center, USA"
+      },
+      {
+      name: "Jodi Schneider",
+      company: "University of Illinois at Urbana-Champaign, USA"
+      },
+      {
+      name: "Lorne Walker",
+      company: "University of Pittsburgh Medical Center, USA"
+      },
+      {
+      name: "Louisa (Yu) Zhang",
+      company: "University of Pittsburgh, USA"
+      }
+      ],
       github: "https://github.com/w3c/hcls-drug-drug-interaction/",
       shortName: "MPIO",
       wg: "Semantic Web in Health Care and Life Sciences Community Group",
@@ -909,12 +931,11 @@
     </style>
   </head>
   <body>
-    <section id='abstract'>
+    <section id='abstract' class='introductory'>
       <p>
 
 	Ensuring medication therapy occurs safely and to the maximum benefit
-	for any given patient is of great interest to clinicians
-	[[institute-medicine-2006]]. One possible threat to patient safety comes
+	for any given patient is of great interest to clinicians [[institute-medicine-2006]]. One possible threat to patient safety comes
 	from exposure to two or more drugs that are known to interact (i.e.,
 	potential drug-drug interactions or PDDIs), and could therefore lead
 	to a clinically observable effect on the patient (i.e., an actual
@@ -931,12 +952,7 @@
 	information exchange. Downstream applications would process these
 	representations into forms amenable for clinical decision support,
 	drug product label enhancement, cohort identification, and other
-	pharmacovigilance activities.  
-
-
-
-
-
+	activities relevant to protecting patients from harm.  
       </p>
     </section>
     <section id='sotd'>
@@ -946,7 +962,7 @@
   This document is governed by the <a href="https://www.w3.org/community/reports/reqs/">W3C  requirements of the Community and Business Group Process related to deliverables</a>.
 </p>
 </section>
-<section>
+<section class='informative'>
   <h2>Introduction</h2>
   <p>
     Ensuring medication therapy occurs safely and to the maximum benefit for of any given patient is of great
@@ -966,8 +982,7 @@
   </p>
   <p>
     Clinicians often face barriers to the effective and appropriate management of PDDI exposures [[nabovati-2017]].
-    Barriers include PDDI alerts with poor specificity and incomplete personal PDDI knowledge [[abarca-2004]][[van-der-sijs-2006]]
-    . An awareness of the need for PDDI decision support prompts clinicians to use various drug
+    Barriers include PDDI alerts with poor specificity and incomplete personal PDDI knowledge [[abarca-2004]][[van-der-sijs-2006]]. An awareness of the need for PDDI decision support prompts clinicians to use various drug
     knowledge resources including print or online drug information references, drug interaction checking tools, and alerting systems.
     Unfortunately, poor specificity leads clinicians to be overwhelmed by PDDI information that is “difficult to retrieve, sort and
     digest into clinical decision making” [[bottiger-2009]]. PDDI alerts are often  criticized for “over-alerting” that
@@ -979,64 +994,80 @@
   </p>
   <section>
     <h2>Need, envisioned workflow, and high-level requirements</h2>
-    <p>New information regarding PDDIs is published every day in primary sources such as drug product labeling and the scientific
-      literature. A PubMed search for publications indexed with the Medical Subject Headings keyword “Drug interactions” shows an
-      average of 3,970 publications per year from 2000 through 2016. This suggests that the body of evidence about PDDIs is
-      overwhelming and dynamic. As it is impossible for clinicians to keep up with the PDDI evidence base, drug
-      experts generate summaries of PDDI evidence from primary sources. These summaries bring PDDI knowledge to clinicians
-      in the form of published drug information compendium, clinical decision support rules, and interaction checking applications.
+    <p>New information regarding PDDIs is published every day in
+      primary sources such as drug product labeling and the scientific
+      literature. A PubMed search for publications indexed with the
+      Medical Subject Headings keyword “Drug interactions” shows
+      growth from a little more than 6,000 publications in the year
+      2000 to more than 9,000 publications in 2018. This suggests that
+      the body of evidence about PDDIs is overwhelming and dynamic. As
+      it is impossible for clinicians to keep up with the PDDI
+      evidence base, drug experts generate summaries of PDDI evidence
+      from primary sources. These summaries bring PDDI knowledge to
+      clinicians in the form of published drug information compendium,
+      clinical decision support rules, and interaction checking
+      applications.
       <strong>However, there are currently no broadly accepted standards to guide these experts in the organization and presentation of PDDI
         information.</strong>
     </p>
 
     <p><a href="#PDDI-MI-APPLICATIONS"></a> provides an overview of
-      the roles envisioned for a PDDI minimal information model.  Drug
+      the roles envisioned for a PDDI minimal information model. Drug
       experts would generate summaries of PDDI evidence from primary
       sources using the information elements from the PDDI minimal
       information model. The information elements would cover the
       minimum set of information required for the effective clinical
       management of PDDI exposure. The resulting common representation
       of PDDI summaries would facilitate curation and information
-      exchange. Downstream applications would process these
-      representations into forms amenable for clinical decision
-      support, drug product label enhancement, cohort identification,
-      and other pharmacovigilance activities. To achieve the
-      envisioned roles, the minimal information model must be flexible
-      and computable. Where possible, model elements should draw upon
-      accepted biomedical taxonomies and ontologies to represent
-      medications, diagnoses, and descriptions of potential adverse
-      reactions. Preferring the use of ontologies over free-text
-      descriptions will reduce ambiguity associated with free-text,
-      thus supporting comparison and computational
-      analyses. Representations in commonly-used formats (JSON,XML/RDF
-      ,etc.) will support ease of construction and parsing of models,
-      particularly through shared libraries and APIs.
+      exchange.  The annotated knowledge artifacts could be shared in
+      a knowledgebase and used for a variety of use cases.
+      </p>
+    <p>
+      Downstream applications would process these representations into
+      forms amenable for clinical decision support (see
+      Section <a href="#ex-pddi-cds-hl7"></a>), drug product label
+      enhancement (see Section <a href="#ex-SPL"></a>), to inform
+      cohort descriptions useful for generating evidence from
+      retrospective health records (see
+      Section <a href="#ex-cohort-desc"></a>), and other medication
+      safety activities.
     </p>
 
     <figure id="PDDI-MI-APPLICATIONS">
       <img src="Presentations/images/info-model-value-proposition.png"
 	   width"1152" height="864">
-      <figcaption>An overview of the role envisioned for a PDDI minimal information model. Starting from the top of the figure, drug experts synthesize drug-drug interaction evidence from pre-clinical studies, clinical studies, and clinical observation into knowlege artifacts annotated using information categories in the PDDI minimal information model. The annotated knowledge artifacts can be shared in a knowledgebase, and applied to a variety of use cases including decision support, drug product labeling, and to inform cohort descriptions useful for generating evidence from retrospective health records. </figcaption>
+      <figcaption>An overview of the role envisioned for a PDDI minimal information model. Starting from the top of the figure, drug experts synthesize drug-drug interaction evidence from pre-clinical studies, clinical studies, and clinical observation into knowledge artifacts annotated using information categories in the PDDI minimal information model. The annotated knowledge artifacts can be shared in a knowledgebase, and applied to a variety of use cases including <a href="#ex-pddi-cds-hl7">clinical decision support</a>, <a href="#ex-SPL">structuring PDDI information in drug product labeling</a>, and to <a href="#ex-cohort-desc">inform cohort descriptions useful for generating evidence</a> from retrospective health records. </figcaption>
     </figure>
+
+    <p>
+      To achieve the envisioned roles, the minimal information model
+      must be grounded in non-trivial real world use cases. Where
+      possible, model elements should draw upon accepted biomedical
+      taxonomies and ontologies to represent medications, diagnoses,
+      and descriptions of potential adverse reactions. Being
+      a <i>minimum</i> information model, the goal is not to represent
+      every aspect of a PDDI using formal logic and
+      ontologies. Rather, the model should 1) specify the key
+      information that is needed for effective clinical decision
+      making, and 2) provide recommendations on how to minimize
+      ambiguity common to free-text descriptions about PDDIs
+    </p>
 
     <p>The purpose of this Community Group Note is to provide a
       technical and user-centered foundation for a minimum
       information model for PDDI information. The principal
       contributions include:
-
-      <div class="issue" data-number="39" title="consider creating a table of normative recommendations with identifiers">
 	<ol>
 	  
 	  <li>definitions for the model's core information items,
 	    examples of using these definitions to represent two PDDIs,
 	    and a set of additional PDDIs selected as case studies for
 	    future work on the information model;</li>
-	  <li>clarification on the intended users of the information model
-	    along with use stories and specific information needs; and</li>
 	  <li>a statement on the appropriate scope of knowledge representation
 	    for the information model.</li>
+	  <li>clarification on the intended users of the information model
+	    along with use stories and specific information needs; and</li>
 	</ol>
-      </div>
 
       <div class="issue" data-number="40" title="The example PDDIs should also be represented using the model">
 	The focus of this document is definition of the model, not
@@ -1062,9 +1093,7 @@
       The minimum information model contains a total of 10 core
       information items. Definitions are given below; descriptions of
       considerations informing the     definitions of these term can be
-      found at (<a target="new"
-		   href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions"> 
-	https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>): 
+      found in the <a target="new" href="https://github.com/w3c/hcls-drug-drug-interaction/tree/master/User-centered-definitions">user-centered definition working documents on github</a>. 
     </p>
     <ul>
 
@@ -1081,13 +1110,23 @@
 	Changes in patient health status from baseline that can be observed or measured by a
 	clinician or reported by a patient.</li>
 
-      <li> <dfn>Seriousness</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000009">http://purl.obolibrary.org/obo/MPIO_0000009</a>):
-	As defined by the World Health Organization an event is serious
-	if it &quot;results in death; requires hospitalization or
-	extension of hospital stay; results in persistent or significant
-	disability or incapacity; is life-threatening&quot;
-	[[who-umc-glossary]]. Seriousness may determine the type and speed
-	of clinician intervention.</li>
+      <li> <dfn data-lt="seriousness|serious"
+	data-dfn-type="dfn">Seriousness</dfn> (<a target="new"
+	href="http://purl.obolibrary.org/obo/MPIO_0000009">http://purl.obolibrary.org/obo/MPIO_0000009</a>):
+	As defined by the World Health Organization an event is
+	serious if it &quot;results in death; requires hospitalization
+	or extension of hospital stay; results in persistent or
+	significant disability or incapacity; is
+	life-threatening&quot; [[who-umc-glossary]]. Seriousness may
+	determine the type and speed of clinician intervention. Note
+	that seriousness is also an important concept for
+	pharmacovigilance and pharmacoepidemiological studies. The
+	adoption of this term aligns this effort with definitions
+	adopted by the World Health Organization[[who-umc-glossary]],
+	the United States Food and Drug Administration
+	[[usdhhs-2011]], and other organizations involved in
+	pharmacovigilance efforts.
+    </li>
 
       <li> <dfn>Operational Classification Statement</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000005">http://purl.obolibrary.org/obo/MPIO_0000111</a>):
 	A short risk classification statement that suggests a specific management criteria for a specific patient context. For example, the OpeRational ClassificAtion of Drug Interactions [[hansten-2001]] system suggests the following categories:</li>
@@ -1117,7 +1156,7 @@
       <li><dfn>Recommended Action</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000008">http://purl.obolibrary.org/obo/MPIO_0000008</a>):
 	An evidence-based strategy to mitigate the potential clinical consequences of a drug-drug interaction such as a drug change, adjust drug dose, and monitor lab values. A Recommended Action should provide specific detailed suggestions that complement the <a>Operational Classification Statement</a>.  </li>
       
-      <li><dfn>Mechanism of Interaction</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000005">http://purl.obolibrary.org/obo/MPIO_0000005</a>):
+      <li><dfn data-lt="mechanism of interaction|mechanism of a PDDI" data-dfn-type="dfn">Mechanism of Interaction</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000005">http://purl.obolibrary.org/obo/MPIO_0000005</a>):
 	The process(es) by which a drug-drug interaction with clinical
 	consequence occurs.</li>
 
@@ -1126,481 +1165,81 @@
 	Factors such as patient age, patient health conditions, route of administration, product formulation, drug dose, pharmacogenetics,
 	or concurrent medications that might alter the risk of a drug-drug interaction clinical consequence or its seriousness. </li>
 
-      <li><dfn>Evidence for a Suspected Drug-Drug Interaction</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000004">http://purl.obolibrary.org/obo/MPIO_0000004</a>):
+      <li><dfn <dfn data-lt="Evidence About a Suspected Drug-Drug Interaction|evidence"
+	data-dfn-type="dfn">Evidence About a Suspected Drug-Drug Interaction</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000004">http://purl.obolibrary.org/obo/MPIO_0000004</a>):
 	The support for or refutation of a drug-drug interaction in humans, potentially including data resulting
 	from clinical studies, clinical observation, physiological experiments, or extrapolation based
 	on drug-drug interaction mechanisms.</li>
       
-      <li><dfn>Frequency of Exposure to the PDDI</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000007">http://purl.obolibrary.org/obo/MPIO_0000007</a>):
+      <li><dfn data-lt="Frequency of Exposure to the PDDI|frequency of exposure">Frequency of Exposure to the PDDI</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000007">http://purl.obolibrary.org/obo/MPIO_0000007</a>):
 	When available, the number of individuals within a cohort that are exposed to a drug-drug interaction over a specified time
 	period divided by the total number of patients in the cohort.</li>
 
-      <li><dfn>Frequency of Harm for persons who have been exposed to the PDDI</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000006">http://purl.obolibrary.org/obo/MPIO_0000006</a> ):
+      <li><dfn data-lt="Frequency of Harm for Persons who have been Exposed to the PDDI|frequency of harm" data-dfn-type="dfn">Frequency of Harm for persons who have been exposed to the PDDI</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000006">http://purl.obolibrary.org/obo/MPIO_0000006</a> ):
 	When available, the number of individuals within a cohort that experience a clinical consequence of a drug-drug interaction clinical consequence divided by the total number of patients co-exposed to the drugs involved.</li>
 
 
     </ul>
-    <p>
-      These core information elements are consistent with the results of a separate international Delphi study on how
-      to improve the delivery of medication alerts within computerized physician order entry systems [[riedmann-2011]].
-      This suggested list of core information elements includes some that are present in one or more of the 15 PDDI conceptual
-      models analyzed in a recent comprehensive review by Herrero-Zazo, Segura-Bedmar, and Martínez [[herrero-zazo-2016]].
-      However, there is little commonality across the conceptual models on those elements that are included and no single
-      conceptual model covers all 9 of the information elements. For example, the mechanism of the interaction and clinical
-      consequences were present in multiple models but at different levels of granularity. Other information elements, such
-      as frequency of exposure and frequency of harm are not present in any of the 15 sources. Even PDDI knowledge bases that
-      are strongly clinically-oriented (as opposed to  knowledge bases oriented toward use in bioinformatics or drug development)
-      use considerably different information elements. For example, the National Drug File - Reference Terminology (NDF-RT)
-      produced by the U.S. Department of Veterans Affairs [[olvey-2010]] includes detailed information about pharmacokinetic
-      mechanisms but does not discuss clinical consequences. In contrast, the system reported by Mille, Degoulet, and Jaulent
-      [[mille-2007]] provided details on the clinical consequences, including risk increasing and mitigating factors,
-      but supplied only a limited structure for mechanism.
-    </p>
-
-    <p>Note that, although not commonly used by practitioners and
-      clinicians, seriousness is an important concept for pharmacovigilance
-      and pharmacoepidemiological studies. The adoption of this term aligns
-      this effort with definitions adopted by the World Health
-      Organization[[who-umc-glossary]], the United States Food and Drug
-      Administration [[usdhhs-2011]], and other organizations involved in
-      pharmacovigilance efforts.
-    </p>
 </div>
-<p>
-  The interested reader can review details on each definition in
-  documnets  downloadable from GitHub (<a target="new"
-					  href="https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions">https://github.com/W3C-HCLS/w3c-ddi/tree/master/User-centered-definitions</a>).
-</p>
 </section>
 
-<section id="examples">
-  <h2>Examples of the use of the minimal information model</h2>
-  We provide limited discussion of the definitions in the form of two example
-  PDDIs, chosen from a larger set of 14 exemplar potential drug-drug
-  interactions examined during the develompent of the minimal
-  information model (see <a href="#decision-trees"></a>).
+<section id="recommendations-summary">
+   <h2>A summary of recommendations related to the minimum information model</h2>
 
-  <div class="issue" data-number="10" title="Write a small section about concept/value sets and refer to it in the examples.">
-    <section id="intro-to-value-sets">
-      <h2>Concept identification and 'value sets' </h2>
+   <p>
+   Note that the capitalized keywords (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, AND OPTIONAL) are defined in RFC 2119 [[RFC2119]].
+   </p>
+   
+   <div class="practice" id="bp-drugs-involved">
+        <b><i>R1 - Explicitly state the drugs involved:</b></i> The <a>drugs involved</a> in a PDDI MUST be explicitly stated. To reduce ambiguity and support a computable representation of the PDDI, the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>. Such so called <i>value sets</i> MAY be referenced by a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.
+   </div>
 
-      <figure id="ddi-model-value-sets ">
-	<img src="Presentations/images/value-set-overview.png" width="700">
-	<figcaption>Sources of value sets for two of the core information items of PDDI. Identifiers may come from above mentioned code systems or other relevant terminologies. As is typical for value sets,  version, original code system and the code system version are required. The National Library of Medicine's Value Set Authority Center is a public site commonly used to store individual value sets.</figcaption>
-      </figure>      
-    </section>
-  </div>
+   <div class="practice" id="bp-clinical-consequences">
+        <b><i>R2 - Explicitly state clinical consequences:</b></i> The <a>clinical consequences</a> associated with a PDDI MUST be reported if known. Clinical consequences SHOULD refer health outcomes as specifically as possible. To reduce ambiguity and support a computable representation of the PDDI, clinical consequences SHOULD be represented as one or more sets of terms from a terminology such as <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> or <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. Such so called <i>value sets</i> MAY be referenced by a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public. 
+   </div>
 
-  
-  <section id="ex-warfarin-nsaids">
-    <h2>Applying the Minimal Information Model definitions to the PDDI between warfarin
-      and non-steroidal anti-inflammatory drugs (NSAIDs)</h2>
-    <p>
-      We illustrate here the application of the Minimum Information Model definitions to representing the PDDI involving warfarin
-      and non-steroidal anti-inflammatory drugs (NSAIDs). Details of
-      the development process can be found
-      in <a href="#warfarin-nsaids-dt"></a>. Note that the capitalized keywords (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, AND OPTIONAL) are defined in RFC 2119 [[RFC2119]]. 
-    </p>
+   <div class="practice" id="bp-serious">
+     <b><i>R3 - Note if a clinical consequence is serious:</b></i> A clinical consequence associated with a PDDI MUST be noted as <a>serious</a> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage.
+   </div>
 
-    <table>
-      <tr>
-	<td style="background-color: #f4fff2"><strong>Drugs involved</strong>: <a href="#warfarins">Warfarin</a> and <a href="#NSAIDS-drugs">non-steroidal anti-inflammatory drugs (NSAIDs)</a> </td>
-      </tr>
-      <tr>
-	<td>
-	  <strong>Comment:</strong> The drugs involved in a PDDI MUST be explicitly stated. To support a computable representation of the PDDI, the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>. Such so called <i>value sets</i> MAY be referenced by a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>.</td> 
-      </tr>
-    </table>
-    <table>
-      <tr>
-	<td style="background-color: #f4fff2"><a>Clinical Consequences</a>: Increased risk of bleeding including <a href="#gi-bleeding">gastrointestinal bleeding</a>,  <a href="#icran-hemm">intracranial hemorrhage</a>,  and <a href="#cereb-hemm">cerebral hemorrhage</a></td>
-      </tr>
-      <tr>
-	<td><strong>Comment:</strong> The clinical consequences associated with a PDDI MUST be reported if known. Clinical consequences SHOULD refer health outcomes as specifically as possible. To support a computable representation of the PDDI, clinical consequences SHOULD be represented as one or more sets of terms from a terminology such as <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> or <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. Such so called <i>value sets</i> MAY be referenced by a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>.</td> 
-      </tr>
-    </table>
+   <div class="practice" id="bp-operational-classification">
+     <b><i>R4 - Include an operational classifaction statement:</b></i> A PDDI MUST report at least one <a>operational classification statement</a>. The description MAY include one or more operational classification statements as long as each statement depends on a single set of <a>contextual information/modifying factors</a>. In this case, the  operational classification statements SHOULD be mentioned where the specific contextual information/modifying factors are discussed. While implementers MAY use any system that provides clear operational classification statements, the use of the OpeRational ClassificAtion of Drug Interactions [hansten-2001] is RECOMMENDED. 
+   </div>
 
-    <table>
-      <tr>
-	<td style="background-color: #f4fff2"><a>Seriousness</a>: Bleeding is a serious potential clinical consequence because it can result in death, life-threatening hospitalization, and disability. </td>
-      </tr>
-      <tr>
-	<td><strong>Comment:</strong> A PDDI clinical consequence MUST be noted as <i>serious</i> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage.</td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-	<td style="background-color: #f4fff2"><a>Operational Classification Statement</a>: Depending on the patient context, there are different operational classification statements for the warfarin-NSAIDs PDDI. See the contextual information/modifying factors for this interaction where the specific contextual information/modifying factors are discussed.</td>
-      </tr>
-      <tr>
-	<td><strong>Comment:</strong>A PDDI MUST report at least one operational classification statement. The description MAY include one or more operational classification statements as long as each statement depends on a single patient context. In this case, the  operational classification statements SHOULD be mentioned where the specific contextual information/modifying factors are discussed.</td>
-      </tr>
-    </table>
-</div>
-<table>
-  <tr>
-    <td style="background-color: #f4fff2"><a>Mechanism of Interaction</a>: <a href="#NSAIDS-drugs">Non-steroidal anti-inflammatory drugs (NSAIDs)</a> have
-      antiplatelet effects which increase the bleeding risk when combined with oral anticoagulants such as
-      <a href="#warfarins">warfarin</a>. The antiplatelet effect of NSAIDs lasts only as long as the NSAID is present in the circulation,
-      unlike aspirin’s antiplatelet effect, which lasts for up to 2 weeks after aspirin is discontinued. NSAIDs also
-      can cause peptic ulcers and most of the evidence for increased bleeding risk with NSAIDs plus warfarin is due to
-      upper gastrointestinal bleeding (UGIB).</td>
-  </tr>
-  <tr>
-    <td><strong>Comment:</strong> The mechanism of a PDDI MUST be reported if known. The description SHOULD be written for a clinician audience and include details that help the clinician decide what course of management action to take. To reduce ambiguity, the description MAY refer to specific drugs or health conditions using codes from terminologies. </td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td style="background-color: #f4fff2"><a>Recommended Action</a>: If the NSAID is being used as an analgesic or antipyretic,
-      it would be prudent to use an alternative such as acetaminophen. In some people, acetaminophen can
-      increase the anticoagulant effect of warfarin, so monitor the INR if acetaminophen is used in doses
-      over 2 g/day for a few days. For more severe pain consider short-term opioids in place of the NSAID.</td>
-  </tr>
-  <tr>
-    <td><strong>Comment:</strong> If known, a <a>recommended action</a> SHOULD be stated using clear and concise language. Any recommended actions that apply to all patient exposures SHOULD be stated using clear and concise language. It is RECOMMENDED that each recommended action statement provide citations to <a>evidence for a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on <a>contextual information/modifying factors</a> SHOULD be mentioned separately to support context-specific presentation of such information.</td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td style="background-color: #f4fff2"><a>Contextual information/modifying factors</a>:
-      <ol>
-        <li>The <a href="#NSAIDS-drugs">NSAIDs</a> is <a href="#topical-diclof">topical diclofenac</a></li>
-        <ul>
-          <li><strong>Operational Classification Statement:</strong> No special precautions</li>
-          <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> <a href="#topical-diclof">Topical diclofenac</a> has relatively
-	    low systemic absorption; in one study a topical gel (16 g/day) produced about 6% of
-	    the absorption seen with systemic administration of 150 mg/day. A higher than recommended
-	    dose of topical gel (48 g/day) produced 20% of a systemic dose of diclofenac.</li>
-        </ul>
-        <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a> but the patient is concomitantly taking a
-          <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a></li>
-        <ul>
-          <li><strong>Operational Classification Statement:</strong> Assess risk and take action if necessary</li>
-          <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> <a href="#proton-pump-inhibitor">Proton pump inhibitors</a> and <a href="#misoprostol">misoprostol</a> may reduce the risk of UGIB in patients receiving NSAIDs and warfarin. </li>
-        </ul>
-        <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a>, the patient is NOT concomitantly taking a <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a>, and the patient has one or more of the following risk factors:</li>
-        <ul>
-          <li>History of <a href="#gi-bleeding">upper gastrointestinal bleeding (UGIB) or peptic ulcer</a> or age > 65 years old</li>
-          <ul>
-	    <li><strong>Operational Classification Statement:</strong> Use only if benefit outweighs risk</li>
-	    <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> Patients with a
-              history of UGIB or peptic ulcer may have an increased risk of UGIB from this interaction.
-              The extent to which older age is an independent risk factor for UGIB due to these interactions
-              is not firmly established, but UGIB in general is known to increase with age.</li>
-          </ul>
-          <li>Concomitantly taking <a href="#systemic-cortico">systemic corticosteroids</a>, <a href="#aldosterone-antagonists">aldosterone antagonists</a>, or high dose or multiple <a href="#NSAIDS-drugs">NSAIDs</a></li>
-          <ul>
-	    <li><strong>Operational Classification Statement:</strong> Use only if benefit outweighs risk</li>
-	    <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> Both corticosteroids
-              and aldosterone antagonists have been shown to substantially increase the risk of UGIB in
-              patients on NSAIDs, with relative risks of 12.8 and 11 respectively compared
-              to a risk of 4.3 with NSAIDs alone [[masclee-2014]]</li>
-          </ul>
-        </ul>
-      </ol>
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Comment:</strong> <a>Contextual information/modifying factors</a> are necessary for alerts that
+   
+   <div class="practice" id="bp-mechanism">
+     <b><i>R5 - Report a mechanism if known:</b></i> The <a>mechanism of a PDDI</a> MUST be reported if known. The description SHOULD be written for a clinician audience and include details that help the clinician decide what course of management action to take. To reduce ambiguity, the description MAY refer to specific drugs or health conditions using codes from terminologies.
+   </div>
+
+
+   <div class="practice" id="bp-recommended-action">
+     <b><i>R6 - State a recommended action if one is known:</b></i> If known, a <a>recommended action</a> SHOULD be stated using clear and concise language. Any recommended actions that apply to all patient exposures SHOULD be stated using clear and concise language. It is RECOMMENDED that each recommended action statement provide citations to <a>evidence about a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on specific <a>contextual information/modifying factors</a> SHOULD be mentioned so as to support a context-specific presentation of such information.
+   </div>
+
+   <div class="practice" id="bp-contextual">
+     <b><i>R7 - State each known risk modifying factor or patient context:</b></i> <a>Contextual information/modifying factors</a> are necessary for alerts that
       are both sensitive and specific. Like clinical consequences, each known factor SHOULD be
       stated as specifically as possible. The factors SHOULD be amenable to implementation as executable
       logic using value sets from clinical terminologies such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a>, the
       <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a>, and <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. As is used in this
-      example, each factor SHOULD be related to a specific <a>operational classification statement</a> that is supported by the <a>evidence for a suspected drug-drug interaction</a>. It is RECOMMENDED that, wherever possible, each evidence statment refer to a specific source in the form of a citation.</td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td style="background-color: #f4fff2"><strong>Frequency of Exposure to the PDDI:</strong> Unknown</td>
-  </tr>
-  <tr>		      
-    <td><strong>Comment:</strong> Frequency of exposure and frequency of harm information is
-      rarely available but can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Such information SHOULD be provided if available. </td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td style="background-color: #f4fff2"><strong>Frequency of Harm for persons who have been exposed to the PDDI:</strong> Unknown</td>
-  </tr>
-  <tr>
-    <td><strong>Comment:</strong> Frequency of exposure and frequency of harm information is
-      rarely available but can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Such information SHOULD be provided if available. </td>
-  </tr>
-</table>
+      example, each factor SHOULD be related to a specific <a>operational classification statement</a> that is supported by the <a>evidence about a suspected drug-drug interaction</a>. It is RECOMMENDED that, wherever possible, each evidence statement refer to a specific source in the form of a citation.
+   </div>
 
-</section>
-<section id="ex-tki-ppi">
-  <h2>Applying the Minimal Information Model definitions to the PDDI between BCR-ABL
-    Tyrosine Kinase Inhibitors (TKI) + Proton Pump Inhibitors (PPI)</h2>
-  <p> Minimal information Model definitions and discussion comments
-    (were differing from the previous example) for the  PDDI
-    involving  BCR-ABL Tyrosine Kinase Inhibitors (TKIs) + Proton
-    Pump Inhibitors (PPIs). 
-  </p>
-  <table>
-    <tr>
-      <td style="background-color: #f4fff2"><emph>Drugs involved</emph>: <a href="#TKIs">Tyrosine Kinase Inhibitors (TKIs)</a> and <a href="#proton-pump-inhibitor-atc">Proton Pump Inhibitors (PPIs)</a></td>
-    </tr>
-    <tr>
-      <td><strong>Comment:</strong> Note that in the previous example the drugs involved are specified using RxNorm while this example uses ATC. This is to emphasize that, while the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-      <td style="background-color: #f4fff2"><strong>Clinical Consequences:</strong> Decreased efficacy relative to treatment for <a href="#acml">chronic myeloid leukemia</a></td>
-    </tr>
-    <tr>
-      <td><strong>Comment:</strong> Note that in the previous example the clinical consequences involved are specified using <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> while this example uses <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. This is to emphasize that, while the clinical consequences  SHOULD be listed as sets of terms from a terminology such as ICD-10 or SNOMED-CT, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
-    </tr>
-  </table>
+   <div class="practice" id="bp-freq-exp">
+     <b><i>R8 - State the frequency of harm relative to frequency of exposure if known:</b></i> Information about the <a>frequency of harm</a> of exposure to a PDDI relative to <a>frequency of exposure</a> and is rarely available. If such information is available, it can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Therefore, such information SHOULD be provided if available and considered reliable. It is RECOMMENDED that, wherever possible, each frequency of harm and frequency of exposure datum refer to a specific source in the form of a citation. If such information is not available, it is RECOMMENDED that an explicit statement declaring this fact be provided.
+   </div>
 
-  <table>
-    <tr>
-      <td style="background-color: #f4fff2"><strong>Seriousness:</strong> A decrease in chronic myeloid leukemia treatment efficacy is
-        a serious potential clinical consequence because it can result in death, life-threatening
-        hospitalization, and disability. </td>
-    </tr>
-    <tr>
-      <td><strong>Comment:</strong> A PDDI clinical consequence MUST be noted as <i>serious</i> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage.</td>
-    </tr>
-  </table>  
-  <table>
-    <tr>
-      <td style="background-color: #f4fff2"><strong>Mechanism of Interaction:</strong> BCR-ABL Tyrosine Kinase inhibitors demonstrate pH
-        dependent absorption for oral administration which may result in decreased efficacy when given
-        concomitantly with medications that increase gastric pH.  </td>
-    </tr>
-    <tr>
-      <td><strong>Comment:</strong> The mechanism of a PDDI MUST be reported if known. The description SHOULD be written for a clinician audience and include details that help the clinician decide what course of management action to take. To reduce ambiguity, the description MAY refer to specific drugs or health conditions using codes from terminologies. A limitation of this example is that it refers to 'medications that increase gastric pH' without reference any specific drugs or codes from a drug terminology. </td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-      <td style="background-color: #f4fff2"><strong>Contextual information/modifying factors:</strong></td>
-    </tr>
-    <tr>
-      <td>
-        <ul>
-          <li>The TKI is <a href="#imatinib">imatinib</a> or <a href="#ponatinib">ponatinib</a></li>
-          <ul>
-            <li><strong>Operational Classification Statement:</strong> No special precautions</li>
-            <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong> Imatinib and ponatinib AUCs are not appreciably
-	      decreased by PPI co-administration </li>
-            <ul>
-	      <li>Iclusig [package insert]. Cambridge, MA: ARIAD Pharmaceuticals, Inc. 2016., and </li>
-	      <li>Egorin MJ, Shah DD, Christner SM, et al. Effect of a proton pump inhibitor on the
-                pharmacokinetics of imatinib. Br J Clin Pharmacol. 2009;68(3):370-374.)</li>
-            </ul>
-          </ul>
-          <li>The TKI is <a href="#nilotinib">nilotinib</a></li>
-          <ul>
-            <li><strong>Operational Classification Statement:</strong> Assess risk and take action if necessary</li>
-            <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong>Bosutinib and nilotinib AUCs
-	      are decreased with concomitant PPIs but antacids and H2 antagonists may be considered if
-	      TKI is given 2 hours before the antacid/H2 antagonist. However, for nilotinib a retrospective
-	      study has shown no difference in cytogenetic response rates for patients taking PPIs.</li>
-            <ul>
-	      <li>Yin OQ, Giles FJ, Baccarani M, et al. Concurrent use of proton pump inhibitors or H2
-                blockers did not adversely affect nilotinib efficacy in patients with chronic myeloid
-                leukemia. Cancer Chemother Pharmacol. 2012;70(2):345-350.</li>
-            </ul>
-          </ul>
-          <li>The TKI is <a href="#bosutinib">bosutinib</a> or <a href="#dasatinib">dasatinib</a></li>
-          <ul>
-            <li><strong>Operational Classification Statement:</strong> Use only if benefit outweighs risk</li>
-            <li><strong>Evidence for a Suspected Drug-Drug Interaction:</strong>Bosutinib and nilotinib
-	      AUCs are decreased with concomitant PPIs but antacids and H2 antagonists may be considered
-	      if TKI is given 2 hours before the antacid/H2 antagonist.</li>
-            <ul>
-	      <li>Sprycel [package insert]. Princeton, NJ: Bristol-Myers Squibb Company; 2015</li>
-	      <li>Bosulif [package insert]. New York, NY: Pfizer Labs; 2015.</li>
-	      <li>Tasigna [package insert]. East Hanover, NJ: Novartis; 2015.</li>
-            </ul>
-          </ul>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Comment:</strong> The same comments stated in the previous example about the contextual information/modifying factors. Notice that there is no <a>recommended action</a> statement to complement the <a>operational classification statements</a>. Such a statement would be most useful for the recommendation to "assess risk and take action if necessary." In this case, there is not sufficient evidence for a recommended action statement to provide more information than the operational classification statement already provides. As for other information items, reference to coded terms for drugs and other relevant entities SHOULD be used to reduce ambiguity. Notice that this example could be improved because it references coded terms for TKIs but not for antacids and H2 antagonists. The implementer MAY choose any terminologies they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminologies be one that is actively maintained and freely accessible to the public.</td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-      <td style="background-color: #f4fff2"><strong>Frequency of Exposure to the PDDI:</strong> Unknown</td>
-    </tr>
-    <tr>
-      <td><strong>Comment:</strong> Frequency of exposure and frequency of harm information is
-        rarely available but can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Such information SHOULD be provided if available. </td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-      <td style="background-color: #f4fff2"><strong>Frequency of Harm for persons who have been exposed to the PDDI:</strong> Unknown</td>
-    </tr>
-    <tr>
-      <td><strong>Comment:</strong> Frequency of exposure and frequency of harm information is
-        rarely available but can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Such information SHOULD be provided if available. </td>
-    </tr>
-
-  </table>
-</section>
-</section>
-</section>
-
-<section id="justification">
-  <h2>Background and use cases</h2>
-
-  <section id="overarching-use-case">
-    <h2>The overarching use case for the minimum information model</h2>
-    <p>
-      The overarching use case for a minimum information model for
-      representing PDDI information in a clinical context
-      is <strong>to provide a technical foundation for effective PDDI
-	clinical decision support</strong>. Unfortunately, existing drug
-      information sources systems generally organize information into
-      a more or less narrative format includes only some of the core
-      PDDI information elements. To illustrate, consider the PDDI
-      between oral anticoagulants and non-steroidal anti-inflammatory
-      drugs (NSAIDs) reported in the well-curated French Interactions
-      médicamenteuses PDDI dataset [[ansm-2016]] shown
-      in <a href="#NSAID-Example"></a>.
-    </p>
-    <figure id="NSAID-Example">
-      <img src="W3C-Images/NSAID-Example.png">
-      <figcaption>PDDI example from a French compendium</figcaption>
-    </figure>
-    <p>
-      The PDDI narrative shown is structured into short and easy-to-read description and management
-      sections. However, much of the information in the proposed minimum information model is either not structured
-      or not provided:
-    </p>
-    <ul>
-      <li><em>Drugs Involved</em> - textual, non-standardized, non-coded lists of ingredients that have been
-        classified as either NSAIDs or as oral anticoagulants</li>
-      <li><em>Clinical consequences</em> - textual, non-standardized, non-coded mention of “hemorrhage” </li>
-      <li><em>Frequency of exposure to the PDDI</em> - no mention </li>
-      <li><em>Frequency of harm for persons who have been exposed to the PDDI</em> - no mention</li>
-      <li><em>Contextual information/modifying factors</em> - no mention</li>
-      <li><em>Evidence</em> - no mention</li>
-      <li><em>Mechanism of the interaction</em> - textual, non-standardized, mention of gastroduodenal irritation by the NSAID</li>
-      <li><em>Recommended actions</em> - avoidance if possible, monitoring otherwise</li>
-      <li><em>Seriousness rating</em> - not explicit. However, the statement “not recommended” would suggest a risk of clinically significant consequence</li>
-    </ul>
-    <p>
-      As is evident from the listing above, there are four minimum information items that are not provided in the
-      narrative (contextual information, frequency of exposure, frequency of harm, and evidence). Contextual information
-      would include drug and patient characteristics factors that might increase or mitigate the risk of harm from exposure
-      to the interaction drug pair. Such information often complements, and sometimes is based on , information on the
-      frequency information items (frequency of exposure to the PDDI and frequency of harm for exposed persons who have
-      been exposed). Together, these information items help to inform the clinician about the risk-benefit trade-off of PDDI
-      exposure. In fact, it has been shown that effective clinical decision support that improves patient outcomes can be
-      built using such information. For example, Tamblyn et al. found that a novel medication clinical decision support system
-      that provided patient-specific risk estimates of injury due to falls reduced fall-related injury by 1.7 injuries per 1000
-      patients (95% CI 0.2/1000 to 3.2/1000 p=0.02) [[tamblyn-2012]]. Conversely, when a PDDI summary provides no context
-      about risk and no frequency information, only clinical decision support alerts based on  simple exposure to the drug
-      combination can be built. This leads to highly sensitive but unspecific alerts and is a primary cause of alert fatigue and
-      clinician dissatisfaction  [[van-der-sijs-2006]].
-    </p>
-    <p>
-      Further, the PDDI narrative in <a href="#NSAID-Example"></a>
-      provides information without citing supporting evidence.
-      Previous community efforts concluded that “providing access to the evidence is a critical component
-      of weighing the risks and benefits of co-prescribing drugs that have the potential to result in a drug-drug interaction”
-      [[tilson-2016]]. Evidence in supporting PDDIs includes physiological and pharmacological observations from
-      clinical studies; mechanistic knowledge derived from pre-clinical and clinical studies; and observational data
-      including case reports and various non-randomized studies [[utecht-2017]][[brochhausen-2014]]. Evidence
-      may be useful for establishing the existence of an interaction without providing information about the potential
-      clinical effect. Other evidence can help to answer questions about the associated clinical effects and their magnitude,
-      variability, and estimated frequency [[scheife-2015]]. A PDDI representation should cite specific supporting
-      evidence items and provide some acceptable appraisal of the total body of evidence [[tilson-2016]].
-    </p>
-    <p>
-      Unstructured narratives may also fail to provide critical information in computable form suitable for creation
-      of personalized decision support presentation. The interaction described above notes that the mechanism of the
-      interaction involves gastroduodenal irritation by the NSAID, suggesting gastrointestinal hemorrhage as a possible
-      consequence. Such an occurrence would seem unlikely to occur for NSAIDs administered topically rather than orally.
-      However, this constraint on the applicability of this PDDI is not stated: the formulation of the NSAID
-      being described is ambiguous, and the importance of the means of administration is implied, but not stated directly.
-      Describing PDDI evidence in terms of drugs in established drug terminologies, such as RxNorm
-      (<a href="https://www.nlm.nih.gov/research/umls/rxnorm/">https://www.nlm.nih.gov/research/umls/rxnorm/</a>), will reduce ambiguity and enable computation through rules
-      and inference used to turn the PDDI descriptions into actionable content for clinical decision support.
-    </p>
-    <p>
-      The elements of the minimum information model demonstrate that, despite the readability of the example
-      PDDI narrative, the information provided lacks both the structure and semantics necessary for effective
-      decision support. Problems like these are not unique to the French Interactions médicamenteuses.
-      For example, a search for the same Oral Anticoagulant / NSAID interaction executed at the drug
-      ingredient level in the freely accessible database  DrugBank returns a single statement that vaguely
-      describes the clinical effect but with no other information from the core items mentioned above:
-    </p>
-    <p style="text-align: center">“Ibuprofen may increase the anticoagulant activities of Warfarin.”</p>
-    <p>
-      As <a href="#COUMADIN-warfarin-product-label"></a> shows,
-      slightly more information is provided in United States drug
-      product labeling than in DrugBank but there are still many
-      information gaps relative to the core PDDI information items
-      suggested by conference series attendees (Bristol-Myers Squibb
-      2017).
-    </p>
-    <figure id="COUMADIN-warfarin-product-label">
-      <img src="W3C-Images/warfarin-product-label.png">
-      <figcaption>An oral Anticoagulant / NSAID PDDI shown at the drug ingredient level
-        from the United States drug product label for COUMADIN- warfarin sodium tablet (Bristol-Myers Squibb 2017). </figcaption>
-    </figure>
-    <p>
-      Although missing information is the primary concern for the examples discussed, the minimum information
-      model would also increase the utility of narratives that are abundant with information. For example, a
-      search for oral anticoagulant / NSAID in the online interaction checking tool provided by Drugs.com returns
-      a very detailed narrative that includes mention of clinical effect, mechanism, management options, some
-      contextualized risk information, and specific citations of evidence (Drugs.com search 3/31/17). In this
-      case, the minimum information model would be useful for suggesting how to provide structure and semantics
-      to the description to best enable clinical decision support systems through the use of coded drugs names,
-      clinical consequences, and contextual information and modifying factors.  The provision of these details
-      in a standardized, computable form will facilitate integration of PDDI information with data in a patient's
-      electronic health record, thus enabling patient-specific alerting and decision support.
-    </p>
-  </section>
-
-  <section id="spec-user-stories">
-    <h2>End-users of the minimum information model</h2>
-    <p>
-      Twelve user stories with related goals demonstrate the use of the
-      PDDI minimal information model. These stories are associated
-      with seven types of users (physicians, pharamacists, nurses,
-      drug compendia editors, health science librarians, systems
-      analysts, and content specialists.
-    </p>
-    <p>
-      Three user stories focus on the critical process of
-      medication reconciliation for PDDIS: <a href="#med-rec-use-cases">User stories for pharmacists reconciling patient medications</a>
-    </p>
-    <p>
-      Three user stories focus on physicians conducting treatment planning: <a href="#treatment-planning-phys">User stories for physicians conducting treatment planning</a>
-    </p>
-    <p>
-      The remaining six stories cover a variety of other use cases: 
-      <ul>
-	<li><a href="#eval-management-options-pharm">A pharmacist evaluating management options</a></li>
-	<li><a href="#eval-management-options-phys">A physician evaluating management options</a></li>
-	<li><a href="#nurse-screening">A nurse screening for PDDIs</a></li>
-	<li><a href="#editor-synthesis-dissemination">A drug compendium editor synthesizing PDDI evidence for dissemination</a></li>
-	<li><a href="#librarian-dissemination">A health science librarian assisting in the synthesis of PDDI evidence for dissemination</a></li>
-	<li><a href="#cds-team">A systems analyst and content specialist translating a synthesizes of PDDI evidence into a clinical decision support tool</a></li>
-      </ul>
-      Additional user types considered “out of scope” are listed in Appendix <a href="#out-of-scope-stories"></a>.    
-    </p>
-    <p>Each user story was color coded
-      for mention of core information items in the minimum information
-      model (see <A HREF="#user-story-color-coding"></a>).
-    </p>
-  </section>
 </section>
 
 
 <section id="KR-discussion">
   <h2>Knowledge representation for the minimal information model</h2>
 
+  <p>
+    <i>The intended audience for this section includes persons interested in recommendations related to information model knowledge representation. Persons interested in the clinically-oriented application of the information model can skip this section.</i>
+  </p>
+
+  <p> 
   The wide range of potential use cases for the information model
   requires flexibility in the knowledge representation. Moreover, the
   number of pre-existing ontologies relevant to this domain clearly
@@ -1698,39 +1337,443 @@
       terminology and the specific concept.
     </li>
   </ol>  
-  
+  </p>  
+</section>
 </section>
 
-<section>
+<section id="examples" class="informative">
+  <h2>Examples of the use of the minimal information model</h2> In
+  this section, we provide limited discussion of the information
+  model's definitions and recommendations in the form of two example
+  PDDIs. These examples were chosen from a larger set exemplar
+  potential drug-drug interactions examined during the develompent of
+  the minimal information model (see Appendix <a href="#decision-trees"></a>).
+
+  <section id="ex-warfarin-nsaids">
+    <h2>Applying the Minimal Information Model definitions to the PDDI between warfarin
+      and non-steroidal anti-inflammatory drugs (NSAIDs)</h2>
+    <p>
+      We illustrate here the application of the Minimum Information Model definitions to representing the PDDI involving warfarin
+      and non-steroidal anti-inflammatory drugs (NSAIDs). Details of
+      the development process can be found
+      in Appendix <a href="#warfarin-nsaids-dt"></a>. 
+    </p>
+
+    <table>
+      <tr>
+	<td style="background-color: #f4fff2"><strong>Drugs involved</strong>: <a href="#warfarins">Warfarin</a> and <a href="#NSAIDS-drugs">non-steroidal anti-inflammatory drugs (NSAIDs)</a> </td>
+      </tr>
+      <tr>
+	<td>
+	  <strong>Comment:</strong> Per the recommendation <a href="#bp-drugs-involved">R1 - Explicitly state the drugs involved</a>, value sets for warfarin and NSAIDs are explicitly enumerated. As Appendix <a href=#intro-to-value-sets></a> mentions, this <i>extensional definition</i> is one approach to declaring value sets. It is also possible to define an algorithm that, when executed by a machine (or interpreted by a human), yields a set of such elements. Such a <i>intensional definition</i> is also an acceptable approach to declaring the drugs involved. </td> 
+      </tr>
+    </table>
+    <table>
+      <tr>
+	<td style="background-color: #f4fff2"><a>Clinical Consequences</a>: Increased risk of bleeding including <a href="#gi-bleeding">gastrointestinal bleeding</a>,  <a href="#icran-hemm">intracranial hemorrhage</a>,  and <a href="#cereb-hemm">cerebral hemorrhage</a></td>
+      </tr>
+      <tr>
+	<td><strong>Comment:</strong> Per the recommendation <a href="#bp-clinical-consequences">R2 - Explicitly state clinical consequences</a>, value sets for the clinical consequences are explicitly enumerated. As Appendix <a href=#intro-to-value-sets></a> mentions, this <i>extensional definition</i> is one approach to declaring value sets. It is also possible to define an algorithm that, when executed by a machine (or interpreted by a human), yields a set of such elements. Such a <i>intensional definition</i> is also an acceptable approach to declaring clinical conseqences.</td> 
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+	<td style="background-color: #f4fff2"><a>Seriousness</a>: Bleeding is a serious potential clinical consequence because it can result in death, life-threatening hospitalization, and disability. </td>
+      </tr>
+      <tr>
+	<td><strong>Comment:</strong> Per the recommendation <a href="#bp-serious">R3 - Note if a clinical consequence is serious</a>, there is a clear statement that the potential clinical consequence of bleeding <a>serious</a>.</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+	<td style="background-color: #f4fff2"><a>Operational Classification Statement</a>: Depending on the patient context, there are different operational classification statements for the warfarin-NSAIDs PDDI. See the <a href="#warfarin-specific-context">contextual information/modifying factors for this interaction</a>.</td>
+      </tr>
+      <tr>
+	<td><strong>Comment:</strong> Per recommendation <a href="#bp-operational-classification">R4 - Include an operational classifaction statement</a>, the PDDI description includes one or more <a>operational classification statements</a>. Because there is multiple <a>contextual information/modifying factors</a>, no single general operational classifaction statement can be mentioned. Rather, an operational classification statement is provided for each factor. </td>
+      </tr>
+    </table>
+</div>
+<table>
+  <tr>
+    <td style="background-color: #f4fff2"><a>Mechanism of Interaction</a>: <a href="#NSAIDS-drugs">Non-steroidal anti-inflammatory drugs (NSAIDs)</a> have
+      antiplatelet effects which increase the bleeding risk when combined with oral anticoagulants such as
+      <a href="#warfarins">warfarin</a>. The antiplatelet effect of NSAIDs lasts only as long as the NSAID is present in the circulation,
+      unlike aspirin’s antiplatelet effect, which lasts for up to 2 weeks after aspirin is discontinued. NSAIDs also
+      can cause peptic ulcers and most of the evidence about increased bleeding risk with NSAIDs plus warfarin is due to
+      upper gastrointestinal bleeding (UGIB).</td>
+  </tr>
+  <tr>
+    <td><strong>Comment:</strong> Per recommendation <a href="#bp-mechanism">R5 - Report a mechanism if known</a>, there is a clear statement of the <a>mechanism of interaction</a> written for a clinician audience. </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td style="background-color: #f4fff2"><a>Recommended Action</a>: If the NSAID is being used as an analgesic or antipyretic,
+      it would be prudent to use an alternative such as acetaminophen. In some people, acetaminophen can
+      increase the anticoagulant effect of warfarin, so monitor the INR if acetaminophen is used in doses
+      over 2 g/day for a few days. For more severe pain consider short-term opioids in place of the NSAID.</td>
+  </tr>
+  <tr>
+    <td><strong>Comment:</strong> Per recommendation <a href="#bp-recommended-action">R6 - State a recommended action if one is known</a>, a <a>recommended action</a> is stated using clear and concise language. Unfortunately, the statement provides no specific citation to evidence in the form of a citation.</td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td style="background-color: #f4fff2"><a>Contextual information/modifying factors</a>:
+      <ol>
+        <li>The <a href="#NSAIDS-drugs">NSAIDs</a> is <a href="#topical-diclof">topical diclofenac</a></li>
+        <ul>
+          <li><strong>Operational Classification Statement:</strong> No special precautions</li>
+          <li><strong>Evidence About a Suspected Drug-Drug Interaction:</strong> <a href="#topical-diclof">Topical diclofenac</a> has relatively
+	    low systemic absorption; in one study a topical gel (16 g/day) produced about 6% of
+	    the absorption seen with systemic administration of 150 mg/day. A higher than recommended
+	    dose of topical gel (48 g/day) produced 20% of a systemic dose of diclofenac.</li>
+        </ul>
+        <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a> but the patient is concomitantly taking a
+          <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a></li>
+        <ul>
+          <li><strong>Operational Classification Statement:</strong> Assess risk and take action if necessary</li>
+          <li><strong>Evidence About a Suspected Drug-Drug Interaction:</strong> <a href="#proton-pump-inhibitor">Proton pump inhibitors</a> and <a href="#misoprostol">misoprostol</a> may reduce the risk of UGIB in patients receiving NSAIDs and warfarin. </li>
+        </ul>
+        <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a>, the patient is NOT concomitantly taking a <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a>, and the patient has one or more of the following risk factors:</li>
+        <ul>
+          <li>History of <a href="#gi-bleeding">upper gastrointestinal bleeding (UGIB) or peptic ulcer</a> or age > 65 years old</li>
+          <ul>
+	    <li><strong>Operational Classification Statement:</strong> Use only if benefit outweighs risk</li>
+	    <li><strong>Evidence About a Suspected Drug-Drug Interaction:</strong> Patients with a
+              history of UGIB or peptic ulcer may have an increased risk of UGIB from this interaction.
+              The extent to which older age is an independent risk factor for UGIB due to these interactions
+              is not firmly established, but UGIB in general is known to increase with age.</li>
+          </ul>
+          <li>Concomitantly taking <a href="#systemic-cortico">systemic corticosteroids</a>, <a href="#aldosterone-antagonists">aldosterone antagonists</a>, or high dose or multiple <a href="#NSAIDS-drugs">NSAIDs</a></li>
+          <ul>
+	    <li><strong>Operational Classification Statement:</strong> Use only if benefit outweighs risk</li>
+	    <li><strong>Evidence About a Suspected Drug-Drug Interaction:</strong> Both corticosteroids
+              and aldosterone antagonists have been shown to substantially increase the risk of UGIB in
+              patients on NSAIDs, with relative risks of 12.8 and 11 respectively compared
+              to a risk of 4.3 with NSAIDs alone [[masclee-2014]]</li>
+          </ul>
+        </ul>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Comment:</strong> Per recommendation <a href="#bp-contextual">R7 - each known risk modifying factor or patient context</a>, each known <a>contextual information/modifying factor</a> is stated specifically. Value sets for the <a>clinical consequences</a> are explicitly enumerated. As Appendix <a href=#intro-to-value-sets></a> mentions, this <i>extensional definition</i> is one approach to declaring value sets. It is also possible to define an algorithm that, when executed by a machine (or interpreted by a human), yields a set of such elements. Such a <i>intensional definition</i> is also an acceptable approach to declaring clinical conseqences. An <a>operational classification statement</a> is provided for each <a>contextual information/modifying factor</a> and each evidence statement refers to a specific source in the form of a citation. </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td style="background-color: #f4fff2"><strong>Frequency of Harm Relative to Frequency of Exposure to the PDDI:</strong> Unknown</td>
+  </tr>
+  <tr>		      
+    <td><strong>Comment:</strong> Per recommendation <a href="#bp-freq-exp">R8 - State the frequency of harm relative to frequency of exposure if known</a>, an explicit statement is made declaring that information on frequency of harm relative to frequency of exposure to the PDDI is not available. </td>
+  </tr>
+</table>
+
+</section>
+<section id="ex-tki-ppi">
+  <h2>Applying the Minimal Information Model definitions to the PDDI between BCR-ABL
+    Tyrosine Kinase Inhibitors (TKI) + Proton Pump Inhibitors (PPI)</h2>
+  <p> Minimal information Model definitions and discussion comments
+     for the PDDI involving BCR-ABL Tyrosine Kinase Inhibitors (TKIs)
+     + Proton Pump Inhibitors (PPIs).
+  </p>
+  <table>
+    <tr>
+      <td style="background-color: #f4fff2"><emph>Drugs involved</emph>: <a href="#TKIs">Tyrosine Kinase Inhibitors (TKIs)</a> and <a href="#proton-pump-inhibitor-atc">Proton Pump Inhibitors (PPIs)</a></td>
+    </tr>
+    <tr>
+      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-drugs-involved">R1 - Explicitly state the drugs involved</a>, value sets for TKIs and PPIs are provided. Note that in the <a href="#ex-warfarin-nsaids">warfarin-NSAIDs example</a> the drugs involved are specified using RxNorm while this example uses ATC. This is to emphasize that, while the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td style="background-color: #f4fff2"><strong>Clinical Consequences:</strong> Decreased efficacy relative to treatment for <a href="#acml">chronic myeloid leukemia</a></td>
+    </tr>
+    <tr>
+      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-clinical-consequences">R2 - Explicitly state clinical consequences</a>, a value set for the clinical consequence is explicitly enumerated. Note that in the <a href="#ex-warfarin-nsaids">warfarin-NSAIDs example</a>, the clinical consequences involved are specified using <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> while this example uses <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. This is to emphasize that, while the clinical consequences  SHOULD be listed as sets of terms from a terminology such as ICD-10 or SNOMED-CT, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td style="background-color: #f4fff2"><strong>Seriousness:</strong> A decrease in chronic myeloid leukemia treatment efficacy is
+        a serious potential clinical consequence because it can result in death, life-threatening
+        hospitalization, and disability. </td>
+    </tr>
+    <tr>
+      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-serious">R3 - Note if a clinical consequence is serious</a>, there is a clear statement that the potential clinical consequence of a decrease in chronic myeloid leukemia treatment efficacy is <a>serious</a>.</td>
+    </tr>
+  </table>  
+  <table>
+    <tr>
+      <td style="background-color: #f4fff2"><strong>Mechanism of Interaction:</strong> BCR-ABL Tyrosine Kinase inhibitors demonstrate pH
+        dependent absorption for oral administration which may result in decreased efficacy when given
+        concomitantly with medications that increase gastric pH.  </td>
+    </tr>
+    <tr>
+      <td><strong>Comment:</strong> Per recommendation <a href="#bp-mechanism">R5 - Report a mechanism if known</a>, there is a clear statement of the <a>mechanism of interaction</a> written for a clinician audience. A limitation of this example is that it refers to 'medications that increase gastric pH' without reference any specific drugs or codes from a drug terminology. </td>
+    </tr>
+  </table>
+  <table id="warfarin-specific-context">
+    <tr>
+      <td style="background-color: #f4fff2"><strong>Contextual information/modifying factors:</strong></td>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>The TKI is <a href="#imatinib">imatinib</a> or <a href="#ponatinib">ponatinib</a></li>
+          <ul>
+            <li><strong>Operational Classification Statement:</strong> No special precautions</li>
+            <li><strong>Evidence About a Suspected Drug-Drug Interaction:</strong> Imatinib and ponatinib AUCs are not appreciably
+	      decreased by PPI co-administration </li>
+            <ul>
+	      <li>Iclusig [package insert]. Cambridge, MA: ARIAD Pharmaceuticals, Inc. 2016., and </li>
+	      <li>Egorin MJ, Shah DD, Christner SM, et al. Effect of a proton pump inhibitor on the
+                pharmacokinetics of imatinib. Br J Clin Pharmacol. 2009;68(3):370-374.)</li>
+            </ul>
+          </ul>
+          <li>The TKI is <a href="#nilotinib">nilotinib</a></li>
+          <ul>
+            <li><strong>Operational Classification Statement:</strong> Assess risk and take action if necessary</li>
+            <li><strong>Evidence About a Suspected Drug-Drug Interaction:</strong>Bosutinib and nilotinib AUCs
+	      are decreased with concomitant PPIs but antacids and H2 antagonists may be considered if
+	      TKI is given 2 hours before the antacid/H2 antagonist. However, for nilotinib a retrospective
+	      study has shown no difference in cytogenetic response rates for patients taking PPIs.</li>
+            <ul>
+	      <li>Yin OQ, Giles FJ, Baccarani M, et al. Concurrent use of proton pump inhibitors or H2
+                blockers did not adversely affect nilotinib efficacy in patients with chronic myeloid
+                leukemia. Cancer Chemother Pharmacol. 2012;70(2):345-350.</li>
+            </ul>
+          </ul>
+          <li>The TKI is <a href="#bosutinib">bosutinib</a> or <a href="#dasatinib">dasatinib</a></li>
+          <ul>
+            <li><strong>Operational Classification Statement:</strong> Use only if benefit outweighs risk</li>
+            <li><strong>Evidence About a Suspected Drug-Drug Interaction:</strong>Bosutinib and nilotinib
+	      AUCs are decreased with concomitant PPIs but antacids and H2 antagonists may be considered
+	      if TKI is given 2 hours before the antacid/H2 antagonist.</li>
+            <ul>
+	      <li>Sprycel [package insert]. Princeton, NJ: Bristol-Myers Squibb Company; 2015</li>
+	      <li>Bosulif [package insert]. New York, NY: Pfizer Labs; 2015.</li>
+	      <li>Tasigna [package insert]. East Hanover, NJ: Novartis; 2015.</li>
+            </ul>
+          </ul>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Comment:</strong> Per recommendation <a href="#bp-contextual">R7 - each known risk modifying factor or patient context</a>, each known <a>contextual information/modifying factor</a> is stated specifically. Value sets for the <a>clinical consequences</a> are explicitly enumerated. Notice that there is no  <a>recommended action</a> statement to complement the <a>operational classification statements</a>. Such a statement would be most useful for the recommendation to "assess risk and take action if necessary." In this case, there is not sufficient evidence for a recommended action statement to provide more information than the operational classification statement already provides. Notice that this example could be improved because it references coded terms for TKIs but not for antacids and H2 antagonists. </td>
+    </tr>
+  </table>
+  <table>
+  <tr>
+    <td style="background-color: #f4fff2"><strong>Frequency of Harm Relative to Frequency of Exposure to the PDDI:</strong> Unknown</td>
+  </tr>
+  <tr>		      
+    <td><strong>Comment:</strong> Per recommendation <a href="#bp-freq-exp">R8 - State the frequency of harm relative to frequency of exposure if known</a>, an explicit statement is made declaring that information on frequency of harm relative to frequency of exposure to the PDDI is not available. </td>
+  </tr>
+</table>
+
+</section>
+</section>
+
+
+<section id="justification" class="informative">
+  <h2>Background and use cases</h2>
+
+  <section id="overarching-use-case">
+    <h2>The overarching use case for the minimum information model</h2>
+    <p>
+      The overarching use case for a minimum information model for
+      representing PDDI information in a clinical context
+      is <strong>to provide a technical foundation for effective PDDI
+	clinical decision support</strong>. Unfortunately, existing drug
+      information sources systems generally organize information into
+      a more or less narrative format includes only some of the core
+      PDDI information elements. To illustrate, consider the PDDI
+      between oral anticoagulants and non-steroidal anti-inflammatory
+      drugs (NSAIDs) reported in the well-curated French Thesaurus des interactions médicamenteuses PDDI dataset [[ansm-2016]] shown
+      in <a href="#NSAID-Example"></a>.
+    </p>
+    <figure id="NSAID-Example">
+      <img src="W3C-Images/NSAID-Example.png">
+      <figcaption>PDDI example from a French compendium</figcaption>
+    </figure>
+    <p>
+      The PDDI narrative shown is structured into short and easy-to-read description and management
+      sections. However, the narrative does not satisfy the proposed minimum information model:
+    </p>
+    <ul>
+      <li><a>Drugs Involved</a> - textual, non-standardized, non-coded lists of ingredients that have been
+        classified as either NSAIDs or as oral anticoagulants</li>
+      <li><a>Clinical Consequences</a> - textual, non-standardized, non-coded mention of “hemorrhage” </li>
+      <li><a>Seriousness</a> - not explicit. However, the statement “not recommended” would suggest a risk of clinically significant consequence</li>
+      <li><a>Operational Classification Statement</a> - a direct "not recommended" statement
+      <li><a>Recommended Actions</a> - avoidance if possible and monitoring otherwise</li>
+      <li><a>Evidence About a Suspected Drug-Drug Interaction</a> - no mention</li>
+      <li><a>Mechanism of Interaction</a> - textual, non-standardized, mention of gastroduodenal irritation by the NSAID</li>
+      <li><a>Contextual Information/Modifying Factors</a> - no mention</li>
+      <li><a>Frequency of Exposure to the PDDI</a> - no mention </li>
+      <li><a>Frequency of Harm for Persons who have been Exposed to the PDDI</a> - no mention</li>
+    </ul>
+    <p>
+      As is evident from the listing above, there are four minimum information items that are not provided in the
+      narrative (<a>contextual information/modifying factors</a>, <a>frequency of exposure to the PDDI</a>, <a>frequency of harm for persons who have been exposed to the PDDI</a>, and <a>Evidence About a Suspected Drug-Drug Interaction</a>). Contextual information
+      would include drug and patient characteristics factors that might increase or mitigate the risk of harm from exposure
+      to the interaction drug pair. Such information often complements, and sometimes is based on, information on the
+      frequency information items (frequency of exposure to the PDDI and frequency of harm for exposed persons who have
+      been exposed). Together, these information items help to inform the clinician about the risk-benefit trade-off of PDDI
+      exposure. In fact, it has been shown that effective clinical decision support that improves patient outcomes can be
+      built using such information. For example, Tamblyn et al. found that a novel medication clinical decision support system
+      that provided patient-specific risk estimates of injury due to falls reduced fall-related injury by 1.7 injuries per 1000
+      patients (95% CI 0.2/1000 to 3.2/1000 p=0.02) [[tamblyn-2012]]. Conversely, when a PDDI summary provides no context
+      about risk and no frequency information, only clinical decision support alerts based on  simple exposure to the drug
+      combination can be built. This leads to highly sensitive but unspecific alerts and is a primary cause of alert fatigue and
+      clinician dissatisfaction  [[van-der-sijs-2006]].
+    </p>
+    <p>
+      Further, the PDDI narrative in <a href="#NSAID-Example"></a>
+      provides information without citing supporting evidence.
+      Previous community efforts concluded that “providing access to the evidence is a critical component
+      of weighing the risks and benefits of co-prescribing drugs that have the potential to result in a drug-drug interaction”
+      [[tilson-2016]]. Evidence in supporting PDDIs includes physiological and pharmacological observations from
+      clinical studies; mechanistic knowledge derived from pre-clinical and clinical studies; and observational data
+      including case reports and various non-randomized studies [[utecht-2017]][[brochhausen-2014]]. Evidence
+      may be useful for establishing the existence of an interaction without providing information about the potential
+      clinical effect. Other evidence can help to answer questions about the associated clinical effects and their magnitude,
+      variability, and estimated frequency [[scheife-2015]]. A PDDI representation should cite specific supporting
+      evidence items and provide some acceptable appraisal of the total body of evidence [[tilson-2016]].
+    </p>
+    <p>
+      The narrative in <a href="#NSAID-Example"></a> also fails to provide critical information in computable form suitable for creation
+      of personalized decision support presentation. The interaction described above notes that the mechanism of the
+      interaction involves gastroduodenal irritation by the NSAID, suggesting gastrointestinal hemorrhage as a possible
+      consequence. Such an occurrence would seem unlikely to occur for NSAIDs administered topically rather than orally.
+      However, this constraint on the applicability of this PDDI is not stated: the formulation of the NSAID
+      being described is ambiguous, and the importance of the means of administration is implied, but not stated directly.
+      Describing PDDI evidence in terms of drugs in established drug terminologies, such as RxNorm
+      (<a href="https://www.nlm.nih.gov/research/umls/rxnorm/">https://www.nlm.nih.gov/research/umls/rxnorm/</a>), will reduce ambiguity and enable computation through rules
+      and inference used to turn the PDDI descriptions into actionable content for clinical decision support.
+    </p>
+    <p>
+      By comparing the narrative in <a href="#NSAID-Example"></a> with
+      the core elements of the minimum information model, we see that,
+      despite being readable, the information provided lacks both the
+      structure and semantics necessary for effective decision
+      support. Problems like these are not unique to the French
+      Thesaurus des interactions médicamenteuses.  For example, a search for the
+      same Oral Anticoagulant / NSAID interaction executed at the drug
+      ingredient level in the freely accessible database DrugBank
+      returns a single statement that vaguely describes the clinical
+      effect but with no other information from the core items
+      mentioned above:
+    </p>
+    <p style="text-align: center">“Ibuprofen may increase the anticoagulant activities of Warfarin.”</p>
+    <p>
+      As <a href="#COUMADIN-warfarin-product-label"></a> shows,
+      slightly more information is provided in United States drug
+      product labeling than in DrugBank but there are still many
+      information gaps relative to the core PDDI information items
+      suggested by conference series attendees.[[bristol-myers-warfarin]])
+    </p>
+    <figure id="COUMADIN-warfarin-product-label">
+      <img src="W3C-Images/warfarin-product-label.png">
+      <figcaption>An oral Anticoagulant / NSAID PDDI shown at the drug ingredient level
+        from the United States drug product label for COUMADIN- warfarin sodium tablet.[[bristol-myers-warfarin]] </figcaption>
+    </figure>
+    <p>
+      Although missing information is the primary concern for the examples discussed, the minimum information
+      model would also increase the utility of narratives that are abundant with information. For example, a
+      search for oral anticoagulant / NSAID in the online interaction checking tool provided by Drugs.com returns
+      a very detailed narrative that includes mention of clinical effect, mechanism, management options, some
+      contextualized risk information, and specific citations of evidence.[[drugs-dot-com-interaction]] In this
+      case, the minimum information model would be useful for suggesting how to provide structure and semantics
+      to the description to best enable clinical decision support systems through the use of coded drugs names,
+      clinical consequences, and contextual information and modifying factors.  The provision of these details
+      in a standardized, computable form will facilitate integration of PDDI information with data in a patient's
+      electronic health record, thus enabling patient-specific alerting and decision support.
+    </p>
+  </section>
+
+  <section id="spec-user-stories">
+    <h2>End-users of the minimum information model</h2>
+    <p>
+      Twelve user stories with related goals were developed to clarify
+      specific use cases of the minimum information model's core
+      information elements (see
+      Appendix <a href="#med-rec-use-cases"></a>). These stories are
+      associated with seven types of users (physicians, pharamacists,
+      nurses, drug compendia editors, health science librarians,
+      systems analysts, and content specialists.
+    </p>
+    <p>
+      Three user stories focus on the critical process of
+      medication reconciliation for PDDIS: See <a href="#med-rec-use-cases"></a>
+    </p>
+    <p>
+      Three user stories focus on physicians conducting treatment planning: See <a href="#treatment-planning-phys"></a>
+    </p>
+    <p>
+      The remaining six stories cover a variety of other use cases: 
+      <ul>
+	<li><a href="#eval-management-options-pharm"></a></li>
+	<li><a href="#eval-management-options-phys"></a></li>
+	<li><a href="#nurse-screening"></a></li>
+	<li><a href="#editor-synthesis-dissemination"></a></li>
+	<li><a href="#librarian-dissemination"></a></li>
+	<li><a href="#cds-team"></a></li>
+      </ul>
+      Additional user types considered “out of scope” are listed in Appendix <a href="#out-of-scope-stories"></a>.    
+    </p>
+    <p>Each user story was color coded
+      for mention of core information items in the minimum information
+      model (see <A HREF="#user-story-color-coding"></a>).
+    </p>
+  </section>
+</section>
+
+
+
+<section class="informative">
   <h2>Discussion</h2>
   <p>
-    The information provided in this Community Group Note provides a
-    concrete, user centered, basis for design and implementation
-    activities for the PDDI minimum information model. Twelve user
-    stories with related goals show how the PDDI minimum information
-    model would support various users
-    (see <a href="#spec-user-stories"></a>).  Detailed descriptions of
-    more than a dozen PDDIs, including specific clinical contexts,
-    were constructed (see <a href="#decision-trees"></a>). Non-ambiguous definitions
-    were created for PDDI core information items and implemented in a
-    new an open source ontology (see
-    Sections <a href="#user-centered-def"></a>
-    and <a href="#KR-discussion"></a>). Two example PDDIs were
+    This Community Group Note provides a concrete, user centered,
+    basis for design and implementation activities using the PDDI
+    minimum information model. The non-ambiguous definitions
+    for <a href="#user-centered-def">core information items</a> are
+    consistent with recently published consensus recommendations
+    [[scheife-2015]][[payne-2015]] and the results of a separate
+    international Delphi study on how to improve the delivery of
+    medication alerts within computerized physician order entry
+    systems
+    [[riedmann-2011]]. The <a href="#recommendations-summary">eight
+    minimum information model recommendations</a> are similarly based
+    on recently published consensus recommendations
+    [[scheife-2015]][[payne-2015]] and an analysis of a wide variety of
+    PDDIs and real-world use cases.
+  </p>
+  <p>
+    Detailed descriptions of the PDDIs
+    that informed the model, including specific clinical contexts, are
+    available in the Appendix
+    (see <a href="#decision-trees"></a>). Two example PDDIs were
     annotated with the core information items along with detailed
-    recommendations (see
-    Sections <a href="#ex-warfarin-nsaids"></a>
-    and <a href="#ex-tki-ppi"></a>. A subset of the user stories and
-    selected PDDIs were integrated into three medication
-    reconciliation use cases (see Section
+    recommendations (see Sections <a href="#ex-warfarin-nsaids"></a>
+    and <a href="#ex-tki-ppi"></a>. Twelve user stories with related
+    goals show how the PDDI minimum information model would support
+    various users (see <a href="#spec-user-stories"></a>). A subset of
+    the user stories and selected PDDIs were integrated into three
+    medication reconciliation use cases (see Section
     <a href="#med-rec-use-cases"></a>).
   </p>
   <p>
     The next sub-sections provide a discussion of three potential
     applications of the minimum information that are shown
-    in <a href="#PDDI-MI-APPLICATIONS"></a>. 
+    in <a href="#PDDI-MI-APPLICATIONS"></a> 
   </p>
 
-  <section>
+  <section id="ex-pddi-cds-hl7">
     <h2>Shareable PDDI Clinical Decision Support Using HL7 Standards </h2>
     <p>
       The creation and maintenance of PDDI clinical decision support
@@ -1808,7 +1851,7 @@
     </p>
   </section>
 
-  <section>
+  <section id="ex-SPL">
     <h2>Enhancing the Drug-drug Interaction Section of Structured Product Labeling</h2>
     <p>
       Serious consequences for patients could result if information
@@ -1818,16 +1861,14 @@
       labels for FDA-approved prescription drugs include clinically
       significant interactions (c.f., CFR 21 201.57(c)(8)), as well as
       the results of pharmacokinetic studies that establish the
-      absence of effect (c.f., CFR 21 201.57(c)(13)(C)) (Code of
-      Federal Regulations Title 21). Similar requirements have been
+      absence of effect (c.f., CFR 21 201.57(c)(13)(C)) [[fda-cfr-21-4]]. Similar requirements have been
       enacted by the European Medicine's Agency for their equivalent
       of product labeling
       called <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3248251/"
 		target="new">Summary of Product Characteristics</a>.
     </p>
     <p>
-      As mentioned in a previous section
-      (see <a href="#overarching-use-case"></a>), drug product
+      As mentioned in the section <a href="#overarching-use-case"></a>, drug product
       labeling can contain many gaps in information relative to the
       core PDDI information. Other prior work has shown that many
       known PDDIs are not mentioned in drug labels [[boyce-2013]]. This problem is not unique to United States
@@ -1871,7 +1912,7 @@
       and maintains the SPL standard. Currently, the SPLs for all drug
       products marketed in the United States are available for
       download from the National Library of Medicine's DailyMed
-      resource (National Library of Medicine 2017). At the time of
+      resource [[dailymed-about]]. At the time of
       this writing, DailyMed provides access to drug product labeling
       for more than 30,000 prescription products.
     </p>
@@ -1891,7 +1932,7 @@
     </p>
   </section>
 
-  <section>
+  <section id="ex-cohort-desc">
     <h2>Highlighting and Filling Gaps in Evidence Needed to Develop PDDI Decision Support</h2>
     <p>
       Existing PDDI knowledge is heterogeneous with respect to
@@ -1955,7 +1996,7 @@
 </section>
 
 
-<section>
+<section class="informative">
   <h2>Conclusion</h2>
   <p>
     This Community Group Note provides motivation and a detailed
@@ -1970,7 +2011,7 @@
   </p>
 </section>
 
-<section>
+<section class="informative">
   <h2>Acknowledgments</h2>
   <p>
     Development of this Community Group Note was partially supported by
@@ -1985,7 +2026,7 @@
   <!-- A list of issues will magically appear here -->
 </section>
 
-<section class="appendix">
+<section class="appendix" class="informative">
   <h2>Appendices</h2>
   <section id="development-process">
     <h2>Development Process</h2>
@@ -2253,7 +2294,7 @@
 </section>
 </section>
 
-<section id="user-stories-goals">
+<section id="user-stories-goals" class="informative">
   <h2>User Stories</h2>
 
   <section id="user-story-workflow">
@@ -2293,7 +2334,7 @@
     summarizing the information needs exposed by these use cases is also presented in  Appendix <a href="#med-rec-use-cases"></a>.
 </p>
 
-<section id="user-story-color-coding">
+<section id="user-story-color-coding" class="informative">
   <h2>Color codes used in user stories</h2>
   <p>The following table illustrates the colors used to describe
     user stories. Note that  frequency of exposure is not addressed in any of the user stories.</p>
@@ -2339,7 +2380,7 @@
   
 </section>
 
-<section id="med-rec-use-cases">
+<section id="med-rec-use-cases" class="informative">
   <h2>A set of user stories focused on medication reconciliation</h2>
   <section>
     <h2>Use Story 1:  Hospital Pharmacist, Medication Reconciliation upon Admission</h2>
@@ -2467,7 +2508,7 @@
 </section>
 </section>
 
-<section id="treatment-planning-phys">
+<section id="treatment-planning-phys" class="informative">
   <h2>Treatment Planning, Physician</h2>
   <p><strong>Simvastatin + Amiodarone</strong></p>
   <ul>
@@ -2504,7 +2545,7 @@
       <span style="background-color: #dfa99f">avoid further interacting medications</span>.</li>
   </ul>
 </section>
-<section id="eval-management-options-phys">
+<section id="eval-management-options-phys" class="informative">
   <h2>Evaluation of Management Options for Drug-Drug Interactions, Physician</h2>
   <p><strong>Warfarin + Naproxen</strong></p>
   <ul>
@@ -2517,7 +2558,7 @@
       when taken with warfarin, and she wants to know the <span style="background-color: #dfa99f">best way to manage this interaction</span>.</li>
   </ul>
 </section>
-<section id="eval-management-options-pharm">
+<section id="eval-management-options-pharm" class="informative">
   <h2>Evaluation of Management Options for Drug-Drug Interactions, Pharmacist</h2>
   <p><strong>Atorvastatin + Clarithromycin</strong></p>
   <ul>
@@ -2537,7 +2578,7 @@
         of one of the drugs</span> would be best.</li>
   </ul>
 </section>
-<section id="nurse-screening">
+<section id="nurse-screening" class="informative">
   <h2>Screening for Drug-Drug Interactions, Nurse</h2>
   <p><strong>Glipizide + Lisinopril (Sulfonylureas + ACE Inhibitors)</strong></p>
   <ul>
@@ -2555,7 +2596,7 @@
         treat the patient</span>.</li>
   </ul>
 </section>
-<section id="editor-synthesis-dissemination">
+<section id="editor-synthesis-dissemination" class="informative">
   <h2>Synthesis for Dissemination, Drug Compendium Editor</h2>
   <p><strong>Tyrosine Kinase Inhibitors + Proton Pump Inhibitors</strong></p>
   <ul>
@@ -2571,7 +2612,7 @@
       more about <span style="background-color: #dfa99f">recommended management options</span>.</li>
   </ul>
 </section>
-<section id="librarian-dissemination"> 
+<section id="librarian-dissemination" class="informative"> 
   <h2>Synthesis for Dissemination, Librarian</h2>
   <ul>
     <li>Michael is a librarian who works for the medication safety unit in a regulatory
@@ -2585,7 +2626,7 @@
       interaction, and existing types of <span style="background-color: #bed1f6">evidence</span> of the interaction.</li>
   </ul>
 </section>
-<section id="cds-team">
+<section id="cds-team" class="informative">
   <h2>Synthesis for Dissemination, Clinical Decision Support Team - Systems Analyst & Content Specialist</h2>
   <ul>
     <li>Richard is a systems analyst who is working with Joe, a content
@@ -2605,7 +2646,7 @@
       what to display and how to display information or alerts for clinicians.</li>
   </ul>
 </section>
-<section id="out-of-scope-stories">
+<section id="out-of-scope-stories" class="informative">
   <h2>Out of scope user stories</h2>
   <p>The following user stories were considered as outside of scope of the task of developing the PDDI minimum
     information model, since the goals of the user stories were to determine how healthcare providers use
@@ -2625,7 +2666,7 @@
 </section>
 
 
-<section id="kr-process-apdx">
+<section id="kr-process-apdx" class="informative">
   <h2>Definition of guidelines for knowledge representation</h2>
   
   <font color="grey">A sub-team of the task force focused on setting the scope of
@@ -2647,9 +2688,38 @@
 </section>
 </section>
 
-<section id="Value-Sets">
+<section id="Value-Sets" class="informative">
   <h2>Value Sets to Support PDDI Examples</h2>
-
+  <section id="intro-to-value-sets">
+    <h2>Some Background on Concept Identification and 'Value Sets' </h2>
+    <p>
+    According to the National Library of Medicine, value sets are
+    lists of codes and corresponding terms from standard clinical
+    vocabularies (such as SNOMED CT®, RxNorm, LOINC® and others), that
+    define clinical concepts to support effective and interoperable
+    health information exchange.[[NLM-vsac-2019]] Value sets are also
+    referred to as "concept
+    sets". <a href="#ddi-model-value-sets"></a> shows some of the
+    terminology sources that provide codes useful for constructing
+    values sets for information items in the PDDI information
+    model. Value sets may be <i>explicitly defined</i> by containing a
+    terminology code for each term in the value set concepts. They can
+    also be <i>intensionally defined</i> using an algorithm that, when
+    executed by a machine (or interpreted by a human), yields a set of
+    such
+    elements. An <a href="http://wiki.hl7.org/index.php?title=PDDI_CDS"
+    target="new">HL7 project related to PDDI decision support</a>
+    effort is currently underway within HL7. The work has produced a
+    draft implementation guide that includes a specification for
+    constructing value sets for the drugs included in a
+    PDDI.[[HL7-cds-PDDI-draft]]
+    </p>
+      <figure id="ddi-model-value-sets">
+	<img src="Presentations/images/value-set-overview.png" width="700">
+	<figcaption>Sources of value sets for two of the core information items of PDDI. Identifiers may come from above mentioned code systems or other relevant terminologies. As is typical for value sets,  version, original code system and the code system version are required. The National Library of Medicine's Value Set Authority Center is a public site commonly used to store individual value sets.</figcaption>
+      </figure>      
+  </section>
+  
   <section id="aldosterone-antagonists">
     <h2>aldosterone antagonists (RxNorm)</h2>
     <pre>
@@ -3156,7 +3226,7 @@
   </section>
 </section>
 
-<section id="appendix-xml">
+<section id="appendix-xml" class="informative">
   <h2>Proposed XML Examples</h2>
   <p>The purpose of this note is to describe the content of
     the PDDI minimal information model, leaving representational
@@ -3243,7 +3313,7 @@
       &ltMPIO:MPIO_0000008 label=’recommended action’&gt
       ‘No special precautions’
       &lt/MPIO:MPIO_0000008&gt
-      &ltMPIO:MPIO_0000004 label=’Evidence for a Suspected Drug-Drug Interaction’&gt
+      &ltMPIO:MPIO_0000004 label=’Evidence About a Suspected Drug-Drug Interaction’&gt
       ‘Topical diclofenac has relatively low systemic absorption; in one study a
       topical gel (16 g/day) produced about 6% of the absorption seen with systemic
       administration of 150 mg/day. A higher than recommended dose of topical gel
@@ -3256,7 +3326,7 @@
       &ltMPIO:MPIO_0000008 label=’recommended action’&gt
       ‘Assess risk and take action if necessary’
       &lt/MPIO:MPIO_0000008&gt
-      &ltMPIO:MPIO_0000004 label=’Evidence for a Suspected Drug-Drug Interaction’&gt
+      &ltMPIO:MPIO_0000004 label=’Evidence About a Suspected Drug-Drug Interaction’&gt
       ‘Proton pump inhibitors and misoprostol may reduce the risk of UGIB in
       patients receiving NSAIDs and warfarin.’
       &lt/MPIO:MPIO_0000004&gt
@@ -3267,7 +3337,7 @@
       &ltMPIO:MPIO_0000008 label=’recommended action’&gt
       ‘Use only if benefit outweighs risk’
       &lt/MPIO:MPIO_0000008&gt
-      &ltMPIO:MPIO_0000004 label=’Evidence for a Suspected Drug-Drug Interaction’&gt
+      &ltMPIO:MPIO_0000004 label=’Evidence About a Suspected Drug-Drug Interaction’&gt
       ‘Proton pump inhibitors and misoprostol may reduce the risk of UGIB in
       patients receiving NSAIDs and warfarin.’
       &lt/MPIO:MPIO_0000004&gt
@@ -3278,7 +3348,7 @@
       &ltMPIO:MPIO_0000008 label=’recommended action’&gt
       ‘Use only if benefit outweighs risk’
       &lt/MPIO:MPIO_0000008&gt
-      &ltMPIO:MPIO_0000004 label=’Evidence for a Suspected Drug-Drug Interaction’  references=’r1’&gt
+      &ltMPIO:MPIO_0000004 label=’Evidence About a Suspected Drug-Drug Interaction’  references=’r1’&gt
       ‘Both corticosteroids and aldosterone antagonists have been shown to substantially increase the risk of UGIB in patients on NSAIDs, with relative risks of 12.8 and 11 respectively compared to a risk of 4.3 with NSAIDs alone’
       &lt/MPIO:MPIO_0000004&gt
       &lt/it&gt
@@ -3380,7 +3450,7 @@
       &ltMPIO:MPIO_0000008 label=’recommended action’&gt
       ‘No special precautions’
       &lt/MPIO:MPIO_0000008&gt
-      &ltMPIO:MPIO_0000004 label=’Evidence for a Suspected Drug-Drug Interaction’ references=’r1,r2’&gt
+      &ltMPIO:MPIO_0000004 label=’Evidence About a Suspected Drug-Drug Interaction’ references=’r1,r2’&gt
       ‘Imatinib and ponatinib AUCs are not appreciably decreased by PPI
       co-administration.’
       &lt/MPIO:MPIO_0000004&gt
@@ -3390,7 +3460,7 @@
       &ltMPIO:MPIO_0000008 label=’recommended action’&gt
       ‘Assess risk and take action if necessary’
       &lt/MPIO:MPIO_0000008&gt
-      &ltMPIO:MPIO_0000004 label=’Evidence for a Suspected Drug-Drug Interaction’ references=’r3’&gt
+      &ltMPIO:MPIO_0000004 label=’Evidence About a Suspected Drug-Drug Interaction’ references=’r3’&gt
       ‘Bosutinib and nilotinib AUCs are decreased with concomitant PPIs but antacids
       and H2 antagonists may be considered if TKI is given 2 hours before the
       antacid/H2 antagonist. However, for nilotinib a retrospective study has
@@ -3402,7 +3472,7 @@
       &ltMPIO:MPIO_0000008 label=’recommended action’&gt
       ‘Use only if benefit outweighs risk’
       &lt/MPIO:MPIO_0000008&gt
-      &ltMPIO:MPIO_0000004 label=’Evidence for a Suspected Drug-Drug Interaction’ references=’r4,r5’&gt
+      &ltMPIO:MPIO_0000004 label=’Evidence About a Suspected Drug-Drug Interaction’ references=’r4,r5’&gt
       ‘Bosutinib and nilotinib AUCs are decreased with concomitant PPIs but antacids
       and H2 antagonists may be considered if TKI is given 2 hours before the
       antacid/H2 antagonist.’
