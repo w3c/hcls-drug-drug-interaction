@@ -1090,19 +1090,21 @@
     <p>
       The minimum information model contains a total of 10 core
       information items. Definitions are given below; descriptions of
-      considerations informing the     definitions of these term can be
+      considerations informing the definitions of these term can be
       found in the <a target="new" href="https://github.com/w3c/hcls-drug-drug-interaction/tree/master/User-centered-definitions">user-centered definition working documents on github</a>. 
     </p>
     <ul>
 
-      <div class="issue" data-number="17" title="Need to update to refer to the drug concept set identifier entity once available in MPIO">
-	<li><dfn>Drugs Involved</dfn> (<a target="new"
-					  href="http://purl.obolibrary.org/obo/APOLLO_SV_00000461"><span style="color:red">http://purl.obolibrary.org/obo/APOLLO_SV_00000461<span></A>):
-	  The drugs considered to be possible participants in a potential
-	  drug-drug interactions. Drugs may be specified as drug classses
-	  (such as NSAIDs), as specific chemicals, as products, or in any
-	  other appropriate granularity.</LI>
-      </div>
+      <li><dfn>Drugs Involved</dfn> Two or more drugs considered to be
+	possible participants in a potential drug-drug
+	interaction. Drugs may be specified as drug classes, specific chemicals, products, or in any other
+	appropriate level of granularity. Specification of each drug involved in a PDDI
+	may include the use of a single <i>drug identifier</i>
+	(<a target="new"
+	href="http://purl.obolibrary.org/obo/APOLLO_SV_00000461">http://purl.obolibrary.org/obo/APOLLO_SV_00000461</a>) from a medical terminology, or a <i>drug concept set
+	identifier</i> (<a target="new"
+	href="http://purl.obolibrary.org/obo/DIDEO_00000128">http://purl.obolibrary.org/obo/DIDEO_00000128</a>) that identifies two or more relevant drug identifiers. 
+      </li>
 
       <li><dfn>Clinical Consequences</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000002">http://purl.obolibrary.org/obo/MPIO_0000002</a>):
 	Changes in patient health status from baseline that can be observed or measured by a
@@ -1189,7 +1191,7 @@
    </p>
    
    <div class="practice" id="bp-drugs-involved">
-        <b><i>R1 - Explicitly state the drugs involved:</b></i> The <a>drugs involved</a> in a PDDI MUST be explicitly stated. To reduce ambiguity and support a computable representation of the PDDI, the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>. Such so called <i>value sets</i> MAY be referenced by a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.
+        <b><i>R1 - Explicitly state the drugs involved:</b></i> The <a>drugs involved</a> in a PDDI MUST be explicitly stated. To reduce ambiguity and support a computable representation of the PDDI, the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>. Such so called <i>value sets</i> MAY be referenced by a <i>drug concept set identifier</i> (<a target="new" href="http://purl.obolibrary.org/obo/DIDEO_00000128">http://purl.obolibrary.org/obo/DIDEO_00000128</a>) such as a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.
    </div>
 
    <div class="practice" id="bp-clinical-consequences">
