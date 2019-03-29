@@ -919,6 +919,10 @@
       company: "College of Pharmacy, University of Arizona, USA"
       },
       {
+      name: "Gerald McEvoy",
+      company: "McEvoy Consulting, USA"
+      },
+      {
       name: "Øystein Nytrø",
       company: "Norwegian University of Science and Technology, Norway"
       },
@@ -961,21 +965,23 @@
   <body>
     <section id='abstract' class='introductory'>
       <p>
-	The purpose of this Community Group Note is to provide a
+	The purpose of this Community Group Report is to provide a
 	technical and user-centered foundation for a minimum
 	information model for information about potential drug-drug
-	interactions. The Note provides non-ambiguous definitions for
-	10 core information items. It also provides 8 detailed best
-	practice recommendations related to the 10 core information
-	items. The definitions and recommendations are shown as both
-	narrative and prototype JSON artifacts using 2 exemplar potential
-	drug-drug interactions. Adoption of the recommendations by
-	developers of PDDI knowledge artifacts will improve the
-	usefulness of the artifacts within clinical
-	workflows. Intended downstream applications include clinical
-	decision support, drug product label enhancement, cohort
-	identification, and other activities relevant to protecting
-	patients from harmful drug interactions.
+	interactions. The Report provides non-ambiguous definitions
+	for 10 core information items. It also provides 8 detailed
+	best practice recommendations related to the 10 core
+	information items. The definitions and recommendations are
+	shown as both narrative and prototype JSON artifacts using 2
+	exemplar potential drug-drug interactions. Twelve user stories
+	with related goals illustrate use cases for the information
+	model. Adoption of the recommendations by developers of PDDI
+	knowledge artifacts will improve the usefulness of the
+	artifacts within clinical workflows. Intended downstream
+	applications include clinical decision support, drug product
+	label enhancement, cohort identification, and other activities
+	relevant to protecting patients from harmful drug
+	interactions.
       </p>
     </section>
     <section id='sotd'>
@@ -1013,7 +1019,7 @@
     and clinician dissatisfaction [[bottiger-2009]][[payne-2015]]. Moreover, while many compilations of
     PDDI evidence exist to help improve prescriber and pharmacist knowledge, they are not concordant in their coverage,
     accuracy, and agreement [[wang-2010]][[saverno-2011]][[ayvaz-2015]][[fung-2017]]. Together, these
-    shortcomings suggest the need for harmonized approaches for documenting and sharing PDDI information. <strong>The purpose of this Community Group Note is to provide a technical and user-centered foundation for a minimum information model for information about potential drug-drug interactions.</strong>
+    shortcomings suggest the need for harmonized approaches for documenting and sharing PDDI information. <strong>The purpose of this Community Group Report is to provide a technical and user-centered foundation for a minimum information model for information about potential drug-drug interactions.</strong>
   </p>
   <section>
     <h2>Need, envisioned workflow, and high-level requirements</h2>
@@ -1076,7 +1082,7 @@
       ambiguity common to free-text descriptions about PDDIs
     </p>
 
-    <p>The purpose of this Community Group Note is to provide a
+    <p>The purpose of this Community Group Report is to provide a
       technical and user-centered foundation for a minimum
       information model for PDDI information. The principal
       contributions include:
@@ -1091,7 +1097,7 @@
 	<li>A statement on the appropriate scope of knowledge representation
 	  for the information model.  </li>
 	<li>Clarification on the intended users of the information model
-	  along with use stories and specific information needs. </li>
+	  in the form of 12 use stories with specific information needs. </li>
 	<li>Prototype representations of 2 exemplar PDDIs as narrative and JSON.</li>
       </ol>
     </p>
@@ -1219,7 +1225,7 @@
 
     
   <div class="practice" id="bp-mechanism">
-    <b><i>R2 - Report a mechanism if known:</b></i> The <a>mechanism of a PDDI</a> MUST be reported if known. The description SHOULD be written for a clinician audience and include details that help the clinician decide what course of management action to take. To reduce ambiguity, the description MAY refer to specific drugs or health conditions using codes from terminologies.
+    <b><i>R2 - Report a mechanism if known:</b></i> The <a>mechanism of a PDDI</a> MUST be reported if known. If the mechanism is not known, that MUST be explicitly stated. The description SHOULD be written for a clinician audience and include details that help the clinician decide what course of management action to take. To reduce ambiguity, the description MAY refer to specific drugs or health conditions using codes from terminologies.
   </div>
 
   <div class="practice" id="bp-freq-exp">
@@ -1236,7 +1242,7 @@
   </div>
 
   <div class="practice" id="bp-operational-classification">
-    <b><i>R6 - Include an operational classifaction statement:</b></i> A PDDI MUST report at least one <a>operational classification statement</a>. The description MAY include one or more operational classification statements as long as each statement depends on a single set of <a>contextual information/modifying factors</a>. In this case, the  operational classification statements SHOULD be mentioned where the specific contextual information/modifying factors are discussed. While implementers MAY use any system that provides clear operational classification statements, the use of the OpeRational ClassificAtion of Drug Interactions [hansten-2001] is RECOMMENDED. 
+    <b><i>R6 - Include an operational classification statement:</b></i> A PDDI MUST report at least one <a>operational classification statement</a>. The description MAY include one or more operational classification statements as long as each statement depends on a single set of <a>contextual information/modifying factors</a>. In this case, the  operational classification statements SHOULD be mentioned where the specific contextual information/modifying factors are discussed. While implementers MAY use any system that provides clear operational classification statements, the use of the OpeRational ClassificAtion of Drug Interactions [hansten-2001] is RECOMMENDED. 
   </div>
 
 
@@ -1775,7 +1781,7 @@
 <section class="informative">
   <h2>Discussion</h2>
   <p>
-    This Community Group Note provides a concrete, user centered,
+    This Community Group Report provides a concrete, user centered,
     basis for design and implementation activities using the PDDI
     minimum information model. The non-ambiguous definitions
     for <a href="#user-centered-def">core information items</a> are
@@ -1875,7 +1881,7 @@
 	     target="new">project's scope statement</a>, the HL7 PDDI CDS
       project will draw from the technical foundation, PDDI
       information, and user centered design artifacts reported in this
-      Community Group Note. It is anticipated that representation of
+      Community Group Report. It is anticipated that representation of
       PDDI minimal information may  require the creation of new FHIR
       resource(s) (e.g., a resource       to represent drug
       interactions) and/or FHIR profile(s) (e,g, for 
@@ -1975,7 +1981,7 @@
       coverage of the core information elements. For example,
       frequency of exposure and frequency of harm evidence was not
       available for either of the two PDDI examples detailed in this
-      Note (see Sections <a href="#ex-warfarin-nsaids"></a>
+      Report (see Sections <a href="#ex-warfarin-nsaids"></a>
       and <a href="#ex-tki-ppi"></a>). Other examples of knowledge
       gaps are mentioned in Appendix <a href="#decision-trees"></a>,
       such as the poorly understood mechanism of the PDDI between
@@ -2013,7 +2019,7 @@
       clinical data repository. Computable cohort descriptions are a
       cornerstone for research on PDDIs using real world data. A
       recent project showed the feasibility of converting PDDI
-      descriptions created as part of this Note to  computable cohort
+      descriptions created as part of this Report to computable cohort
       definitions [[rosko-2017]]. The target for 
       translation was the Atlas clinical research tool created by the
       Observational Data Health and Informatics collaborative. Atlas
@@ -2035,9 +2041,9 @@
 <section class="informative">
   <h2>Conclusion</h2>
   <p>
-    This Community Group Note provides motivation and a detailed
+    This Community Group Report provides motivation and a detailed
     domain analysis for a minimum information model for PDDI
-    information. The Note also suggests potential applications of the
+    information. The Report also suggests potential applications of the
     minimum information model that could lead to improvements in
     patient safety with respect to PDDIs. The overarching goal of
     these contributions is to provide a technical foundation for
@@ -2050,7 +2056,7 @@
 <section class="informative">
   <h2>Acknowledgments</h2>
   <p>
-    Development of this Community Group Note was partially supported by
+    Development of this Community Group Report was partially supported by
     a grant from the United States National Library of Medicine
     (R01LM011838) and Agency for Healthcare Research and Quality
     (R21-HS023826). The opinions expressed in this note do not
@@ -3252,14 +3258,14 @@
   </p>
   <p>
     Both of the examples below follow the recommendations provided in
-    this Community Group Note. The examples are intended to show a
+    this Community Group Report. The examples are intended to show a
     simple approach to applying the recommendations to PDDIs using
     JSON, the Web Annotation Data Model [[web-annotation-model]], and
     BibJSON [[bib-json]].
   </p>
   <p>
     An entirely different approach that is also compliant with the
-    recommendations in this Note is the HL7 CDS Workgroup's draft
+    recommendations in this Report is the HL7 CDS Workgroup's draft
     Implementation Guide for PDDI CDS as a service
     [[hl7-pddi-cds-ig-git]]. The Implentation Guide integrates the
     PDDI minimum information model into PDDI CDS using the health
