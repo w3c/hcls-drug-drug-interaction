@@ -426,6 +426,12 @@
       "date":"2019",
       "href": "https://dailymed.nlm.nih.gov/dailymed/about-dailymed.cfm"},
 
+      "dailymed-indexing": {
+      "authors": ["DailyMed"],
+      "title": "SPL RESOURCES: Download All Indexing & REMS Files",
+      "date":"2019",
+      "href": "https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-indexing-files.cfm"},
+
       "nebeker-2004": {
       "authors": [
       "Jonathan Nebeker",
@@ -834,7 +840,7 @@
 
       },
       specStatus: "CG-DRAFT",
-      edDraftURI: "https://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/hcls-drug-drug-interaction/index.html",
+      edDraftURI: "https://w3id.org/hclscg/pddi",
       editors: [
       {
       name: "Richard D. Boyce",
@@ -843,7 +849,7 @@
       },
       {
       name: "Elizabeth A. Garcia",
-      company: "School of Pharmacy, University of Pittsburgh, USA"
+      company: "Pharmacy Consulting International (PCI), USA"
       },
       {
       name: "Harry Hochheiser",
@@ -958,7 +964,7 @@
 	The purpose of this Community Group Note is to provide a
 	technical and user-centered foundation for a minimum
 	information model for information about potential drug-drug
-	interactions. The Note provides non-ambigous definitions for
+	interactions. The Note provides non-ambiguous definitions for
 	10 core information items. It also provides 8 detailed best
 	practice recommendations related to the 10 core information
 	items. The definitions and recommendations are shown as both
@@ -969,7 +975,7 @@
 	workflows. Intended downstream applications include clinical
 	decision support, drug product label enhancement, cohort
 	identification, and other activities relevant to protecting
-	patients from harm from drug interactions.
+	patients from harmful drug interactions.
       </p>
     </section>
     <section id='sotd'>
@@ -982,9 +988,9 @@
 <section class='informative'>
   <h2>Introduction</h2>
   <p>
-    Ensuring medication therapy occurs safely and to the maximum benefit for of any given patient is of great
+    Ensuring medication therapy occurs safely and to the maximum benefit for any given patient is of great
     interest to clinicians [[institute-medicine-2006]]. One possible threat to patient safety comes from exposure
-    to two or more drugs that are known to interact (i.e., potential drug-drug interactions or PDDIs), and could therefore
+    to two or more drugs that may interact (i.e., potential drug-drug interactions or PDDIs), and could therefore
     lead to a clinically observable effect on the patient (i.e., an actual drug-drug interaction). While the effects
     that may occur due to exposure to some PDDIs can benefit patients (e.g., some HIV therapies use a low-dose of ritonavir
     to increase plasma concentrations of co-administered protease inhibitors by inhibiting their metabolism), PDDIs are
@@ -999,7 +1005,7 @@
   </p>
   <p>
     Clinicians often face barriers to the effective and appropriate management of PDDI exposures [[nabovati-2017]].
-    Barriers include PDDI alerts with poor specificity and incomplete personal PDDI knowledge [[abarca-2004]][[van-der-sijs-2006]]. An awareness of the need for PDDI decision support prompts clinicians to use various drug
+    Barriers include PDDI alerts with poor specificity and incomplete clinician knowledge about PDDIs [[abarca-2004]][[van-der-sijs-2006]]. An awareness of the need for PDDI decision support prompts clinicians to use various drug
     knowledge resources including print or online drug information references, drug interaction checking tools, and alerting systems.
     Unfortunately, poor specificity leads clinicians to be overwhelmed by PDDI information that is “difficult to retrieve, sort and
     digest into clinical decision making” [[bottiger-2009]]. PDDI alerts are often  criticized for “over-alerting” that
@@ -1037,7 +1043,7 @@
       management of PDDI exposure. The resulting common representation
       of PDDI summaries would facilitate curation and information
       exchange.  The annotated knowledge artifacts could be shared in
-      a knowledgebase and used for a variety of use cases.
+      a knowledgebase and applied to a variety of use cases.
     </p>
     <p>
       Downstream applications would process these representations into
@@ -1179,7 +1185,7 @@
 		    data-dfn-type="dfn">Evidence About a Suspected Drug-Drug Interaction</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000004">http://purl.obolibrary.org/obo/MPIO_0000004</a>):
 	       The support for or refutation of a drug-drug interaction in humans, potentially including data resulting
 	       from clinical studies, clinical observation, physiological experiments, or extrapolation based
-	       on drug-drug interaction mechanisms.</li>
+	       on drug-drug interaction mechanisms. It is also acceptable to refer to this information item as "Evidence About a <i>Potential</i> Drug-Drug Interaction." </li>
 	       
 	       <li><dfn data-lt="Frequency of Exposure to the PDDI|frequency of exposure">Frequency of Exposure to the PDDI</dfn> (<a target="new" href="http://purl.obolibrary.org/obo/MPIO_0000007">http://purl.obolibrary.org/obo/MPIO_0000007</a>):
 		 When available, the number of individuals within a cohort that are exposed to a drug-drug interaction over a specified time
@@ -1197,34 +1203,42 @@
   <h2>A summary of recommendations related to the minimum information model</h2>
 
   <p>
-    Note that the capitalized keywords (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, AND OPTIONAL) are defined in RFC 2119 [[RFC2119]].
+    This section summarizes the Community Group's recommendations related to the minimum information model. <a href="#PDDI-MI-APPLICATIONS"></a> shows an overview of the recommendations and how they related to one another. A brief summary of each recommendation is provided below the figure. Each recommendation summary uses capitalized keywords (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, AND OPTIONAL) defined in RFC 2119 [[RFC2119]]. Two examples of applying the recommendations to PDDIs are provided in <a href="#examples"></a>.  
   </p>
+
+  <figure id="recommended-approaches">
+      <img src="W3C-Images/recommendations-overview.png"
+	   width"1152">
+      <figcaption>An visual overview of the 8 recommendations that are labeled R1 to R8 in the paragraphs below. The figure indicates strong recommendations using bubbles with solid lines and optional recommendations using bubbles with dashed lines. Boxes indicate entities discussed in the recommendations such as value sets and evidence support. Arrows indicate relationships between information items and entities discussed in the recommendations. Black arrows indicate information items or entities that MUST be reported together while gray arrows indicate items or entities that SHOULD be reported together if known. 
+    </figure>
+
   
   <div class="practice" id="bp-drugs-involved">
     <b><i>R1 - Explicitly state the drugs involved:</b></i> The <a>drugs involved</a> in a PDDI MUST be explicitly stated. To reduce ambiguity and support a computable representation of the PDDI, the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>. Such so called <i>value sets</i> MAY be referenced by a <i>drug concept set identifier</i> (<a target="new" href="http://purl.obolibrary.org/obo/DIDEO_00000128">http://purl.obolibrary.org/obo/DIDEO_00000128</a>) such as a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.
   </div>
 
-  <div class="practice" id="bp-clinical-consequences">
-    <b><i>R2 - Explicitly state clinical consequences:</b></i> The <a>clinical consequences</a> associated with a PDDI MUST be reported if known. Clinical consequences SHOULD refer health outcomes as specifically as possible. To reduce ambiguity and support a computable representation of the PDDI, clinical consequences SHOULD be represented as one or more sets of terms from a terminology such as <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> or <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. Such so called <i>value sets</i> MAY be referenced by a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public. 
+    
+  <div class="practice" id="bp-mechanism">
+    <b><i>R2 - Report a mechanism if known:</b></i> The <a>mechanism of a PDDI</a> MUST be reported if known. The description SHOULD be written for a clinician audience and include details that help the clinician decide what course of management action to take. To reduce ambiguity, the description MAY refer to specific drugs or health conditions using codes from terminologies.
   </div>
 
-  <div class="practice" id="bp-serious">
-    <b><i>R3 - Note if a clinical consequence is serious:</b></i> A clinical consequence associated with a PDDI MUST be noted as <a>serious</a> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage.
-  </div>
-
-  <div class="practice" id="bp-operational-classification">
-    <b><i>R4 - Include an operational classifaction statement:</b></i> A PDDI MUST report at least one <a>operational classification statement</a>. The description MAY include one or more operational classification statements as long as each statement depends on a single set of <a>contextual information/modifying factors</a>. In this case, the  operational classification statements SHOULD be mentioned where the specific contextual information/modifying factors are discussed. While implementers MAY use any system that provides clear operational classification statements, the use of the OpeRational ClassificAtion of Drug Interactions [hansten-2001] is RECOMMENDED. 
+  <div class="practice" id="bp-freq-exp">
+    <b><i>R3 - State the frequency of harm relative to frequency of exposure if known:</b></i> Information about the <a>frequency of harm</a> of exposure to a PDDI relative to <a>frequency of exposure</a> and is rarely available. If such information is available, it can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Therefore, such information SHOULD be provided if available and considered reliable. It is RECOMMENDED that, wherever possible, each frequency of harm and frequency of exposure datum refer to a specific source in the form of a citation. If such information is not available, it is RECOMMENDED that an explicit statement declaring this fact be provided.
   </div>
 
   
-  <div class="practice" id="bp-mechanism">
-    <b><i>R5 - Report a mechanism if known:</b></i> The <a>mechanism of a PDDI</a> MUST be reported if known. The description SHOULD be written for a clinician audience and include details that help the clinician decide what course of management action to take. To reduce ambiguity, the description MAY refer to specific drugs or health conditions using codes from terminologies.
+  <div class="practice" id="bp-clinical-consequences">
+    <b><i>R4 - Explicitly state clinical consequences:</b></i> The <a>clinical consequences</a> associated with a PDDI MUST be reported if known. Clinical consequences SHOULD refer health outcomes as specifically as possible. To reduce ambiguity and support a computable representation of the PDDI, clinical consequences SHOULD be represented as one or more sets of terms from a terminology such as <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> or <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. Such so called <i>value sets</i> MAY be referenced by a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public. 
   </div>
 
-
-  <div class="practice" id="bp-recommended-action">
-    <b><i>R6 - State a recommended action if one is known:</b></i> If known, a <a>recommended action</a> SHOULD be stated using clear and concise language. Any recommended actions that apply to all patient exposures SHOULD be stated using clear and concise language. It is RECOMMENDED that each recommended action statement provide citations to <a>evidence about a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on specific <a>contextual information/modifying factors</a> SHOULD be mentioned so as to support a context-specific presentation of such information.
+  <div class="practice" id="bp-serious">
+    <b><i>R5 - Note if a clinical consequence is serious:</b></i> A clinical consequence associated with a PDDI MUST be noted as <a>serious</a> if it can result in death, life-threatening hospitalization, congenital anomaly, disability, or if it requires intervention to prevent permanent impairment or damage.
   </div>
+
+  <div class="practice" id="bp-operational-classification">
+    <b><i>R6 - Include an operational classifaction statement:</b></i> A PDDI MUST report at least one <a>operational classification statement</a>. The description MAY include one or more operational classification statements as long as each statement depends on a single set of <a>contextual information/modifying factors</a>. In this case, the  operational classification statements SHOULD be mentioned where the specific contextual information/modifying factors are discussed. While implementers MAY use any system that provides clear operational classification statements, the use of the OpeRational ClassificAtion of Drug Interactions [hansten-2001] is RECOMMENDED. 
+  </div>
+
 
   <div class="practice" id="bp-contextual">
     <b><i>R7 - State each known risk modifying factor or patient context:</b></i> <a>Contextual information/modifying factors</a> are necessary for alerts that
@@ -1235,9 +1249,11 @@
     example, each factor SHOULD be related to a specific <a>operational classification statement</a> that is supported by the <a>evidence about a suspected drug-drug interaction</a>. It is RECOMMENDED that, wherever possible, each evidence statement refer to a specific source in the form of a citation.
   </div>
 
-  <div class="practice" id="bp-freq-exp">
-    <b><i>R8 - State the frequency of harm relative to frequency of exposure if known:</b></i> Information about the <a>frequency of harm</a> of exposure to a PDDI relative to <a>frequency of exposure</a> and is rarely available. If such information is available, it can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Therefore, such information SHOULD be provided if available and considered reliable. It is RECOMMENDED that, wherever possible, each frequency of harm and frequency of exposure datum refer to a specific source in the form of a citation. If such information is not available, it is RECOMMENDED that an explicit statement declaring this fact be provided.
+  <div class="practice" id="bp-recommended-action">
+    <b><i>R8 - State a recommended action if one is known:</b></i> If known, a <a>recommended action</a> SHOULD be stated using clear and concise language. Any recommended actions that apply to all patient exposures SHOULD be stated using clear and concise language. It is RECOMMENDED that each recommended action statement provide citations to <a>evidence about a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on specific <a>contextual information/modifying factors</a> SHOULD be mentioned so as to support a context-specific presentation of such information.
   </div>
+
+
 
 </section>
 
@@ -1314,10 +1330,10 @@
 	interactions must actually exist.  However, as OWL models are
 	generally interpreted to discuss objects that exist in the
 	world, knowledge representations must take care to avoid
-	making these claims of any of the PDDI information. To addres
+	making these claims of any of the PDDI information. To address
 	this problem, MPIO classifies items in the minimal information
 	model as <em>information content entities</em>, essentially
-	saying that they are &quot;about some thing&quot; Thus, each
+	saying that they are &quot;about something&quot; Thus, each
 	element of the model essentially exists as a statement about
 	the PDDI.  As a result, the OWL 2 entities do not
 	refer to the actual material entities or processes. Rather, all
@@ -1342,7 +1358,7 @@
 	by a diagnostic code from ICD 10 would be reused in the MPIO by
 	representing an information content entity corresponding to the
 	ICD 10 code. Practically speaking, concepts from any of the
-	terminologies might be used, but they should represented
+	terminologies might be used, but they should be represented
 	whenever possible by unambiguous identifiers for both the source
 	terminology and the specific concept.
       </li>
@@ -1358,8 +1374,10 @@
   PDDIs. These examples are in narrative form and were chosen from a
   larger set exemplar PDDIs examined during the development of the
   minimal information model (see
-  Appendix <a href="#decision-trees"></a>). The same 2 PDDIs are
-  represented as prototype JSON documents in
+  Appendix <a href="#decision-trees"></a>). <b>Note that while the
+  examples shown here are realistic, they are not intended for direct
+  integration into a clinical applications.</b>  The same 2 PDDIs examples
+  shown below are also represented as prototype JSON documents in
   Appendix <a href="#appendix-json"></a>
 
   <section id="ex-warfarin-nsaids">
@@ -1382,32 +1400,6 @@
       </tr>
     </table>
     <table>
-      <tr>
-	<td style="background-color: #f4fff2"><a>Clinical Consequences</a>: Increased risk of bleeding including <a href="#gi-bleeding">gastrointestinal bleeding</a>,  <a href="#icran-hemm">intracranial hemorrhage</a>,  and <a href="#cereb-hemm">cerebral hemorrhage</a></td>
-      </tr>
-      <tr>
-	<td><strong>Comment:</strong> Per the recommendation <a href="#bp-clinical-consequences">R2 - Explicitly state clinical consequences</a>, value sets for the clinical consequences are explicitly enumerated. As Appendix <a href=#intro-to-value-sets></a> mentions, this <i>extensional definition</i> is one approach to declaring value sets. It is also possible to define an algorithm that, when executed by a machine (or interpreted by a human), yields a set of such elements. Such a <i>intensional definition</i> is also an acceptable approach to declaring clinical conseqences.</td> 
-      </tr>
-    </table>
-
-    <table>
-      <tr>
-	<td style="background-color: #f4fff2"><a>Seriousness</a>: Bleeding is a serious potential clinical consequence because it can result in death, life-threatening hospitalization, and disability. </td>
-      </tr>
-      <tr>
-	<td><strong>Comment:</strong> Per the recommendation <a href="#bp-serious">R3 - Note if a clinical consequence is serious</a>, there is a clear statement that the potential clinical consequence of bleeding <a>serious</a>.</td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-	<td style="background-color: #f4fff2"><a>Operational Classification Statement</a>: Depending on the patient context, there are different operational classification statements for the warfarin-NSAIDs PDDI. See the <a href="#warfarin-specific-context">contextual information/modifying factors for this interaction</a>.</td>
-      </tr>
-      <tr>
-	<td><strong>Comment:</strong> Per recommendation <a href="#bp-operational-classification">R4 - Include an operational classifaction statement</a>, the PDDI description includes one or more <a>operational classification statements</a>. Because there is multiple <a>contextual information/modifying factors</a>, no single general operational classifaction statement can be mentioned. Rather, an operational classification statement is provided for each factor. </td>
-      </tr>
-    </table>
-</div>
-<table>
   <tr>
     <td style="background-color: #f4fff2"><a>Mechanism of Interaction</a>: <a href="#NSAIDS-drugs">Non-steroidal anti-inflammatory drugs (NSAIDs)</a> have
       antiplatelet effects which increase the bleeding risk when combined with oral anticoagulants such as
@@ -1417,20 +1409,46 @@
       upper gastrointestinal bleeding (UGIB).</td>
   </tr>
   <tr>
-    <td><strong>Comment:</strong> Per recommendation <a href="#bp-mechanism">R5 - Report a mechanism if known</a>, there is a clear statement of the <a>mechanism of interaction</a> written for a clinician audience. </td>
+    <td><strong>Comment:</strong> Per recommendation <a href="#bp-mechanism">R2 - Report a mechanism if known</a>, there is a clear statement of the <a>mechanism of interaction</a> written for a clinician audience. </td>
   </tr>
 </table>
-<table>
+
+    <table>
   <tr>
-    <td style="background-color: #f4fff2"><a>Recommended Action</a>: If the NSAID is being used as an analgesic or antipyretic,
-      it would be prudent to use an alternative such as acetaminophen. In some people, acetaminophen can
-      increase the anticoagulant effect of warfarin, so monitor the INR if acetaminophen is used in doses
-      over 2 g/day for a few days. For more severe pain consider short-term opioids in place of the NSAID.</td>
+    <td style="background-color: #f4fff2"><strong>Frequency of Harm Relative to Frequency of Exposure to the PDDI:</strong> Unknown</td>
   </tr>
-  <tr>
-    <td><strong>Comment:</strong> Per recommendation <a href="#bp-recommended-action">R6 - State a recommended action if one is known</a>, a <a>recommended action</a> is stated using clear and concise language. Unfortunately, the statement provides no specific citation to evidence in the form of a citation.</td>
+  <tr>		      
+    <td><strong>Comment:</strong> Per recommendation <a href="#bp-freq-exp">R3 - State the frequency of harm relative to frequency of exposure if known</a>, an explicit statement is made declaring that information on frequency of harm relative to frequency of exposure to the PDDI is not available. </td>
   </tr>
 </table>
+
+    
+    <table>
+      <tr>
+	<td style="background-color: #f4fff2"><a>Clinical Consequences</a>: Increased risk of bleeding including <a href="#gi-bleeding">gastrointestinal bleeding</a>,  <a href="#icran-hemm">intracranial hemorrhage</a>,  and <a href="#cereb-hemm">cerebral hemorrhage</a></td>
+      </tr>
+      <tr>
+	<td><strong>Comment:</strong> Per the recommendation <a href="#bp-clinical-consequences">R4 - Explicitly state clinical consequences</a>, value sets for the clinical consequences are explicitly enumerated. As Appendix <a href=#intro-to-value-sets></a> mentions, this <i>extensional definition</i> is one approach to declaring value sets. It is also possible to define an algorithm that, when executed by a machine (or interpreted by a human), yields a set of such elements. Such a <i>intensional definition</i> is also an acceptable approach to declaring clinical conseqences.</td> 
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+	<td style="background-color: #f4fff2"><a>Seriousness</a>: Bleeding is a serious potential clinical consequence because it can result in death, life-threatening hospitalization, and disability. </td>
+      </tr>
+      <tr>
+	<td><strong>Comment:</strong> Per the recommendation <a href="#bp-serious">R5 - Note if a clinical consequence is serious</a>, there is a clear statement that the potential clinical consequence of bleeding <a>serious</a>.</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+	<td style="background-color: #f4fff2"><a>Operational Classification Statement</a>: Depending on the patient context, there are different operational classification statements for the warfarin-NSAIDs PDDI. See the <a href="#warfarin-specific-context">contextual information/modifying factors for this interaction</a>.</td>
+      </tr>
+      <tr>
+	<td><strong>Comment:</strong> Per recommendation <a href="#bp-operational-classification">R6 - Include an operational classification statement</a>, the PDDI description includes one or more <a>operational classification statements</a>. Because there is multiple <a>contextual information/modifying factors</a>, no single general operational classification statement can be mentioned. Rather, an operational classification statement is provided for each factor. </td>
+      </tr>
+    </table>
+</div>
 <table>
   <tr>
     <td style="background-color: #f4fff2"><a>Contextual information/modifying factors</a>:
@@ -1472,15 +1490,19 @@
 </td>
 </tr>
 <tr>
-  <td><strong>Comment:</strong> Per recommendation <a href="#bp-contextual">R7 - each known risk modifying factor or patient context</a>, each known <a>contextual information/modifying factor</a> is stated specifically. Value sets for the <a>clinical consequences</a> are explicitly enumerated. As Appendix <a href=#intro-to-value-sets></a> mentions, this <i>extensional definition</i> is one approach to declaring value sets. It is also possible to define an algorithm that, when executed by a machine (or interpreted by a human), yields a set of such elements. Such a <i>intensional definition</i> is also an acceptable approach to declaring clinical conseqences. An <a>operational classification statement</a> is provided for each <a>contextual information/modifying factor</a> and each evidence statement refers to a specific source in the form of a citation. </td>
+  <td><strong>Comment:</strong> Per recommendation <a href="#bp-operational-classification">R6 - Include an operational classification statement</a>, the PDDI description includes one or more <a>operational classification statements</a>. Because there is multiple <a>contextual information/modifying factors</a>, no single general operational classification statement can be mentioned. Rather, an operational classification statement is provided for each factor. Per recommendation <a href="#bp-contextual">R7 - each known risk modifying factor or patient context</a>, each known <a>contextual information/modifying factor</a> is stated specifically. Value sets for the <a>clinical consequences</a> are explicitly enumerated. As Appendix <a href=#intro-to-value-sets></a> mentions, this <i>extensional definition</i> is one approach to declaring value sets. It is also possible to define an algorithm that, when executed by a machine (or interpreted by a human), yields a set of such elements. Such a <i>intensional definition</i> is also an acceptable approach to declaring clinical conseqences. An <a>operational classification statement</a> is provided for each <a>contextual information/modifying factor</a> and each evidence statement refers to a specific source in the form of a citation. </td>
 </tr>
 </table>
+
 <table>
   <tr>
-    <td style="background-color: #f4fff2"><strong>Frequency of Harm Relative to Frequency of Exposure to the PDDI:</strong> Unknown</td>
+    <td style="background-color: #f4fff2"><a>Recommended Action</a>: If the NSAID is being used as an analgesic or antipyretic,
+      it would be prudent to use an alternative such as acetaminophen. In some people, acetaminophen can
+      increase the anticoagulant effect of warfarin, so monitor the INR if acetaminophen is used in doses
+      over 2 g/day for a few days. For more severe pain consider short-term opioids in place of the NSAID.</td>
   </tr>
-  <tr>		      
-    <td><strong>Comment:</strong> Per recommendation <a href="#bp-freq-exp">R8 - State the frequency of harm relative to frequency of exposure if known</a>, an explicit statement is made declaring that information on frequency of harm relative to frequency of exposure to the PDDI is not available. </td>
+  <tr>
+    <td><strong>Comment:</strong> Per recommendation <a href="#bp-recommended-action">R8 - State a recommended action if one is known</a>, a <a>recommended action</a> is stated using clear and concise language. Unfortunately, the statement provides no specific citation to evidence in the form of a citation.</td>
   </tr>
 </table>
 
@@ -1500,12 +1522,32 @@
       <td><strong>Comment:</strong> Per the recommendation <a href="#bp-drugs-involved">R1 - Explicitly state the drugs involved</a>, value sets for TKIs and PPIs are provided. Note that in the <a href="#ex-warfarin-nsaids">warfarin-NSAIDs example</a> the drugs involved are specified using RxNorm while this example uses ATC. This is to emphasize that, while the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
     </tr>
   </table>
+    <table>
+    <tr>
+      <td style="background-color: #f4fff2"><strong>Mechanism of Interaction:</strong> BCR-ABL Tyrosine Kinase inhibitors demonstrate pH
+        dependent absorption for oral administration which may result in decreased efficacy when given
+        concomitantly with medications that increase gastric pH.  </td>
+    </tr>
+    <tr>
+      <td><strong>Comment:</strong> Per recommendation <a href="#bp-mechanism">R2 - Report a mechanism if known</a>, there is a clear statement of the <a>mechanism of interaction</a> written for a clinician audience. A limitation of this example is that it refers to 'medications that increase gastric pH' without reference any specific drugs or codes from a drug terminology. </td>
+    </tr>
+  </table>
+
+    <table>
+    <tr>
+      <td style="background-color: #f4fff2"><strong>Frequency of Harm Relative to Frequency of Exposure to the PDDI:</strong> Unknown</td>
+    </tr>
+    <tr>		      
+      <td><strong>Comment:</strong> Per recommendation <a href="#bp-freq-exp">R3 - State the frequency of harm relative to frequency of exposure if known</a>, an explicit statement is made declaring that information on frequency of harm relative to frequency of exposure to the PDDI is not available. </td>
+    </tr>
+  </table>
+
   <table>
     <tr>
       <td style="background-color: #f4fff2"><strong>Clinical Consequences:</strong> Decreased efficacy relative to treatment for <a href="#acml">chronic myeloid leukemia</a></td>
     </tr>
     <tr>
-      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-clinical-consequences">R2 - Explicitly state clinical consequences</a>, a value set for the clinical consequence is explicitly enumerated. Note that in the <a href="#ex-warfarin-nsaids">warfarin-NSAIDs example</a>, the clinical consequences involved are specified using <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> while this example uses <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. This is to emphasize that, while the clinical consequences  SHOULD be listed as sets of terms from a terminology such as ICD-10 or SNOMED-CT, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
+      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-clinical-consequences">R4 - Explicitly state clinical consequences</a>, a value set for the clinical consequence is explicitly enumerated. Note that in the <a href="#ex-warfarin-nsaids">warfarin-NSAIDs example</a>, the clinical consequences involved are specified using <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> while this example uses <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. This is to emphasize that, while the clinical consequences  SHOULD be listed as sets of terms from a terminology such as ICD-10 or SNOMED-CT, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
     </tr>
   </table>
 
@@ -1516,19 +1558,9 @@
         hospitalization, and disability. </td>
     </tr>
     <tr>
-      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-serious">R3 - Note if a clinical consequence is serious</a>, there is a clear statement that the potential clinical consequence of a decrease in chronic myeloid leukemia treatment efficacy is <a>serious</a>.</td>
+      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-serious">R5 - Note if a clinical consequence is serious</a>, there is a clear statement that the potential clinical consequence of a decrease in chronic myeloid leukemia treatment efficacy is <a>serious</a>.</td>
     </tr>
   </table>  
-  <table>
-    <tr>
-      <td style="background-color: #f4fff2"><strong>Mechanism of Interaction:</strong> BCR-ABL Tyrosine Kinase inhibitors demonstrate pH
-        dependent absorption for oral administration which may result in decreased efficacy when given
-        concomitantly with medications that increase gastric pH.  </td>
-    </tr>
-    <tr>
-      <td><strong>Comment:</strong> Per recommendation <a href="#bp-mechanism">R5 - Report a mechanism if known</a>, there is a clear statement of the <a>mechanism of interaction</a> written for a clinician audience. A limitation of this example is that it refers to 'medications that increase gastric pH' without reference any specific drugs or codes from a drug terminology. </td>
-    </tr>
-  </table>
   <table id="warfarin-specific-context">
     <tr>
       <td style="background-color: #f4fff2"><strong>Contextual information/modifying factors:</strong></td>
@@ -1579,14 +1611,6 @@
       <td><strong>Comment:</strong> Per recommendation <a href="#bp-contextual">R7 - each known risk modifying factor or patient context</a>, each known <a>contextual information/modifying factor</a> is stated specifically. Value sets for the <a>clinical consequences</a> are explicitly enumerated. Notice that there is no  <a>recommended action</a> statement to complement the <a>operational classification statements</a>. Such a statement would be most useful for the recommendation to "assess risk and take action if necessary." In this case, there is not sufficient evidence for a recommended action statement to provide more information than the operational classification statement already provides. Notice that this example could be improved because it references coded terms for TKIs but not for antacids and H2 antagonists. </td>
     </tr>
   </table>
-  <table>
-    <tr>
-      <td style="background-color: #f4fff2"><strong>Frequency of Harm Relative to Frequency of Exposure to the PDDI:</strong> Unknown</td>
-    </tr>
-    <tr>		      
-      <td><strong>Comment:</strong> Per recommendation <a href="#bp-freq-exp">R8 - State the frequency of harm relative to frequency of exposure if known</a>, an explicit statement is made declaring that information on frequency of harm relative to frequency of exposure to the PDDI is not available. </td>
-    </tr>
-  </table>
 
 </section>
 </section>
@@ -1602,8 +1626,8 @@
       representing PDDI information in a clinical context
       is <strong>to provide a technical foundation for effective PDDI
 	clinical decision support</strong>. Unfortunately, existing drug
-      information sources systems generally organize information into
-      a more or less narrative format includes only some of the core
+      information sources  generally organize interaction information into
+      a more or less narrative format and include only some of the core
       PDDI information elements. To illustrate, consider the PDDI
       between oral anticoagulants and non-steroidal anti-inflammatory
       drugs (NSAIDs) reported in the well-curated French Thesaurus des interactions médicamenteuses PDDI dataset [[ansm-2016]] shown
@@ -1716,7 +1740,7 @@
       specific use cases of the minimum information model's core
       information elements (see
       Appendix <a href="#med-rec-use-cases"></a>). These stories are
-      associated with seven types of users (physicians, pharamacists,
+      associated with seven types of users (physicians, pharmacists,
       nurses, drug compendia editors, health science librarians,
       systems analysts, and content specialists.
     </p>
@@ -1932,16 +1956,15 @@
     <p>
       PDDI information annotated using the minimum information model
       could be published in a computer readable format using what is
-      called an SPL <i>supplemental       indexing
-	file</i>. Supplemental indexing files provide additional useful
-      information augmenting official FDA drug  SPLs. Currently,
-      supplemental indexing is used to specify pharmacologic classes,
-      billing units, warning letter alerts, and other information
-      (National Library of Medicine 2017). Supplemental indexing files
-      including the elements of the  PDDI minimum information model
-      might be stored in XML and, trough the use of XSL and XSLT,
-      be used to render the data in various formats including HTML,
-      and PDF, and character-delimited tables. 
+      called an SPL <i>indexing file</i>. Indexing files
+      provide additional useful information augmenting official FDA
+      drug SPLs. Currently, indexing files are used to specify
+      pharmacologic classes, billing units, warning letter alerts, and
+      other information [[dailymed-indexing]]. Supplemental indexing files including the elements of the
+      PDDI minimum information model might be stored in XML and,
+      through the use of XSL and XSLT, be used to render the data in
+      various formats including HTML, and PDF, and character-delimited
+      tables.
     </p>
   </section>
 
@@ -2726,7 +2749,7 @@
   </section>
   
   <section id="aldosterone-antagonists">
-    <h2>aldosterone antagonists (RxNorm)</h2>
+    <h2>aldosterone antagonists and products containing an aldosterone receptor antagonist (RxNorm)</h2>
     <pre>
       298869 - eplerenone
       9997 - Spironolactone
@@ -2749,7 +2772,7 @@
 
   
   <section id="cereb-hemm">
-    <h2>cerebral hemorrhage (ICD-10)</h2>
+    <h2>cerebral hemorrhage (ICD-10-CM)</h2>
     <pre>
       I61.0 - Nontraumatic intracerebral hemorrhage in hemisphere, subcortical
       I61.1 - Nontraumatic intracerebral hemorrhage in hemisphere, cortical
@@ -2758,25 +2781,15 @@
       I61.4 - Nontraumatic intracerebral hemorrhage in cerebellum
       I61.5 - Nontraumatic intracerebral hemorrhage, intraventricular
       I61.6 - Nontraumatic intracerebral hemorrhage, multiple localized
-      I61.8 - Other nontraumatic intracerebral hemorrhage
       I61.9 - Nontraumatic intracerebral hemorrhage, unspecified
-      P10.0 - Subdural hemorrhage due to birth injury
-      P10.1 - Cerebral hemorrhage due to birth injury
       P10.2 - Intraventricular hemorrhage due to birth injury
-      P10.3 - Subarachnoid hemorrhage due to birth injury
       P10.4 - Tentorial tear due to birth injury
-      P10.8 - Other intracranial lacerations and hemorrhages due to birth injury
-      P10.9 - Unspecified intracranial laceration and hemorrhage due to birth injury
       P52.0 - Intraventricular (nontraumatic) hemorrhage, grade 1, of newborn
       P52.1 - Intraventricular (nontraumatic) hemorrhage, grade 2, of newborn
       P52.2 - Intraventricular (nontraumatic) hemorrhage, grade 3 and grade 4, of newborn
       P52.3 - Unspecified intraventricular (nontraumatic) hemorrhage of newborn
       P52.4 - Intracerebral (nontraumatic) hemorrhage of newborn
-      P52.5 - Subarachnoid (nontraumatic) hemorrhage of newborn
-      P52.6 - Cerebellar (nontraumatic) and posterior fossa hemorrhage of newborn
-      P52.8 - Other intracranial (nontraumatic) hemorrhages of newborn
       P52.9 - Intracranial (nontraumatic) hemorrhage of newborn, unspecified
-      S06.8 - Other specified intracranial injuries
     </pre>	    
   </section>
 
@@ -2786,7 +2799,6 @@
       415287001 - Relapsing chronic myeloid leukemia
       277589003 - Atypical chronic myeloid leukemia
       277587001 - Juvenile chronic myeloid leukemia
-      128826001 - Atypical chronic myeloid leukemia, BCR/ABL negative
     </pre>
   </section>
 
@@ -2800,7 +2812,7 @@
 
   
   <section id="gi-bleeding">
-    <h2>gastrointestinal bleeding or peptic ulcer (ICD-10)</h2>
+    <h2>upper gastrointestinal bleeding or peptic ulcer (ICD-10-CM)</h2>
     <pre>
       k92.2 – Gastrointestinal hemorrhage, unspecified
       k25.0 – Acute gastric ulcer with hemorrhage
@@ -2841,7 +2853,7 @@
 
   
   <section id="icran-hemm">
-    <h2>intracranial hemorrhage (ICD-10)</h2>
+    <h2>intracranial hemorrhage (ICD-10-CM)</h2>
     <pre>
       I62.0 - Nontraumatic subdural hemorrhage
       I62.1 - Nontraumatic extradural hemorrhage
@@ -2930,7 +2942,6 @@
       1116339 - 24 HR Naproxen 500 MG Extended Release Oral Tablet
       1116349 - 24 HR Naproxen 750 MG Extended Release Oral Tablet
       992420 - 8 ACTUAT Ketorolac Tromethamine 15.8 MG/ACTUAT Nasal Inhaler
-      1236089 - Benzydamine Hydrochloride 3 MG Oral Lozenge
       205322 - celecoxib 100 MG Oral Capsule
       205323 - celecoxib 200 MG Oral Capsule
       349514 - celecoxib 400 MG Oral Capsule
@@ -3333,7 +3344,7 @@
     "concept set references": [
       {
         "type": "TextQuoteSelector",
-        "exact": "gastrointestinal bleeding",
+        "exact": "upper gastrointestinal bleeding",
         "body": {
           "type": "SemanticTag",
           "value": "af3209ab-082f-40e6-9c37-6f2945afa850"
@@ -3860,12 +3871,6 @@
           "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
           "code": "992420",
           "display": "8 ACTUAT Ketorolac Tromethamine 15.8 MG/ACTUAT Nasal Inhaler"
-        },
-        {
-          "type": "APOLLO_SV_00000461",
-          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-          "code": "1236089",
-          "display": "Benzydamine Hydrochloride 3 MG Oral Lozenge"
         },
         {
           "type": "APOLLO_SV_00000461",
@@ -4585,169 +4590,169 @@
     },
     {
       "id": "af3209ab-082f-40e6-9c37-6f2945afa850",
-      "display": "gastrointestinal bleeding",
+      "display": "upper gastrointestinal bleeding",
       "type": "NCIT_C113497",
-      "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+      "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
       "members": [
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k92.2",
           "display": "Gastrointestinal hemorrhage, unspecified"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k25.0",
           "display": "Acute gastric ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k25.2",
           "display": "Acute gastric ulcer with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k25.4",
           "display": "Chronic or unspecified gastric ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k25.6",
           "display": "Chronic or unspecified gastric ulcer with both hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k26.0",
           "display": "Acute duodenal ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k26.2",
           "display": "Acute duodenal ulcer with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k26.4",
           "display": "Chronic duodenal ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k26.6",
           "display": "Chronic duodenal ulcer with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k27.0",
           "display": "Acute peptic ulcer, site unspecified, with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k27.2",
           "display": "Acute peptic ulcer, site unspecified, with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k27.4",
           "display": "Chronic peptic ulcer, site unspecified, with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k27.6",
           "display": "Chronic peptic ulcer, site unspecified, with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k28.0",
           "display": "Acute gastrojejunel ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k28.2",
           "display": "Acute gastrojejunel ulcer with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k28.4",
           "display": "Chronic gastrojejunel ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k28.6",
           "display": "Chronic Acute gastrojejunel ulcer with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.01",
           "display": "Acute gastritis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.31",
           "display": "Chronic gastritis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.41",
           "display": "Chronic atrophic gastritis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.51",
           "display": "Unspecified chronic gastritis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.61",
           "display": "Other gastritis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.71",
           "display": "Gastritis, unspecified, with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.81",
           "display": "Duodenitis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.91",
           "display": "Gastroduodenitis, unspecified, with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k31.811",
           "display": "Angiodysplasia –of stomach and duodenum with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k31.82",
           "display": "Dieulafoy lesion (hemorrhagic) of stomach and duodenum"
         }
@@ -4757,167 +4762,167 @@
       "id": "6a085888-7bc2-4b6a-8547-95d635cbcb3a",
       "display": "upper gastrointestinal bleeding (UGIB) or peptic ulcer",
       "type": "NCIT_C113497",
-      "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+      "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
       "members": [
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k92.2",
           "display": "Gastrointestinal hemorrhage, unspecified"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k25.0",
           "display": "Acute gastric ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k25.2",
           "display": "Acute gastric ulcer with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k25.4",
           "display": "Chronic or unspecified gastric ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k25.6",
           "display": "Chronic or unspecified gastric ulcer with both hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k26.0",
           "display": "Acute duodenal ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k26.2",
           "display": "Acute duodenal ulcer with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k26.4",
           "display": "Chronic duodenal ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k26.6",
           "display": "Chronic duodenal ulcer with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k27.0",
           "display": "Acute peptic ulcer, site unspecified, with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k27.2",
           "display": "Acute peptic ulcer, site unspecified, with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k27.4",
           "display": "Chronic peptic ulcer, site unspecified, with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k27.6",
           "display": "Chronic peptic ulcer, site unspecified, with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k28.0",
           "display": "Acute gastrojejunel ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k28.2",
           "display": "Acute gastrojejunel ulcer with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k28.4",
           "display": "Chronic gastrojejunel ulcer with hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k28.6",
           "display": "Chronic Acute gastrojejunel ulcer with hemorrhage and perforation"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.01",
           "display": "Acute gastritis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.31",
           "display": "Chronic gastritis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.41",
           "display": "Chronic atrophic gastritis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.51",
           "display": "Unspecified chronic gastritis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.61",
           "display": "Other gastritis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.71",
           "display": "Gastritis, unspecified, with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.81",
           "display": "Duodenitis with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k29.91",
           "display": "Gastroduodenitis, unspecified, with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k31.811",
           "display": "Angiodysplasia –of stomach and duodenum with bleeding"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "k31.82",
           "display": "Dieulafoy lesion (hemorrhagic) of stomach and duodenum"
         }
@@ -4927,137 +4932,137 @@
       "id": "2b083e55-755c-432a-9d78-ac5f55787737",
       "display": "intracranial hemorrhage",
       "type": "NCIT_C113497",
-      "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+      "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
       "members": [
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I62.0",
           "display": "Nontraumatic subdural hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I62.1",
           "display": "Nontraumatic extradural hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I62.9",
           "display": "Nontraumatic intracranial hemorrhage, unspecified"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I69.2",
           "display": "Sequelae of other nontraumatic intracranial hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.0",
           "display": "Subdural hemorrhage due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.1",
           "display": "Cerebral hemorrhage due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.2",
           "display": "Intraventricular hemorrhage due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.3",
           "display": "Subarachnoid hemorrhage due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.4",
           "display": "Tentorial tear due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.8",
           "display": "Other intracranial lacerations and hemorrhages due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.9",
           "display": "Unspecified intracranial laceration and hemorrhage due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.0",
           "display": "Intraventricular (nontraumatic) hemorrhage, grade 1, of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.1",
           "display": "Intraventricular (nontraumatic) hemorrhage, grade 2, of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.2",
           "display": "Intraventricular (nontraumatic) hemorrhage, grade 3 and grade 4, of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.3",
           "display": "Unspecified intraventricular (nontraumatic) hemorrhage of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.4",
           "display": "Intracerebral (nontraumatic) hemorrhage of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.5",
           "display": "Subarachnoid (nontraumatic) hemorrhage of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.6",
           "display": "Cerebellar (nontraumatic) and posterior fossa hemorrhage of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.8",
           "display": "Other intracranial (nontraumatic) hemorrhages of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.9",
           "display": "Intracranial (nontraumatic) hemorrhage of newborn, unspecified"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "S06.5",
           "display": "Traumatic subdural hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "S06.8",
           "display": "Other specified intracranial injuries"
         }
@@ -5067,161 +5072,161 @@
       "id": "5d5cf201-0a37-4c10-8397-da1aa774811e",
       "display": "cerebral hemorrhage",
       "type": "NCIT_C113497",
-      "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+      "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
       "members": [
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I61.0",
           "display": "Nontraumatic intracerebral hemorrhage in hemisphere, subcortical"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I61.1",
           "display": "Nontraumatic intracerebral hemorrhage in hemisphere, cortical"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I61.2",
           "display": "Nontraumatic intracerebral hemorrhage in hemisphere, unspecified"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I61.3",
           "display": "Nontraumatic intracerebral hemorrhage in brain stem"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I61.4",
           "display": "Nontraumatic intracerebral hemorrhage in cerebellum"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I61.5",
           "display": "Nontraumatic intracerebral hemorrhage, intraventricular"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I61.6",
           "display": "Nontraumatic intracerebral hemorrhage, multiple localized"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I61.8",
           "display": "Other nontraumatic intracerebral hemorrhage"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "I61.9",
           "display": "Nontraumatic intracerebral hemorrhage, unspecified"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.0",
           "display": "Subdural hemorrhage due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.1",
           "display": "Cerebral hemorrhage due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.2",
           "display": "Intraventricular hemorrhage due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.3",
           "display": "Subarachnoid hemorrhage due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.4",
           "display": "Tentorial tear due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.8",
           "display": "Other intracranial lacerations and hemorrhages due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P10.9",
           "display": "Unspecified intracranial laceration and hemorrhage due to birth injury"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.0",
           "display": "Intraventricular (nontraumatic) hemorrhage, grade 1, of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.1",
           "display": "Intraventricular (nontraumatic) hemorrhage, grade 2, of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.2",
           "display": "Intraventricular (nontraumatic) hemorrhage, grade 3 and grade 4, of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.3",
           "display": "Unspecified intraventricular (nontraumatic) hemorrhage of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.4",
           "display": "Intracerebral (nontraumatic) hemorrhage of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.5",
           "display": "Subarachnoid (nontraumatic) hemorrhage of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.6",
           "display": "Cerebellar (nontraumatic) and posterior fossa hemorrhage of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.8",
           "display": "Other intracranial (nontraumatic) hemorrhages of newborn"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "P52.9",
           "display": "Intracranial (nontraumatic) hemorrhage of newborn, unspecified"
         },
         {
           "type": "IAO_0020000",
-          "system": "http://www.nlm.nih.gov/research/umls/ICD-10",
+          "system": "http://www.nlm.nih.gov/research/umls/ICD-10-CM",
           "code": "S06.8",
           "display": "Other specified intracranial injuries"
         }
@@ -5909,7 +5914,7 @@
     },
     {
       "id": "a32b4ed0-1aff-4520-a973-879f705a0366",
-      "display": "aldosterone antagonists",
+      "display": "aldosterone antagonists and products containing an aldosterone receptor antagonist",
       "type": "DIDEO_00000128",
       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
       "members": [
