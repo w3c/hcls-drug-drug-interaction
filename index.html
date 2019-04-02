@@ -991,6 +991,8 @@
   This document is governed by the <a href="https://www.w3.org/community/reports/reqs/">W3C  requirements of the Community and Business Group Process related to deliverables</a>.
 </p>
 </section>
+
+
 <section class='informative'>
   <h2>Introduction</h2>
   <p>
@@ -1218,11 +1220,12 @@
       <figcaption>An visual overview of the 8 recommendations that are labeled R1 to R8 in the paragraphs below. Note that the bubbles are ordered for simpler visual presentation and not meant to suggest an editorial workflow. The figure indicates strong recommendations using bubbles with solid lines and optional recommendations using bubbles with dashed lines. Boxes indicate entities discussed in the recommendations such as value sets and evidence support. Arrows indicate relationships between information items and entities discussed in the recommendations. Black arrows indicate information items or entities that MUST be reported together while gray arrows indicate items or entities that SHOULD be reported together if known.  &#8224; If the PDDI mechanism is not known, state "not known".
     </figure>
 
-  
+
+  <div class="issue" data-number="42" title="Discuss implications and alternatives of referring to drugs involved comprehensively rather than specifically">
   <div class="practice" id="bp-drugs-involved">
     <b><i>R1 - Explicitly state the drugs involved:</b></i> The <a>drugs involved</a> in a PDDI MUST be explicitly stated. To reduce ambiguity and support a computable representation of the PDDI, the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>. Such so called <i>value sets</i> MAY be referenced by a <i>drug concept set identifier</i> (<a target="new" href="http://purl.obolibrary.org/obo/DIDEO_00000128">http://purl.obolibrary.org/obo/DIDEO_00000128</a>) such as a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.
   </div>
-
+  </div>
     
   <div class="practice" id="bp-mechanism">
     <b><i>R2 - Report a mechanism if known:</b></i> The <a>mechanism of a PDDI</a> MUST be reported if known. If the mechanism is not known, that MUST be explicitly stated. The description SHOULD be written for a clinician audience and include details that help the clinician decide what course of management action to take. To reduce ambiguity, the description MAY refer to specific drugs or health conditions using codes from terminologies.
@@ -1455,6 +1458,7 @@
       </tr>
     </table>
 </div>
+
 <table>
   <tr>
     <td style="background-color: #f4fff2"><a>Contextual information/modifying factors</a>:
@@ -1467,6 +1471,7 @@
 	    the absorption seen with systemic administration of 150 mg/day. A higher than recommended
 	    dose of topical gel (48 g/day) produced 20% of a systemic dose of diclofenac.</li>
         </ul>
+	<div class="issue" data-number="41" title="Consider modifying the 'NOT topical diclofenac' to include opthalmic formulations">
         <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a> but the patient is concomitantly taking a
           <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a></li>
         <ul>
@@ -1483,6 +1488,7 @@
           The extent to which older age is an independent risk factor for UGIB due to these interactions
           is not firmly established, but UGIB in general is known to increase with age.</li>
       </ul>
+      </div>
       <li>Concomitantly taking <a href="#systemic-cortico">systemic corticosteroids</a>, <a href="#aldosterone-antagonists">aldosterone antagonists</a>, or high dose or multiple <a href="#NSAIDS-drugs">NSAIDs</a></li>
       <ul>
 	<li><strong>Operational Classification Statement:</strong> Use only if benefit outweighs risk</li>
@@ -2066,6 +2072,10 @@
 
 <section class="appendix" class="informative">
   <h2>Appendices</h2>
+  <section class="appendix" id="issue-summary">
+    <!-- A list of issues will magically appear here -->
+  </section>
+
   <section id="development-process">
     <h2>Development Process</h2>
 
