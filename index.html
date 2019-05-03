@@ -1211,19 +1211,19 @@
   <h2>A summary of recommendations related to the minimum information model</h2>
 
   <p>
-    This section summarizes the Community Group's recommendations related to the minimum information model. <a href="#PDDI-MI-APPLICATIONS"></a> shows an overview of the recommendations and how they related to one another. A brief summary of each recommendation is provided below the figure. Each recommendation summary uses capitalized keywords (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, AND OPTIONAL) defined in RFC 2119 [[RFC2119]]. Two examples of applying the recommendations to PDDIs are provided in <a href="#examples"></a>.  
+    This section summarizes the Community Group's recommendations related to the minimum information model. <a href="#recommended-approaches"></a> shows an overview of the recommendations and how they related to one another. A brief summary of each recommendation is provided below the figure. Each recommendation summary uses capitalized keywords (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, AND OPTIONAL) defined in RFC 2119 [[RFC2119]]. Two examples of applying the recommendations to PDDIs are provided in <a href="#examples"></a>.  
   </p>
 
   <figure id="recommended-approaches">
       <img src="W3C-Images/recommendations-overview.png"
 	   width"1152">
-      <figcaption>An visual overview of the 8 recommendations that are labeled R1 to R8 in the paragraphs below. Note that the bubbles are ordered for simpler visual presentation and not meant to suggest an editorial workflow. The figure indicates strong recommendations using bubbles with solid lines and optional recommendations using bubbles with dashed lines. Boxes indicate entities discussed in the recommendations such as value sets and evidence support. Arrows indicate relationships between information items and entities discussed in the recommendations. Black arrows indicate information items or entities that MUST be reported together while gray arrows indicate items or entities that SHOULD be reported together if known.  &#8224; If the PDDI mechanism is not known, state "not known".
+      <figcaption>An visual overview of the 8 recommendations that are labeled R1 to R8 in the paragraphs below. Note that the bubbles are ordered for simpler visual presentation and not meant to suggest an editorial workflow. The figure indicates fundamental recommendations using bubbles with solid lines and knowledge dependent recommendations using bubbles with dashed lines. Boxes indicate entities discussed in the recommendations such as value sets and evidence support. Arrows indicate relationships between information items and entities discussed in the recommendations. Black arrows indicate fundamental information items or entities that MUST be reported together while gray arrows indicate items or entities that SHOULD be reported together if known.  &#8224; If the PDDI mechanism is not known, state "not known".
     </figure>
 
 
   <div class="issue" data-number="42" title="Discuss implications and alternatives of referring to drugs involved comprehensively rather than specifically">
   <div class="practice" id="bp-drugs-involved">
-    <b><i>R1 - Explicitly state the drugs involved:</b></i> The <a>drugs involved</a> in a PDDI MUST be explicitly stated. To reduce ambiguity and support a computable representation of the PDDI, the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>. Such so called <i>value sets</i> MAY be referenced by a <i>drug concept set identifier</i> (<a target="new" href="http://purl.obolibrary.org/obo/DIDEO_00000128">http://purl.obolibrary.org/obo/DIDEO_00000128</a>) such as a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.
+    <b><i>R1 - Explicitly state the drugs involved:</b></i> The <a>drugs involved</a> in a PDDI MUST be explicitly stated. To reduce ambiguity and support a computable representation of the PDDI, the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>. Such so called <i>value sets</i> MAY be referenced by a <i>drug concept set identifier</i> (<a target="new" href="http://purl.obolibrary.org/obo/DIDEO_00000128">http://purl.obolibrary.org/obo/DIDEO_00000128</a>) such as a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, the implementer SHOULD use a terminology that is actively maintained and freely accessible to the public.
   </div>
   </div>
     
@@ -1232,12 +1232,12 @@
   </div>
 
   <div class="practice" id="bp-freq-exp">
-    <b><i>R3 - State the frequency of harm relative to frequency of exposure if known:</b></i> Information about the <a>frequency of harm</a> of exposure to a PDDI relative to <a>frequency of exposure</a> and is rarely available. If such information is available, it can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Therefore, such information SHOULD be provided if available and considered reliable. It is RECOMMENDED that, wherever possible, each frequency of harm and frequency of exposure datum refer to a specific source in the form of a citation. If such information is not available, it is RECOMMENDED that an explicit statement declaring this fact be provided.
+    <b><i>R3 - State the frequency of harm relative to frequency of exposure if known:</b></i> Information about the <a>frequency of harm</a> of exposure to a PDDI relative to <a>frequency of exposure</a> and is rarely available. If such information is available, it can help a clinician assess the risk/benefit trade-off of exposure to PDDI. Therefore, if such information is not available, an explicit statement declaring this fact MUST be provided. However, if such information is available and considered reliable, it MUST be provided. Wherever possible, each frequency of harm and frequency of exposure datum SHOULD refer to a specific source in the form of a citation. 
   </div>
 
   
   <div class="practice" id="bp-clinical-consequences">
-    <b><i>R4 - Explicitly state clinical consequences:</b></i> The <a>clinical consequences</a> associated with a PDDI MUST be reported if known. Clinical consequences SHOULD refer health outcomes as specifically as possible. To reduce ambiguity and support a computable representation of the PDDI, clinical consequences SHOULD be represented as one or more sets of terms from a terminology such as <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> or <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. Such so called <i>value sets</i> MAY be referenced by a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public. 
+    <b><i>R4 - Explicitly state clinical consequences:</b></i> The <a>clinical consequences</a> associated with a PDDI MUST be reported if known. Clinical consequences MUST refer health outcomes as specifically as possible. To reduce ambiguity and support a computable representation of the PDDI, clinical consequences SHOULD be represented as one or more sets of terms from a terminology such as <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> or <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. Such so called <i>value sets</i> MAY be referenced by a URI to a public repository such as the <a href="https://vsac.nlm.nih.gov/" target="new">Value Set Authority Center</a> that is maintained by the <a href="https://www.nlm.nih.gov/" target="new">United States National Library of Medicine</a>. The implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, the implementer SHOULD use a terminology that is actively maintained and freely accessible to the public. 
   </div>
 
   <div class="practice" id="bp-serious">
@@ -1245,21 +1245,17 @@
   </div>
 
   <div class="practice" id="bp-operational-classification">
-    <b><i>R6 - Include an operational classification statement:</b></i> A PDDI MUST report at least one <a>operational classification statement</a>. The description MAY include one or more operational classification statements as long as each statement depends on a single set of <a>contextual information/modifying factors</a>. In this case, the  operational classification statements SHOULD be mentioned where the specific contextual information/modifying factors are discussed. While implementers MAY use any system that provides clear operational classification statements, the use of the OpeRational ClassificAtion of Drug Interactions [hansten-2001] is RECOMMENDED. 
+    <b><i>R6 - Include an operational classification statement:</b></i> A PDDI MUST report at least one <a>operational classification statement</a>. The description MAY include more than one operational classification statements as long as each statement depends on a single set of <a>contextual information/modifying factors</a>. If there is more than one operational classification statement, each operational classification statement MUST be mentioned along with the specific contextual information/modifying factor that applies to the situation. While implementers MAY use any system that provides clear operational classification statements, the use of the OpeRational ClassificAtion of Drug Interactions [hansten-2001] is RECOMMENDED. 
   </div>
 
 
   <div class="practice" id="bp-contextual">
     <b><i>R7 - State each known risk modifying factor or patient context:</b></i> <a>Contextual information/modifying factors</a> are necessary for alerts that
-    are both sensitive and specific. Like clinical consequences, each known factor SHOULD be
-    stated as specifically as possible. The factors SHOULD be amenable to implementation as executable
-    logic using value sets from clinical terminologies such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a>, the
-    <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a>, and <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. As is used in this
-    example, each factor SHOULD be related to a specific <a>operational classification statement</a> that is supported by the <a>evidence about a suspected drug-drug interaction</a>. It is RECOMMENDED that, wherever possible, each evidence statement refer to a specific source in the form of a citation.
+    are both sensitive and specific. Like clinical consequences, each known factor MUST be stated as specifically as possible. The factors SHOULD be amenable to implementation as executable logic using value sets from clinical terminologies such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a>, the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a>, and <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. Each factor SHOULD be related to a specific <a>operational classification statement</a> that is supported by the <a>evidence about a suspected drug-drug interaction</a>. Wherever possible, each evidence statement SHOULD refer to a specific source in the form of a citation.
   </div>
 
   <div class="practice" id="bp-recommended-action">
-    <b><i>R8 - State a recommended action if one is known:</b></i> If known, a <a>recommended action</a> SHOULD be stated using clear and concise language. Any recommended actions that apply to all patient exposures SHOULD be stated using clear and concise language. It is RECOMMENDED that each recommended action statement provide citations to <a>evidence about a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on specific <a>contextual information/modifying factors</a> SHOULD be mentioned so as to support a context-specific presentation of such information.
+    <b><i>R8 - State a recommended action if one is known:</b></i> If known, a <a>recommended action</a> MUST be stated. Any recommended actions that apply to all patient exposures MUST be stated. It is desirable that each recommended action is written in clear and concise language. Each recommended action statement SHOULD provide citations to <a>evidence about a suspected drug-drug interaction</a> (not provided in this example). Recommendations that depend on specific <a>contextual information/modifying factors</a> SHOULD be mentioned so as to support a context-specific presentation of such information.
   </div>
 
 
@@ -1405,7 +1401,8 @@
       </tr>
       <tr>
 	<td>
-	  <strong>Comment:</strong> Per the recommendation <a href="#bp-drugs-involved">R1 - Explicitly state the drugs involved</a>, value sets for warfarin and NSAIDs are explicitly enumerated. As Appendix <a href=#intro-to-value-sets></a> mentions, this <i>extensional definition</i> is one approach to declaring value sets. It is also possible to define an algorithm that, when executed by a machine (or interpreted by a human), yields a set of such elements. Such a <i>intensional definition</i> is also an acceptable approach to declaring the drugs involved. </td> 
+	  <strong>Comment:</strong> Per the recommendation <a href="#bp-drugs-involved">R1 - Explicitly state the drugs involved</a>, value sets for warfarin and NSAIDs are explicitly enumerated. This example states NSAIDs generally and then refers to specific NSAID formulations in Contextual information/modifying factors (since the interaction is only relevant for bioavailable forms). A reasonable alternative approach would have been to create two PDDI knowledge artifacts - one that refers to "warfarin - systemic NSAIDs", and the other referring to "warfarin - non-systemic NSAIDs." Also, this example explicitly lists the drugs involved. As Appendix <a href=#intro-to-value-sets></a> mentions, this <i>extensional definition</i> is one approach to declaring value sets. It is also possible to define an algorithm that, when executed by a machine (or interpreted by a human), yields a set of such elements. Such a <i>intensional definition</i> is also an acceptable approach to declaring the drugs involved. 
+	</td> 
       </tr>
     </table>
     <table>
@@ -1454,7 +1451,7 @@
 	<td style="background-color: #f4fff2"><a>Operational Classification Statement</a>: Depending on the patient context, there are different operational classification statements for the warfarin-NSAIDs PDDI. See the <a href="#warfarin-specific-context">contextual information/modifying factors for this interaction</a>.</td>
       </tr>
       <tr>
-	<td><strong>Comment:</strong> Per recommendation <a href="#bp-operational-classification">R6 - Include an operational classification statement</a>, the PDDI description includes one or more <a>operational classification statements</a>. Because there is multiple <a>contextual information/modifying factors</a>, no single general operational classification statement can be mentioned. Rather, an operational classification statement is provided for each factor. </td>
+	<td><strong>Comment:</strong> Per recommendation <a href="#bp-operational-classification">R6 - Include an operational classification statement</a>, the PDDI description includes more than one <a>operational classification statements</a>. Because there is multiple <a>contextual information/modifying factors</a>, no single general operational classification statement can be mentioned. Rather, an operational classification statement is provided for each factor. </td>
       </tr>
     </table>
 </div>
@@ -1463,22 +1460,19 @@
   <tr>
     <td style="background-color: #f4fff2"><a>Contextual information/modifying factors</a>:
       <ol>
-        <li>The <a href="#NSAIDS-drugs">NSAIDs</a> is <a href="#topical-diclof">topical diclofenac</a></li>
+        <li>The <a href="#NSAIDS-drugs">NSAID</a> is <a href="#topical-diclof">topical or opthalmic diclofenac</a></li>
         <ul>
           <li><strong>Operational Classification Statement:</strong> No special precautions</li>
-          <li><strong>Evidence About a Suspected Drug-Drug Interaction:</strong> <a href="#topical-diclof">Topical diclofenac</a> has relatively
-	    low systemic absorption; in one study a topical gel (16 g/day) produced about 6% of
-	    the absorption seen with systemic administration of 150 mg/day. A higher than recommended
-	    dose of topical gel (48 g/day) produced 20% of a systemic dose of diclofenac.</li>
+          <li><strong>Evidence About a Suspected Drug-Drug Interaction:</strong> <a href="#topical-diclof">Both topical and opthalmic formulations of diclofenac</a> have relatively low systemic absorption; in one study a topical gel (16 g/day) produced about 6% of the absorption seen with systemic administration of 150 mg/day. A higher than recommended dose of topical gel (48 g/day) produced 20% of a systemic dose of diclofenac. The UK Summary of Product Characteristics for Voltarol Ophtha Multidose Eye Drops states, "No measurable levels of diclofenac could be found in humans after ocular application of diclofenac sodium eye drops". The FDA-approved SPL for Diclofenac Sodium Ophthalmic Solution 0.1% states, "Results from a bioavailability study established that plasma levels of diclofenac following ocular instillation of two drops of Diclofenac sodium ophthalmic solution, 0.1% to each eye were below the limit of quantification (10 ng/mL) over a 4-hour period. This study suggests that limited, if any, systemic absorption occurs with Diclofenac sodium ophthalmic solution". </li>
         </ul>
 	<div class="issue" data-number="41" title="Consider modifying the 'NOT topical diclofenac' to include opthalmic formulations">
-        <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a> but the patient is concomitantly taking a
+        <li>The NSAID is NEITHER <a href="#topical-diclof">topical nor opthalmic diclofenac</a> but the patient is concomitantly taking a
           <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a></li>
         <ul>
           <li><strong>Operational Classification Statement:</strong> Assess risk and take action if necessary</li>
           <li><strong>Evidence About a Suspected Drug-Drug Interaction:</strong> <a href="#proton-pump-inhibitor">Proton pump inhibitors</a> and <a href="#misoprostol">misoprostol</a> may reduce the risk of UGIB in patients receiving NSAIDs and warfarin. </li>
         </ul>
-        <li>The NSAID is NOT <a href="#topical-diclof">topical diclofenac</a>, the patient is NOT concomitantly taking a <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a>, and the patient has one or more of the following risk factors:</li>
+        <li>The NSAID is NEITHER <a href="#topical-diclof">topical nor opthalmic diclofenac</a>, the patient is NOT concomitantly taking a <a href="#proton-pump-inhibitor">proton pump inhibitor</a> or <a href="#misoprostol">misoprostol</a>, and the patient has one or more of the following risk factors:</li>
         <ul>
           <li>History of <a href="#gi-bleeding">upper gastrointestinal bleeding (UGIB) or peptic ulcer</a> or age > 65 years old</li>
       <ul>
@@ -1531,7 +1525,7 @@
       <td style="background-color: #f4fff2"><emph>Drugs involved</emph>: <a href="#TKIs">Tyrosine Kinase Inhibitors (TKIs)</a> and <a href="#proton-pump-inhibitor-atc">Proton Pump Inhibitors (PPIs)</a></td>
     </tr>
     <tr>
-      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-drugs-involved">R1 - Explicitly state the drugs involved</a>, value sets for TKIs and PPIs are provided. Note that in the <a href="#ex-warfarin-nsaids">warfarin-NSAIDs example</a> the drugs involved are specified using RxNorm while this example uses ATC. This is to emphasize that, while the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
+      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-drugs-involved">R1 - Explicitly state the drugs involved</a>, value sets for TKIs and PPIs are provided. Note that in the <a href="#ex-warfarin-nsaids">warfarin-NSAIDs example</a> the drugs involved are specified using RxNorm while this example uses ATC. This is to emphasize that, while the drugs involved SHOULD be listed as sets of terms from a terminology such as <a href="https://www.nlm.nih.gov/research/umls/rxnorm/" target="new">RxNorm</a> or the <a href="https://www.whocc.no/atc/structure_and_principles/" target="new">Anatomical Therapeutic Chemical Classification System (ATC)</a>, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, implementer SHOULD use a terminology that is actively maintained and freely accessible to the public.</td>
     </tr>
   </table>
     <table>
@@ -1559,7 +1553,7 @@
       <td style="background-color: #f4fff2"><strong>Clinical Consequences:</strong> Decreased efficacy relative to treatment for <a href="#acml">chronic myeloid leukemia</a></td>
     </tr>
     <tr>
-      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-clinical-consequences">R4 - Explicitly state clinical consequences</a>, a value set for the clinical consequence is explicitly enumerated. Note that in the <a href="#ex-warfarin-nsaids">warfarin-NSAIDs example</a>, the clinical consequences involved are specified using <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> while this example uses <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. This is to emphasize that, while the clinical consequences  SHOULD be listed as sets of terms from a terminology such as ICD-10 or SNOMED-CT, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, it is RECOMMENDED that the chosen terminology be one that is actively maintained and freely accessible to the public.</td>
+      <td><strong>Comment:</strong> Per the recommendation <a href="#bp-clinical-consequences">R4 - Explicitly state clinical consequences</a>, a value set for the clinical consequence is explicitly enumerated. Note that in the <a href="#ex-warfarin-nsaids">warfarin-NSAIDs example</a>, the clinical consequences involved are specified using <a href="http://www.who.int/classifications/icd/en/" target="new">ICD-10</a> while this example uses <a href="https://www.snomed.org/snomed-ct" target="new">SNOMED-CT</a>. This is to emphasize that, while the clinical consequences  SHOULD be listed as sets of terms from a terminology such as ICD-10 or SNOMED-CT, the implementer MAY choose any terminology they think appropriate. To promote broader accessibility to PDDI knowledge, implementers SHOULD use a terminology that is actively maintained and freely accessible to the public.</td>
     </tr>
   </table>
 
@@ -2283,7 +2277,7 @@
     gastrointestinal bleeding (UGIB).
   </p>
   <figure id="Warfarin-NSAID-TREE">
-    <img src="W3C-Images/Warfarin-NSAID-TREE.png">
+    <img src="W3C-Images/Warfarin-NSAID-TREE-opthalmic-addition.png">
     <figcaption> <span style="color: #30d529">¢</span> = No special precautions.
       <span style="color: #f9bd3b">n</span> = Assess risk and take action if necessary.
       <span style="color: #fb0082">u</span> = Use only if benefit
@@ -2295,7 +2289,7 @@
 
 <p style="text-align: left"><strong>Footnotes:</strong></p>
 <ol type="1">
-  <li style="text-align: left">Topical diclofenac has relatively low systemic absorption; in one study a topical gel (16 g/day) produced about 6% of the absorption seen with systemic administration of 150 mg/day. A higher than recommended dose of topical gel (48 g/day) produced 20% of a systemic dose of diclofenac.</li>
+  <li style="text-align: left">Topical diclofenac has relatively low systemic absorption; in one study a topical gel (16 g/day) produced about 6% of the absorption seen with systemic administration of 150 mg/day. A higher than recommended dose of topical gel (48 g/day) produced 20% of a systemic dose of diclofenac. The UK Summary of Product Characteristics for Voltarol Ophtha Multidose Eye Drops states, "No measurable levels of diclofenac could be found in humans after ocular application of diclofenac sodium eye drops". The FDA-approved SPL for Diclofenac Sodium Ophthalmic Solution 0.1% states, "Results from a bioavailability study established that plasma levels of diclofenac following ocular instillation of two drops of Diclofenac sodium ophthalmic solution, 0.1% to each eye were below the limit of quantification (10 ng/mL) over a 4-hour period. This study suggests that limited, if any, systemic absorption occurs with Diclofenac sodium ophthalmic solution". </li>
   <li style="text-align: left">If the NSAID is being used as an analgesic or antipyretic, it would be prudent to use an alternative such as acetaminophen. In some people, acetaminophen can increase the anticoagulant effect of warfarin, so monitor the INR if acetaminophen is used in doses over 2 g/day for a few days. For more severe pain consider short-term opioids in place of the NSAID.</li>
   <li style="text-align: left">Proton pump inhibitors and misoprostol may reduce the risk of UGIB in patients receiving NSAIDs and warfarin.</li>
   <li style="text-align: left">Patients with a history of UGIB or peptic ulcer may have an increased risk of UGIB from this interaction. The extent to which older age is an independent risk factor for UGIB due to these interactions is not firmly established, but UGIB in general is known to increase with age.</li>
@@ -3224,9 +3218,10 @@
 
   
   <section id="topical-diclof">
-    <h2>topical diclofenac (RxNorm)</h2>
+    <h2>topical or opthlamic diclofenac (RxNorm)</h2>
     <pre>
       1234735 - diclofenac epolamine 0.0129 MG/MG Topical Gel
+      854801 - Diclofenac Sodium Ophthalmic Solution
     </pre>	    
   </section>
 
@@ -3445,7 +3440,7 @@
     "expressionLogic": "human readable",
     "members": [
       {
-        "display": "The NSAID is topical diclofenac",
+        "display": "The NSAID is topical or opthalmic diclofenac",
         "operational classification statement": {
           "type": "MPIO_0000111",
           "display": "No special precautions."
@@ -3458,7 +3453,7 @@
           {
             "type": "TextQuoteSelector",
             "attribute": "display",
-            "exact": "topical diclofenac",
+            "exact": "topical or opthalmic diclofenac",
             "body": {
               "type": "SemanticTag",
               "value": "484ef188-5765-408d-b8c3-f2f38ae8066c"
@@ -3480,7 +3475,7 @@
           {
             "type": "TextQuoteSelector",
             "attribute": "display",
-            "exact": "topical diclofenac",
+            "exact": "topical or opthalmic diclofenac",
             "body": {
               "type": "SemanticTag",
               "value": "484ef188-5765-408d-b8c3-f2f38ae8066c"
@@ -3521,7 +3516,7 @@
           {
             "type": "TextQuoteSelector",
             "attribute": "display",
-            "exact": "topical diclofenac",
+            "exact": "topical or opthalmic diclofenac",
             "body": {
               "type": "SemanticTag",
               "value": "484ef188-5765-408d-b8c3-f2f38ae8066c"
@@ -3626,7 +3621,7 @@
           {
             "type": "TextQuoteSelector",
             "attribute": "display",
-            "exact": "topical diclofenac",
+            "exact": "topical or opthalmic diclofenac",
             "body": {
               "type": "SemanticTag",
               "value": "484ef188-5765-408d-b8c3-f2f38ae8066c"
@@ -5250,7 +5245,7 @@
     },
     {
       "id": "484ef188-5765-408d-b8c3-f2f38ae8066c",
-      "display": "topical diclofenac",
+      "display": "topical or opthalmic diclofenac",
       "type": "DIDEO_00000128",
       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
       "members": [
@@ -5259,7 +5254,13 @@
           "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
           "code": "1234735",
           "display": "diclofenac epolamine 0.0129 MG/MG Topical Gel"
-        }
+         },
+         {
+          "type": "APOLLO_SV_00000461",
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "854801",
+          "display": "Diclofenac Sodium Ophthalmic Solution"
+         }
       ]
     },
     {
