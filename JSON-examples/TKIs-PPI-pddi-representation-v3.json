@@ -1,0 +1,488 @@
+{
+  "drugs involved": [
+    {
+      "type": "DIDEO_00000128",
+      "id": "48695d2d-9545-4a31-80d1-201d7d7e2cdb"
+    },
+    {
+      "type": "DIDEO_00000128",
+      "id": "05b06c16-a763-4ef4-90d8-899abb34abd8"
+    }
+  ],
+  "clinical consequences": {
+    "type": "MPIO_0000003",
+    "id": "5476c5b5-b52b-4750-882d-cc47f4fa52f4",
+    "display": "Decreased efficacy relative to treatment for chronic myeloid leukemia.",
+    "concept set references": [
+      {
+        "type": "TextQuoteSelector",
+        "exact": "chronic myeloid leukemia",
+        "body": {
+          "type": "SemanticTag",
+          "value": "2e1bca79-953c-4ea3-9c40-4c16da2dde31"
+        }
+      }
+    ]
+  },
+  "seriousness": {
+    "type": "MPIO_0000009",
+    "id": "d8ea3c5c-bc25-4cca-b9a8-ed742742e741",
+    "value": "serious",
+    "display": "A decrease in chronic myeloid leukemia treatment efficacy is a serious potential clinical consequence because it can result in death, life-threatening hospitalization, and disability."
+  },
+  "mechanism of interaction information": {
+    "type": "MPIO_0000005",
+    "id": "8a8ce6c0-c78e-4d38-bda2-835118f976ea",
+    "display": "These TKIs demonstrate pH dependent absorption for oral administration which may result in decreased efficacy when given concomitantly with medications that increase gastric pH."
+  },
+  "frequency of exposure to the PDDI": {
+    "type": "MPIO_0000007",
+    "id": "56ebf54f-a148-4f2d-9924-b44f174ea72e",
+    "display": "Unknown"
+  },
+  "frequency of harm for persons who have been exposed to the PDDI": {
+    "type": "MPIO_0000006",
+    "id": "207ae890-3098-436d-b248-578279c65d9c",
+    "display": "Unknown"
+  },
+  "modifying factors information": {
+    "type": "MPIO_0000000",
+    "id": "b4566e23-3884-495f-93e1-04a0b5c9a008",
+    "expressionLogic": "human readable",
+    "members": [
+      {
+        "display": "The TKI is imatinib or ponatinib",
+        "operational classification statement": {
+          "type": "MPIO_0000111",
+          "display": "No special precautions."
+        },
+        "evidence about a suspected drug-drug interaction": {
+          "type": "MPIO_0000004",
+          "display": "Imatinib and ponatinib AUCs are not appreciably decreased by PPI co-administration.",
+          "References": [
+            {
+              "title": "Iclusig",
+              "author": [
+                {
+                  "name": "ARIAD Pharmaceuticals, Inc."
+                }
+              ],
+              "type": "package insert",
+              "year": "2016",
+              "link": [
+                {
+                  "url": "https://specialtydrug.magellanprovider.com/media/32235/iclusig.pdf"
+                }
+              ]
+            },
+            {
+              "title": "Effect of a proton pump inhibitor on the pharmacokinetics of imatinib",
+              "author": [
+                {
+                  "name": "Merrill J Egorin"
+                },
+                {
+                  "name": "Dhvani D Shah"
+                },
+                {
+                  "name": "Susan M Christner"
+                },
+                {
+                  "name": "Mara A Yerk"
+                },
+                {
+                  "name": "Kristin A Komazec"
+                },
+                {
+                  "name": "Leonard R Appleman"
+                },
+                {
+                  "name": "Robert L Redner"
+                },
+                {
+                  "name": "Brian M  Miller"
+                },
+                {
+                  "name": "Jan H Beumer"
+                }
+              ],
+              "type": "article",
+              "year": "2009",
+              "journal": {
+                "name": "British journal of clinical pharmacology",
+                "volume": "68",
+                "number": "3",
+                "pages": "370--374"
+              },
+              "link": [
+                {
+                  "url": "https://bpspubs.onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2125.2009.03466.x"
+                }
+              ],
+              "identifier": [
+                {
+                  "type": "doi",
+                  "id": "10.1111/j.1365-2125.2009.03466.x"
+                }
+              ]
+            }
+          ]
+        },
+        "concept set references": [
+          {
+            "type": "TextQuoteSelector",
+            "attribute": "display",
+            "exact": "Imatinib",
+            "body": {
+              "type": "SemanticTag",
+              "value": "bd1da3d0-0543-42b6-9698-62f672d20ea4"
+            }
+          },
+          {
+            "type": "TextQuoteSelector",
+            "attribute": "display",
+            "exact": "ponatinib",
+            "body": {
+              "type": "SemanticTag",
+              "value": "901791fd-5575-49fd-b043-a865743432b6"
+            }
+          }
+        ]
+      },
+      {
+        "display": "The TKI is nilotinib",
+        "operational classification statement": {
+          "type": "MPIO_0000111",
+          "display": "Assess risk and take action if necessary."
+        },
+        "evidence about a suspected drug-drug interaction": {
+          "type": "MPIO_0000004",
+          "display": "Bosutinib and nilotinib AUCs are decreased with concomitant PPIs but antacids and H2 antagonists may be considered if TKI is given 2 hours before the antacid/H2 antagonist. However, for nilotinib a retrospective study has shown no difference in cytogenetic response rates for patients taking PPIs.",
+          "References": [
+            {
+              "title": "Concurrent use of proton pump inhibitors or H2 blockers did not adversely affect nilotinib efficacy in patients with chronic myeloid leukemia",
+              "author": [
+                {
+                  "name": "Ophelia QP Yin"
+                },
+                {
+                  "name": "Frank J Giles "
+                },
+                {
+                  "name": "Michele Baccarani"
+                },
+                {
+                  "name": "Philipp Le Coutre"
+                },
+                {
+                  "name": "Ovidiu Chiparus"
+                },
+                {
+                  "name": "Neil Gallagher"
+                },
+                {
+                  "name": "Giuseppe Saglio"
+                },
+                {
+                  "name": "Timothy P Hughes"
+                },
+                {
+                  "name": "Andreas Hochhaus"
+                },
+                {
+                  "name": "Hagop M Kantarjian"
+                },
+                {
+                  "name": "RA Larson"
+                }
+              ],
+              "type": "article",
+              "year": "2012",
+              "journal": {
+                "name": "Cancer chemotherapy and pharmacology",
+                "volume": "70",
+                "number": "2",
+                "pages": "345--350"
+              },
+              "link": [
+                {
+                  "url": "https://link.springer.com/article/10.1007/s00280-012-1881-3"
+                }
+              ],
+              "identifier": [
+                {
+                  "type": "doi",
+                  "id": "10.1007/s00280-012-1881-3"
+                }
+              ]
+            }
+          ]
+        },
+        "concept set references": [
+          {
+            "type": "TextQuoteSelector",
+            "attribute": "display",
+            "exact": "nilotinib",
+            "body": {
+              "type": "SemanticTag",
+              "value": "d8dc65de-aefc-45a1-a0b5-d576838bcb1b"
+            }
+          }
+        ]
+      },
+      {
+        "display": "The TKI is bosutinib or dasatinib",
+        "type": "MPIO_0000111",
+        "operational classification statement": {
+          "type": "MPIO_0000111",
+          "display": "Use only if benefit outweighs risk."
+        },
+        "evidence about a suspected drug-drug interaction": {
+          "type": "MPIO_0000004",
+          "display": "Bosutinib and nilotinib AUCs are decreased with concomitant PPIs but antacids and H2 antagonists may be considered if TKI is given 2 hours before the antacid/H2 antagonist.",
+          "References": [
+            {
+              "title": "Sprycel",
+              "author": [
+                {
+                  "name": "Bristol-Myers Squibb Company"
+                }
+              ],
+              "type": "package insert",
+              "year": "2015",
+              "link": [
+                {
+                  "url": "https://packageinserts.bms.com/pi/pi_sprycel.pdf"
+                }
+              ]
+            },
+            {
+              "title": "Bosulif",
+              "author": [
+                {
+                  "name": "Pfizer Labs"
+                }
+              ],
+              "type": "package insert",
+              "year": "2015",
+              "link": [
+                {
+                  "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/203341lbl.pdf"
+                }
+              ]
+            },
+            {
+              "title": "Tasigna",
+              "author": [
+                {
+                  "name": "Novartis"
+                }
+              ],
+              "type": "package insert",
+              "year": "2015",
+              "link": [
+                {
+                  "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2007/022068lbl.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        "concept set references": [
+          {
+            "type": "TextQuoteSelector",
+            "attribute": "display",
+            "exact": "bosutinib",
+            "body": {
+              "type": "SemanticTag",
+              "value": "3b4fd6a6-15a8-4520-8ec4-ffb62898bc33"
+            }
+          },
+          {
+            "type": "TextQuoteSelector",
+            "attribute": "display",
+            "exact": "dasatinib",
+            "body": {
+              "type": "SemanticTag",
+              "value": "e57501f1-5af2-4479-99c6-dc971e1dec35"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "concept sets": [
+    {
+      "id": "2e1bca79-953c-4ea3-9c40-4c16da2dde31",
+      "display": "chronic myeloid leukemia",
+      "type": "SNOMED-CT",
+      "system": "https://www.nlm.nih.gov/healthit/snomedct/",
+      "members": [
+        {
+          "type": "IAO_0020000",
+          "system": "https://www.nlm.nih.gov/healthit/snomedct/",
+          "code": "415287001",
+          "display": "Relapsing chronic myeloid leukemia"
+        },
+        {
+          "type": "IAO_0020000",
+          "system": "https://www.nlm.nih.gov/healthit/snomedct/",
+          "code": "277589003",
+          "display": "Atypical chronic myeloid leukemia"
+        },
+        {
+          "type": "IAO_0020000",
+          "system": "https://www.nlm.nih.gov/healthit/snomedct/",
+          "code": "277587001",
+          "display": "Juvenile chronic myeloid leukemia"
+        },
+        {
+          "type": "IAO_0020000",
+          "system": "https://www.nlm.nih.gov/healthit/snomedct/",
+          "code": "128826001",
+          "display": "Atypical chronic myeloid leukemia, BCR/ABL negative"
+        }
+      ]
+    },
+    {
+      "id": "48695d2d-9545-4a31-80d1-201d7d7e2cdb",
+      "display": " tyrosine kinase inhibitors (TKIs)",
+      "type": "DIDEO_00000128",
+      "system": "https://www.whocc.no/atc_ddd_index",
+      "members": [
+        {
+          "type": "ATC",
+          "system": "https://www.whocc.no/atc_ddd_index",
+          "code": "L01XE04",
+          "display": "sunitinib"
+        },
+        {
+          "type": "ATC",
+          "system": "https://www.whocc.no/atc_ddd_index",
+          "code": "L01XC03",
+          "display": "trastuzumab"
+        },
+        {
+          "type": "ATC",
+          "system": "https://www.whocc.no/atc_ddd_index",
+          "code": "L01XC14",
+          "display": "ado-trastuzumab emtansine"
+        }
+      ]
+    },
+    {
+      "id": "05b06c16-a763-4ef4-90d8-899abb34abd8",
+      "display": "proton pump inhibitors",
+      "type": "DIDEO_00000128",
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "members": [
+        {
+          "type": "APOLLO_SV_00000461",
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "816346",
+          "display": " Dexlansoprazole"
+        },
+        {
+          "type": "APOLLO_SV_00000461",
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "283742",
+          "display": "  Esomeprazole"
+        },
+        {
+          "type": "APOLLO_SV_00000461",
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "17128",
+          "display": " Lansoprazole"
+        },
+        {
+          "type": "APOLLO_SV_00000461",
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "7646",
+          "display": " Omeprazole"
+        },
+        {
+          "type": "APOLLO_SV_00000461",
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "40790",
+          "display": " Pantoprazole"
+        },
+        {
+          "type": "APOLLO_SV_00000461",
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "114979",
+          "display": " Rabeprazole"
+        }
+      ]
+    },
+    {
+      "id": "bd1da3d0-0543-42b6-9698-62f672d20ea4",
+      "display": "Imatinib",
+      "type": "DIDEO_00000128",
+      "system": "https://www.whocc.no/atc_ddd_index",
+      "members": [
+        {
+          "type": "ATC",
+          "system": "https://www.whocc.no/atc_ddd_index",
+          "code": "L01XE01",
+          "display": "imatinib"
+        }
+      ]
+    },
+    {
+      "id": "901791fd-5575-49fd-b043-a865743432b6",
+      "display": "ponatinib",
+      "type": "DIDEO_00000128",
+      "system": "https://www.whocc.no/atc_ddd_index",
+      "members": [
+        {
+          "type": "ATC",
+          "system": "https://www.whocc.no/atc_ddd_index",
+          "code": "L01XE08",
+          "display": "ponatinib"
+        }
+      ]
+    },
+    {
+      "id": "d8dc65de-aefc-45a1-a0b5-d576838bcb1b",
+      "display": "nilotinib",
+      "type": "DIDEO_00000128",
+      "system": "https://www.whocc.no/atc_ddd_index",
+      "members": [
+        {
+          "type": "ATC",
+          "system": "https://www.whocc.no/atc_ddd_index",
+          "code": "L01XE08",
+          "display": "nilotinib"
+        }
+      ]
+    },
+    {
+      "id": "3b4fd6a6-15a8-4520-8ec4-ffb62898bc33",
+      "display": "bosutinib",
+      "type": "DIDEO_00000128",
+      "system": "https://www.whocc.no/atc_ddd_index",
+      "members": [
+        {
+          "type": "ATC",
+          "system": "https://www.whocc.no/atc_ddd_index",
+          "code": "L01XE14",
+          "display": "bosutinib"
+        }
+      ]
+    },
+    {
+      "id": "e57501f1-5af2-4479-99c6-dc971e1dec35",
+      "display": "dasatinib",
+      "type": "DIDEO_00000128",
+      "system": "https://www.whocc.no/atc_ddd_index",
+      "members": [
+        {
+          "type": "ATC",
+          "system": "https://www.whocc.no/atc_ddd_index",
+          "code": "L01XE06",
+          "display": "dasatinib"
+        }
+      ]
+    }
+  ]
+}
